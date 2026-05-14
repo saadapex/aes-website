@@ -149,6 +149,9 @@ export default function Nav() {
           <Link href="/about" className={`text-sm font-medium transition-colors ${linkClass}`}>
             About
           </Link>
+          <Link href="/partners" className={`text-sm font-medium transition-colors ${linkClass}`}>
+            Partners
+          </Link>
           <Link href="/contact" className={`text-sm font-medium transition-colors ${linkClass}`}>
             Contact
           </Link>
@@ -226,6 +229,7 @@ export default function Nav() {
           <Link href="/case-studies" className="text-[#06284C] font-semibold" onClick={closeAll}>Case Studies</Link>
           <Link href="/blog"         className="text-[#06284C] font-semibold" onClick={closeAll}>Blog</Link>
           <Link href="/about"        className="text-[#06284C] font-semibold" onClick={closeAll}>About</Link>
+          <Link href="/partners"     className="text-[#06284C] font-semibold" onClick={closeAll}>Partners</Link>
           <Link href="/contact"      className="text-[#06284C] font-semibold" onClick={closeAll}>Contact</Link>
 
           <a
