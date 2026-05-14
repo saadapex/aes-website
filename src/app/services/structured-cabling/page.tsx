@@ -4,7 +4,10 @@ import Link from "next/link";
 import PageHero from "@/components/page-hero";
 import CtaBand from "@/components/cta-band";
 
-export const metadata: Metadata = { title: "Structured Cabling (Copper & Fiber)" };
+export const metadata: Metadata = {
+  title: "Structured Cabling — Copper & Fiber Installation",
+  description: "Certified copper and fiber structured cabling installation across the U.S. and Canada. OTDR testing, as-builts, and closeout documentation included on every project.",
+};
 
 const scope = [
   "Site survey and pathway design; permitting support",
@@ -22,9 +25,25 @@ const kpis = [
 ];
 const deliverables = ["Certification Reports", "Label Schema", "As-Builts", "Closeout Pack"];
 
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Structured Cabling",
+  "description": "Certified copper and fiber structured cabling installation across the U.S. and Canada. OTDR testing, as-builts, and closeout documentation on every project.",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Apex Enterprise Solutions",
+    "url": "https://www.apexsolutions.io"
+  },
+  "areaServed": ["United States", "Canada"],
+  "url": "https://www.apexsolutions.io/services/structured-cabling"
+};
+
 export default function StructuredCablingPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <PageHero
         eyebrow="Service"
         h1="Structured Cabling — Copper &amp; Fiber"

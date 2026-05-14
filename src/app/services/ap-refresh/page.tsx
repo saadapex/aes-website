@@ -4,7 +4,10 @@ import Link from "next/link";
 import PageHero from "@/components/page-hero";
 import CtaBand from "@/components/cta-band";
 
-export const metadata: Metadata = { title: "AP Refresh — Large-Scale Wireless Rollouts" };
+export const metadata: Metadata = {
+  title: "AP Refresh — Large-Scale Wireless Rollouts",
+  description: "High-density Wi-Fi deployments for warehouses, logistics facilities, and enterprise campuses. AES installs and validates access points at scale across the U.S. and Canada.",
+};
 
 const scope = [
   "Pre-deployment site surveys and RF planning",
@@ -24,9 +27,25 @@ const kpis = [
 ];
 const deliverables = ["RF Survey Report", "Coverage Validation", "As-Builts", "Label Schema", "Closeout Pack"];
 
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "AP Refresh",
+  "description": "Large-scale wireless access point rollouts for warehouses, logistics facilities, and enterprise campuses across the U.S. and Canada.",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Apex Enterprise Solutions",
+    "url": "https://www.apexsolutions.io"
+  },
+  "areaServed": ["United States", "Canada"],
+  "url": "https://www.apexsolutions.io/services/ap-refresh"
+};
+
 export default function ApRefreshPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <PageHero
         eyebrow="Service"
         h1="AP Refresh — Large-Scale Wireless Rollouts"

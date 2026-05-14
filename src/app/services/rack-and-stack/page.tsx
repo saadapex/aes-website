@@ -4,7 +4,10 @@ import Link from "next/link";
 import PageHero from "@/components/page-hero";
 import CtaBand from "@/components/cta-band";
 
-export const metadata: Metadata = { title: "Rack & Stack — Data Center Build & Refresh" };
+export const metadata: Metadata = {
+  title: "Rack & Stack — Data Center Build & Refresh",
+  description: "From bare room to live racks — AES delivers rack-and-stack, power, and cabling for data center builds and hardware refresh projects across North America.",
+};
 
 const scope = [
   "Pre-build planning: rack layout, power mapping, cable management design",
@@ -24,9 +27,25 @@ const kpis = [
 ];
 const deliverables = ["Rack Diagrams", "Cable Labels", "Burn-In Reports", "Asset Inventory", "Closeout Pack"];
 
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Rack \& Stack",
+  "description": "From bare room to live racks — data center build and hardware refresh including rack installation, power, and cabling across North America.",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Apex Enterprise Solutions",
+    "url": "https://www.apexsolutions.io"
+  },
+  "areaServed": ["United States", "Canada"],
+  "url": "https://www.apexsolutions.io/services/rack-and-stack"
+};
+
 export default function RackAndStackPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <PageHero
         eyebrow="Service"
         h1="Rack &amp; Stack — Data Center Build &amp; Refresh"

@@ -11,6 +11,50 @@ import { SITE, SERVICES, INDUSTRIES, CASE_STUDIES } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "IT Infrastructure & Data-Center Deployment | Apex Enterprise Solutions",
+  description: "Apex Enterprise Solutions delivers structured cabling, rack-and-stack, and large-scale AP refresh across the U.S. & Canada. Field-first, certified, on schedule.",
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://www.apexsolutions.io/#business",
+      name: "Apex Enterprise Solutions",
+      url: "https://www.apexsolutions.io",
+      logo: "https://www.apexsolutions.io/images/AES_Option3_Primary_Full_Logo_No_Background.png",
+      image: "https://www.apexsolutions.io/images/hero-datacenter.png",
+      description: "IT infrastructure deployment company specializing in structured cabling, rack-and-stack, and large-scale AP refresh across the U.S. and Canada.",
+      telephone: "+16692517810",
+      email: "info@apexsolutions.io",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "1069 Duane Ct",
+        addressLocality: "Sunnyvale",
+        addressRegion: "CA",
+        postalCode: "94085",
+        addressCountry: "US",
+      },
+      areaServed: ["United States", "Canada"],
+      sameAs: ["https://www.linkedin.com/company/apexenterprisesolutions/"],
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Infrastructure Deployment Services",
+        itemListElement: [
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Structured Cabling", url: "https://www.apexsolutions.io/services/structured-cabling" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Rack & Stack", url: "https://www.apexsolutions.io/services/rack-and-stack" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "AP Refresh", url: "https://www.apexsolutions.io/services/ap-refresh" } },
+        ],
+      },
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.apexsolutions.io/#website",
+      url: "https://www.apexsolutions.io",
+      name: "Apex Enterprise Solutions",
+      publisher: { "@id": "https://www.apexsolutions.io/#business" },
+    },
+  ],
 };
 
 const STEPS = [
@@ -41,6 +85,10 @@ const VALUE_PILLARS = [
 export default function HomePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* ── HERO ─────────────────────────────────────────────── */}
       <section className="bg-[#06284C] min-h-screen flex items-center pt-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 py-24 grid lg:grid-cols-2 gap-16 items-center">

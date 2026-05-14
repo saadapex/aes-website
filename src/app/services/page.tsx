@@ -5,7 +5,10 @@ import PageHero from "@/components/page-hero";
 import CtaBand from "@/components/cta-band";
 import { SERVICES, SITE } from "@/lib/utils";
 
-export const metadata: Metadata = { title: "Infrastructure Services" };
+export const metadata: Metadata = {
+  title: "Infrastructure Services",
+  description: "AES delivers structured cabling, rack-and-stack, and large-scale AP refresh. Field-first execution with certified technicians across North America.",
+};
 
 const serviceDetails: Record<string, { scope: string[]; deliverables: string[]; image: string }> = {
   "structured-cabling": {

@@ -3,7 +3,10 @@ import { Mail, Phone, MapPin, Linkedin } from "lucide-react";
 import PageHero from "@/components/page-hero";
 import { SITE } from "@/lib/utils";
 
-export const metadata: Metadata = { title: "Contact Us" };
+export const metadata: Metadata = {
+  title: "Contact Us",
+  description: "Get in touch with Apex Enterprise Solutions to scope your next infrastructure deployment — structured cabling, rack-and-stack, or AP refresh across the U.S. and Canada.",
+};
 
 export default function ContactPage() {
   return (

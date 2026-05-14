@@ -4,7 +4,10 @@ import PageHero from "@/components/page-hero";
 import CtaBand from "@/components/cta-band";
 import { SITE } from "@/lib/utils";
 
-export const metadata: Metadata = { title: "Careers — Join the AES Field Team" };
+export const metadata: Metadata = {
+  title: "Careers — Join the AES Field Team",
+  description: "Join Apex Enterprise Solutions as a field technician or project coordinator. We deploy structured cabling, rack-and-stack, and wireless infrastructure across North America.",
+};
 
 const WHY = [
   {

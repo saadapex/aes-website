@@ -4,7 +4,10 @@ import PageHero from "@/components/page-hero";
 import CtaBand from "@/components/cta-band";
 import { INDUSTRIES } from "@/lib/utils";
 
-export const metadata: Metadata = { title: "Industries We Serve" };
+export const metadata: Metadata = {
+  title: "Industries We Serve",
+  description: "AES deploys infrastructure for data centers, logistics and warehousing, enterprise campuses, and telecom providers across the U.S. and Canada.",
+};
 
 export default function IndustriesPage() {
   return (

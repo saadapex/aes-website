@@ -4,7 +4,10 @@ import CaseStudyCard from "@/components/case-study-card";
 import CtaBand from "@/components/cta-band";
 import { CASE_STUDIES } from "@/lib/utils";
 
-export const metadata: Metadata = { title: "Deployments & Case Studies" };
+export const metadata: Metadata = {
+  title: "Deployments & Case Studies",
+  description: "Real-world infrastructure deployments by AES — AI cluster pod builds, large-scale AP rollouts, and data center rack-and-stack projects across North America.",
+};
 
 export default function CaseStudiesPage() {
   return (

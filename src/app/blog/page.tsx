@@ -6,7 +6,10 @@ import CtaBand from "@/components/cta-band";
 import { getAllPosts, type Post } from "@/sanity/queries";
 import { urlFor } from "@/sanity/client";
 
-export const metadata: Metadata = { title: "Blog — Apex Enterprise Solutions" };
+export const metadata: Metadata = {
+  title: "Blog — Apex Enterprise Solutions",
+  description: "Field insights, deployment tips, and infrastructure industry news from the AES team.",
+};
 export const revalidate = 60;
 
 function formatDate(iso: string) {

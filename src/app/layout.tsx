@@ -10,12 +10,13 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.apexsolutions.io"),
   title: {
     default: "IT Infrastructure & Data-Center Deployment | Apex Enterprise Solutions",
     template: "%s | Apex Enterprise Solutions",
   },
   description:
-    "Apex delivers structured cabling, rack-and-stack, and large-scale AP refresh across the U.S. & Canada. Field-first, certified, on schedule.",
+    "Apex Enterprise Solutions delivers structured cabling, rack-and-stack, and large-scale AP refresh across the U.S. & Canada. Field-first, certified, on schedule.",
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -25,6 +26,8 @@ export const metadata: Metadata = {
   },
   twitter: { card: "summary_large_image" },
   robots: { index: true, follow: true },
+  authors: [{ name: "Apex Enterprise Solutions", url: "https://www.apexsolutions.io" }],
+  category: "IT Infrastructure",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

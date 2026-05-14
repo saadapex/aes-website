@@ -3,7 +3,10 @@ import PageHero from "@/components/page-hero";
 import CtaBand from "@/components/cta-band";
 import { SITE } from "@/lib/utils";
 
-export const metadata: Metadata = { title: "Partner With AES — Apex Enterprise Solutions" };
+export const metadata: Metadata = {
+  title: "Partner With AES — Apex Enterprise Solutions",
+  description: "Become an AES execution partner. We support primes, integrators, and MSPs with reliable field teams, clean documentation, and competitive subcontract rates across North America.",
+};
 
 const CURRENT_PARTNERS = [
   {
