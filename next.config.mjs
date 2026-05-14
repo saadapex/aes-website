@@ -2,7 +2,14 @@
 const nextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
-    remotePatterns: [],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "cdn.sanity.io",
+        port: "",
+        pathname: "/images/**",
+      },
+    ],
   },
   async redirects() {
     return [];

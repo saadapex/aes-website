@@ -94,7 +94,7 @@ export default function ContactPage() {
               <button type="submit" className="btn-primary w-full justify-center text-base">
                 Submit Request →
               </button>
-              <p className="text-xs text-gray-400 text-center">Protected by reCAPTCHA v3. Your info is never sold.</p>
+              <p className="text-xs text-gray-400 text-center">We respond within one business day. Your information is never sold or shared.</p>
             </form>
           </div>
 
