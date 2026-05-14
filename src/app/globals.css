@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Manrope:wght@700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+    /* AES Brand Tokens — Branding Document (Tech Orange System) */
+    --aes-navy:    #06284C;
+    --aes-blue:    #006FB9;
+    --aes-orange:  #FF6B00;
+    --aes-slate:   #4E6575;
+    --aes-charcoal:#1F2933;
+    --aes-offwhite:#F4F7FA;
+  }
+  * { box-sizing: border-box; }
+  html { overflow-x: hidden; }
+  body {
+    @apply bg-white text-[#1F2933] font-sans;
+    font-size: 16px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight text-[#06284C];
+  }
+}
+
+@layer utilities {
+  /* Eyebrow label — Steel Slate, spaced caps */
+  .eyebrow {
+    @apply text-[#4E6575] uppercase tracking-widest text-sm font-medium;
+  }
+  /* Section padding standard */
+  .section-pad {
+    @apply py-12 md:py-20 lg:py-24 px-5 sm:px-6 lg:px-12;
+  }
+  /* Tech Orange primary CTA */
+  .btn-primary {
+    @apply bg-[#FF6B00] text-white font-bold px-6 py-3 rounded
+           hover:bg-[#e05e00] transition-colors duration-200
+           inline-flex items-center gap-2;
+  }
+  /* Apex Blue outline secondary */
+  .btn-secondary {
+    @apply border-2 border-[#006FB9] text-[#006FB9] font-semibold px-6 py-3 rounded
+           hover:bg-[#006FB9] hover:text-white transition-colors duration-200
+           inline-flex items-center gap-2;
+  }
+  /* White outline (on navy / blue backgrounds) */
+  .btn-outline-white {
+    @apply border-2 border-white text-white font-semibold px-6 py-3 rounded
+           hover:bg-white hover:text-[#06284C] transition-colors duration-200
+           inline-flex items-center gap-2;
+  }
+}
