@@ -78,7 +78,11 @@ export default function Nav() {
 
           {/* Services */}
           <div className="relative" onMouseEnter={() => setOpen("services")} onMouseLeave={() => setOpen(null)}>
-            <button className={`flex items-center gap-1 text-sm font-medium transition-colors ${linkClass}`}>
+            <button
+              className={`flex items-center gap-1 text-sm font-medium transition-colors ${linkClass}`}
+              aria-haspopup="true"
+              aria-expanded={open === "services"}
+            >
               Services
               <ChevronDown size={14} className={`transition-transform duration-200 ${open === "services" ? "rotate-180" : ""}`} />
             </button>
@@ -101,7 +105,11 @@ export default function Nav() {
 
           {/* Industries */}
           <div className="relative" onMouseEnter={() => setOpen("industries")} onMouseLeave={() => setOpen(null)}>
-            <button className={`flex items-center gap-1 text-sm font-medium transition-colors ${linkClass}`}>
+            <button
+              className={`flex items-center gap-1 text-sm font-medium transition-colors ${linkClass}`}
+              aria-haspopup="true"
+              aria-expanded={open === "industries"}
+            >
               Industries
               <ChevronDown size={14} className={`transition-transform duration-200 ${open === "industries" ? "rotate-180" : ""}`} />
             </button>
@@ -117,7 +125,11 @@ export default function Nav() {
 
           {/* Resources */}
           <div className="relative" onMouseEnter={() => setOpen("resources")} onMouseLeave={() => setOpen(null)}>
-            <button className={`flex items-center gap-1 text-sm font-medium transition-colors ${linkClass}`}>
+            <button
+              className={`flex items-center gap-1 text-sm font-medium transition-colors ${linkClass}`}
+              aria-haspopup="true"
+              aria-expanded={open === "resources"}
+            >
               Resources
               <ChevronDown size={14} className={`transition-transform duration-200 ${open === "resources" ? "rotate-180" : ""}`} />
             </button>
@@ -134,7 +146,11 @@ export default function Nav() {
 
           {/* Company */}
           <div className="relative" onMouseEnter={() => setOpen("company")} onMouseLeave={() => setOpen(null)}>
-            <button className={`flex items-center gap-1 text-sm font-medium transition-colors ${linkClass}`}>
+            <button
+              className={`flex items-center gap-1 text-sm font-medium transition-colors ${linkClass}`}
+              aria-haspopup="true"
+              aria-expanded={open === "company"}
+            >
               Company
               <ChevronDown size={14} className={`transition-transform duration-200 ${open === "company" ? "rotate-180" : ""}`} />
             </button>

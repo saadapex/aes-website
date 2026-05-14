@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { upsertHubSpotContact } from "@/lib/hubspot";
 
 const HS_TOKEN = process.env.HUBSPOT_ACCESS_TOKEN || "";
 
@@ -21,26 +22,17 @@ export async function POST(req: NextRequest) {
     const lastname = rest.join(" ");
 
     if (HS_TOKEN) {
-      await fetch("https://api.hubapi.com/crm/v3/objects/contacts", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${HS_TOKEN}`,
-        },
-        body: JSON.stringify({
-          properties: {
-            email,
-            firstname: firstname || "",
-            lastname:  lastname  || "",
-            company,
-            phone,
-            hs_lead_status: "NEW",
-            lifecyclestage: "lead",
-            lead_type:       "Contact Form",
-            service_interest: services,
-            message: `Locations: ${locations}\nStart Date: ${startDate}\nScope: ${scope}`,
-          },
-        }),
+      await upsertHubSpotContact(HS_TOKEN, {
+        email,
+        firstname: firstname || "",
+        lastname:  lastname  || "",
+        company,
+        phone,
+        hs_lead_status:   "NEW",
+        lifecyclestage:   "lead",
+        lead_type:        "Contact Form",
+        service_interest: services,
+        message: `Locations: ${locations}\nStart Date: ${startDate}\nScope: ${scope}`,
       });
     }
 

@@ -13,7 +13,10 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const ind = INDUSTRIES.find((i) => i.slug === params.slug);
   if (!ind) return {};
-  return { title: ind.title };
+  return {
+    title: ind.title,
+    description: `Apex Enterprise Solutions delivers structured cabling, rack-and-stack, and AP refresh for ${ind.title.toLowerCase()} environments across the U.S. and Canada. ${ind.sub}`,
+  };
 }
 
 export default function IndustryPage({ params }: { params: { slug: string } }) {

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { Mail, Phone, MapPin, Linkedin } from "lucide-react";
 import PageHero from "@/components/page-hero";
+import FormErrorBanner from "@/components/form-error-banner";
 import { SITE } from "@/lib/utils";
 
 export const metadata: Metadata = {
@@ -17,6 +19,9 @@ export default function ContactPage() {
 
           {/* Form — 3 cols */}
           <div className="lg:col-span-3">
+            <Suspense fallback={null}>
+              <FormErrorBanner message="Something went wrong submitting your request — please try again or email us directly at info@apexsolutions.io." />
+            </Suspense>
             <form action="/api/contact" method="POST" className="space-y-5">
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>

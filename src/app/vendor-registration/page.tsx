@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import PageHero from "@/components/page-hero";
 import { SITE } from "@/lib/utils";
+import FormErrorBanner from "@/components/form-error-banner";
 
 export const metadata: Metadata = {
   title: "Vendor & Subcontractor Registration",
@@ -23,6 +25,9 @@ export default function VendorRegistrationPage() {
           <div className="lg:col-span-3">
             <p className="eyebrow mb-3">Tell Us About Your Capabilities</p>
             <h2 className="text-[#06284C] text-2xl font-bold mb-6">Register Your Business</h2>
+            <Suspense fallback={null}>
+              <FormErrorBanner message="Something went wrong — please try again or email info@apexsolutions.io." />
+            </Suspense>
             <form action="/api/vendor" method="POST" className="space-y-5">
 
               <div className="grid sm:grid-cols-2 gap-4">

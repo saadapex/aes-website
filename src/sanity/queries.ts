@@ -35,3 +35,29 @@ export async function getAllPostSlugs(): Promise<{ slug: string }[]> {
   );
   return posts;
 }
+
+// ── Job Postings ──────────────────────────────────────────────
+
+export interface Job {
+  _id: string;
+  title: string;
+  location: string;
+  type: string;
+  department?: string;
+  summary: string;
+  responsibilities?: string[];
+  requirements?: string[];
+  niceToHave?: string[];
+  compensation?: string;
+  postedAt: string;
+}
+
+export async function getActiveJobs(): Promise<Job[]> {
+  return client.fetch(
+    `*[_type == "job" && active == true] | order(postedAt desc) {
+      _id, title, location, type, department,
+      summary, responsibilities, requirements, niceToHave,
+      compensation, postedAt
+    }`
+  );
+}

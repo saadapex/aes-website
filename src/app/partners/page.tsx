@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import PageHero from "@/components/page-hero";
+import FormErrorBanner from "@/components/form-error-banner";
 import CtaBand from "@/components/cta-band";
 import { SITE } from "@/lib/utils";
 
@@ -202,6 +204,9 @@ export default function PartnersPage() {
           <div className="lg:col-span-3">
             <p className="eyebrow mb-3">Partner Inquiry</p>
             <h2 className="text-[#06284C] text-3xl font-bold mb-6">Let&apos;s Start the Conversation</h2>
+            <Suspense fallback={null}>
+              <FormErrorBanner message="Something went wrong — please try again or contact us directly." />
+            </Suspense>
             <form action="/api/partner" method="POST" className="space-y-5">
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
