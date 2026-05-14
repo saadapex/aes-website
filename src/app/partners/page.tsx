@@ -5,6 +5,63 @@ import { SITE } from "@/lib/utils";
 
 export const metadata: Metadata = { title: "Partner With AES — Apex Enterprise Solutions" };
 
+const CURRENT_PARTNERS = [
+  {
+    name: "HPE",
+    logo: "/images/Partners%20Logo/HPE-Logo.png",
+    href: "https://www.hpe.com/us/en/home.html",
+    body: "Global technology leader providing servers, storage, networking, and edge infrastructure for enterprise and data center environments.",
+  },
+  {
+    name: "Black Box",
+    logo: "/images/Partners%20Logo/Blackbox-Logo.jpg",
+    href: "https://www.blackbox.com/",
+    body: "IT infrastructure solutions provider specializing in network infrastructure, KVM, and professional services across North America.",
+  },
+  {
+    name: "DataKnox",
+    logo: "/images/Partners%20Logo/636bbbf913f59171dda12e5b_dataknox-blue.svg",
+    href: "https://www.dataknox.io/",
+    body: "Data center solutions provider offering colocation, managed services, and infrastructure deployment across the U.S.",
+  },
+  {
+    name: "High Plains Computing",
+    logo: "/images/Partners%20Logo/hpc-highplains-logo.png.webp",
+    href: "https://www.linkedin.com/company/highplains/about/",
+    body: "Regional IT infrastructure and computing solutions partner with deep expertise in enterprise hardware deployment.",
+  },
+  {
+    name: "NETS International",
+    logo: "/images/Partners%20Logo/nets-logo-1024x728.png",
+    href: "https://nets-international.com/",
+    body: "Network and infrastructure services company delivering structured cabling, fiber, and low-voltage solutions globally.",
+  },
+  {
+    name: "Eaton / Exertherm",
+    logo: "/images/Partners%20Logo/Exertherm%20logo.svg",
+    href: "https://www.eaton.com/us/en-us/catalog/asset-maintenance-solutions/continuous-thermal-monitoring-solutions.html",
+    body: "Continuous thermal monitoring solutions for electrical systems — keeping mission-critical infrastructure safe and compliant.",
+  },
+  {
+    name: "Wraab",
+    logo: "/images/Partners%20Logo/wraab.png",
+    href: "https://wraab.com/",
+    body: "Technology services partner supporting IT infrastructure projects with field execution and logistics coordination.",
+  },
+  {
+    name: "Karavan Technology",
+    logo: "/images/Partners%20Logo/Karavan.svg",
+    href: "https://gokaravan.com/",
+    body: "IT project management and deployment partner with deep expertise in coordinating large-scale infrastructure rollouts across North America.",
+  },
+  {
+    name: "Inventiv Technology",
+    logo: "/images/Partners%20Logo/INVENTIV-TECHNOLOGY-TRANSPARENT-PNG.png.webp",
+    href: "https://inventivtechnology.com/",
+    body: "Full-service IT solutions provider delivering managed services, infrastructure design, and field deployment support.",
+  },
+];
+
 const BENEFITS = [
   { title: "Reliable Field Execution", body: "We show up, stay on schedule, and deliver clean work. Your reputation is protected on every engagement we support." },
   { title: "Transparent Communication", body: "Daily updates, early issue escalation, and responsive coordination — no surprises from kickoff to handover." },
@@ -86,6 +143,51 @@ export default function PartnersPage() {
                   <p className="text-[#4E6575] text-sm leading-relaxed">{step.body}</p>
                 </div>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Current partners */}
+      <section className="bg-white section-pad">
+        <div className="max-w-7xl mx-auto">
+          <p className="eyebrow mb-3">Our Network</p>
+          <h2 className="text-[#06284C] text-3xl font-bold mb-12">Trusted Partners &amp; Vendors</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {CURRENT_PARTNERS.map((p) => (
+              <a
+                key={p.name}
+                href={p.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group bg-[#F4F7FA] hover:bg-white border border-transparent hover:border-[#006FB9]/20 hover:shadow-md rounded-xl p-6 transition-all duration-200 flex flex-col gap-4"
+              >
+                {/* Logo or name badge */}
+                <div className="h-14 flex items-center">
+                  {p.logo ? (
+                    <img
+                      src={p.logo}
+                      alt={p.name}
+                      className="max-h-12 max-w-[160px] w-auto h-auto object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+                    />
+                  ) : (
+                    <span className="text-[#06284C] font-bold text-lg group-hover:text-[#FF6B00] transition-colors">
+                      {p.name}
+                    </span>
+                  )}
+                </div>
+                <div>
+                  {p.logo && (
+                    <p className="text-[#06284C] font-semibold text-sm mb-1 group-hover:text-[#FF6B00] transition-colors">
+                      {p.name}
+                    </p>
+                  )}
+                  <p className="text-[#1F2933] text-sm leading-relaxed">{p.body}</p>
+                </div>
+                <span className="text-xs text-[#006FB9] font-semibold group-hover:text-[#FF6B00] transition-colors mt-auto">
+                  Visit Website →
+                </span>
+              </a>
             ))}
           </div>
         </div>
