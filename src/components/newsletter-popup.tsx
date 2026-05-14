@@ -108,7 +108,7 @@ export default function NewsletterPopup() {
                   {status === "loading" ? "Subscribing…" : "Subscribe — It's Free →"}
                 </button>
                 <p className="text-xs text-gray-400 text-center">
-                  No spam. Unsubscribe anytime.{" "}
+                  You&apos;ll receive a confirmation email — just click the link to activate.{" "}
                   <a href="/privacy" className="underline hover:text-gray-600">Privacy Policy</a>
                 </p>
               </form>

@@ -6,11 +6,23 @@ import Image from "next/image";
 import { Menu, X, ChevronDown, Phone } from "lucide-react";
 import { SITE, SERVICES, INDUSTRIES } from "@/lib/utils";
 
+const RESOURCES = [
+  { title: "Blog",         subtitle: "Field insights & industry news", href: "/blog" },
+  { title: "Case Studies", subtitle: "Real deployments, real results",  href: "/case-studies" },
+];
+
+const COMPANY = [
+  { title: "About",    subtitle: "Who we are & how we work", href: "/about" },
+  { title: "Partners", subtitle: "Become an execution partner", href: "/partners" },
+  { title: "Careers",  subtitle: "Join the AES field team",   href: "/careers" },
+];
+
+type DropdownKey = "services" | "industries" | "resources" | "company" | null;
+
 export default function Nav() {
-  const [scrolled, setScrolled]             = useState(false);
-  const [mobileOpen, setMobileOpen]         = useState(false);
-  const [servicesOpen, setServicesOpen]     = useState(false);
-  const [industriesOpen, setIndustriesOpen] = useState(false);
+  const [scrolled, setScrolled]   = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [open, setOpen]           = useState<DropdownKey>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -28,11 +40,22 @@ export default function Nav() {
     ? "text-[#06284C] hover:text-[#FF6B00]"
     : "text-white hover:text-[#FF6B00]";
 
-  const closeAll = () => {
-    setServicesOpen(false);
-    setIndustriesOpen(false);
-    setMobileOpen(false);
-  };
+  const closeAll = () => { setOpen(null); setMobileOpen(false); };
+
+  const toggle = (key: DropdownKey) => setOpen(prev => prev === key ? null : key);
+
+  /* ── Dropdown panel ── */
+  const Dropdown = ({
+    id, width = "w-64", children,
+  }: { id: DropdownKey; width?: string; children: React.ReactNode }) => (
+    <div className={`absolute top-full left-0 pt-2 ${width} transition-all duration-150 ${
+      open === id ? "opacity-100 pointer-events-auto translate-y-0" : "opacity-0 pointer-events-none -translate-y-1"
+    }`}>
+      <div className="bg-white rounded-lg shadow-xl border border-gray-100 py-2">
+        {children}
+      </div>
+    </div>
+  );
 
   return (
     <header className={navClass}>
@@ -51,107 +74,81 @@ export default function Nav() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden lg:flex items-center gap-8">
-          <Link href="/" className={`text-sm font-medium transition-colors ${linkClass}`}>
-            Home
-          </Link>
+        <nav className="hidden lg:flex items-center gap-6">
 
-          {/* Services dropdown — handlers on wrapper so gap between button and panel is safe */}
-          <div
-            className="relative"
-            onMouseEnter={() => setServicesOpen(true)}
-            onMouseLeave={() => setServicesOpen(false)}
-          >
+          {/* Services */}
+          <div className="relative" onMouseEnter={() => setOpen("services")} onMouseLeave={() => setOpen(null)}>
             <button className={`flex items-center gap-1 text-sm font-medium transition-colors ${linkClass}`}>
               Services
-              <ChevronDown
-                size={14}
-                className={`transition-transform duration-200 ${servicesOpen ? "rotate-180" : ""}`}
-              />
+              <ChevronDown size={14} className={`transition-transform duration-200 ${open === "services" ? "rotate-180" : ""}`} />
             </button>
-
-            {/* pt-2 bridges the gap — no mt-2 margin that the mouse would fall through */}
-            <div className={`absolute top-full left-0 pt-2 w-64 transition-all duration-150 ${
-              servicesOpen ? "opacity-100 pointer-events-auto translate-y-0" : "opacity-0 pointer-events-none -translate-y-1"
-            }`}>
-              <div className="bg-white rounded-lg shadow-xl border border-gray-100 py-2">
-                {SERVICES.map((s) => (
-                  <Link
-                    key={s.slug}
-                    href={`/services/${s.slug}`}
-                    onClick={() => setServicesOpen(false)}
-                    className="block px-4 py-2.5 text-sm text-[#06284C] hover:bg-[#F4F7FA] hover:text-[#FF6B00] transition-colors"
-                  >
-                    {s.title}
-                    <span className="block text-xs text-[#4E6575] font-normal">{s.subtitle}</span>
-                  </Link>
-                ))}
-                <div className="border-t border-gray-100 mt-1 pt-1">
-                  <Link
-                    href="/services"
-                    onClick={() => setServicesOpen(false)}
-                    className="block px-4 py-2.5 text-xs text-[#006FB9] font-semibold hover:bg-[#F4F7FA] hover:text-[#FF6B00] transition-colors"
-                  >
-                    View All Services →
-                  </Link>
-                </div>
+            <Dropdown id="services" width="w-72">
+              {SERVICES.map((s) => (
+                <Link key={s.slug} href={`/services/${s.slug}`} onClick={closeAll}
+                  className="block px-4 py-2.5 text-sm text-[#06284C] hover:bg-[#F4F7FA] hover:text-[#FF6B00] transition-colors">
+                  {s.title}
+                  <span className="block text-xs text-[#4E6575] font-normal">{s.subtitle}</span>
+                </Link>
+              ))}
+              <div className="border-t border-gray-100 mt-1 pt-1">
+                <Link href="/services" onClick={closeAll}
+                  className="block px-4 py-2.5 text-xs text-[#006FB9] font-semibold hover:bg-[#F4F7FA] hover:text-[#FF6B00] transition-colors">
+                  View All Services →
+                </Link>
               </div>
-            </div>
+            </Dropdown>
           </div>
 
-          {/* Industries dropdown */}
-          <div
-            className="relative"
-            onMouseEnter={() => setIndustriesOpen(true)}
-            onMouseLeave={() => setIndustriesOpen(false)}
-          >
+          {/* Industries */}
+          <div className="relative" onMouseEnter={() => setOpen("industries")} onMouseLeave={() => setOpen(null)}>
             <button className={`flex items-center gap-1 text-sm font-medium transition-colors ${linkClass}`}>
               Industries
-              <ChevronDown
-                size={14}
-                className={`transition-transform duration-200 ${industriesOpen ? "rotate-180" : ""}`}
-              />
+              <ChevronDown size={14} className={`transition-transform duration-200 ${open === "industries" ? "rotate-180" : ""}`} />
             </button>
-
-            <div className={`absolute top-full left-0 pt-2 w-60 transition-all duration-150 ${
-              industriesOpen ? "opacity-100 pointer-events-auto translate-y-0" : "opacity-0 pointer-events-none -translate-y-1"
-            }`}>
-              <div className="bg-white rounded-lg shadow-xl border border-gray-100 py-2">
-                {INDUSTRIES.map((i) => (
-                  <Link
-                    key={i.slug}
-                    href={`/industries/${i.slug}`}
-                    onClick={() => setIndustriesOpen(false)}
-                    className="block px-4 py-2.5 text-sm text-[#06284C] hover:bg-[#F4F7FA] hover:text-[#FF6B00] transition-colors"
-                  >
-                    {i.title}
-                  </Link>
-                ))}
-                <div className="border-t border-gray-100 mt-1 pt-1">
-                  <Link
-                    href="/industries"
-                    onClick={() => setIndustriesOpen(false)}
-                    className="block px-4 py-2.5 text-xs text-[#006FB9] font-semibold hover:bg-[#F4F7FA] hover:text-[#FF6B00] transition-colors"
-                  >
-                    View All Industries →
-                  </Link>
-                </div>
-              </div>
-            </div>
+            <Dropdown id="industries" width="w-64">
+              {INDUSTRIES.map((i) => (
+                <Link key={i.slug} href={`/industries/${i.slug}`} onClick={closeAll}
+                  className="block px-4 py-2.5 text-sm text-[#06284C] hover:bg-[#F4F7FA] hover:text-[#FF6B00] transition-colors">
+                  {i.title}
+                </Link>
+              ))}
+            </Dropdown>
           </div>
 
-          <Link href="/case-studies" className={`text-sm font-medium transition-colors ${linkClass}`}>
-            Case Studies
-          </Link>
-          <Link href="/blog" className={`text-sm font-medium transition-colors ${linkClass}`}>
-            Blog
-          </Link>
-          <Link href="/about" className={`text-sm font-medium transition-colors ${linkClass}`}>
-            About
-          </Link>
-          <Link href="/partners" className={`text-sm font-medium transition-colors ${linkClass}`}>
-            Partners
-          </Link>
+          {/* Resources */}
+          <div className="relative" onMouseEnter={() => setOpen("resources")} onMouseLeave={() => setOpen(null)}>
+            <button className={`flex items-center gap-1 text-sm font-medium transition-colors ${linkClass}`}>
+              Resources
+              <ChevronDown size={14} className={`transition-transform duration-200 ${open === "resources" ? "rotate-180" : ""}`} />
+            </button>
+            <Dropdown id="resources" width="w-60">
+              {RESOURCES.map((r) => (
+                <Link key={r.href} href={r.href} onClick={closeAll}
+                  className="block px-4 py-2.5 text-sm text-[#06284C] hover:bg-[#F4F7FA] hover:text-[#FF6B00] transition-colors">
+                  {r.title}
+                  <span className="block text-xs text-[#4E6575] font-normal">{r.subtitle}</span>
+                </Link>
+              ))}
+            </Dropdown>
+          </div>
+
+          {/* Company */}
+          <div className="relative" onMouseEnter={() => setOpen("company")} onMouseLeave={() => setOpen(null)}>
+            <button className={`flex items-center gap-1 text-sm font-medium transition-colors ${linkClass}`}>
+              Company
+              <ChevronDown size={14} className={`transition-transform duration-200 ${open === "company" ? "rotate-180" : ""}`} />
+            </button>
+            <Dropdown id="company" width="w-60">
+              {COMPANY.map((c) => (
+                <Link key={c.href} href={c.href} onClick={closeAll}
+                  className="block px-4 py-2.5 text-sm text-[#06284C] hover:bg-[#F4F7FA] hover:text-[#FF6B00] transition-colors">
+                  {c.title}
+                  <span className="block text-xs text-[#4E6575] font-normal">{c.subtitle}</span>
+                </Link>
+              ))}
+            </Dropdown>
+          </div>
+
           <Link href="/contact" className={`text-sm font-medium transition-colors ${linkClass}`}>
             Contact
           </Link>
@@ -159,28 +156,18 @@ export default function Nav() {
 
         {/* Desktop CTA */}
         <div className="hidden lg:flex items-center gap-4">
-          <a
-            href={`tel:${SITE.phone.replace(/\D/g, "")}`}
-            className={`flex items-center gap-1.5 text-sm font-medium transition-colors ${linkClass}`}
-          >
+          <a href={`tel:${SITE.phone.replace(/\D/g, "")}`}
+            className={`flex items-center gap-1.5 text-sm font-medium transition-colors ${linkClass}`}>
             <Phone size={14} /> {SITE.phone}
           </a>
-          <a
-            href={SITE.calendly}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-primary text-sm py-2.5 px-5"
-          >
+          <a href={SITE.calendly} target="_blank" rel="noopener noreferrer"
+            className="btn-primary text-sm py-2.5 px-5">
             Book a Call
           </a>
         </div>
 
         {/* Mobile hamburger */}
-        <button
-          className="lg:hidden p-2"
-          onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label="Toggle menu"
-        >
+        <button className="lg:hidden p-2" onClick={() => setMobileOpen(!mobileOpen)} aria-label="Toggle menu">
           {mobileOpen
             ? <X    size={24} className={solid ? "text-[#06284C]" : "text-white"} />
             : <Menu size={24} className={solid ? "text-[#06284C]" : "text-white"} />}
@@ -190,19 +177,13 @@ export default function Nav() {
       {/* Mobile menu */}
       {mobileOpen && (
         <div className="lg:hidden bg-white border-t border-gray-100 px-6 py-6 flex flex-col gap-5 max-h-[80vh] overflow-y-auto">
-          <Link href="/"            className="text-[#06284C] font-semibold" onClick={closeAll}>Home</Link>
 
           <div>
             <p className="text-xs uppercase tracking-widest text-[#4E6575] font-medium mb-3">Services</p>
             {SERVICES.map((s) => (
-              <Link
-                key={s.slug}
-                href={`/services/${s.slug}`}
-                onClick={closeAll}
-                className="flex items-center gap-2 py-2 text-[#06284C] hover:text-[#FF6B00] text-sm border-b border-gray-50 transition-colors"
-              >
-                <span className="text-[#FF6B00]">›</span>
-                {s.title}
+              <Link key={s.slug} href={`/services/${s.slug}`} onClick={closeAll}
+                className="flex items-center gap-2 py-2 text-[#06284C] hover:text-[#FF6B00] text-sm border-b border-gray-50 transition-colors">
+                <span className="text-[#FF6B00]">›</span>{s.title}
               </Link>
             ))}
             <Link href="/services" onClick={closeAll}
@@ -214,30 +195,37 @@ export default function Nav() {
           <div>
             <p className="text-xs uppercase tracking-widest text-[#4E6575] font-medium mb-3">Industries</p>
             {INDUSTRIES.map((i) => (
-              <Link
-                key={i.slug}
-                href={`/industries/${i.slug}`}
-                onClick={closeAll}
-                className="flex items-center gap-2 py-2 text-[#06284C] hover:text-[#FF6B00] text-sm border-b border-gray-50 transition-colors"
-              >
-                <span className="text-[#FF6B00]">›</span>
-                {i.title}
+              <Link key={i.slug} href={`/industries/${i.slug}`} onClick={closeAll}
+                className="flex items-center gap-2 py-2 text-[#06284C] hover:text-[#FF6B00] text-sm border-b border-gray-50 transition-colors">
+                <span className="text-[#FF6B00]">›</span>{i.title}
               </Link>
             ))}
           </div>
 
-          <Link href="/case-studies" className="text-[#06284C] font-semibold" onClick={closeAll}>Case Studies</Link>
-          <Link href="/blog"         className="text-[#06284C] font-semibold" onClick={closeAll}>Blog</Link>
-          <Link href="/about"        className="text-[#06284C] font-semibold" onClick={closeAll}>About</Link>
-          <Link href="/partners"     className="text-[#06284C] font-semibold" onClick={closeAll}>Partners</Link>
-          <Link href="/contact"      className="text-[#06284C] font-semibold" onClick={closeAll}>Contact</Link>
+          <div>
+            <p className="text-xs uppercase tracking-widest text-[#4E6575] font-medium mb-3">Resources</p>
+            {RESOURCES.map((r) => (
+              <Link key={r.href} href={r.href} onClick={closeAll}
+                className="flex items-center gap-2 py-2 text-[#06284C] hover:text-[#FF6B00] text-sm border-b border-gray-50 transition-colors">
+                <span className="text-[#FF6B00]">›</span>{r.title}
+              </Link>
+            ))}
+          </div>
 
-          <a
-            href={SITE.calendly}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-primary justify-center text-center mt-2"
-          >
+          <div>
+            <p className="text-xs uppercase tracking-widest text-[#4E6575] font-medium mb-3">Company</p>
+            {COMPANY.map((c) => (
+              <Link key={c.href} href={c.href} onClick={closeAll}
+                className="flex items-center gap-2 py-2 text-[#06284C] hover:text-[#FF6B00] text-sm border-b border-gray-50 transition-colors">
+                <span className="text-[#FF6B00]">›</span>{c.title}
+              </Link>
+            ))}
+          </div>
+
+          <Link href="/contact" className="text-[#06284C] font-semibold" onClick={closeAll}>Contact</Link>
+
+          <a href={SITE.calendly} target="_blank" rel="noopener noreferrer"
+            className="btn-primary justify-center text-center mt-2">
             Book a Planning Call
           </a>
         </div>
