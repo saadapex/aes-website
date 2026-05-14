@@ -1,37 +1,52 @@
 import { NextRequest, NextResponse } from "next/server";
 
+const HS_TOKEN = process.env.HUBSPOT_ACCESS_TOKEN || "";
+
 export async function POST(req: NextRequest) {
   try {
     const data = await req.formData();
 
-    const payload = {
-      name:       data.get("name"),
-      email:      data.get("email"),
-      phone:      data.get("phone"),
-      company:    data.get("company"),
-      locations:  data.get("locations"),
-      startDate:  data.get("startDate"),
-      services:   data.getAll("services"),
-      scope:      data.get("scope"),
-      nda:        data.get("nda") === "on",
-      utm_source:   data.get("utm_source"),
-      utm_medium:   data.get("utm_medium"),
-      utm_campaign: data.get("utm_campaign"),
-    };
+    const name      = (data.get("name")      as string) || "";
+    const email     = (data.get("email")     as string) || "";
+    const phone     = (data.get("phone")     as string) || "";
+    const company   = (data.get("company")   as string) || "";
+    const locations = (data.get("locations") as string) || "";
+    const startDate = (data.get("startDate") as string) || "";
+    const services  = data.getAll("services").join(", ");
+    const scope     = (data.get("scope")     as string) || "";
 
-    // TODO: Wire to CRM (HubSpot / Pipedrive webhook)
-    // await fetch(process.env.CRM_WEBHOOK_URL!, {
-    //   method: "POST",
-    //   headers: { "Content-Type": "application/json" },
-    //   body: JSON.stringify(payload),
-    // });
+    if (!email) return NextResponse.redirect(new URL("/contact?error=1", req.url));
 
-    console.log("[Contact Form Submission]", payload);
+    const [firstname, ...rest] = name.split(" ");
+    const lastname = rest.join(" ");
 
-    // Redirect to thank-you page (GA4 conversion fires on page load)
+    if (HS_TOKEN) {
+      await fetch("https://api.hubapi.com/crm/v3/objects/contacts", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${HS_TOKEN}`,
+        },
+        body: JSON.stringify({
+          properties: {
+            email,
+            firstname: firstname || "",
+            lastname:  lastname  || "",
+            company,
+            phone,
+            hs_lead_status: "NEW",
+            lifecyclestage: "lead",
+            lead_type:       "Contact Form",
+            service_interest: services,
+            message: `Locations: ${locations}\nStart Date: ${startDate}\nScope: ${scope}`,
+          },
+        }),
+      });
+    }
+
     return NextResponse.redirect(new URL("/thank-you", req.url));
   } catch (err) {
     console.error("[Contact Form Error]", err);
-    return NextResponse.json({ error: "Submission failed" }, { status: 500 });
+    return NextResponse.redirect(new URL("/contact?error=1", req.url));
   }
 }

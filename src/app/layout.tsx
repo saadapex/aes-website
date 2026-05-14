@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Script from "next/script";
 import Nav from "@/components/nav";
 import Footer from "@/components/footer";
+import CookieBanner from "@/components/cookie-banner";
+import Analytics from "@/components/analytics";
+import NewsletterPopup from "@/components/newsletter-popup";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -33,21 +35,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main>{children}</main>
         <Footer />
 
-        {/* GTM — replace GTM-XXXXXXX with real ID */}
-        <Script id="gtm" strategy="afterInteractive">
-          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-          })(window,document,'script','dataLayer','GTM-XXXXXXX');`}
-        </Script>
+        {/* Cookie-consent-gated analytics (GA4 + HubSpot) */}
+        <Analytics />
 
-        {/* LinkedIn Insight Tag — replace _linkedin_partner_id with real ID */}
-        <Script id="linkedin-insight" strategy="afterInteractive">
-          {`_linkedin_partner_id = "XXXXXXX";
-          window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
-          window._linkedin_data_partner_ids.push(_linkedin_partner_id);`}
-        </Script>
+        {/* GDPR cookie consent banner */}
+        <CookieBanner />
+
+        {/* Newsletter lead capture popup — fires after 30s */}
+        <NewsletterPopup />
       </body>
     </html>
   );
