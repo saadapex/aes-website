@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import StatsBand from "@/components/stats-band";
+import LogoSlider from "@/components/logo-slider";
 import ServiceCard from "@/components/service-card";
 import CaseStudyCard from "@/components/case-study-card";
 import CtaBand from "@/components/cta-band";
@@ -86,6 +87,9 @@ export default function HomePage() {
 
       {/* ── STATS ────────────────────────────────────────────── */}
       <StatsBand />
+
+      {/* ── PARTNER LOGO SLIDER ──────────────────────────────── */}
+      <LogoSlider />
 
       {/* ── SERVICES GRID ────────────────────────────────────── */}
       <section className="bg-white section-pad">
@@ -222,6 +226,50 @@ export default function HomePage() {
                 className="bg-[#F4F7FA] border border-[#006FB9]/20 text-[#06284C] text-sm px-4 py-2 rounded-full font-medium">
                 📍 {pod}
               </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── TESTIMONIALS ─────────────────────────────────────── */}
+      <section className="bg-[#06284C] section-pad">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-[#4E6575] uppercase tracking-widest text-sm font-medium text-center mb-3">What Partners Say</p>
+          <h2 className="text-white text-3xl md:text-4xl font-bold mb-12 text-center">
+            Trusted by Primes &amp; Integrators
+          </h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {
+                quote: "AES mobilized quickly, kept us informed throughout, and handed over clean documentation. Exactly what we needed from a field execution partner.",
+                name: "Senior Project Manager",
+                company: "National Systems Integrator",
+                service: "Rack & Stack",
+              },
+              {
+                quote: "The AP rollout across our distribution centers came in on schedule with zero unplanned downtime. The standardized playbook made multi-site coordination seamless.",
+                name: "Director of IT Infrastructure",
+                company: "Fortune 500 Logistics Company",
+                service: "AP Refresh",
+              },
+              {
+                quote: "Their cabling team is meticulous — every run labeled, every test certified, closeout pack ready at handover. We've made AES our go-to sub for structured cabling.",
+                name: "VP of Delivery",
+                company: "Tier-1 Telecom Integrator",
+                service: "Structured Cabling",
+              },
+            ].map((t) => (
+              <div key={t.name} className="bg-white/5 border border-white/10 rounded-xl p-8 flex flex-col">
+                <div className="text-[#FF6B00] text-3xl font-serif leading-none mb-4">"</div>
+                <p className="text-gray-300 text-sm leading-relaxed flex-1 mb-6">{t.quote}</p>
+                <div>
+                  <span className="inline-block bg-[#FF6B00]/10 border border-[#FF6B00]/30 text-[#FF6B00] text-xs font-semibold px-3 py-1 rounded-full mb-3">
+                    {t.service}
+                  </span>
+                  <p className="text-white font-semibold text-sm">{t.name}</p>
+                  <p className="text-[#4E6575] text-xs">{t.company}</p>
+                </div>
+              </div>
             ))}
           </div>
         </div>

@@ -41,12 +41,12 @@ export default function Nav() {
         {/* Logo */}
         <Link href="/" onClick={closeAll} className="flex-shrink-0">
           <Image
-            src={solid ? "/images/logo-horizontal.png" : "/images/logo-white.png"}
+            src={solid ? "/images/AES_Option3_Primary_Nav_Tight_96px_2x.png" : "/images/AES_Option3_Reversed_White_Nav_Tight_96px_2x.png"}
             alt="Apex Enterprise Solutions"
-            width={200}
-            height={56}
+            width={240}
+            height={48}
             priority
-            className="h-10 w-auto"
+            className="h-12 w-auto transition-all duration-300"
           />
         </Link>
 
@@ -143,6 +143,9 @@ export default function Nav() {
           <Link href="/case-studies" className={`text-sm font-medium transition-colors ${linkClass}`}>
             Case Studies
           </Link>
+          <Link href="/blog" className={`text-sm font-medium transition-colors ${linkClass}`}>
+            Blog
+          </Link>
           <Link href="/about" className={`text-sm font-medium transition-colors ${linkClass}`}>
             About
           </Link>
@@ -221,6 +224,7 @@ export default function Nav() {
           </div>
 
           <Link href="/case-studies" className="text-[#06284C] font-semibold" onClick={closeAll}>Case Studies</Link>
+          <Link href="/blog"         className="text-[#06284C] font-semibold" onClick={closeAll}>Blog</Link>
           <Link href="/about"        className="text-[#06284C] font-semibold" onClick={closeAll}>About</Link>
           <Link href="/contact"      className="text-[#06284C] font-semibold" onClick={closeAll}>Contact</Link>
 

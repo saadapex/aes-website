@@ -12,11 +12,11 @@ export default function Footer() {
           {/* Brand column */}
           <div>
             <Image
-              src="/images/logo-reversed-dark.png"
+              src="/images/AES_Option3_Reversed_White_Nav_Tight_HiRes.png"
               alt="Apex Enterprise Solutions"
-              width={180}
-              height={68}
-              className="h-12 w-auto mb-3"
+              width={280}
+              height={56}
+              className="h-14 w-auto mb-3"
             />
             <p className="text-[#4E6575] text-xs tracking-widest uppercase mt-1 mb-4">
               {SITE.tagline}
