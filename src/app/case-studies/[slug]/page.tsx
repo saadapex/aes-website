@@ -6,65 +6,67 @@ import CtaBand from "@/components/cta-band";
 import { CASE_STUDIES } from "@/lib/utils";
 
 const IMAGES: Record<string, string> = {
-  "ai-cluster-pod-build": "/images/case-ai-cluster.png",
-  "warehouse-ap-refresh":  "/images/case-warehouse-ap.png",
-  "amazon-ap-refresh":     "/images/case-amazon-ap.png",
+  "telecom-transport-lab":          "/images/case-telecom-lab.png",
+  "fulfillment-ap-refresh-ontario": "/images/case-warehouse-ap.png",
+  "amazon-ap-refresh":              "/images/case-amazon-ap.png",
 };
 
-/* ── Per-case-study full content ── */
 const CONTENT: Record<string, {
   overview: string;
   challenge: string;
   approach: string[];
   outcome: string;
   tags: string[];
+  lessonsLearned?: { title: string; body: string }[];
 }> = {
-  "ai-cluster-pod-build": {
-    overview:
-      "A national systems integrator engaged AES to execute the physical infrastructure buildout of a high-density AI compute pod in a Tennessee data center. The deployment comprised 48 racks across two rows, each loaded with GPU servers, top-of-rack switching, and high-density fiber to a central spine. The client required zero punch items at handover and a 72-hour burn-in sign-off before cutover.",
-    challenge:
-      "The site had a compressed 3-week delivery window with no room for rescheduling — the GPU hardware was pre-staged and the customer's training workload had a hard start date. Cable management complexity was high: 192 × 400G QSFP-DD fiber links had to be routed, labeled, and OTDR-certified within a tightly packed overhead tray system. Any re-pull would have cascaded schedule risk across all 48 racks.",
+  "telecom-transport-lab": {
+    overview: "One of the largest U.S. energy providers serving approximately 9 million customers engaged AES to upgrade its internal telecom transport lab. The facility validates new telecom equipment before production deployment, making it a critical quality gate. The refresh integrated DWDM, MPLS, and microwave platforms across six racks and had to be completed in two weeks to keep network rollouts on schedule.",
+    challenge: "The scope covered a full site audit, engineering drawings, complete installation and commissioning across six racks, and final as-built documentation. Speed was non-negotiable: future network rollouts depended on lab availability, and any delay would cascade downstream.",
     approach: [
-      "Site walk and BOM review completed two weeks prior to mobilization. AES submitted a detailed method statement, rack elevation drawings, and fiber routing plan for integrator approval before a single cable was pulled.",
-      "Dedicated 6-technician crew mobilized on-site with all consumables staged. Rack assembly and mounting hardware installed row-by-row to maintain clean working zones.",
-      "All 192 fiber runs completed sequentially with inline OTDR certification — results uploaded to shared documentation portal in real time so the integrator's PM could track progress remotely.",
-      "72-hour burn-in monitored by AES field lead. Thermal and power draw logged per rack. Zero critical events recorded.",
-      "Full closeout package delivered at handover: as-built rack diagrams, OTDR test reports, label schema, and a signed punch list with zero open items.",
+      "Phase 1 - Site Survey: AES dispatched a senior engineer for a five-day on-site survey, mapping all existing racks, fibre cables, DC power feeds, and grounding layouts, cross-referenced against the client's design standards.",
+      "Phase 2 - Engineering Documentation: AES produced Visio/Draw.io installation drawings covering rack positions, fibre-duct routes, DC power feeds, and grounding. A granular cost model covered every task from procurement to acceptance testing, with a one-day contingency buffer built into the schedule.",
+      "Phase 3 - Installation: A two-person team commissioned a Ciena 6500 T-Series, Ciena 6500 S-Series, Ciena 6500 Seven-Slot Chassis, Nokia 7250 IXR-R6DL Router, Adtran TA5000 Access Platform, and six two-post telecom racks with cable tray, fibre duct, and grounding. All cabling was dressed and labelled; functional tests confirmed every platform powered up and communicated over the lab network.",
+      "Phase 4 - Handover: Final as-built documentation captured rack layout, cable routing, grounding scheme, and serial numbers. Acceptance-test reports were archived by the client's telecom engineering group as the baseline for future changes.",
     ],
-    outcome:
-      "The AI cluster went live on schedule with no rework required. The integrator submitted the closeout package to their end customer within 24 hours of handover — a first for this project team. AES has since been engaged as the preferred field execution partner for two additional pod deployments at the same facility.",
-    tags: ["Rack & Stack", "Fiber Optics", "Data Center", "Tennessee"],
+    outcome: "The transport lab upgrade was completed within two weeks, keeping the client's rollout program on schedule. Six racks, DWDM and MPLS platforms, fibre ducting, and grounding improvements were delivered with full cost transparency. The project is now a referenceable template for future telecom lab build-outs.",
+    tags: ["Rack & Stack", "Telecom", "DWDM", "MPLS", "Lab Build-Out", "Energy Sector"],
+    lessonsLearned: [
+      { title: "Conduct a thorough site survey first", body: "Documenting the existing environment before design work begins reduces rework and ensures installation drawings are accurate from day one." },
+      { title: "Break scope into discrete tasks", body: "A granular cost and task breakdown provides clarity on resource and time requirements, making the project easier to manage and audit." },
+      { title: "Build in contingency", body: "A schedule and cost buffer absorbs unexpected delays without affecting the delivery date." },
+      { title: "Deliver comprehensive as-built documentation", body: "Final drawings, cable labels, and equipment lists prove invaluable for operations staff and serve as the baseline for future changes." },
+    ],
   },
-  "warehouse-ap-refresh": {
-    overview:
-      "A large logistics operator needed to refresh aging wireless infrastructure across two major distribution centers — one in Toronto, Ontario and one in Las Vegas, Nevada — without disrupting active warehouse operations. AES was brought in as the field execution partner to manage AP removal, mounting, cabling, and validation across both sites concurrently.",
-    challenge:
-      "The warehouses were live 20 hours a day. Any disruption to the wireless network risked stopping pick-and-pack operations and triggering SLA penalties for the end customer. The AP mounting heights ranged from 25 to 40 feet, requiring man-lift coordination and safety permitting on a compressed timeline. Dual-country scope added cross-border logistics complexity for tooling and technician deployment.",
+  "fulfillment-ap-refresh-ontario": {
+    overview: "A global e-commerce and fulfilment leader initiated a network refresh program in early 2026, replacing ageing wireless access points across approximately 24 North American sites including five Canadian facilities. AES executed the physical refresh at two Ontario locations: YYZ9 in Scarborough (476 APs, 23 IDFs) and YYZ7 in Bolton (1,110 APs, 23 IDFs), replacing over 1,586 access points in total.",
+    challenge: "Warehouse ceilings reached 40 feet across four mezzanine levels, requiring scissor lifts maintained at full charge throughout each shift. Labelling was exacting: every AP required port identifier, logical name, serial number, and MAC address for the client's asset database. YYZ9 had a non-negotiable 24-hour shutdown window. YYZ7, with more than twice the AP count, demanded extended windows and a larger workforce.",
     approach: [
-      "AES coordinated separate field pods for Toronto and Las Vegas to run the refresh in parallel, compressing the total deployment window from 6 weeks to 3.",
-      "Detailed site surveys and heat map reviews completed at both locations prior to mobilization. AP placement confirmed against RF design to ensure ≥95% coverage before a single mount was drilled.",
-      "Man-lift scheduling coordinated with warehouse operations management to protect peak picking hours. All overhead work conducted during off-peak windows (1 AM – 6 AM).",
-      "Each AP installed, cabled, and validated against the client's WLAN controller before the lift moved to the next mount point — no batch validates at end of shift.",
-      "Canada-specific cabling standards (CSA vs. NEC) followed for the Toronto site. AES provided a single integrated closeout pack covering both jurisdictions.",
+      "Pre-staging day before each shutdown: technicians visited each site the day prior to inventory APs, confirm scissor-lift availability, and pre-stage all equipment including fall-protection gear. This became standard practice across the program.",
+      "YYZ9 Scarborough (24-hour window): A three-shift crew of 10-11 technicians rotated continuously. Shift 1 handled the top mezzanine and roof structures. Shift 2 covered lower mezzanine levels and main floor with labelling. Shift 3 ran a full verification sweep, qualification testing, and documentation sign-off.",
+      "YYZ7 Bolton (extended window): A greater proportion of APs were pre-labelled before deployment. Scissor lifts and fall-protection gear were pre-staged. Work was divided by mezzanine level for parallel crew operation, with all Scarborough lessons applied directly.",
+      "Real-time iPad-based tracking: each AP was logged in a shared spreadsheet as completed, ensuring no device was missed and enabling clean shift hand-offs with direct client engineering team communication.",
+      "Safety enforcement: full PPE including safety shoes, high-visibility vests, hard hats, and gloves; harnesses and lanyards above 6 feet; mandatory spotters for all scissor-lift operations; VCO contractor orientation completed by every technician.",
     ],
-    outcome:
-      "1,200 WAPs installed across two countries in under 3 weeks with zero unplanned downtime to warehouse operations. Coverage validation exceeded the ≥95% target at both sites on first pass. The logistics operator has since awarded AES a standing field execution agreement for future wireless refresh work.",
-    tags: ["AP Refresh", "Wireless", "Multi-Site", "Canada", "Nevada"],
+    outcome: "All 1,586+ access points were replaced across both Ontario sites within Q1 2026. YYZ9 was completed within the 24-hour window. Warehouse staff reported improved wireless coverage, fewer drop-offs, and faster scanning speeds. Zero safety incidents were recorded at either site. The pre-labelling strategy, real-time documentation, and flexible staffing model were carried forward to the remaining facilities in the broader North American program.",
+    tags: ["AP Refresh", "Wireless", "Ontario", "Fulfillment Centre", "Multi-Site", "Canada"],
+    lessonsLearned: [
+      { title: "Pre-planning is critical", body: "A dedicated inventory and staging day before each shutdown allows the team to confirm lift availability and identify hazards in advance." },
+      { title: "Labelling strategy matters", body: "Pre-labelling APs before arrival reduces on-site labour and minimises errors. Where not feasible, technicians must have clear per-port instructions on hand." },
+      { title: "Safety is non-negotiable", body: "Zero incidents at both sites was achieved through consistent PPE, harnesses, lanyards, mandatory spotters, and contractor orientation." },
+      { title: "Real-time documentation drives accountability", body: "iPad-based progress tracking ensured no AP was left behind and enabled clean shift hand-offs across a 24-hour window." },
+    ],
   },
   "amazon-ap-refresh": {
-    overview:
-      "AES was engaged to execute a large-scale AP refresh across Amazon fulfillment center infrastructure in the United States. The project involved installing 850 wireless access points across high-ceiling warehouse environments, coordinating with Amazon's network team on controller onboarding, and delivering a validated coverage and performance sign-off.",
-    challenge:
-      "Amazon fulfillment centers operate continuously with strict change control windows and elevated safety requirements. Every technician required Amazon-specific safety orientation before site access, and all work had to be scheduled around active conveyor, robotics, and pick operations. The 98% first-pass installation target was non-negotiable — any re-visit carried a significant cost and schedule penalty.",
+    overview: "AES was engaged to execute a large-scale AP refresh across Amazon fulfillment center infrastructure in the United States. The project involved installing 850 wireless access points across high-ceiling warehouse environments, coordinating with Amazon's network team on controller onboarding, and delivering a validated coverage and performance sign-off.",
+    challenge: "Amazon fulfillment centers operate continuously with strict change control windows and elevated safety requirements. Every technician required Amazon-specific safety orientation before site access, and all work had to be scheduled around active conveyor, robotics, and pick operations. The 98% first-pass installation target was non-negotiable.",
     approach: [
       "AES coordinated safety orientation and badging for the full field crew in advance of mobilization to avoid any day-one delays.",
-      "Pre-deployment review of Amazon's AP placement drawings and mounting hardware specifications. AES sourced and kitted all mounting hardware to spec before arriving on site — no improvisation in the field.",
-      "Structured daily progress reporting to Amazon's IT project lead. Each AP logged by MAC address, mount location, and controller association status at end of each shift.",
-      "Quality checkpoint at every 50 APs: a senior technician validated signal strength and controller handshake before the crew advanced. This approach drove the 98% first-pass rate.",
-      "All documentation — AP inventory, mount photos, coverage validation results — submitted in Amazon's required format for final sign-off.",
+      "Pre-deployment review of Amazon's AP placement drawings and mounting hardware specifications. AES sourced and kitted all mounting hardware to spec before arriving on site.",
+      "Structured daily progress reporting to Amazon's IT project lead, with each AP logged by MAC address, mount location, and controller association status.",
+      "Quality checkpoint at every 50 APs: a senior technician validated signal strength and controller handshake before the crew advanced, driving the 98% first-pass rate.",
+      "All documentation submitted in Amazon's required format for final sign-off.",
     ],
-    outcome:
-      "850 APs installed and validated on schedule with a 98% first-pass rate. Amazon's network team confirmed full controller association and coverage sign-off within 48 hours of installation completion. The project was delivered without a single safety incident, and AES received positive feedback from Amazon's vendor management team.",
+    outcome: "850 APs installed and validated on schedule with a 98% first-pass rate. Amazon's network team confirmed full controller association and coverage sign-off within 48 hours of installation completion. The project was delivered without a single safety incident.",
     tags: ["AP Refresh", "Wireless", "Enterprise", "Fulfillment Center"],
   },
 };
@@ -79,14 +81,13 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   if (!cs) return {};
   return {
     title: cs.title,
-    description: content?.overview.slice(0, 155) + "…",
+    description: (content?.overview ?? "").slice(0, 155) + "...",
   };
 }
 
 export default function CaseStudyPage({ params }: { params: { slug: string } }) {
   const cs = CASE_STUDIES.find((c) => c.slug === params.slug);
   if (!cs) notFound();
-
   const content = CONTENT[cs.slug];
 
   return (
@@ -102,21 +103,13 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
         ]}
       />
 
-      {/* Hero image */}
       {IMAGES[cs.slug] && (
         <div className="relative w-full h-72 md:h-96 overflow-hidden">
-          <Image
-            src={IMAGES[cs.slug]}
-            alt={cs.title}
-            fill
-            className="object-cover"
-            priority
-          />
+          <Image src={IMAGES[cs.slug]} alt={cs.title} fill className="object-cover" priority />
           <div className="absolute inset-0 bg-gradient-to-b from-[#06284C]/30 to-[#06284C]/10" />
         </div>
       )}
 
-      {/* Metrics band */}
       <section className="bg-[#06284C] py-12 px-6">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
           {cs.metrics.map((metric) => (
@@ -127,34 +120,28 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
         </div>
       </section>
 
-      {/* Full case study content */}
       {content ? (
         <section className="bg-white section-pad">
           <div className="max-w-3xl mx-auto space-y-12 text-[#1F2933] leading-relaxed">
 
-            {/* Tags */}
             <div className="flex flex-wrap gap-2">
               {content.tags.map((tag) => (
-                <span key={tag}
-                  className="bg-[#F4F7FA] border border-[#006FB9]/20 text-[#06284C] text-xs font-semibold px-3 py-1 rounded-full">
+                <span key={tag} className="bg-[#F4F7FA] border border-[#006FB9]/20 text-[#06284C] text-xs font-semibold px-3 py-1 rounded-full">
                   {tag}
                 </span>
               ))}
             </div>
 
-            {/* Overview */}
             <div>
               <h2 className="text-[#06284C] text-2xl font-bold mb-4">Project Overview</h2>
               <p>{content.overview}</p>
             </div>
 
-            {/* Challenge */}
             <div>
               <h2 className="text-[#06284C] text-2xl font-bold mb-4">The Challenge</h2>
               <p>{content.challenge}</p>
             </div>
 
-            {/* Approach */}
             <div>
               <h2 className="text-[#06284C] text-2xl font-bold mb-4">How AES Executed</h2>
               <ol className="space-y-4 list-none pl-0">
@@ -169,11 +156,27 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
               </ol>
             </div>
 
-            {/* Outcome */}
             <div className="bg-[#F4F7FA] rounded-xl p-8 border-l-4 border-[#FF6B00]">
               <h2 className="text-[#06284C] text-2xl font-bold mb-4">Outcome</h2>
               <p>{content.outcome}</p>
             </div>
+
+            {content.lessonsLearned && content.lessonsLearned.length > 0 && (
+              <div>
+                <h2 className="text-[#06284C] text-2xl font-bold mb-6">Lessons Learned</h2>
+                <div className="space-y-4">
+                  {content.lessonsLearned.map((lesson) => (
+                    <div key={lesson.title} className="flex gap-4">
+                      <span className="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-[#FF6B00]" />
+                      <div>
+                        <p className="font-semibold text-[#06284C] mb-1">{lesson.title}</p>
+                        <p className="text-[#4E6575] text-sm">{lesson.body}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
 
           </div>
         </section>

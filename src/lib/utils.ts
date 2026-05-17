@@ -97,19 +97,19 @@ export const INDUSTRIES = [
 
 export const CASE_STUDIES = [
   {
-    slug: "ai-cluster-pod-build",
-    title: "AI Cluster Pod Build",
+    slug: "telecom-transport-lab",
+    title: "Telecom Transport Lab Build-Out",
     tag: "RACK & STACK",
-    location: "Tennessee",
-    metrics: ["48 racks built & validated", "192 × 400G links installed", "72hr burn-in · 0 punch items at handover"],
+    location: "United States — Q1 2024",
+    metrics: ["Delivered in 2 Weeks", "$24,400 Total Project Cost", "4 Platforms · 6 Racks Commissioned"],
     service: "rack-and-stack",
   },
   {
-    slug: "warehouse-ap-refresh",
-    title: "Warehouse AP Refresh",
+    slug: "fulfillment-ap-refresh-ontario",
+    title: "Large-Scale AP Refresh — Ontario Fulfillment Centres",
     tag: "AP REFRESH",
-    location: "Toronto ON & Las Vegas NV",
-    metrics: ["1,200 WAPs installed", "≥95% coverage achieved", "0 unplanned downtime"],
+    location: "Scarborough & Bolton, ON — Q1 2026",
+    metrics: ["1,586+ Access Points Replaced", "2 Sites · 46 IDFs", "24hr Shutdown Window · 0 Safety Incidents"],
     service: "ap-refresh",
   },
   {
