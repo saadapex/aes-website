@@ -28,10 +28,10 @@ export const SITE = {
 } as const;
 
 export const STATS = [
-  { value: "1,000+",  label: "Racks Built & Validated" },
-  { value: "1.2M+ ft", label: "Fiber Pulled & Certified" },
-  { value: "20,000+", label: "WAPs Installed" },
-  { value: "30+",     label: "AI/ML Pods Delivered" },
+  { value: "1,586+",      label: "Access Points Replaced in a Single Program" },
+  { value: "U.S. & Canada", label: "Cross-Border Deployment Coverage" },
+  { value: "0",           label: "Safety Incidents on Record" },
+  { value: "100%",        label: "On-Time Project Delivery" },
 ] as const;
 
 export const SERVICES = [
