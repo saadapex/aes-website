@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 const PRINCIPLES = [
   {
     title: "Execution Partner, Not a Vendor",
-    body: "We operate as a reliable extension of our partners' field teams — responsive, accountable, and focused on protecting schedule and quality.",
+    body: "AES brings its own processes, its own standards, and its own accountability to every engagement — not just bodies to fill a headcount.",
   },
   {
     title: "Field-First Culture",
@@ -48,8 +48,8 @@ export default function AboutPage() {
     <>
       <PageHero
         eyebrow="About AES"
-        h1="A Field Execution Partner Built for Mission-Critical Infrastructure"
-        sub="Apex Enterprise Solutions supports data center, fiber, cabling, wireless, and field execution work across North America."
+        h1="North America's Infrastructure Execution Partner"
+        sub="Apex Enterprise Solutions executes structured cabling, rack-and-stack, and large-scale wireless rollouts across the U.S. and Canada — built clean, documented right, every time."
         breadcrumb={[{ label: "Home", href: "/" }, { label: "About", href: "/about" }]}
       />
 
@@ -59,17 +59,17 @@ export default function AboutPage() {
           <div>
             <p className="eyebrow mb-3">Who We Are</p>
             <h2 className="text-[#06284C] text-3xl font-bold mb-6">
-              Dependable Delivery for Primes, Integrators, and Enterprise IT Teams
+              The Execution Partner Primes and Integrators Count On
             </h2>
             <p className="text-[#1F2933] text-lg leading-relaxed mb-4">
-              AES helps primes, integrators, and enterprise infrastructure teams execute data center
-              and network deployment work with reliable field resources, clear coordination,
-              and clean closeout documentation.
+              AES executes data center and network deployment programs for primes, integrators,
+              and enterprise infrastructure teams — with experienced field resources, tight
+              coordination, and closeout documentation that holds up to client scrutiny.
             </p>
             <p className="text-[#1F2933] leading-relaxed mb-6">
-              We are a North America-based field execution partner — not a staffing agency, not a
-              general contractor. We bring structured deployment processes, experienced technicians,
-              and a bias toward clean, documented work that protects our partners.
+              We are a North America-based field execution partner. We bring structured deployment
+              processes, credentialed technicians, and a standard of work that protects our
+              partners' reputations on every engagement.
             </p>
             <Link href="/contact" className="btn-primary">
               Work With AES →
@@ -146,7 +146,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <CtaBand heading="Ready to work with a dependable execution partner?" />
+      <CtaBand heading="If it needs to be built right, AES will build it." />
     </>
   );
 }

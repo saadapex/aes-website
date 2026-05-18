@@ -99,7 +99,7 @@ export default function PartnersPage() {
       <PageHero
         eyebrow="Partner Program"
         h1="Become an AES Execution Partner"
-        sub="We work as a trusted subcontract field team for primes, integrators, and MSPs across North America. If you need a reliable execution partner — let's talk."
+        sub="Primes, integrators, and MSPs across North America bring AES in when field execution has to be right. Reliable crews, clean work, handover-ready documentation — every engagement."
         cta={{ label: "Submit Partner Inquiry →", href: "#partner-form" }}
         breadcrumb={[{ label: "Home", href: "/" }, { label: "Partners", href: "/partners" }]}
       />
@@ -111,9 +111,9 @@ export default function PartnersPage() {
             <p className="eyebrow mb-3">Who We Work With</p>
             <h2 className="text-[#06284C] text-3xl font-bold mb-6">Built for Primes, Integrators &amp; MSPs</h2>
             <p className="text-[#1F2933] text-lg leading-relaxed mb-6">
-              AES operates as a field execution subcontractor — not a staffing agency, not a general contractor.
-              We bring our own processes, our own techs, and our own quality standards to every engagement,
-              so you can hand off field execution with confidence.
+              AES is a field execution partner — not a staffing agency, not a general contractor.
+              We bring our own processes, our own techs, and our own quality standards to every
+              engagement. When you hand off scope to AES, it gets done.
             </p>
             <ul className="space-y-3">
               {WHO.map((w) => (
