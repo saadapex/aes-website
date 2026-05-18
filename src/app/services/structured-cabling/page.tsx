@@ -18,10 +18,10 @@ const scope = [
   "Test reports, label schema, as-builts, and closeout pack",
 ];
 const kpis = [
-  "OTDR and power meter test reporting",
-  "TIA/EIA-606 labeling alignment",
-  "Safety-first field execution",
-  "Clean closeout documentation",
+  "Every run OTDR-tested and power meter verified",
+  "TIA/EIA-606 labeling on every cable, panel, and outlet",
+  "Installs dressed, documented, and site-cleaned before we leave",
+  "Closeout pack delivered at handover — not chased after",
 ];
 const deliverables = ["Test Reports", "Label Schema", "As-Builts", "Closeout Pack"];
 
@@ -47,7 +47,7 @@ export default function StructuredCablingPage() {
       <PageHero
         eyebrow="Service"
         h1="Structured Cabling — Copper &amp; Fiber"
-        sub="Copper and fiber installation with testing, labelling, and documentation. From IDF/MDF rooms to hyperscale halls."
+        sub="CAT6/6A and fiber runs executed to spec — OTDR-tested, TIA/EIA-606 labeled, and fully documented at handover. From IDF/MDF rooms to hyperscale halls."
         cta={{ label: "Request a Site Walk →", href: "/contact" }}
         breadcrumb={[
           { label: "Home", href: "/" },
@@ -111,7 +111,7 @@ export default function StructuredCablingPage() {
 
         </div>
       </section>
-      <CtaBand heading="Need certified cabling for your next deployment?" />
+      <CtaBand heading="Cabling runs don't wait. Neither do we." />
     </>
   );
 }

@@ -21,10 +21,10 @@ const scope = [
   "Smart hands for hardware refresh, swap, and decommission",
 ];
 const kpis = [
-  "Punch-list management and rack validation",
-  "CMDB-ready documentation at handover",
-  "Burn-in support available where required",
-  "Daily progress tracking and client reporting",
+  "Every rack validated and punch-listed before handover",
+  "CMDB-ready asset inventory delivered at closeout",
+  "Burn-in support executed on-site where required",
+  "Daily progress reports — no chasing required",
 ];
 const deliverables = ["Rack Diagrams", "Cable Labels", "Burn-In Reports", "Asset Inventory", "Closeout Pack"];
 
@@ -50,7 +50,7 @@ export default function RackAndStackPage() {
       <PageHero
         eyebrow="Service"
         h1="Rack &amp; Stack — Data Center Build &amp; Refresh"
-        sub="From bare room to live racks — fast. Disciplined execution from pre-build planning through validated handover."
+        sub="Bare room to live racks, executed clean. AES handles the full build — planning through validated handover — so your PM doesn't have to chase it."
         cta={{ label: "Book a Planning Call →", href: "https://calendly.com/apexenterprisesolutions", external: true }}
         breadcrumb={[
           { label: "Home", href: "/" },
@@ -115,7 +115,7 @@ export default function RackAndStackPage() {
 
         </div>
       </section>
-      <CtaBand heading="Building or refreshing a data center?" />
+      <CtaBand heading="Got racks to build? We'll be on-site." />
     </>
   );
 }

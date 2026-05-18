@@ -21,10 +21,10 @@ const scope = [
   "Multi-site program rollouts with standardized deployment playbooks",
 ];
 const kpis = [
-  "RF coverage validation at completion",
-  "Real-time progress tracking per AP",
-  "Coordinated scheduling around active operations",
-  "Validated test pack at handover",
+  "RF coverage validated at every site — not assumed",
+  "Per-AP progress tracked and reported in real time",
+  "Scheduling coordinated around live operations — zero disruption",
+  "Validated test pack and as-builts delivered at handover",
 ];
 const deliverables = ["RF Survey Report", "Coverage Validation", "As-Builts", "Label Schema", "Closeout Pack"];
 
@@ -50,7 +50,7 @@ export default function ApRefreshPage() {
       <PageHero
         eyebrow="Service"
         h1="AP Refresh — Large-Scale Wireless Rollouts"
-        sub="High-density Wi-Fi that survives steel, concrete, and cold storage. Multi-site rollouts executed with a standardized deployment playbook."
+        sub="High-density Wi-Fi that holds up in steel, concrete, and cold storage. AES runs multi-site AP rollouts end-to-end — survey through RF validation — with a deployment playbook built for scale."
         cta={{ label: "Get a Quote →", href: "/contact" }}
         breadcrumb={[
           { label: "Home", href: "/" },
@@ -114,7 +114,7 @@ export default function ApRefreshPage() {
 
         </div>
       </section>
-      <CtaBand heading="Rolling out Wi-Fi across multiple sites?" />
+      <CtaBand heading="Multi-site Wi-Fi rollout? We run those programs." />
     </>
   );
 }
