@@ -8,6 +8,7 @@ import { SITE } from "@/lib/utils";
 export const metadata: Metadata = {
   title: "Contact Us",
   description: "Get in touch with Apex Enterprise Solutions to scope your next infrastructure deployment — structured cabling, rack-and-stack, or AP refresh across the U.S. and Canada.",
+  alternates: { canonical: "https://www.apexsolutions.io/contact" },
 };
 
 export default function ContactPage() {
@@ -123,12 +124,4 @@ export default function ContactPage() {
               </div>
               <a href={SITE.linkedin} target="_blank" rel="noopener noreferrer"
                 className="flex items-center gap-3 text-gray-700 hover:text-[#FF6B00] transition-colors">
-                <Linkedin size={16} className="text-[#006FB9]" /> LinkedIn
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </>
-  );
-}
+               

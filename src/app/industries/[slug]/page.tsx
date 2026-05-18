@@ -16,6 +16,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   return {
     title: ind.title,
     description: `Apex Enterprise Solutions delivers structured cabling, rack-and-stack, and AP refresh for ${ind.title.toLowerCase()} environments across the U.S. and Canada. ${ind.sub}`,
+    alternates: { canonical: `https://www.apexsolutions.io/industries/${params.slug}` },
   };
 }
 
@@ -31,7 +32,7 @@ export default function IndustryPage({ params }: { params: { slug: string } }) {
         eyebrow={ind.title}
         h1={ind.headline}
         sub={ind.sub}
-        cta={{ label: "Request a Site Walk →", href: "/contact" }}
+        cta={{ label: "Get a Quote →", href: "/contact" }}
         breadcrumb={[{ label: "Home", href: "/" }, { label: "Industries", href: "/industries" }, { label: ind.title, href: `/industries/${ind.slug}` }]}
       />
       <section className="bg-white section-pad">

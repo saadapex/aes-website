@@ -9,6 +9,7 @@ import { getActiveJobs, type Job } from "@/sanity/queries";
 export const metadata: Metadata = {
   title: "Careers — Join the AES Field Team",
   description: "Join Apex Enterprise Solutions as a field technician or project coordinator. We deploy structured cabling, rack-and-stack, and wireless infrastructure across North America.",
+  alternates: { canonical: "https://www.apexsolutions.io/careers" },
 };
 
 // Revalidate every hour so new postings appear quickly without a full redeploy
@@ -116,43 +117,55 @@ export default async function CareersPage() {
         </div>
       </section>
 
-      {/* Open positions — live from Sanity */}
-      <section className="bg-[#F4F7FA] section-pad">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex items-end justify-between mb-10">
-            <div>
-              <p className="eyebrow mb-2">Open Positions</p>
-              <h2 className="text-[#06284C] text-3xl font-bold">
-                {jobs.length > 0
-                  ? `${jobs.length} Role${jobs.length !== 1 ? "s" : ""} Available`
-                  : "Open Positions"}
-              </h2>
+      {/* Open positions — live from Sanity (only shown when roles exist) */}
+      {jobs.length > 0 && (
+        <section className="bg-[#F4F7FA] section-pad">
+          <div className="max-w-7xl mx-auto">
+            <div className="flex items-end justify-between mb-10">
+              <div>
+                <p className="eyebrow mb-2">Open Positions</p>
+                <h2 className="text-[#06284C] text-3xl font-bold">
+                  {jobs.length} Role{jobs.length !== 1 ? "s" : ""} Available
+                </h2>
+              </div>
             </div>
-          </div>
-
-          {jobs.length > 0 ? (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {jobs.map((job) => (
                 <JobCard key={job._id} job={job} />
               ))}
             </div>
-          ) : (
-            /* Empty state */
-            <div className="border border-dashed border-[#006FB9]/30 rounded-xl p-12 max-w-2xl mx-auto text-center">
-              <p className="text-[#06284C] font-semibold text-lg mb-2">No open listings at the moment</p>
-              <p className="text-[#4E6575] text-sm mb-6">
-                We&apos;re always building the bench. Send your resume and we&apos;ll reach out when a matching role opens up.
+          </div>
+        </section>
+      )}
+
+      {/* Bench CTA — always visible; primary CTA when no roles are live */}
+      {jobs.length === 0 && (
+        <section className="bg-[#F4F7FA] section-pad">
+          <div className="max-w-7xl mx-auto">
+            <div className="max-w-3xl mx-auto text-center">
+              <p className="eyebrow mb-3">Join the Bench</p>
+              <h2 className="text-[#06284C] text-3xl font-bold mb-4">
+                Always Recruiting Experienced Field Techs
+              </h2>
+              <p className="text-[#1F2933] text-lg leading-relaxed mb-8 max-w-xl mx-auto">
+                AES runs active programs across the U.S. and Canada year-round. We keep a bench of
+                credentialed technicians, leads, and PMs ready to mobilize. If you&apos;re certified,
+                experienced, and dependable — send your resume and we&apos;ll reach out when scope
+                that fits your profile opens up.
               </p>
               <a
                 href={`mailto:${SITE.email}?subject=Field Technician — General Application`}
-                className="btn-primary justify-center"
+                className="btn-primary inline-flex justify-center text-base px-8"
               >
                 Send Your Resume →
               </a>
+              <p className="text-[#4E6575] text-sm mt-4">
+                We respond to every qualified submission.
+              </p>
             </div>
-          )}
-        </div>
-      </section>
+          </div>
+        </section>
+      )}
 
       {/* Roles we hire for */}
       <section className="bg-white section-pad">
@@ -191,7 +204,7 @@ export default async function CareersPage() {
         </div>
       </section>
 
-      <CtaBand heading="Experienced in the field? Let's put you to work." />
+      <CtaBand heading="Experienced in the field? Let’s put you to work." />
     </>
   );
 }

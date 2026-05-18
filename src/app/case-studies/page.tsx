@@ -7,6 +7,7 @@ import { CASE_STUDIES } from "@/lib/utils";
 export const metadata: Metadata = {
   title: "Deployments & Case Studies",
   description: "Real-world infrastructure deployments by AES — AI cluster pod builds, large-scale AP rollouts, and data center rack-and-stack projects across North America.",
+  alternates: { canonical: "https://www.apexsolutions.io/case-studies" },
 };
 
 export default function CaseStudiesPage() {

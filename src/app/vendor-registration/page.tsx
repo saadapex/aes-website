@@ -7,6 +7,7 @@ import FormErrorBanner from "@/components/form-error-banner";
 export const metadata: Metadata = {
   title: "Vendor & Subcontractor Registration",
   description: "Register as a vendor or subcontractor with Apex Enterprise Solutions. We work with field technicians and specialty trades across the U.S. and Canada.",
+  alternates: { canonical: "https://www.apexsolutions.io/vendor-registration" },
 };
 
 export default function VendorRegistrationPage() {

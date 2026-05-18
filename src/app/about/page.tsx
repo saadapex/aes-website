@@ -7,6 +7,7 @@ import CtaBand from "@/components/cta-band";
 export const metadata: Metadata = {
   title: "About Apex Enterprise Solutions",
   description: "Learn how Apex Enterprise Solutions operates as a field-first infrastructure deployment partner across the U.S. and Canada. Structured cabling, rack-and-stack, and AP refresh.",
+  alternates: { canonical: "https://www.apexsolutions.io/about" },
 };
 
 const PRINCIPLES = [
@@ -140,13 +141,4 @@ export default function AboutPage() {
               <span key={pod}
                 className="bg-[#F4F7FA] border border-[#006FB9]/20 text-[#06284C] px-4 py-2 rounded-full text-sm font-medium">
                 📍 {pod}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <CtaBand heading="If it needs to be built right, AES will build it." />
-    </>
-  );
-}
+              </spa

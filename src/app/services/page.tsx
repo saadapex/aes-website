@@ -8,6 +8,7 @@ import { SERVICES, SITE } from "@/lib/utils";
 export const metadata: Metadata = {
   title: "Infrastructure Services",
   description: "AES delivers structured cabling, rack-and-stack, and large-scale AP refresh. Field-first execution with certified technicians across North America.",
+  alternates: { canonical: "https://www.apexsolutions.io/services" },
 };
 
 const serviceDetails: Record<string, { scope: string[]; deliverables: string[]; image: string }> = {

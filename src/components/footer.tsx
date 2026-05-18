@@ -103,8 +103,15 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Trust line */}
+        <div className="border-t border-white/10 pt-6 mb-6">
+          <p className="text-[#4E6575] text-xs text-center">
+            Fully insured · General liability &amp; E&amp;O coverage · Licensed &amp; bonded · U.S. &amp; Canada operations
+          </p>
+        </div>
+
         {/* Sub-footer */}
-        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
           <div className="flex flex-wrap gap-4">
             {[
               { label: "Vendor Registration", href: "/vendor-registration" },

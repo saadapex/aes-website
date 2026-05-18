@@ -7,6 +7,7 @@ import CtaBand from "@/components/cta-band";
 export const metadata: Metadata = {
   title: "Structured Cabling — Copper & Fiber Installation",
   description: "Copper and fiber structured cabling installation across the U.S. and Canada. OTDR testing, as-builts, and closeout documentation included on every project.",
+  alternates: { canonical: "https://www.apexsolutions.io/services/structured-cabling" },
 };
 
 const scope = [
@@ -102,16 +103,4 @@ export default function StructuredCablingPage() {
             <div className="flex flex-wrap gap-3">
               {deliverables.map((d) => (
                 <span key={d}
-                  className="bg-[#F4F7FA] border border-[#006FB9]/20 text-[#06284C] px-4 py-2 rounded-full text-sm font-medium">
-                  {d}
-                </span>
-              ))}
-            </div>
-          </div>
-
-        </div>
-      </section>
-      <CtaBand heading="Cabling runs don't wait. Neither do we." />
-    </>
-  );
-}
+                  className="bg-[#F

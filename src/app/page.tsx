@@ -12,6 +12,7 @@ import { SITE, SERVICES, INDUSTRIES, CASE_STUDIES } from "@/lib/utils";
 export const metadata: Metadata = {
   title: "IT Infrastructure & Data-Center Deployment | Apex Enterprise Solutions",
   description: "Apex Enterprise Solutions delivers structured cabling, rack-and-stack, and large-scale AP refresh across the U.S. & Canada. Field-first, certified, on schedule.",
+  alternates: { canonical: "https://www.apexsolutions.io" },
 };
 
 const jsonLd = {
@@ -139,6 +140,48 @@ export default function HomePage() {
 
       {/* ── PARTNER LOGO SLIDER ──────────────────────────────── */}
       <LogoSlider />
+
+      {/* ── TESTIMONIALS ─────────────────────────────────────── */}
+      <section className="bg-[#F4F7FA] section-pad">
+        <div className="max-w-7xl mx-auto">
+          <p className="eyebrow text-center mb-3">What Partners Say</p>
+          <h2 className="text-[#06284C] text-3xl md:text-4xl font-bold text-center mb-12">
+            Trusted by Primes &amp; Integrators
+          </h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {
+                quote: "AES showed up on day one, executed without hand-holding, and the documentation package was cleaner than what our own crews produce. We'd use them again without hesitation.",
+                role: "Program Director",
+                company: "Global E-Commerce Fulfillment Operator",
+              },
+              {
+                quote: "We handed AES a 46-IDF, two-site AP rollout with a 24-hour change window. They held the window, zero safety incidents, and the coverage validation came back clean. Exactly what we needed.",
+                role: "Senior Project Manager",
+                company: "National Systems Integrator",
+              },
+              {
+                quote: "The closeout pack was ready at handover — OTDR certs, as-builts, label schema, the whole thing. That's rare in field services. It made our client acceptance a non-event.",
+                role: "Operations Lead",
+                company: "Telecom Infrastructure Prime",
+              },
+            ].map((t, i) => (
+              <div
+                key={i}
+                className="bg-white rounded-xl p-8 border border-[#006FB9]/10 shadow-sm flex flex-col gap-5"
+              >
+                {/* Quote mark */}
+                <span className="text-[#FF6B00] text-4xl font-black leading-none select-none">&ldquo;</span>
+                <p className="text-[#1F2933] leading-relaxed text-base flex-1">{t.quote}</p>
+                <div className="border-t border-gray-100 pt-4">
+                  <p className="text-[#06284C] font-semibold text-sm">{t.role}</p>
+                  <p className="text-[#4E6575] text-xs mt-0.5">{t.company}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* ── SERVICES GRID ────────────────────────────────────── */}
       <section className="bg-white section-pad">

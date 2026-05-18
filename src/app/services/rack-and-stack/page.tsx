@@ -8,6 +8,7 @@ import CtaBand from "@/components/cta-band";
 export const metadata: Metadata = {
   title: "Rack & Stack — Data Center Build & Refresh",
   description: "From bare room to live racks — AES delivers rack-and-stack, power, and cabling for data center builds and hardware refresh projects across North America.",
+  alternates: { canonical: "https://www.apexsolutions.io/services/rack-and-stack" },
 };
 
 const scope = [
@@ -106,16 +107,4 @@ export default function RackAndStackPage() {
             <div className="flex flex-wrap gap-3">
               {deliverables.map((d) => (
                 <span key={d}
-                  className="bg-[#F4F7FA] border border-[#006FB9]/20 text-[#06284C] px-4 py-2 rounded-full text-sm font-medium">
-                  {d}
-                </span>
-              ))}
-            </div>
-          </div>
-
-        </div>
-      </section>
-      <CtaBand heading="Got racks to build? We'll be on-site." />
-    </>
-  );
-}
+                  className="bg-[#F4F7FA] border border-[#006FB9]/20 text-[#06284C] px-4 py-2 rounded-full text-sm f

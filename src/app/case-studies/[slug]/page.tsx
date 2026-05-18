@@ -82,6 +82,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   return {
     title: cs.title,
     description: (content?.overview ?? "").slice(0, 155) + "...",
+    alternates: { canonical: `https://www.apexsolutions.io/case-studies/${params.slug}` },
   };
 }
 

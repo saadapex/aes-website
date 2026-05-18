@@ -9,6 +9,7 @@ import { SITE } from "@/lib/utils";
 export const metadata: Metadata = {
   title: "Partner With AES — Apex Enterprise Solutions",
   description: "Become an AES execution partner. We support primes, integrators, and MSPs with reliable field teams, clean documentation, and competitive subcontract rates across North America.",
+  alternates: { canonical: "https://www.apexsolutions.io/partners" },
 };
 
 const CURRENT_PARTNERS = [
@@ -298,21 +299,4 @@ export default function PartnersPage() {
                   "Response within 1 business day",
                   "No long-term commitment required upfront",
                   "Flexible NDA options available",
-                  "Per-project or program-level engagements",
-                  "Transparent, competitive subcontract rates",
-                ].map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-[#1F2933]">
-                    <span className="text-[#FF6B00] font-bold flex-shrink-0">✓</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <CtaBand heading="Already know what you need? Let's get it scoped." />
-    </>
-  );
-}
+                  "Per-project or program-level
