@@ -299,4 +299,21 @@ export default function PartnersPage() {
                   "Response within 1 business day",
                   "No long-term commitment required upfront",
                   "Flexible NDA options available",
-                  "Per-project or program-level
+                  "Per-project or program-level engagements",
+                  "Transparent, competitive subcontract rates",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-2 text-sm text-[#1F2933]">
+                    <span className="text-[#FF6B00] font-bold flex-shrink-0">✓</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <CtaBand heading="Already know what you need? Let's get it scoped." />
+    </>
+  );
+}

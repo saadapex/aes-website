@@ -141,4 +141,13 @@ export default function AboutPage() {
               <span key={pod}
                 className="bg-[#F4F7FA] border border-[#006FB9]/20 text-[#06284C] px-4 py-2 rounded-full text-sm font-medium">
                 📍 {pod}
-              </spa
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <CtaBand heading="If it needs to be built right, AES will build it." />
+    </>
+  );
+}

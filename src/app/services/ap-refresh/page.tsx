@@ -106,4 +106,16 @@ export default function ApRefreshPage() {
             <div className="flex flex-wrap gap-3">
               {deliverables.map((d) => (
                 <span key={d}
-                  className="bg-[#F4F7FA] border border-[#006FB9]/20 tex
+                  className="bg-[#F4F7FA] border border-[#006FB9]/20 text-[#06284C] px-4 py-2 rounded-full text-sm font-medium">
+                  {d}
+                </span>
+              ))}
+            </div>
+          </div>
+
+        </div>
+      </section>
+      <CtaBand heading="Multi-site Wi-Fi rollout? We run those programs." />
+    </>
+  );
+}

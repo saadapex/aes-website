@@ -124,4 +124,12 @@ export default function ContactPage() {
               </div>
               <a href={SITE.linkedin} target="_blank" rel="noopener noreferrer"
                 className="flex items-center gap-3 text-gray-700 hover:text-[#FF6B00] transition-colors">
-               
+                <Linkedin size={16} className="text-[#006FB9]" /> LinkedIn
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
