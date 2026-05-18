@@ -21,7 +21,7 @@ const scope = [
   "Multi-site program rollouts with standardized deployment playbooks",
 ];
 const kpis = [
-  "RF coverage validated at every site — not assumed",
+  "Wireless coverage (RF) validated at every site — not assumed",
   "Per-AP progress tracked and reported in real time",
   "Scheduling coordinated around live operations — zero disruption",
   "Validated test pack and as-builts delivered at handover",

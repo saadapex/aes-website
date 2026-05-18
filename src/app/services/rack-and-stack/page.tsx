@@ -17,7 +17,7 @@ const scope = [
   "Power distribution unit (PDU) install and circuit labeling",
   "Cable management: structured patch, power, fiber — labeled to TIA/EIA-606",
   "BIOS/firmware validation and burn-in support",
-  "Asset tagging, CMDB population, and closeout documentation",
+  "Asset tagging, CMDB (IT asset database) updates, and closeout documentation",
   "Smart hands for hardware refresh, swap, and decommission",
 ];
 const kpis = [

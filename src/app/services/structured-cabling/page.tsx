@@ -12,8 +12,8 @@ export const metadata: Metadata = {
 const scope = [
   "Site survey and pathway design; permitting support",
   "CAT6/6A copper runs and terminations",
-  "SM/MM fiber pulls and LC/MPO terminations; fusion splicing",
-  "OTDR and power meter testing; labeling to TIA/EIA-606",
+  "Single-mode and multi-mode fiber pulls, field-terminated and fusion-spliced where required",
+  "Full signal certification testing (OTDR and power meter); labeling to TIA/EIA-606 standard",
   "Rack dressing and documentation; freezer/cooler and high-bay experience",
   "Test reports, label schema, as-builts, and closeout pack",
 ];
@@ -47,7 +47,7 @@ export default function StructuredCablingPage() {
       <PageHero
         eyebrow="Service"
         h1="Structured Cabling — Copper &amp; Fiber"
-        sub="CAT6/6A and fiber runs executed to spec — OTDR-tested, TIA/EIA-606 labeled, and fully documented at handover. From IDF/MDF rooms to hyperscale halls."
+        sub="CAT6/6A copper and fiber runs executed to spec — signal-certified, labeled, and fully documented at handover. From network comms rooms to hyperscale data halls."
         cta={{ label: "Request a Site Walk →", href: "/contact" }}
         breadcrumb={[
           { label: "Home", href: "/" },
