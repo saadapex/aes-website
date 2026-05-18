@@ -1,4 +1,5 @@
 "use client";
+// v2
 
 const PARTNERS = [
   { name: "HPE",              src: "/images/Partners%20Logo/HPE-Logo.png" },
@@ -58,4 +59,6 @@ export default function LogoSlider() {
           100% { transform: translateX(-50%); }
         }
       `}</style>
-   
+    </section>
+  );
+}

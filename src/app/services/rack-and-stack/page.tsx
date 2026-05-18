@@ -1,3 +1,4 @@
+// v2
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -114,4 +115,7 @@ export default function RackAndStackPage() {
 
         </div>
       </section>
-      <CtaBand heading="Building or refreshing a data 
+      <CtaBand heading="Building or refreshing a data center?" />
+    </>
+  );
+}

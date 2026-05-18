@@ -1,3 +1,4 @@
+// v2
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import PageHero from "@/components/page-hero";
@@ -302,4 +303,16 @@ export default function PartnersPage() {
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-2 text-sm text-[#1F2933]">
                     <span className="text-[#FF6B00] font-bold flex-shrink-0">✓</span>
-               
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <CtaBand heading="Already know what you need? Let's get it scoped." />
+    </>
+  );
+}

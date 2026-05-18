@@ -1,3 +1,4 @@
+// v2
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -113,4 +114,7 @@ export default function ApRefreshPage() {
 
         </div>
       </section>
-      <CtaBand heading="Rolling out Wi-Fi across multiple sites
+      <CtaBand heading="Rolling out Wi-Fi across multiple sites?" />
+    </>
+  );
+}
