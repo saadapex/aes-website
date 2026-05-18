@@ -115,4 +115,9 @@ export const CASE_STUDIES = [
   {
     slug: "amazon-ap-refresh",
     title: "Large-Scale Warehouse AP Refresh — U.S. Market",
- 
+    tag: "AP REFRESH",
+    location: "United States",
+    metrics: ["850 APs Installed", "Active Logistics Environment", "On-Schedule Delivery"],
+    service: "ap-refresh",
+  },
+] as const;

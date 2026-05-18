@@ -309,4 +309,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── CTA BAND ────�
+
+      {/* CTA BAND */}
+      <CtaBand heading="Ready to partner on your next deployment?" />
+    </>
+  );
+}
