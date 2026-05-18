@@ -76,10 +76,10 @@ const STEPS = [
 ];
 
 const VALUE_PILLARS = [
-  { heading: "Speed",          body: "Fast mobilization for multi-site and urgent deployment needs." },
-  { heading: "Coordination",   body: "Clear handoff, responsive communication, and field-aware planning." },
-  { heading: "Workmanship",    body: "Technicians focused on clean installs, labeling, testing, and quality." },
-  { heading: "Documentation",  body: "Closeout support that helps partners prove completion and reduce rework." },
+  { heading: "Speed",          body: "AES mobilizes fast — across the U.S. and Canada, for single sites and multi-city programs alike." },
+  { heading: "Coordination",   body: "Daily field updates, proactive issue calls, and a team that doesn't wait to be chased." },
+  { heading: "Workmanship",    body: "Installations that pass first inspection — cabling dressed clean, labeled right, documented before we leave site." },
+  { heading: "Documentation",  body: "Test reports, as-builts, and label schemas in the format your client requires. Delivered at closeout, not three weeks later." },
 ];
 
 export default function HomePage() {
@@ -94,17 +94,17 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-12 py-24 grid lg:grid-cols-2 gap-16 items-center">
           <div>
             <p className="text-[#4E6575] uppercase tracking-widest text-sm font-medium mb-6">
-              Execution Partner · U.S. &amp; Canada
+              Field Execution · U.S. &amp; Canada
             </p>
             <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-black leading-tight mb-6">
-              IT Infrastructure Field Deployment —{" "}
-              <span className="text-[#FF6B00]">Built Clean. Documented Properly.</span>
+              North America&apos;s{" "}
+              <span className="text-[#FF6B00]">Field Execution Partner</span>
             </h1>
             <p className="text-[#4E6575] text-lg md:text-xl leading-relaxed mb-4 max-w-xl">
-              AES supports structured cabling, rack-and-stack, and AP refresh
-              projects across the U.S. and Canada. We help primes, integrators,
-              and enterprise teams with reliable field execution, clear
-              coordination, and closeout documentation.
+              Structured cabling, rack-and-stack, and large-scale AP refresh —
+              executed across the U.S. and Canada. AES delivers the field
+              precision, disciplined documentation, and program coordination
+              that primes and integrators stake their reputation on.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
               <Link href="/contact" className="btn-primary text-base">
@@ -283,21 +283,21 @@ export default function HomePage() {
       {/* ── PARTNER VALUE ────────────────────────────────────── */}
       <section className="bg-[#06284C] section-pad">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[#4E6575] uppercase tracking-widest text-sm font-medium text-center mb-3">Why Partners Choose AES</p>
+          <p className="text-[#4E6575] uppercase tracking-widest text-sm font-medium text-center mb-3">The AES Standard</p>
           <h2 className="text-white text-3xl md:text-4xl font-bold mb-4 text-center">
-            Built for Primes, Integrators &amp; MSPs
+            What Primes and Integrators Get
           </h2>
           <p className="text-[#4E6575] text-center max-w-2xl mx-auto mb-12 text-base leading-relaxed">
-            We operate as a subcontract execution partner — focused on clean field work, clear coordination, and documentation that holds up under client scrutiny.
+            When a program goes to the field, execution quality is what the client remembers. AES delivers consistent, documented, professional field work — the kind that makes primes look good.
           </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {[
-              { icon: "01", heading: "Fast Mobilization", body: "Quick response when field resources are needed — across the U.S. and Canada, without compromising on technician quality." },
-              { icon: "02", heading: "Clear Communication", body: "Daily progress updates, proactive issue escalation, and responsive coordination from kickoff through closeout." },
-              { icon: "03", heading: "Clean Installation Practices", body: "Technicians focused on doing the work right the first time — proper labelling, routing, testing, and site cleanup." },
-              { icon: "04", heading: "Closeout Documentation", body: "As-builts, test reports, and label schemas delivered in the format your client requires. No chasing paperwork after the fact." },
-              { icon: "05", heading: "Flexible Subcontract Support", body: "We adapt to your program size, timeline, and delivery model — whether it's a single site or a multi-city rollout." },
-              { icon: "06", heading: "Safety-First Field Execution", body: "PPE compliance, site orientation, and safety protocols enforced on every engagement. Zero incidents is the standard, not the goal." },
+              { icon: "01", heading: "Fast Mobilization", body: "AES deploys quickly — credentialed technicians, right coverage area, right scope. No warm-up time on urgent programs." },
+              { icon: "02", heading: "Clear Communication", body: "Daily site reports, proactive escalation, and a single point of contact from kickoff to closeout. No surprises." },
+              { icon: "03", heading: "Clean Installations", body: "Every install is done to a standard: properly routed, tested, labeled, and cleaned up before the crew leaves site." },
+              { icon: "04", heading: "Handover-Ready Documentation", body: "As-builts, OTDR reports, RF validation, label schemas — delivered in the format your PM needs. Closeout that holds up." },
+              { icon: "05", heading: "Program Execution at Scale", body: "Single site or 50-location rollout, the AES delivery standard doesn't change. We scale to the program." },
+              { icon: "06", heading: "Safety by Default", body: "Full PPE compliance, site orientation, and documented safety practices on every engagement. Zero incidents isn't a target — it's the floor." },
             ].map((item) => (
               <div key={item.icon} className="bg-white/5 border border-white/10 rounded-xl p-7 flex flex-col gap-3">
                 <span className="text-[#FF6B00] text-xs font-black tracking-widest">{item.icon}</span>
@@ -311,7 +311,7 @@ export default function HomePage() {
 
 
       {/* CTA BAND */}
-      <CtaBand heading="Ready to partner on your next deployment?" />
+      <CtaBand heading="Let's Talk About Your Next Program." />
     </>
   );
 }
