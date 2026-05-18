@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
-      <PageHero h1="Let's Talk Infrastructure" sub="Tell us about your project and we'll get back within one business day." />
+      <PageHero h1="Let's Talk Infrastructure" sub="Send us your scope. We'll respond within one business day with a straight answer on how AES can execute it." />
       <section className="bg-white section-pad">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-5 gap-12">
 

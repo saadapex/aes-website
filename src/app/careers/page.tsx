@@ -97,14 +97,14 @@ export default async function CareersPage() {
       <PageHero
         eyebrow="Careers"
         h1="Build Infrastructure with a Team That Knows the Field"
-        sub="We're always looking for experienced technicians, field leads, and project managers across the U.S. and Canada."
+        sub="AES deploys across the U.S. and Canada. We work with experienced technicians, field leads, and project managers who take clean, documented work seriously."
         breadcrumb={[{ label: "Home", href: "/" }, { label: "Careers", href: "/careers" }]}
       />
 
       {/* Why AES */}
       <section className="bg-white section-pad">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-[#06284C] text-3xl font-bold mb-12">Why Work With AES?</h2>
+          <h2 className="text-[#06284C] text-3xl font-bold mb-12">Why Field Pros Choose AES</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {WHY.map((item) => (
               <div key={item.heading} className="border-t-4 border-[#006FB9] pt-6">
@@ -191,7 +191,7 @@ export default async function CareersPage() {
         </div>
       </section>
 
-      <CtaBand heading="Ready to build infrastructure that matters?" />
+      <CtaBand heading="Experienced in the field? Let's put you to work." />
     </>
   );
 }

@@ -7,8 +7,8 @@ interface CtaBandProps {
 }
 
 export default function CtaBand({
-  heading = "Have a project in mind?",
-  sub     = "Talk to us about your scope. We'll tell you exactly how we can help.",
+  heading = "Have scope? AES will execute it.",
+  sub     = "Send us the details and we'll respond within one business day with a clear path forward.",
 }: CtaBandProps) {
   return (
     <section className="bg-[#006FB9] py-16 px-6">
