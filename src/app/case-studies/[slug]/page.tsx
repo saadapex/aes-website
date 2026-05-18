@@ -6,7 +6,7 @@ import CtaBand from "@/components/cta-band";
 import { CASE_STUDIES } from "@/lib/utils";
 
 const IMAGES: Record<string, string> = {
-  "telecom-transport-lab":          "/images/case-telecom-lab.png",
+  "telecom-transport-lab":          "/images/case-telecom-lab.jpg",
   "fulfillment-ap-refresh-ontario": "/images/case-warehouse-ap.png",
   "amazon-ap-refresh":              "/images/case-amazon-ap.png",
 };
@@ -171,4 +171,24 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
                       <div>
                         <p className="font-semibold text-[#06284C] mb-1">{lesson.title}</p>
                         <p className="text-[#4E6575] text-sm">{lesson.body}</p>
-               
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+          </div>
+        </section>
+      ) : (
+        <section className="bg-white section-pad">
+          <div className="max-w-3xl mx-auto">
+            <p className="text-[#4E6575] text-center">Full case study details coming soon.</p>
+          </div>
+        </section>
+      )}
+
+      <CtaBand />
+    </>
+  );
+}
