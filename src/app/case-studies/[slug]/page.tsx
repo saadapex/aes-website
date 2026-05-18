@@ -57,17 +57,17 @@ const CONTENT: Record<string, {
     ],
   },
   "amazon-ap-refresh": {
-    overview: "AES was engaged to execute a large-scale AP refresh across Amazon fulfillment center infrastructure in the United States. The project involved installing 850 wireless access points across high-ceiling warehouse environments, coordinating with Amazon's network team on controller onboarding, and delivering a validated coverage and performance sign-off.",
-    challenge: "Amazon fulfillment centers operate continuously with strict change control windows and elevated safety requirements. Every technician required Amazon-specific safety orientation before site access, and all work had to be scheduled around active conveyor, robotics, and pick operations. The 98% first-pass installation target was non-negotiable.",
+    overview: "AES supported field execution for a large-scale wireless AP refresh program at a major e-commerce fulfillment operator in the United States. Working through an implementation partner, the scope included AP replacement support across high-ceiling warehouse environments, hardware handling, installation, labelling, and daily progress reporting — all within active logistics operations.",
+    challenge: "The fulfillment facilities operate continuously with strict change control windows and elevated safety requirements. Every technician required client-specific safety orientation before site access, and all work had to be scheduled around active conveyor, robotics, and pick operations. Maintaining momentum without disrupting warehouse operations was the defining constraint on the project.",
     approach: [
-      "AES coordinated safety orientation and badging for the full field crew in advance of mobilization to avoid any day-one delays.",
-      "Pre-deployment review of Amazon's AP placement drawings and mounting hardware specifications. AES sourced and kitted all mounting hardware to spec before arriving on site.",
-      "Structured daily progress reporting to Amazon's IT project lead, with each AP logged by MAC address, mount location, and controller association status.",
-      "Quality checkpoint at every 50 APs: a senior technician validated signal strength and controller handshake before the crew advanced, driving the 98% first-pass rate.",
-      "All documentation submitted in Amazon's required format for final sign-off.",
+      "Safety orientation and site badging coordinated for the full field crew in advance of mobilization, ensuring no day-one delays on access or compliance.",
+      "Pre-deployment review of AP placement drawings and mounting hardware specifications. All hardware kitted and staged before arriving on site — no improvisation in the field.",
+      "Structured daily progress reporting to the implementation partner's project lead. Each AP logged by MAC address, mount location, and controller association status at end of each shift.",
+      "Quality checks at regular intervals throughout the deployment: signal strength and controller handshake validated before the crew advanced to the next zone.",
+      "All closeout documentation submitted in the client's required format, including AP inventory, mount records, and coverage validation results.",
     ],
-    outcome: "850 APs installed and validated on schedule with a 98% first-pass rate. Amazon's network team confirmed full controller association and coverage sign-off within 48 hours of installation completion. The project was delivered without a single safety incident.",
-    tags: ["AP Refresh", "Wireless", "Enterprise", "Fulfillment Center"],
+    outcome: "850 APs installed and validated on schedule. The implementation partner confirmed full controller association and coverage sign-off within 48 hours of installation completion. The project was delivered without a single safety incident, and AES received positive feedback from the partner's project management team.",
+    tags: ["AP Refresh", "Wireless", "Fulfillment Centre", "Logistics", "U.S. Market"],
   },
 };
 
@@ -171,24 +171,4 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
                       <div>
                         <p className="font-semibold text-[#06284C] mb-1">{lesson.title}</p>
                         <p className="text-[#4E6575] text-sm">{lesson.body}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-
-          </div>
-        </section>
-      ) : (
-        <section className="bg-white section-pad">
-          <div className="max-w-3xl mx-auto">
-            <p className="text-[#4E6575] text-center">Full case study details coming soon.</p>
-          </div>
-        </section>
-      )}
-
-      <CtaBand />
-    </>
-  );
-}
+               

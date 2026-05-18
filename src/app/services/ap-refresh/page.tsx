@@ -20,9 +20,9 @@ const scope = [
   "Multi-site program rollouts with standardized deployment playbooks",
 ];
 const kpis = [
-  "≥ 95% first-pass coverage target",
-  "98% first-pass installation rate",
-  "Zero unplanned downtime target",
+  "RF coverage validation at completion",
+  "Real-time progress tracking per AP",
+  "Coordinated scheduling around active operations",
   "Validated test pack at handover",
 ];
 const deliverables = ["RF Survey Report", "Coverage Validation", "As-Builts", "Label Schema", "Closeout Pack"];
@@ -113,7 +113,4 @@ export default function ApRefreshPage() {
 
         </div>
       </section>
-      <CtaBand heading="Rolling out Wi-Fi across multiple sites?" />
-    </>
-  );
-}
+      <CtaBand heading="Rolling out Wi-Fi across multiple sites

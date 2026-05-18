@@ -20,10 +20,10 @@ const scope = [
   "Smart hands for hardware refresh, swap, and decommission",
 ];
 const kpis = [
-  "Zero-defect rack validation target",
+  "Punch-list management and rack validation",
   "CMDB-ready documentation at handover",
-  "72-hour burn-in support available",
-  "On-schedule delivery commitment",
+  "Burn-in support available where required",
+  "Daily progress tracking and client reporting",
 ];
 const deliverables = ["Rack Diagrams", "Cable Labels", "Burn-In Reports", "Asset Inventory", "Closeout Pack"];
 
@@ -114,7 +114,4 @@ export default function RackAndStackPage() {
 
         </div>
       </section>
-      <CtaBand heading="Building or refreshing a data center?" />
-    </>
-  );
-}
+      <CtaBand heading="Building or refreshing a data 

@@ -114,10 +114,5 @@ export const CASE_STUDIES = [
   },
   {
     slug: "amazon-ap-refresh",
-    title: "Amazon Warehouse — AP Refresh & Low Voltage",
-    tag: "AP REFRESH",
-    location: "United States",
-    metrics: ["850 APs installed", "98% first-pass rate", "On-schedule delivery"],
-    service: "ap-refresh",
-  },
-] as const;
+    title: "Large-Scale Warehouse AP Refresh — U.S. Market",
+ 

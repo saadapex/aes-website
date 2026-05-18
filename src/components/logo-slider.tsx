@@ -18,7 +18,7 @@ export default function LogoSlider() {
     <section className="bg-white border-y border-gray-100 py-10 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 mb-6">
         <p className="text-xs uppercase tracking-widest text-[#4E6575] font-medium text-center">
-          Trusted Partners &amp; Vendors
+          Companies &amp; Ecosystems We&apos;ve Worked With
         </p>
       </div>
 
@@ -58,6 +58,4 @@ export default function LogoSlider() {
           100% { transform: translateX(-50%); }
         }
       `}</style>
-    </section>
-  );
-}
+   

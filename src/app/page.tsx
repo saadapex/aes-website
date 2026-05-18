@@ -97,13 +97,14 @@ export default function HomePage() {
               Execution Partner · U.S. &amp; Canada
             </p>
             <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-black leading-tight mb-6">
-              Mission-Critical IT Infrastructure —{" "}
-              <span className="text-[#FF6B00]">Deployed on Time. On Spec.</span>
+              IT Infrastructure Field Deployment —{" "}
+              <span className="text-[#FF6B00]">Built Clean. Documented Properly.</span>
             </h1>
             <p className="text-[#4E6575] text-lg md:text-xl leading-relaxed mb-4 max-w-xl">
-              Structured cabling, rack-and-stack, and large-scale AP rollouts
-              across the U.S. and Canada. Reliable field teams. Clean handoff.
-              Closeout documentation that protects your schedule.
+              AES supports structured cabling, rack-and-stack, and AP refresh
+              projects across the U.S. and Canada. We help primes, integrators,
+              and enterprise teams with reliable field execution, clear
+              coordination, and closeout documentation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
               <Link href="/contact" className="btn-primary text-base">
@@ -279,52 +280,33 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── TESTIMONIALS ─────────────────────────────────────── */}
+      {/* ── PARTNER VALUE ────────────────────────────────────── */}
       <section className="bg-[#06284C] section-pad">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[#4E6575] uppercase tracking-widest text-sm font-medium text-center mb-3">What Partners Say</p>
-          <h2 className="text-white text-3xl md:text-4xl font-bold mb-12 text-center">
-            Trusted by Primes &amp; Integrators
+          <p className="text-[#4E6575] uppercase tracking-widest text-sm font-medium text-center mb-3">Why Partners Choose AES</p>
+          <h2 className="text-white text-3xl md:text-4xl font-bold mb-4 text-center">
+            Built for Primes, Integrators &amp; MSPs
           </h2>
-          <div className="grid md:grid-cols-3 gap-6">
+          <p className="text-[#4E6575] text-center max-w-2xl mx-auto mb-12 text-base leading-relaxed">
+            We operate as a subcontract execution partner — focused on clean field work, clear coordination, and documentation that holds up under client scrutiny.
+          </p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {[
-              {
-                quote: "AES mobilized quickly, kept us informed throughout, and handed over clean documentation. Exactly what we needed from a field execution partner.",
-                name: "Senior Project Manager",
-                company: "National Systems Integrator",
-                service: "Rack & Stack",
-              },
-              {
-                quote: "The AP rollout across our distribution centers came in on schedule with zero unplanned downtime. The standardized playbook made multi-site coordination seamless.",
-                name: "Director of IT Infrastructure",
-                company: "Fortune 500 Logistics Company",
-                service: "AP Refresh",
-              },
-              {
-                quote: "Their cabling team is meticulous — every run labeled, every test certified, closeout pack ready at handover. We've made AES our go-to sub for structured cabling.",
-                name: "VP of Delivery",
-                company: "Tier-1 Telecom Integrator",
-                service: "Structured Cabling",
-              },
-            ].map((t) => (
-              <div key={t.name} className="bg-white/5 border border-white/10 rounded-xl p-8 flex flex-col">
-                <div className="text-[#FF6B00] text-3xl font-serif leading-none mb-4">"</div>
-                <p className="text-gray-300 text-sm leading-relaxed flex-1 mb-6">{t.quote}</p>
-                <div>
-                  <span className="inline-block bg-[#FF6B00]/10 border border-[#FF6B00]/30 text-[#FF6B00] text-xs font-semibold px-3 py-1 rounded-full mb-3">
-                    {t.service}
-                  </span>
-                  <p className="text-white font-semibold text-sm">{t.name}</p>
-                  <p className="text-[#4E6575] text-xs">{t.company}</p>
-                </div>
+              { icon: "01", heading: "Fast Mobilization", body: "Quick response when field resources are needed — across the U.S. and Canada, without compromising on technician quality." },
+              { icon: "02", heading: "Clear Communication", body: "Daily progress updates, proactive issue escalation, and responsive coordination from kickoff through closeout." },
+              { icon: "03", heading: "Clean Installation Practices", body: "Technicians focused on doing the work right the first time — proper labelling, routing, testing, and site cleanup." },
+              { icon: "04", heading: "Closeout Documentation", body: "As-builts, test reports, and label schemas delivered in the format your client requires. No chasing paperwork after the fact." },
+              { icon: "05", heading: "Flexible Subcontract Support", body: "We adapt to your program size, timeline, and delivery model — whether it's a single site or a multi-city rollout." },
+              { icon: "06", heading: "Safety-First Field Execution", body: "PPE compliance, site orientation, and safety protocols enforced on every engagement. Zero incidents is the standard, not the goal." },
+            ].map((item) => (
+              <div key={item.icon} className="bg-white/5 border border-white/10 rounded-xl p-7 flex flex-col gap-3">
+                <span className="text-[#FF6B00] text-xs font-black tracking-widest">{item.icon}</span>
+                <h3 className="text-white font-bold text-base">{item.heading}</h3>
+                <p className="text-[#4E6575] text-sm leading-relaxed">{item.body}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── CTA BAND ─────────────────────────────────────────── */}
-      <CtaBand />
-    </>
-  );
-}
+      {/* ── CTA BAND ────�

@@ -156,8 +156,9 @@ export default function PartnersPage() {
       {/* Current partners */}
       <section className="bg-white section-pad">
         <div className="max-w-7xl mx-auto">
-          <p className="eyebrow mb-3">Our Network</p>
-          <h2 className="text-[#06284C] text-3xl font-bold mb-12">Trusted Partners &amp; Vendors</h2>
+          <p className="eyebrow mb-3">Delivery Network</p>
+          <h2 className="text-[#06284C] text-3xl font-bold mb-3">Companies &amp; Ecosystems We Support</h2>
+          <p className="text-[#4E6575] text-sm mb-10 max-w-2xl">AES has worked with or alongside the following companies on infrastructure projects. Relationships are project-based; logos are displayed for reference only.</p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {CURRENT_PARTNERS.map((p) => (
               <a
@@ -301,16 +302,4 @@ export default function PartnersPage() {
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-2 text-sm text-[#1F2933]">
                     <span className="text-[#FF6B00] font-bold flex-shrink-0">✓</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <CtaBand heading="Already know what you need? Let's get it scoped." />
-    </>
-  );
-}
+               
