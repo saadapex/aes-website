@@ -36,6 +36,7 @@ export default function IndustryPage({ params }: { params: { slug: string } }) {
         sub={ind.sub}
         cta={{ label: "Get a Quote →", href: "/contact" }}
         breadcrumb={[{ label: "Home", href: "/" }, { label: "Industries", href: "/industries" }, { label: ind.title, href: `/industries/${ind.slug}` }]}
+        image={ind.image}
       />
 
       {/* ── PAIN POINTS ─────────────────────────────────────────── */}

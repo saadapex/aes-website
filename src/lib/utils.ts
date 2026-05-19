@@ -68,6 +68,7 @@ export const INDUSTRIES = [
     title: "Data Centers & Colocation",
     headline: "Infrastructure Built for Data Center Scale",
     sub: "Rack-and-stack, structured cabling, and fiber executed to spec — from bare room to live racks in hyperscale halls and colo builds.",
+    image: { src: "/images/industry-data-centers.png", alt: "Field technician inside a hyperscale data center reviewing rack documentation" },
     services: ["rack-and-stack", "structured-cabling"],
     painPoints: [
       {
@@ -99,6 +100,7 @@ export const INDUSTRIES = [
     title: "Logistics & Warehousing",
     headline: "Wireless & Low-Voltage for High-Throughput Warehouses",
     sub: "AP rollouts, structured cabling, and freezer/cooler-rated installs — executed around active operations, zero disruption to throughput.",
+    image: { src: "/images/industry-logistics.jpg", alt: "Field technician on a scissor lift installing a wireless AP in a large distribution warehouse" },
     services: ["ap-refresh", "structured-cabling"],
     painPoints: [
       {
@@ -130,6 +132,7 @@ export const INDUSTRIES = [
     title: "Enterprise & Corporate",
     headline: "Enterprise Infrastructure, Done Right the First Time",
     sub: "Copper, fiber, and high-density wireless for campus, office, and multi-site enterprise programs — built clean, documented at handover.",
+    image: { src: "/images/industry-enterprise.png", alt: "Field technician certifying structured cabling in a corporate enterprise server room" },
     services: ["structured-cabling", "ap-refresh"],
     painPoints: [
       {
@@ -161,6 +164,7 @@ export const INDUSTRIES = [
     title: "Telecom & Service Providers",
     headline: "Field Execution for Telecom Infrastructure Builds",
     sub: "Structured cabling, rack-and-stack, and smart hands for service provider deployments — credentialed crews, OTDR-certified, across North America.",
+    image: { src: "/images/industry-telecom.jpg", alt: "Technician routing fiber optic patch cables in a telecom central office distribution frame" },
     services: ["structured-cabling", "rack-and-stack"],
     painPoints: [
       {
