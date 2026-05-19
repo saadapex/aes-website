@@ -22,6 +22,7 @@ export const SITE = {
   address: "1069 Duane Ct, Sunnyvale, CA 94085",
   calendly: "https://calendly.com/apexenterprisesolutions",
   linkedin: "https://www.linkedin.com/company/apexenterprisesolutions/",
+  twitter: "",   // add X/Twitter handle URL when ready e.g. "https://x.com/apexenterprise"
   capabilityPdf: "/assets/Apex Enterprise Solutions – Capability Statement.pdf",
 } as const;
 

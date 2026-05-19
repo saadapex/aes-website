@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Linkedin, Mail, Phone, MapPin } from "lucide-react";
+import { Linkedin, Mail, Phone, MapPin, Twitter } from "lucide-react";
 import { SITE, SERVICES, INDUSTRIES } from "@/lib/utils";
 
 export default function Footer() {
@@ -21,9 +21,32 @@ export default function Footer() {
             <p className="text-[#4E6575] text-xs tracking-widest uppercase mt-1 mb-4">
               {SITE.tagline}
             </p>
-            <p className="text-[#4E6575] text-sm leading-relaxed">
+            <p className="text-[#4E6575] text-sm leading-relaxed mb-6">
               North America&apos;s field-first infrastructure deployment partner.
             </p>
+            {/* Social icons */}
+            <div className="flex items-center gap-3">
+              <a
+                href={SITE.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Apex Enterprise Solutions on LinkedIn"
+                className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-[#4E6575] hover:bg-[#F26522] hover:border-[#F26522] hover:text-white transition-all duration-200"
+              >
+                <Linkedin size={16} />
+              </a>
+              {SITE.twitter && (
+                <a
+                  href={SITE.twitter}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Apex Enterprise Solutions on X / Twitter"
+                  className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-[#4E6575] hover:bg-[#F26522] hover:border-[#F26522] hover:text-white transition-all duration-200"
+                >
+                  <Twitter size={16} />
+                </a>
+              )}
+            </div>
           </div>
 
           {/* Services column */}
@@ -91,13 +114,6 @@ export default function Footer() {
                   <MapPin size={14} className="mt-0.5 flex-shrink-0 text-[#006FB9]" />
                   <span>{SITE.address}</span>
                 </div>
-              </li>
-              <li>
-                <a href={SITE.linkedin} target="_blank" rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-sm text-gray-300 hover:text-[#FF6B00] transition-colors mt-2">
-                  <Linkedin size={14} className="text-[#006FB9]" />
-                  LinkedIn
-                </a>
               </li>
             </ul>
           </div>
