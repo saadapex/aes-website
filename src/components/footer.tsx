@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Linkedin, Mail, Phone, MapPin, Twitter } from "lucide-react";
+import { Linkedin, Mail, Phone, MapPin, Twitter, Instagram, Facebook } from "lucide-react";
 import { SITE, SERVICES, INDUSTRIES } from "@/lib/utils";
 
 export default function Footer() {
@@ -26,6 +26,7 @@ export default function Footer() {
             </p>
             {/* Social icons */}
             <div className="flex items-center gap-3">
+              {/* LinkedIn — always visible */}
               <a
                 href={SITE.linkedin}
                 target="_blank"
@@ -35,6 +36,7 @@ export default function Footer() {
               >
                 <Linkedin size={16} />
               </a>
+              {/* Twitter/X — renders only when URL is set */}
               {SITE.twitter && (
                 <a
                   href={SITE.twitter}
@@ -44,6 +46,30 @@ export default function Footer() {
                   className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-[#4E6575] hover:bg-[#F26522] hover:border-[#F26522] hover:text-white transition-all duration-200"
                 >
                   <Twitter size={16} />
+                </a>
+              )}
+              {/* Instagram — renders only when URL is set */}
+              {SITE.instagram && (
+                <a
+                  href={SITE.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Apex Enterprise Solutions on Instagram"
+                  className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-[#4E6575] hover:bg-[#F26522] hover:border-[#F26522] hover:text-white transition-all duration-200"
+                >
+                  <Instagram size={16} />
+                </a>
+              )}
+              {/* Facebook — renders only when URL is set */}
+              {SITE.facebook && (
+                <a
+                  href={SITE.facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Apex Enterprise Solutions on Facebook"
+                  className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-[#4E6575] hover:bg-[#F26522] hover:border-[#F26522] hover:text-white transition-all duration-200"
+                >
+                  <Facebook size={16} />
                 </a>
               )}
             </div>
