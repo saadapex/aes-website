@@ -7,21 +7,39 @@ import { SITE } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Contact Us",
-  description: "Get in touch with Apex Enterprise Solutions to scope your next infrastructure deployment — structured cabling, rack-and-stack, or AP refresh across the U.S. and Canada.",
+  description: "Get in touch with Apex Enterprise Solutions to scope your next infrastructure deployment \u2014 structured cabling, rack-and-stack, or AP refresh across the U.S. and Canada.",
   alternates: { canonical: "https://www.apexsolutions.io/contact" },
 };
+
+const NEXT_STEPS = [
+  {
+    step: "01",
+    heading: "We Review Your Scope",
+    body: "Your submission goes directly to our team \u2014 not a ticketing queue. Within one business day, a real person has read your scope and is thinking about how AES can execute it.",
+  },
+  {
+    step: "02",
+    heading: "You Get a Straight Answer",
+    body: "We come back with a clear take: what we can do, how we&apos;d approach it, and rough pricing. No vague follow-up calls just to gather the same information twice.",
+  },
+  {
+    step: "03",
+    heading: "We Get to Work",
+    body: "Scope aligned \u2014 we mobilize the right crew, confirm the schedule, and get your project on the calendar. From first contact to boots on the ground, we move fast.",
+  },
+];
 
 export default function ContactPage() {
   return (
     <>
-      <PageHero h1="Let's Talk Infrastructure" sub="Send us your scope. We'll respond within one business day with a straight answer on how AES can execute it." />
+      <PageHero h1="Let&apos;s Talk Infrastructure" sub="Send us your scope. We&apos;ll respond within one business day with a straight answer on how AES can execute it." />
       <section className="bg-white section-pad">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-5 gap-12">
 
-          {/* Form — 3 cols */}
+          {/* Form \u2014 3 cols */}
           <div className="lg:col-span-3">
             <Suspense fallback={null}>
-              <FormErrorBanner message="Something went wrong submitting your request — please try again or email us directly at info@apexsolutions.io." />
+              <FormErrorBanner message="Something went wrong submitting your request \u2014 please try again or email us directly at info@apexsolutions.io." />
             </Suspense>
             <form action="/api/contact" method="POST" className="space-y-5">
               <div className="grid sm:grid-cols-2 gap-4">
@@ -77,7 +95,7 @@ export default function ContactPage() {
 
               <div>
                 <label className="block text-sm font-semibold text-[#06284C] mb-1.5">Brief Scope Description</label>
-                <textarea name="scope" rows={4} placeholder="Tell us what you're working on..."
+                <textarea name="scope" rows={4} placeholder="Tell us what you&apos;re working on..."
                   className="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-[#006FB9] focus:ring-1 focus:ring-[#006FB9] resize-none" />
               </div>
 
@@ -98,18 +116,18 @@ export default function ContactPage() {
               <input type="hidden" name="utm_campaign" />
 
               <button type="submit" className="btn-primary w-full justify-center text-base">
-                Submit Request →
+                Submit Request &rarr;
               </button>
               <p className="text-xs text-gray-400 text-center">We respond within one business day. Your information is never sold or shared.</p>
             </form>
           </div>
 
-          {/* Sidebar — 2 cols */}
+          {/* Sidebar \u2014 2 cols */}
           <div className="lg:col-span-2 space-y-8">
             <div>
               <h3 className="text-[#06284C] font-bold text-lg mb-4">Or book a time directly</h3>
               <a href={SITE.calendly} target="_blank" rel="noopener noreferrer" className="btn-primary w-full justify-center">
-                Book a Planning Call →
+                Book a Planning Call &rarr;
               </a>
             </div>
             <div className="border-t border-gray-100 pt-6 space-y-4">
@@ -127,6 +145,23 @@ export default function ContactPage() {
                 <Linkedin size={16} className="text-[#006FB9]" /> LinkedIn
               </a>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What Happens Next */}
+      <section className="bg-[#F4F7FA] section-pad">
+        <div className="max-w-7xl mx-auto">
+          <p className="eyebrow mb-3">After You Submit</p>
+          <h2 className="text-[#06284C] text-3xl font-bold mb-12">What Happens Next</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {NEXT_STEPS.map(({ step, heading, body }) => (
+              <div key={step} className="relative bg-white rounded-xl p-8 shadow-sm border border-gray-100">
+                <div className="text-[#FF6B00] text-5xl font-black leading-none mb-5 opacity-20 select-none">{step}</div>
+                <h3 className="text-[#06284C] font-bold text-lg mb-3">{heading}</h3>
+                <p className="text-[#1F2933] text-sm leading-relaxed" dangerouslySetInnerHTML={{ __html: body }} />
+              </div>
+            ))}
           </div>
         </div>
       </section>
