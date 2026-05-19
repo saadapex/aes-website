@@ -33,14 +33,14 @@ const PRINCIPLES = [
 
 const LEADERSHIP = [
   {
-    photo: "/images/team-saad-usmani.jpg",
+    photo: null, // add /images/team-saad-usmani.jpg to public/images/ to activate
     initials: "SU",
     name: "Saad Usmani",
     title: "Founder & CEO",
     bio: "Leads business development, client relationships, partner engagement, pricing, and delivery oversight across AES operations.",
   },
   {
-    photo: "/images/team-vinod-bharwani.jpg",
+    photo: null, // add /images/team-vinod-bharwani.jpg to public/images/ to activate
     initials: "VB",
     name: "Vinod Bharwani",
     title: "Chief Operating Officer",

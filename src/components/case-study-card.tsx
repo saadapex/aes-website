@@ -2,9 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 const IMAGES: Record<string, string> = {
-  "ai-cluster-pod-build":  "/images/case-ai-cluster.png",
-  "warehouse-ap-refresh":  "/images/case-warehouse-ap.png",
-  "amazon-ap-refresh":     "/images/case-amazon-ap.png",
+  "ai-cluster-pod-build":           "/images/case-ai-cluster.png",
+  "warehouse-ap-refresh":           "/images/case-warehouse-ap.png",
+  "amazon-ap-refresh":              "/images/case-amazon-ap.png",
+  "telecom-transport-lab":          "/images/case-telecom-lab.jpg",
+  // fulfillment-ap-refresh-ontario: add image to public/images/ to activate
 };
 
 interface CaseStudyCardProps {
