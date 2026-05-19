@@ -204,6 +204,92 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── WHO WE HELP ──────────────────────────────────────── */}
+      <section className="bg-[#0D1F3C] section-pad">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-[#7A9FC0] uppercase tracking-widest text-sm font-light text-center mb-3">
+            Who We Help
+          </p>
+          <h2 className="text-white text-3xl md:text-4xl font-bold text-center mb-4">
+            Built for the Teams Running the Program
+          </h2>
+          <p className="text-[#7A9FC0] text-center max-w-2xl mx-auto mb-14 text-base leading-relaxed">
+            AES works as a subcontract execution partner — not a staffing agency, not a generalist IT firm.
+            If your team is responsible for what happens in the field, we&apos;re built for you.
+          </p>
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {
+                label: "Primes & General Contractors",
+                icon: (
+                  <svg className="w-7 h-7 text-[#F26522]" fill="none" stroke="currentColor" strokeWidth={1.6} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21" />
+                  </svg>
+                ),
+                heading: "Multi-site programs need execution partners, not variables.",
+                body: "You're managing scope, schedule, and client expectations across multiple locations. AES plugs in as a reliable subcontractor — credentialed field crew, clear communication, zero babysitting required.",
+                fit: ["10+ location rollouts", "Data center builds", "Wireless deployments"],
+              },
+              {
+                label: "Systems Integrators",
+                icon: (
+                  <svg className="w-7 h-7 text-[#F26522]" fill="none" stroke="currentColor" strokeWidth={1.6} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M7.5 21 3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" />
+                  </svg>
+                ),
+                heading: "Your brand is on the line. So is ours.",
+                body: "Integrators stake their reputation on every subcontractor in the field. AES delivers to a standard that protects yours — clean installs, documented closeout, and a crew that represents your program professionally.",
+                fit: ["Network refresh programs", "Cabling & fiber runs", "Rack-and-stack builds"],
+              },
+              {
+                label: "Enterprise IT Teams",
+                icon: (
+                  <svg className="w-7 h-7 text-[#F26522]" fill="none" stroke="currentColor" strokeWidth={1.6} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5.25 14.25h13.5m-13.5 0a3 3 0 0 1-3-3m3 3a3 3 0 0 0 3 3h7.5a3 3 0 0 0 3-3m-16.5 0a3 3 0 0 1 3-3h13.5a3 3 0 0 1 3 3M6.75 6h10.5M6 9.75h.008v.008H6V9.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                  </svg>
+                ),
+                heading: "You need the physical layer done right — on your timeline.",
+                body: "Hardware refresh, AP rollouts, structured cabling across campus or data center — AES executes the field work so your internal team stays focused on system configuration, not pulling cable.",
+                fit: ["Hardware refresh cycles", "Campus AP rollouts", "Data center migrations"],
+              },
+            ].map((persona) => (
+              <div
+                key={persona.label}
+                className="bg-white/5 border border-white/10 hover:border-[#F26522]/40 rounded-xl p-8 flex flex-col gap-5 transition-colors duration-200"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-[#F26522]/10 rounded-lg flex items-center justify-center">
+                    {persona.icon}
+                  </div>
+                  <span className="text-[#7A9FC0] text-xs uppercase tracking-widest font-light leading-tight pt-1">
+                    {persona.label}
+                  </span>
+                </div>
+                <h3 className="text-white font-bold text-lg leading-snug">
+                  {persona.heading}
+                </h3>
+                <p className="text-[#7A9FC0] text-sm leading-relaxed flex-1">
+                  {persona.body}
+                </p>
+                <div className="border-t border-white/10 pt-4 space-y-1.5">
+                  {persona.fit.map((item) => (
+                    <div key={item} className="flex items-center gap-2 text-xs text-[#7A9FC0]">
+                      <div className="w-1.5 h-1.5 rounded-full bg-[#F26522] flex-shrink-0" />
+                      {item}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-12">
+            <Link href="/contact" className="btn-primary inline-flex items-center gap-2">
+              Tell Us About Your Program <ArrowRight size={16} />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* ── HOW WE DELIVER ───────────────────────────────────── */}
       <section className="bg-[#F4F7FA] section-pad">
         <div className="max-w-7xl mx-auto">

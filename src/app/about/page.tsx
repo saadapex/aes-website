@@ -103,6 +103,70 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Founding Story */}
+      <section className="bg-[#F4F6F9] section-pad">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+          {/* Timeline / story visual */}
+          <div className="relative">
+            <div className="absolute left-4 top-0 bottom-0 w-px bg-[#1E5FA8]/20" />
+            <div className="space-y-10 pl-12">
+              {[
+                {
+                  year: "The Problem",
+                  heading: "A gap that kept showing up",
+                  body: "Coming from a telecom and systems engineering background, I kept running into the same situation on large programs — primes and integrators with strong design and PM capability, but no reliable field execution partner they could actually trust. Work was getting handed off to whoever was available, not whoever was qualified. Documentation was an afterthought. And the client always felt it.",
+                },
+                {
+                  year: "The Decision",
+                  heading: "Built for execution — nothing else",
+                  body: "I started AES to fill that gap. Not as a staffing company, not as a generalist IT firm — but as a dedicated field execution partner with its own processes, its own standards, and its own accountability. A company that shows up prepared, executes clean, and hands over documentation that holds up. One where the quality of the work protects our partners, every time.",
+                },
+                {
+                  year: "Today",
+                  heading: "A team and a standard",
+                  body: "AES now operates across the U.S. and Canada with a network of trusted field resources and a delivery model built around program-grade execution. Every technician on an AES engagement works to the same standard — because our partners' reputations depend on it.",
+                },
+              ].map((item) => (
+                <div key={item.year} className="relative">
+                  {/* Timeline dot */}
+                  <div className="absolute -left-12 top-1 w-4 h-4 rounded-full bg-[#F26522] border-4 border-[#F4F6F9]" />
+                  <p className="text-[#F26522] text-xs font-black uppercase tracking-widest mb-1">
+                    {item.year}
+                  </p>
+                  <h3 className="text-[#0D1F3C] font-bold text-lg mb-2">{item.heading}</h3>
+                  <p className="text-[#1F2933] text-sm leading-relaxed">{item.body}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Pull quote */}
+          <div className="flex flex-col gap-8">
+            <div className="bg-[#0D1F3C] rounded-2xl p-10">
+              <span className="text-[#F26522] text-5xl font-black leading-none select-none block mb-4">&ldquo;</span>
+              <p className="text-white text-xl md:text-2xl font-bold leading-snug mb-6">
+                I built AES because the market had a real shortage of execution partners who actually cared
+                about the standard of work — not just getting the job done fast.
+              </p>
+              <div className="border-t border-white/10 pt-5">
+                <p className="text-[#F26522] font-semibold text-sm">Saad Usmani</p>
+                <p className="text-[#7A9FC0] text-xs mt-0.5">Founder &amp; CEO, Apex Enterprise Solutions</p>
+              </div>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="bg-white rounded-xl p-6 border border-[#1E5FA8]/10 text-center shadow-sm">
+                <p className="text-[#F26522] text-3xl font-black mb-1">U.S. &amp; CA</p>
+                <p className="text-[#0D1F3C] text-xs uppercase tracking-wide font-medium">Active Coverage</p>
+              </div>
+              <div className="bg-white rounded-xl p-6 border border-[#1E5FA8]/10 text-center shadow-sm">
+                <p className="text-[#F26522] text-3xl font-black mb-1">0</p>
+                <p className="text-[#0D1F3C] text-xs uppercase tracking-wide font-medium">Safety Incidents</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* AES at a Glance — KPI band */}
       <section className="bg-[#06284C] py-14 px-6">
         <div className="max-w-7xl mx-auto">
