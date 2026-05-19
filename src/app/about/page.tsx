@@ -1,8 +1,10 @@
+// v2
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import PageHero from "@/components/page-hero";
 import CtaBand from "@/components/cta-band";
+import { STATS } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "About Apex Enterprise Solutions",
@@ -13,7 +15,7 @@ export const metadata: Metadata = {
 const PRINCIPLES = [
   {
     title: "Execution Partner, Not a Vendor",
-    body: "AES brings its own processes, its own standards, and its own accountability to every engagement — not just bodies to fill a headcount.",
+    body: "AES brings its own processes, its own standards, and its own accountability to every engagement \u2014 not just bodies to fill a headcount.",
   },
   {
     title: "Field-First Culture",
@@ -31,12 +33,14 @@ const PRINCIPLES = [
 
 const LEADERSHIP = [
   {
+    photo: "/images/team-saad-usmani.jpg",
     initials: "SU",
     name: "Saad Usmani",
     title: "Founder & CEO",
     bio: "Leads business development, client relationships, partner engagement, pricing, and delivery oversight across AES operations.",
   },
   {
+    photo: "/images/team-vinod-bharwani.jpg",
     initials: "VB",
     name: "Vinod Bharwani",
     title: "Chief Operating Officer",
@@ -49,8 +53,8 @@ export default function AboutPage() {
     <>
       <PageHero
         eyebrow="About AES"
-        h1="North America's Infrastructure Execution Partner"
-        sub="Apex Enterprise Solutions executes structured cabling, rack-and-stack, and large-scale wireless rollouts across the U.S. and Canada — built clean, documented right, every time."
+        h1="North America&#x27;s Infrastructure Execution Partner"
+        sub="Apex Enterprise Solutions executes structured cabling, rack-and-stack, and large-scale wireless rollouts across the U.S. and Canada \u2014 built clean, documented right, every time."
         breadcrumb={[{ label: "Home", href: "/" }, { label: "About", href: "/about" }]}
       />
 
@@ -64,16 +68,16 @@ export default function AboutPage() {
             </h2>
             <p className="text-[#1F2933] text-lg leading-relaxed mb-4">
               AES executes data center and network deployment programs for primes, integrators,
-              and enterprise infrastructure teams — with experienced field resources, tight
+              and enterprise infrastructure teams \u2014 with experienced field resources, tight
               coordination, and closeout documentation that holds up to client scrutiny.
             </p>
             <p className="text-[#1F2933] leading-relaxed mb-6">
               We are a North America-based field execution partner. We bring structured deployment
               processes, credentialed technicians, and a standard of work that protects our
-              partners' reputations on every engagement.
+              partners&apos; reputations on every engagement.
             </p>
             <Link href="/contact" className="btn-primary">
-              Work With AES →
+              Work With AES &rarr;
             </Link>
           </div>
           <div className="space-y-6">
@@ -99,6 +103,21 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* AES at a Glance — KPI band */}
+      <section className="bg-[#06284C] py-14 px-6">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-[#4E6575] uppercase tracking-widest text-xs text-center mb-10">AES at a Glance</p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            {STATS.map((stat) => (
+              <div key={stat.label}>
+                <div className="text-[#FF6B00] text-3xl md:text-4xl font-black mb-2">{stat.value}</div>
+                <div className="text-[#4E6575] text-xs uppercase tracking-wide leading-tight">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Leadership */}
       <section className="bg-[#F4F7FA] section-pad">
         <div className="max-w-7xl mx-auto">
@@ -107,9 +126,20 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 gap-8 max-w-3xl">
             {LEADERSHIP.map((person) => (
               <div key={person.name} className="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
-                <div className="w-16 h-16 bg-[#06284C] rounded-full flex items-center justify-center mb-4">
-                  <span className="text-white font-bold text-xl">{person.initials}</span>
-                </div>
+                {person.photo ? (
+                  <div className="relative w-16 h-16 rounded-full overflow-hidden mb-4">
+                    <Image
+                      src={person.photo}
+                      alt={person.name}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                ) : (
+                  <div className="w-16 h-16 bg-[#06284C] rounded-full flex items-center justify-center mb-4">
+                    <span className="text-white font-bold text-xl">{person.initials}</span>
+                  </div>
+                )}
                 <h3 className="text-[#06284C] font-bold text-xl mb-0.5">{person.name}</h3>
                 <p className="text-[#FF6B00] text-sm font-semibold mb-3">{person.title}</p>
                 <p className="text-[#1F2933] text-sm leading-relaxed">{person.bio}</p>
@@ -132,7 +162,7 @@ export default function AboutPage() {
           <div className="w-full rounded-xl overflow-hidden shadow-lg mb-8">
             <img
               src="/images/about-coverage-map.png"
-              alt="AES field coverage map — active pods across the United States"
+              alt="AES field coverage map \u2014 active pods across the United States"
               className="w-full h-auto block"
             />
           </div>
@@ -140,7 +170,7 @@ export default function AboutPage() {
             {["Ontario, CA", "Bay Area, CA", "Dallas, TX", "Las Vegas, NV", "Memphis, TN"].map((pod) => (
               <span key={pod}
                 className="bg-[#F4F7FA] border border-[#006FB9]/20 text-[#06284C] px-4 py-2 rounded-full text-sm font-medium">
-                📍 {pod}
+                &#128205; {pod}
               </span>
             ))}
           </div>

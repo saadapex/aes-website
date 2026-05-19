@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import PageHero from "@/components/page-hero";
 import CtaBand from "@/components/cta-band";
+import CaseStudyCard from "@/components/case-study-card";
+import { CASE_STUDIES } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Structured Cabling — Copper & Fiber Installation",
@@ -26,22 +28,18 @@ const kpis = [
 ];
 const deliverables = ["Test Reports", "Label Schema", "As-Builts", "Closeout Pack"];
 
-
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
   "name": "Structured Cabling",
   "description": "Copper and fiber structured cabling installation across the U.S. and Canada. OTDR testing, as-builts, and closeout documentation on every project.",
-  "provider": {
-    "@type": "LocalBusiness",
-    "name": "Apex Enterprise Solutions",
-    "url": "https://www.apexsolutions.io"
-  },
+  "provider": { "@type": "LocalBusiness", "name": "Apex Enterprise Solutions", "url": "https://www.apexsolutions.io" },
   "areaServed": ["United States", "Canada"],
-  "url": "https://www.apexsolutions.io/services/structured-cabling"
+  "url": "https://www.apexsolutions.io/services/structured-cabling",
 };
 
 export default function StructuredCablingPage() {
+  const featuredStudy = CASE_STUDIES.find((c) => c.slug === "telecom-transport-lab");
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
@@ -57,44 +55,33 @@ export default function StructuredCablingPage() {
         ]}
       />
 
-      {/* Service image banner */}
       <div className="relative w-full h-64 md:h-80 lg:h-96 overflow-hidden">
-        <Image
-          src="/images/service-structured-cabling.png"
-          alt="Structured cabling installation in a data center"
-          fill
-          className="object-cover"
-          priority
-        />
+        <Image src="/images/service-structured-cabling.png" alt="Structured cabling installation in a data center" fill className="object-cover" priority />
         <div className="absolute inset-0 bg-gradient-to-t from-[#06284C]/50 to-transparent" />
       </div>
 
       <section className="bg-white section-pad">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-3 gap-12">
-
-          {/* KPI sidebar — first on mobile, right column on desktop */}
           <div className="order-first lg:order-last">
             <div className="bg-[#06284C] rounded-xl p-6 lg:sticky lg:top-28">
               <h3 className="text-[#4E6575] uppercase tracking-widest text-xs mb-5">Performance Targets</h3>
               {kpis.map((kpi) => (
                 <div key={kpi} className="flex items-start gap-2 mb-4">
-                  <span className="text-[#FF6B00] font-bold flex-shrink-0">›</span>
+                  <span className="text-[#FF6B00] font-bold flex-shrink-0">&rsaquo;</span>
                   <span className="text-white text-sm">{kpi}</span>
                 </div>
               ))}
               <Link href="/contact" className="btn-primary w-full justify-center mt-6 text-sm">
-                Request a Site Walk →
+                Request a Site Walk &rarr;
               </Link>
             </div>
           </div>
-
-          {/* Main content */}
           <div className="lg:col-span-2 lg:order-first">
             <h2 className="text-[#06284C] text-2xl font-bold mb-6">Scope of Work</h2>
             <ul className="space-y-3 mb-10">
               {scope.map((item) => (
                 <li key={item} className="flex gap-3 text-[#1F2933]">
-                  <span className="text-[#FF6B00] font-bold flex-shrink-0 mt-0.5">✓</span>
+                  <span className="text-[#FF6B00] font-bold flex-shrink-0 mt-0.5">&#10003;</span>
                   {item}
                 </li>
               ))}
@@ -102,16 +89,32 @@ export default function StructuredCablingPage() {
             <h2 className="text-[#06284C] text-2xl font-bold mb-4">Deliverables</h2>
             <div className="flex flex-wrap gap-3">
               {deliverables.map((d) => (
-                <span key={d}
-                  className="bg-[#F4F7FA] border border-[#006FB9]/20 text-[#06284C] px-4 py-2 rounded-full text-sm font-medium">
+                <span key={d} className="bg-[#F4F7FA] border border-[#006FB9]/20 text-[#06284C] px-4 py-2 rounded-full text-sm font-medium">
                   {d}
                 </span>
               ))}
             </div>
           </div>
-
         </div>
       </section>
+
+      {featuredStudy && (
+        <section className="bg-[#F4F7FA] section-pad">
+          <div className="max-w-7xl mx-auto">
+            <p className="eyebrow mb-3">Proof of Work</p>
+            <h2 className="text-[#06284C] text-3xl font-bold mb-10">See It in the Field</h2>
+            <div className="max-w-xl">
+              <CaseStudyCard {...featuredStudy} />
+            </div>
+            <div className="mt-8">
+              <Link href="/case-studies" className="text-[#006FB9] font-semibold text-sm hover:text-[#FF6B00] transition-colors">
+                View All Deployments &rarr;
+              </Link>
+            </div>
+          </div>
+        </section>
+      )}
+
       <CtaBand heading="Cabling runs don't wait. Neither do we." />
     </>
   );
