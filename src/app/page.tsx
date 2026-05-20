@@ -397,7 +397,7 @@ export default function HomePage() {
               alt="AES field coverage map — active pods across the United States"
               width={900}
               height={520}
-              className="w-full h-auto block brightness-125"
+              className="w-full h-auto block brightness-150"
             />
           </div>
           <div className="flex flex-wrap justify-center gap-3">
