@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/page-hero";
 
-export const metadata: Metadata = { title: "Privacy Policy — Apex Enterprise Solutions" };
+export const metadata: Metadata = {
+  title: "Privacy Policy — Apex Enterprise Solutions",
+  alternates: { canonical: "https://www.apexsolutions.io/privacy" },
+};
 
 export default function PrivacyPage() {
   return (

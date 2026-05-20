@@ -9,13 +9,15 @@ export interface Post {
   category?: string;
   author: string;
   publishedAt: string;
+  readingTime?: number;
   body?: any[];
 }
 
 export async function getAllPosts(): Promise<Post[]> {
   return client.fetch(
     `*[_type == "post"] | order(publishedAt desc) {
-      _id, title, slug, excerpt, coverImage, category, author, publishedAt
+      _id, title, slug, excerpt, coverImage, category, author, publishedAt,
+      "readingTime": round(length(pt::text(body)) / 1000)
     }`
   );
 }

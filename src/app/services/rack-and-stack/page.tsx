@@ -41,11 +41,41 @@ const jsonLd = {
   "url": "https://www.apexsolutions.io/services/rack-and-stack",
 };
 
+const faq = [
+  {
+    q: "What does rack and stack include in a data center deployment?",
+    a: "AES rack and stack services cover physical rack installation and anchoring, server and appliance mounting per vendor specs, PDU installation and circuit labeling, structured cabling and power dressing within the rack, asset tagging, and full closeout documentation. We work from your BOMs and rack elevation drawings.",
+  },
+  {
+    q: "Do you provide burn-in and validation after rack and stack?",
+    a: "Yes. AES can perform burn-in monitoring, BIOS/firmware validation, IPMI/BMC verification, and pre-handover punch-list clearance where required. Burn-in scope and duration are confirmed during project planning.",
+  },
+  {
+    q: "Can AES handle multi-site rack and stack rollouts simultaneously?",
+    a: "Yes. We staff and coordinate multi-site deployments across U.S. and Canadian markets simultaneously using a network of vetted field resources. Multi-site rollouts include unified documentation, standardized labeling, and a single closeout pack per site.",
+  },
+  {
+    q: "What documentation is delivered at rack and stack handover?",
+    a: "Handover documentation includes rack elevation as-builts, cable labeling logs, equipment serial number records, PDU load documentation, burn-in test reports, and a signed punch-list clearance. CMDB-ready asset inventory is also provided.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faq.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: { "@type": "Answer", text: item.a },
+  })),
+};
+
 export default function RackAndStackPage() {
   const featuredStudy = CASE_STUDIES.find((c) => c.slug === "telecom-transport-lab");
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <PageHero
         eyebrow="Service"
         h1="Rack &amp; Stack — Data Center Build &amp; Refresh"
@@ -117,6 +147,22 @@ export default function RackAndStackPage() {
           </div>
         </section>
       )}
+
+      {/* FAQ Section */}
+      <section className="bg-[#F4F6F9] section-pad">
+        <div className="max-w-7xl mx-auto">
+          <p className="eyebrow mb-3">Common Questions</p>
+          <h2 className="text-[#0D1F3C] text-3xl font-bold mb-10">Rack &amp; Stack — FAQ</h2>
+          <div className="max-w-3xl space-y-8">
+            {faq.map((item) => (
+              <div key={item.q} className="border-b border-gray-200 pb-8 last:border-0">
+                <h3 className="text-[#0D1F3C] text-lg font-bold mb-3">{item.q}</h3>
+                <p className="text-[#1F2933] leading-relaxed">{item.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <CtaBand heading="Got racks to build? We'll be on-site." />
     </>

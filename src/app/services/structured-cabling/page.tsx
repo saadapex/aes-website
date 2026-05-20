@@ -38,11 +38,41 @@ const jsonLd = {
   "url": "https://www.apexsolutions.io/services/structured-cabling",
 };
 
+const faq = [
+  {
+    q: "Do you work as a subcontractor for IT integrators and general contractors?",
+    a: "Yes — the majority of AES engagements are as a subcontract execution partner to prime contractors, systems integrators, and managed service providers. We bring our own supervision, documentation standards, and closeout deliverables to every engagement.",
+  },
+  {
+    q: "What certifications and documentation do you deliver at project closeout?",
+    a: "Every project includes OTDR trace files, power meter test results, link certification reports (Fluke DSX or equivalent), TIA/EIA-606 compliant labeling records, and full as-built documentation. The complete closeout pack is delivered at handover — not chased after.",
+  },
+  {
+    q: "What cable categories and fiber types does AES install?",
+    a: "We install CAT6, CAT6A (U/UTP and F/UTP shielded), and OS2, OM3, and OM4 fiber. Fiber runs are field-terminated or fusion-spliced depending on the design requirement. We also work in freezer, cooler, and high-bay environments.",
+  },
+  {
+    q: "How long does a structured cabling project typically take?",
+    a: "A typical network comms room with 100–200 runs can be completed in 2–5 days. Larger multi-floor or multi-site deployments are scoped individually with milestone timelines. We provide daily progress updates throughout.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faq.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: { "@type": "Answer", text: item.a },
+  })),
+};
+
 export default function StructuredCablingPage() {
   const featuredStudy = CASE_STUDIES.find((c) => c.slug === "telecom-transport-lab");
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <PageHero
         eyebrow="Service"
         h1="Structured Cabling — Copper &amp; Fiber"
@@ -114,6 +144,22 @@ export default function StructuredCablingPage() {
           </div>
         </section>
       )}
+
+      {/* FAQ Section */}
+      <section className="bg-[#F4F6F9] section-pad">
+        <div className="max-w-7xl mx-auto">
+          <p className="eyebrow mb-3">Common Questions</p>
+          <h2 className="text-[#0D1F3C] text-3xl font-bold mb-10">Structured Cabling — FAQ</h2>
+          <div className="max-w-3xl space-y-8">
+            {faq.map((item) => (
+              <div key={item.q} className="border-b border-gray-200 pb-8 last:border-0">
+                <h3 className="text-[#0D1F3C] text-lg font-bold mb-3">{item.q}</h3>
+                <p className="text-[#1F2933] leading-relaxed">{item.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <CtaBand heading="Cabling runs don't wait. Neither do we." />
     </>

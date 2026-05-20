@@ -11,8 +11,27 @@ interface PageHeroProps {
 }
 
 export default function PageHero({ eyebrow, h1, sub, cta, breadcrumb, image }: PageHeroProps) {
+  const breadcrumbSchema = breadcrumb
+    ? {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: breadcrumb.map((crumb, i) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          name: crumb.label,
+          item: `https://www.apexsolutions.io${crumb.href}`,
+        })),
+      }
+    : null;
+
   return (
     <section className="bg-[#0D1F3C] pt-24 md:pt-32 pb-12 md:pb-16 px-5 sm:px-6 lg:px-12">
+      {breadcrumbSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
+      )}
       <div className={`max-w-7xl mx-auto ${image ? "grid lg:grid-cols-2 gap-12 lg:gap-16 items-center" : ""}`}>
         {/* Text column */}
         <div>

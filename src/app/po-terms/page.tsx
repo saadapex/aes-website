@@ -4,6 +4,7 @@ import PageHero from "@/components/page-hero";
 export const metadata: Metadata = {
   title: "Purchase Order Terms & Conditions",
   description: "Standard Purchase Order Terms & Conditions for Apex Enterprise Solutions subcontract engagements.",
+  alternates: { canonical: "https://www.apexsolutions.io/po-terms" },
 };
 
 export default function POTermsPage() {

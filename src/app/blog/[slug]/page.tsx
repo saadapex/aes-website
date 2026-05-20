@@ -18,7 +18,11 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const post = await getPostBySlug(params.slug);
   if (!post) return {};
-  return { title: `${post.title} — AES Blog`, description: post.excerpt };
+  return {
+    title: `${post.title} — AES Blog`,
+    description: post.excerpt,
+    alternates: { canonical: `https://www.apexsolutions.io/blog/${params.slug}` },
+  };
 }
 
 function formatDate(iso: string) {
@@ -81,8 +85,39 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
   const post = await getPostBySlug(params.slug);
   if (!post) notFound();
 
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    description: post.excerpt,
+    author: {
+      "@type": "Person",
+      name: post.author,
+    },
+    publisher: {
+      "@type": "Organization",
+      "@id": "https://www.apexsolutions.io/#business",
+      name: "Apex Enterprise Solutions",
+      url: "https://www.apexsolutions.io",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://www.apexsolutions.io/images/AES_Option3_Primary_Full_Logo_No_Background.png",
+      },
+    },
+    datePublished: post.publishedAt,
+    url: `https://www.apexsolutions.io/blog/${params.slug}`,
+    mainEntityOfPage: `https://www.apexsolutions.io/blog/${params.slug}`,
+    ...(post.coverImage
+      ? { image: urlFor(post.coverImage).width(1200).height(630).url() }
+      : {}),
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
       <PageHero
         eyebrow={post.category || "Blog"}
         h1={post.title}
@@ -120,6 +155,9 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
                 {post.author}
               </span>
               <span className="text-[#4E6575] text-sm">{formatDate(post.publishedAt)}</span>
+              {post.readingTime && post.readingTime > 0 && (
+                <span className="text-[#4E6575] text-sm">{post.readingTime} min read</span>
+              )}
               {post.category && (
                 <span className="bg-[#FF6B00]/10 border border-[#FF6B00]/30 text-[#FF6B00] text-xs font-semibold px-3 py-1.5 rounded-full">
                   {post.category}

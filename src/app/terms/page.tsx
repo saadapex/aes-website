@@ -4,6 +4,7 @@ import PageHero from "@/components/page-hero";
 export const metadata: Metadata = {
   title: "Terms of Service",
   description: "Terms of Service for Apex Enterprise Solutions — governing use of the apexsolutions.io website.",
+  alternates: { canonical: "https://www.apexsolutions.io/terms" },
 };
 
 export default function TermsPage() {

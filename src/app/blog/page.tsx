@@ -9,6 +9,7 @@ import { urlFor } from "@/sanity/client";
 export const metadata: Metadata = {
   title: "Blog — Apex Enterprise Solutions",
   description: "Field insights, deployment tips, and infrastructure industry news from the AES team.",
+  alternates: { canonical: "https://www.apexsolutions.io/blog" },
 };
 export const revalidate = 60;
 
@@ -71,6 +72,7 @@ export default async function BlogPage() {
                   <div className="flex flex-col flex-1 p-6">
                     <p className="text-[#4E6575] text-xs mb-2">
                       {formatDate(post.publishedAt)} · {post.author}
+                      {post.readingTime && post.readingTime > 0 && ` · ${post.readingTime} min read`}
                     </p>
                     <h2 className="text-[#06284C] font-bold text-lg leading-snug mb-3 group-hover:text-[#FF6B00] transition-colors">
                       {post.title}

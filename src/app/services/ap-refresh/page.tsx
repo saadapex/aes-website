@@ -41,11 +41,41 @@ const jsonLd = {
   "url": "https://www.apexsolutions.io/services/ap-refresh",
 };
 
+const faq = [
+  {
+    q: "How many access points can your team install per shift?",
+    a: "In open-plan warehouse and logistics environments, experienced AES crews typically install and validate 80–150 APs per shift. High-bay environments requiring lift equipment or complex conduit runs are scoped to site conditions. We provide per-AP progress tracking throughout the deployment.",
+  },
+  {
+    q: "What wireless platforms does AES support?",
+    a: "AES deploys access points for Cisco (Catalyst and Meraki), Juniper Mist, Aruba/HPE, Extreme Networks, and Ubiquiti. Our crews handle physical mounting, low-voltage cabling, and basic configuration staging — RF planning and controller configuration are coordinated with the responsible network engineer.",
+  },
+  {
+    q: "Do you provide post-installation testing and coverage validation?",
+    a: "Yes. AES performs per-AP connectivity validation on every deployment and, where specified, a post-installation RF walk-test using Ekahau or equivalent tooling. Test results and RF coverage data are included in the project closeout pack.",
+  },
+  {
+    q: "Can AES handle decommissioning of legacy APs as part of a refresh?",
+    a: "Yes. AES can decommission and remove legacy equipment as part of a refresh scope. Disposal options include certified e-waste recycling or return to client inventory, per project requirements.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faq.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: { "@type": "Answer", text: item.a },
+  })),
+};
+
 export default function ApRefreshPage() {
   const featuredStudy = CASE_STUDIES.find((c) => c.slug === "fulfillment-ap-refresh-ontario");
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <PageHero
         eyebrow="Service"
         h1="AP Refresh — Large-Scale Wireless Rollouts"
@@ -117,6 +147,22 @@ export default function ApRefreshPage() {
           </div>
         </section>
       )}
+
+      {/* FAQ Section */}
+      <section className="bg-[#F4F6F9] section-pad">
+        <div className="max-w-7xl mx-auto">
+          <p className="eyebrow mb-3">Common Questions</p>
+          <h2 className="text-[#0D1F3C] text-3xl font-bold mb-10">AP Refresh — FAQ</h2>
+          <div className="max-w-3xl space-y-8">
+            {faq.map((item) => (
+              <div key={item.q} className="border-b border-gray-200 pb-8 last:border-0">
+                <h3 className="text-[#0D1F3C] text-lg font-bold mb-3">{item.q}</h3>
+                <p className="text-[#1F2933] leading-relaxed">{item.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <CtaBand heading="Multi-site Wi-Fi rollout? We run those programs." />
     </>

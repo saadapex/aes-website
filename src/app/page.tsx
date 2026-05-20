@@ -392,9 +392,11 @@ export default function HomePage() {
             Rapid-response field pods across the U.S. and Canada. We mobilize where the work is.
           </p>
           <div className="w-full max-w-3xl mx-auto rounded-xl overflow-hidden shadow-lg mb-8">
-            <img
+            <Image
               src="/images/about-coverage-map.png"
               alt="AES field coverage map — active pods across the United States"
+              width={900}
+              height={520}
               className="w-full h-auto block"
             />
           </div>

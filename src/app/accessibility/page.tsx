@@ -4,6 +4,7 @@ import PageHero from "@/components/page-hero";
 export const metadata: Metadata = {
   title: "Accessibility Statement",
   description: "Apex Enterprise Solutions is committed to making apexsolutions.io accessible to all users.",
+  alternates: { canonical: "https://www.apexsolutions.io/accessibility" },
 };
 
 export default function AccessibilityPage() {

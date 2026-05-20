@@ -3,7 +3,11 @@ import Link from "next/link";
 import { CheckCircle } from "lucide-react";
 import { SITE } from "@/lib/utils";
 
-export const metadata: Metadata = { title: "Request Received — Apex Enterprise Solutions" };
+export const metadata: Metadata = {
+  title: "Request Received — Apex Enterprise Solutions",
+  alternates: { canonical: "https://www.apexsolutions.io/thank-you" },
+  robots: { index: false, follow: false },
+};
 
 const NEXT_STEPS = [
   {
