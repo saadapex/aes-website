@@ -33,18 +33,11 @@ const PRINCIPLES = [
 
 const LEADERSHIP = [
   {
-    photo: null, // add /images/team-saad-usmani.jpg to public/images/ to activate
+    photo: "/images/Saad Headshot.png",
     initials: "SU",
     name: "Saad Usmani",
     title: "Founder & CEO",
-    bio: "Leads business development, client relationships, partner engagement, pricing, and delivery oversight across AES operations.",
-  },
-  {
-    photo: null, // add /images/team-vinod-bharwani.jpg to public/images/ to activate
-    initials: "VB",
-    name: "Vinod Bharwani",
-    title: "Chief Operating Officer",
-    bio: "Supports operational coordination, execution planning, and field delivery across active project engagements.",
+    bio: "Saad founded Apex Enterprise Solutions after a decade in telecom and systems engineering, where he repeatedly saw large deployment programs fail at the field execution layer. He leads business development, partner relationships, pricing, and delivery oversight at AES — with a focus on building a company that protects its partners' reputations on every job.",
   },
 ];
 
@@ -187,26 +180,28 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto">
           <p className="eyebrow mb-3">Leadership</p>
           <h2 className="text-[#06284C] text-3xl font-bold mb-12">The Team Behind AES</h2>
-          <div className="grid md:grid-cols-2 gap-8 max-w-3xl">
+          <div className="max-w-sm">
             {LEADERSHIP.map((person) => (
-              <div key={person.name} className="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
+              <div key={person.name} className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 flex gap-6 items-start">
                 {person.photo ? (
-                  <div className="relative w-16 h-16 rounded-full overflow-hidden mb-4">
+                  <div className="relative w-24 h-24 rounded-full overflow-hidden flex-shrink-0">
                     <Image
                       src={person.photo}
                       alt={person.name}
                       fill
-                      className="object-cover"
+                      className="object-cover object-top"
                     />
                   </div>
                 ) : (
-                  <div className="w-16 h-16 bg-[#06284C] rounded-full flex items-center justify-center mb-4">
-                    <span className="text-white font-bold text-xl">{person.initials}</span>
+                  <div className="w-24 h-24 bg-[#06284C] rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-white font-bold text-2xl">{person.initials}</span>
                   </div>
                 )}
-                <h3 className="text-[#06284C] font-bold text-xl mb-0.5">{person.name}</h3>
-                <p className="text-[#FF6B00] text-sm font-semibold mb-3">{person.title}</p>
-                <p className="text-[#1F2933] text-sm leading-relaxed">{person.bio}</p>
+                <div>
+                  <h3 className="text-[#06284C] font-bold text-xl mb-0.5">{person.name}</h3>
+                  <p className="text-[#FF6B00] text-sm font-semibold mb-3">{person.title}</p>
+                  <p className="text-[#1F2933] text-sm leading-relaxed">{person.bio}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -224,10 +219,12 @@ export default function AboutPage() {
           </p>
           {/* Coverage map */}
           <div className="w-full rounded-xl overflow-hidden shadow-lg mb-8">
-            <img
+            <Image
               src="/images/about-coverage-map.png"
               alt="AES field coverage map \u2014 active pods across the United States"
-              className="w-full h-auto block"
+              width={1200}
+              height={650}
+              className="w-full h-auto block brightness-125"
             />
           </div>
           <div className="flex flex-wrap gap-3">
