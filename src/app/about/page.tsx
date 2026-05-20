@@ -228,7 +228,7 @@ export default function AboutPage() {
             />
           </div>
           <div className="flex flex-wrap gap-3">
-            {["Ontario, CA", "Bay Area, CA", "Dallas, TX", "Las Vegas, NV", "Memphis, TN"].map((pod) => (
+            {["San Francisco Bay Area, CA", "Los Angeles, CA", "Dallas, TX", "Las Vegas, NV", "Memphis, TN"].map((pod) => (
               <span key={pod}
                 className="bg-[#F4F7FA] border border-[#006FB9]/20 text-[#06284C] px-4 py-2 rounded-full text-sm font-medium">
                 &#128205; {pod}
