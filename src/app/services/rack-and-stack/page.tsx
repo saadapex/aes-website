@@ -80,7 +80,7 @@ export default function RackAndStackPage() {
         eyebrow="Service"
         h1="Rack &amp; Stack — Data Center Build &amp; Refresh"
         sub="Bare room to live racks, executed clean. AES handles the full build — planning through validated handover — so your PM doesn't have to chase it."
-        cta={{ label: "Book a Planning Call →", href: "https://calendly.com/apexenterprisesolutions", external: true }}
+        cta={{ label: "Book a Planning Call →", href: "https://calendly.com/apexenterprisesolutions/meeting", external: true }}
         breadcrumb={[
           { label: "Home", href: "/" },
           { label: "Services", href: "/services" },
@@ -104,7 +104,7 @@ export default function RackAndStackPage() {
                   <span className="text-white text-sm">{kpi}</span>
                 </div>
               ))}
-              <a href="https://calendly.com/apexenterprisesolutions" target="_blank" rel="noopener noreferrer" className="btn-primary w-full justify-center mt-6 text-sm">
+              <a href="https://calendly.com/apexenterprisesolutions/meeting" target="_blank" rel="noopener noreferrer" className="btn-primary w-full justify-center mt-6 text-sm">
                 Book a Planning Call &rarr;
               </a>
             </div>

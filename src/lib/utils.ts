@@ -20,7 +20,7 @@ export const SITE = {
   email: "info@apexsolutions.io",
   phone: "(669) 251-7810",
   address: "1069 Duane Ct, Sunnyvale, CA 94085",
-  calendly: "https://calendly.com/apexenterprisesolutions",
+  calendly: "https://calendly.com/apexenterprisesolutions/meeting",
   linkedin: "https://www.linkedin.com/company/apexenterprisesolutions/",
   twitter: "https://x.com/apexensolutions",
   instagram: "https://www.instagram.com/apexenterprisesolutions",

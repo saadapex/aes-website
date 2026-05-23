@@ -1,43 +1,31 @@
-"use client";
-
-import { useEffect, useRef } from "react";
+import Link from "next/link";
 
 export default function GiscusComments() {
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (!ref.current || ref.current.hasChildNodes()) return;
-    const script = document.createElement("script");
-    script.src = "https://giscus.app/client.js";
-    script.setAttribute("data-repo", "saadapex/aes-website");
-    script.setAttribute("data-repo-id", "R_kgDOSc-Cmg");
-    script.setAttribute("data-category", "Announcements");
-    script.setAttribute("data-category-id", "DIC_kwDOSc-Cms4C9Z-T");
-    script.setAttribute("data-mapping", "pathname");
-    script.setAttribute("data-strict", "0");
-    script.setAttribute("data-reactions-enabled", "1");
-    script.setAttribute("data-emit-metadata", "0");
-    script.setAttribute("data-input-position", "bottom");
-    script.setAttribute("data-theme", "preferred_color_scheme");
-    script.setAttribute("data-lang", "en");
-    script.setAttribute("data-loading", "lazy");
-    script.crossOrigin = "anonymous";
-    script.async = true;
-    ref.current.appendChild(script);
-  }, []);
-
   return (
     <div className="mt-12 pt-10 border-t border-gray-100">
-      <h2 className="text-[#06284C] text-xl font-bold mb-6">Comments</h2>
-      <div ref={ref} />
-      <p className="text-xs text-[#4E6575] mt-4">
-        Comments powered by{" "}
-        <a href="https://giscus.app" target="_blank" rel="noopener noreferrer"
-          className="text-[#006FB9] hover:underline">
-          Giscus
-        </a>{" "}
-        — sign in with GitHub to comment.
-      </p>
+      <div className="bg-[#06284C] rounded-2xl p-8 md:p-10">
+        <p className="text-[#4E6575] uppercase tracking-widest text-xs font-semibold mb-3">
+          Get In Touch
+        </p>
+        <h2 className="text-white text-2xl font-bold leading-snug mb-3">
+          Have questions about this deployment?
+        </h2>
+        <p className="text-[#7A9FC0] text-sm leading-relaxed mb-6 max-w-lg">
+          Whether you&apos;re scoping a similar project or looking for a field execution partner,
+          the AES team is happy to talk through the details.
+        </p>
+        <div className="flex flex-wrap gap-3">
+          <Link href="/contact"
+            className="bg-[#FF6B00] hover:bg-[#e05e00] text-white font-bold text-sm px-6 py-3 rounded-lg transition-colors">
+            Talk to the AES Team →
+          </Link>
+          <a href="/assets/Apex Enterprise Solutions – Capability Statement.pdf"
+            target="_blank" rel="noopener noreferrer"
+            className="border border-white/20 hover:border-white/40 text-white font-semibold text-sm px-6 py-3 rounded-lg transition-colors">
+            ↓ Download Capability Statement
+          </a>
+        </div>
+      </div>
     </div>
   );
 }
