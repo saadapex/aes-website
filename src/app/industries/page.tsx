@@ -6,7 +6,7 @@ import { INDUSTRIES } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Industries We Serve",
-  description: "AES deploys infrastructure for data centers, logistics and warehousing, enterprise campuses, and telecom providers across the U.S. and Canada.",
+  description: "AES deploys infrastructure for data centers, logistics and warehousing, and telecom providers across the U.S. and Canada.",
   alternates: { canonical: "https://www.apexsolutions.io/industries" },
 };
 

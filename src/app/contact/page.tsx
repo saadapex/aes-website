@@ -127,7 +127,7 @@ export default function ContactPage() {
             <div>
               <h3 className="text-[#06284C] font-bold text-lg mb-4">Or book a time directly</h3>
               <a href={SITE.calendly} target="_blank" rel="noopener noreferrer" className="btn-primary w-full justify-center">
-                Book a Planning Call &rarr;
+                Book a Call &rarr;
               </a>
             </div>
             <div className="border-t border-gray-100 pt-6 space-y-4">

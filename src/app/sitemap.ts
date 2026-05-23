@@ -13,7 +13,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/industries`,                       lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/industries/data-centers`,          lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/industries/logistics-warehousing`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE}/industries/enterprise`,            lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/industries/telecom`,               lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/case-studies`,                               lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/case-studies/telecom-transport-lab`,         lastModified: now, changeFrequency: "yearly", priority: 0.7 },

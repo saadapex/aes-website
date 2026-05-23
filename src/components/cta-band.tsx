@@ -21,7 +21,7 @@ export default function CtaBand({
           </Link>
           <a href={SITE.calendly} target="_blank" rel="noopener noreferrer"
             className="btn-outline-white justify-center">
-            Book a Planning Call →
+            Book a Call →
           </a>
         </div>
       </div>

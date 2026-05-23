@@ -50,7 +50,7 @@ export const SERVICES = [
     title: "Rack & Stack",
     subtitle: "Data Center Build & Refresh",
     subhead: "From bare room to live racks — fast.",
-    cta: "Book a Planning Call",
+    cta: "Book a Call",
     ctaHref: "calendly",
     ctaType: "calendly" as const,
   },
@@ -129,38 +129,6 @@ export const INDUSTRIES = [
       { value: "0",      label: "Safety Incidents on Record" },
     ],
     caseStudySlug: "fulfillment-ap-refresh-ontario",
-  },
-  {
-    slug: "enterprise",
-    title: "Enterprise & Corporate",
-    headline: "Enterprise Infrastructure, Done Right the First Time",
-    sub: "Copper, fiber, and high-density wireless for campus, office, and multi-site enterprise programs — built clean, documented at handover.",
-    image: { src: "/images/industry-enterprise.png", alt: "Field technician certifying structured cabling in a corporate enterprise server room" },
-    services: ["structured-cabling", "ap-refresh"],
-    painPoints: [
-      {
-        heading: "Consistency Across Every Location",
-        body: "Multi-site enterprise programs fail when Site 3 is wired differently from Site 1. AES brings the same installation standards, labeling schemas, and test certification to every location.",
-      },
-      {
-        heading: "Documentation Drives Helpdesk Cost",
-        body: "Accurate as-builts and cable records directly reduce MAC time and helpdesk call volume. Sloppy closeout documentation is a cost your IT team pays for years.",
-      },
-      {
-        heading: "Certification Requirements Are Real",
-        body: "Manufacturer warranties on structured cabling systems require certified installation. AES delivers OTDR and channel certification with every fiber and copper run — not on request.",
-      },
-      {
-        heading: "High-Density Wireless Is an Engineering Problem",
-        body: "Open-plan offices, conference-heavy floors, and campus environments require predictive RF surveys and validation heatmaps — not a best-guess AP grid from a floor plan.",
-      },
-    ],
-    kpis: [
-      { value: "100%",        label: "On-Time Delivery Rate" },
-      { value: "U.S. & CA",  label: "Cross-Border Program Coverage" },
-      { value: "TIA/EIA-606", label: "Labeling Standard on Every Job" },
-    ],
-    caseStudySlug: "amazon-ap-refresh",
   },
   {
     slug: "telecom",

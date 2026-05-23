@@ -6,18 +6,14 @@ import Image from "next/image";
 import { Menu, X, ChevronDown, Phone } from "lucide-react";
 import { SITE, SERVICES, INDUSTRIES } from "@/lib/utils";
 
-const RESOURCES = [
-  { title: "Blog",         subtitle: "Field insights & industry news", href: "/blog" },
-  { title: "Case Studies", subtitle: "Real deployments, real results",  href: "/case-studies" },
+const ABOUT = [
+  { title: "Saad's Background", subtitle: "Founder & CEO — telecom and field execution leader", href: "/about#leadership" },
+  { title: "Company",           subtitle: "Who we are & how we work",                          href: "/about" },
+  { title: "Partners",          subtitle: "Become an execution partner",                       href: "/partners" },
+  { title: "Careers",           subtitle: "Join the AES field team",                           href: "/careers" },
 ];
 
-const COMPANY = [
-  { title: "About",    subtitle: "Who we are & how we work", href: "/about" },
-  { title: "Partners", subtitle: "Become an execution partner", href: "/partners" },
-  { title: "Careers",  subtitle: "Join the AES field team",   href: "/careers" },
-];
-
-type DropdownKey = "services" | "industries" | "resources" | "company" | null;
+type DropdownKey = "services" | "industries" | "about" | null;
 
 export default function Nav() {
   const [scrolled, setScrolled]   = useState(false);
@@ -76,6 +72,11 @@ export default function Nav() {
         {/* Desktop nav */}
         <nav className="hidden lg:flex items-center gap-6">
 
+          {/* Case Studies */}
+          <Link href="/case-studies" className={`text-sm font-medium transition-colors ${linkClass}`}>
+            Case Studies
+          </Link>
+
           {/* Services */}
           <div className="relative" onMouseEnter={() => setOpen("services")} onMouseLeave={() => setOpen(null)}>
             <button
@@ -123,39 +124,18 @@ export default function Nav() {
             </Dropdown>
           </div>
 
-          {/* Resources */}
-          <div className="relative" onMouseEnter={() => setOpen("resources")} onMouseLeave={() => setOpen(null)}>
+          {/* About */}
+          <div className="relative" onMouseEnter={() => setOpen("about")} onMouseLeave={() => setOpen(null)}>
             <button
               className={`flex items-center gap-1 text-sm font-medium transition-colors ${linkClass}`}
               aria-haspopup="true"
-              aria-expanded={open === "resources"}
+              aria-expanded={open === "about"}
             >
-              Resources
-              <ChevronDown size={14} className={`transition-transform duration-200 ${open === "resources" ? "rotate-180" : ""}`} />
+              About
+              <ChevronDown size={14} className={`transition-transform duration-200 ${open === "about" ? "rotate-180" : ""}`} />
             </button>
-            <Dropdown id="resources" width="w-60">
-              {RESOURCES.map((r) => (
-                <Link key={r.href} href={r.href} onClick={closeAll}
-                  className="block px-4 py-2.5 text-sm text-[#06284C] hover:bg-[#F4F7FA] hover:text-[#FF6B00] transition-colors">
-                  {r.title}
-                  <span className="block text-xs text-[#4E6575] font-normal">{r.subtitle}</span>
-                </Link>
-              ))}
-            </Dropdown>
-          </div>
-
-          {/* Company */}
-          <div className="relative" onMouseEnter={() => setOpen("company")} onMouseLeave={() => setOpen(null)}>
-            <button
-              className={`flex items-center gap-1 text-sm font-medium transition-colors ${linkClass}`}
-              aria-haspopup="true"
-              aria-expanded={open === "company"}
-            >
-              Company
-              <ChevronDown size={14} className={`transition-transform duration-200 ${open === "company" ? "rotate-180" : ""}`} />
-            </button>
-            <Dropdown id="company" width="w-60">
-              {COMPANY.map((c) => (
+            <Dropdown id="about" width="w-72">
+              {ABOUT.map((c) => (
                 <Link key={c.href} href={c.href} onClick={closeAll}
                   className="block px-4 py-2.5 text-sm text-[#06284C] hover:bg-[#F4F7FA] hover:text-[#FF6B00] transition-colors">
                   {c.title}
@@ -164,6 +144,11 @@ export default function Nav() {
               ))}
             </Dropdown>
           </div>
+
+          {/* Blog */}
+          <Link href="/blog" className={`text-sm font-medium transition-colors ${linkClass}`}>
+            Blog
+          </Link>
 
           <Link href="/contact" className={`text-sm font-medium transition-colors ${linkClass}`}>
             Contact
@@ -194,6 +179,11 @@ export default function Nav() {
       {mobileOpen && (
         <div className="lg:hidden bg-white border-t border-gray-100 px-6 py-6 flex flex-col gap-5 max-h-[80vh] overflow-y-auto">
 
+          <Link href="/case-studies" onClick={closeAll}
+            className="text-[#06284C] font-semibold hover:text-[#FF6B00] transition-colors">
+            Case Studies
+          </Link>
+
           <div>
             <p className="text-xs uppercase tracking-widest text-[#4E6575] font-medium mb-3">Services</p>
             {SERVICES.map((s) => (
@@ -219,18 +209,8 @@ export default function Nav() {
           </div>
 
           <div>
-            <p className="text-xs uppercase tracking-widest text-[#4E6575] font-medium mb-3">Resources</p>
-            {RESOURCES.map((r) => (
-              <Link key={r.href} href={r.href} onClick={closeAll}
-                className="flex items-center gap-2 py-2 text-[#06284C] hover:text-[#FF6B00] text-sm border-b border-gray-50 transition-colors">
-                <span className="text-[#FF6B00]">›</span>{r.title}
-              </Link>
-            ))}
-          </div>
-
-          <div>
-            <p className="text-xs uppercase tracking-widest text-[#4E6575] font-medium mb-3">Company</p>
-            {COMPANY.map((c) => (
+            <p className="text-xs uppercase tracking-widest text-[#4E6575] font-medium mb-3">About</p>
+            {ABOUT.map((c) => (
               <Link key={c.href} href={c.href} onClick={closeAll}
                 className="flex items-center gap-2 py-2 text-[#06284C] hover:text-[#FF6B00] text-sm border-b border-gray-50 transition-colors">
                 <span className="text-[#FF6B00]">›</span>{c.title}
@@ -238,11 +218,16 @@ export default function Nav() {
             ))}
           </div>
 
+          <Link href="/blog" onClick={closeAll}
+            className="text-[#06284C] font-semibold hover:text-[#FF6B00] transition-colors">
+            Blog
+          </Link>
+
           <Link href="/contact" className="text-[#06284C] font-semibold" onClick={closeAll}>Contact</Link>
 
           <a href={SITE.calendly} target="_blank" rel="noopener noreferrer"
             className="btn-primary justify-center text-center mt-2">
-            Book a Planning Call
+            Book a Call
           </a>
         </div>
       )}

@@ -42,10 +42,10 @@ export default function ThankYouPage() {
           <p className="text-[#4E6575] text-sm uppercase tracking-widest mb-2">Optional</p>
           <h2 className="text-white font-bold text-xl mb-2">Want to move faster?</h2>
           <p className="text-[#4E6575] mb-4 text-sm">
-            Book a planning call directly and we&apos;ll get on the same page sooner.
+            Book a call directly and we&apos;ll get on the same page sooner.
           </p>
           <a href={SITE.calendly} target="_blank" rel="noopener noreferrer" className="btn-primary">
-            Book a Planning Call →
+            Book a Call →
           </a>
         </div>
 

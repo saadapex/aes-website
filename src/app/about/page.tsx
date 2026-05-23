@@ -176,7 +176,7 @@ export default function AboutPage() {
       </section>
 
       {/* Leadership */}
-      <section className="bg-[#F4F7FA] section-pad">
+      <section id="leadership" className="bg-[#F4F7FA] section-pad scroll-mt-24">
         <div className="max-w-7xl mx-auto">
           <p className="eyebrow mb-3">Leadership</p>
           <h2 className="text-[#06284C] text-3xl font-bold mb-12">The Team Behind AES</h2>
