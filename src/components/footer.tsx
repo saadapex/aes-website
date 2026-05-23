@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Linkedin, Mail, Phone, MapPin, Twitter, Instagram, Facebook } from "lucide-react";
+import { Linkedin, Mail, Phone, MapPin, Twitter, Instagram, Facebook, MessageSquare } from "lucide-react";
 import { SITE, SERVICES, INDUSTRIES } from "@/lib/utils";
 
 export default function Footer() {
@@ -129,11 +129,22 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href={`tel:${SITE.phone.replace(/\D/g, "")}`}
-                  className="flex items-start gap-2 text-sm text-gray-300 hover:text-[#FF6B00] transition-colors">
+                <div className="flex items-start gap-2 text-sm text-gray-300">
                   <Phone size={14} className="mt-0.5 flex-shrink-0 text-[#006FB9]" />
-                  {SITE.phone}
-                </a>
+                  <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+                    <a href={`tel:+1${SITE.phone.replace(/\D/g, "")}`}
+                      aria-label={`Call ${SITE.phone}`}
+                      className="hover:text-[#FF6B00] transition-colors">
+                      {SITE.phone}
+                    </a>
+                    <span className="text-gray-500">·</span>
+                    <a href={`sms:+1${SITE.phone.replace(/\D/g, "")}`}
+                      aria-label={`Text ${SITE.phone}`}
+                      className="inline-flex items-center gap-1 text-xs text-[#7A9FC0] hover:text-[#FF6B00] transition-colors">
+                      <MessageSquare size={11} /> Text
+                    </a>
+                  </div>
+                </div>
               </li>
               <li>
                 <div className="flex items-start gap-2 text-sm text-gray-300">

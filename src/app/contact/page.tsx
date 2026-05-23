@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
-import { Mail, Phone, MapPin, Linkedin } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, MessageSquare } from "lucide-react";
 import PageHero from "@/components/page-hero";
 import FormErrorBanner from "@/components/form-error-banner";
 import { SITE } from "@/lib/utils";
@@ -134,9 +134,18 @@ export default function ContactPage() {
               <a href={`mailto:${SITE.email}`} className="flex items-center gap-3 text-gray-700 hover:text-[#FF6B00] transition-colors">
                 <Mail size={16} className="text-[#006FB9]" /> {SITE.email}
               </a>
-              <a href={`tel:${SITE.phone.replace(/\D/g, "")}`} className="flex items-center gap-3 text-gray-700 hover:text-[#FF6B00] transition-colors">
-                <Phone size={16} className="text-[#006FB9]" /> {SITE.phone}
-              </a>
+              <div className="flex items-center gap-3 text-gray-700">
+                <Phone size={16} className="text-[#006FB9] flex-shrink-0" />
+                <a href={`tel:+1${SITE.phone.replace(/\D/g, "")}`}
+                  className="hover:text-[#FF6B00] transition-colors">
+                  {SITE.phone}
+                </a>
+                <span className="text-gray-300">·</span>
+                <a href={`sms:+1${SITE.phone.replace(/\D/g, "")}`}
+                  className="inline-flex items-center gap-1 text-sm text-[#006FB9] hover:text-[#FF6B00] transition-colors">
+                  <MessageSquare size={13} /> Text
+                </a>
+              </div>
               <div className="flex items-start gap-3 text-gray-700">
                 <MapPin size={16} className="text-[#006FB9] mt-0.5 flex-shrink-0" /> {SITE.address}
               </div>

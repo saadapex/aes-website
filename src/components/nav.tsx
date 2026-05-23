@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Menu, X, ChevronDown, Phone } from "lucide-react";
+import { Menu, X, ChevronDown, Phone, MessageSquare } from "lucide-react";
 import { SITE, SERVICES, INDUSTRIES } from "@/lib/utils";
 
 const ABOUT = [
@@ -156,11 +156,24 @@ export default function Nav() {
         </nav>
 
         {/* Desktop CTA */}
-        <div className="hidden lg:flex items-center gap-4">
-          <a href={`tel:${SITE.phone.replace(/\D/g, "")}`}
-            className={`flex items-center gap-1.5 text-sm font-medium transition-colors ${linkClass}`}>
-            <Phone size={14} /> {SITE.phone}
-          </a>
+        <div className="hidden lg:flex items-center gap-3">
+          <div className="flex items-center gap-2">
+            <a href={`tel:+1${SITE.phone.replace(/\D/g, "")}`}
+              aria-label={`Call ${SITE.phone}`}
+              className={`flex items-center gap-1.5 text-sm font-medium transition-colors ${linkClass}`}>
+              <Phone size={14} /> {SITE.phone}
+            </a>
+            <a href={`sms:+1${SITE.phone.replace(/\D/g, "")}`}
+              aria-label={`Text ${SITE.phone}`}
+              title="Text us"
+              className={`flex items-center gap-1 text-xs font-medium px-2 py-1 rounded border transition-colors ${
+                solid
+                  ? "border-[#006FB9]/30 text-[#006FB9] hover:border-[#FF6B00] hover:text-[#FF6B00]"
+                  : "border-white/40 text-white hover:border-[#FF6B00] hover:text-[#FF6B00]"
+              }`}>
+              <MessageSquare size={12} /> Text
+            </a>
+          </div>
           <a href={SITE.calendly} target="_blank" rel="noopener noreferrer"
             className="btn-primary text-sm py-2.5 px-5">
             Book a Call

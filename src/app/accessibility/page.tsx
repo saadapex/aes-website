@@ -53,7 +53,7 @@ export default function AccessibilityPage() {
               <p>We welcome your feedback on the accessibility of this website. If you experience any barriers or have suggestions for improvement, please contact us:</p>
               <ul className="mt-3 space-y-2 list-none pl-0">
                 <li><strong>Email:</strong> <a href="mailto:info@apexsolutions.io" className="text-[#006FB9] hover:text-[#FF6B00] underline">info@apexsolutions.io</a></li>
-                <li><strong>Phone:</strong> <a href="tel:16692517810" className="text-[#006FB9] hover:text-[#FF6B00] underline">(669) 251-7810</a></li>
+                <li><strong>Phone / Text:</strong> <a href="tel:+16692517810" className="text-[#006FB9] hover:text-[#FF6B00] underline">(669) 251-7810</a> &middot; <a href="sms:+16692517810" className="text-[#006FB9] hover:text-[#FF6B00] underline">Text us</a></li>
                 <li><strong>Mail:</strong> Apex Enterprise Solutions, 1069 Duane Ct, Sunnyvale, CA 94085</li>
               </ul>
               <p className="mt-4">We aim to respond to accessibility feedback within 3 business days.</p>
