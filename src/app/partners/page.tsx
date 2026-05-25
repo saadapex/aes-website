@@ -94,6 +94,22 @@ const STEPS = [
   { num: "04", title: "First Deployment", body: "You send us scope, we execute. Clean work, documented handover, and a partner you can count on." },
 ];
 
+const WHEN_PARTNERS_CALL = [
+  "You've won work outside your core geography and need credentialed crews on the ground",
+  "Your internal field team is overloaded and a deadline isn't moving",
+  "You need crews in California, Nevada, Texas, Tennessee, Ontario, or Alberta",
+  "You need AP refresh support in live warehouse or fulfillment environments",
+  "You need closeout documentation that protects your client relationship",
+  "You need a subcontractor who will not poach your customer",
+];
+
+const WHAT_AES_WONT_DO = [
+  { title: "We will not bypass your PM", body: "Your project manager owns the client relationship. AES communicates through your PM and follows your documentation and reporting standards." },
+  { title: "We will not poach your client", body: "Direct-engagement requests from your client get routed back to you. We do not pursue work behind a partner's back, full stop." },
+  { title: "We will not publish project details without permission", body: "Project names, client names, site addresses, and outcome data stay confidential unless you give written approval to disclose." },
+  { title: "We will not send unvetted labor and hope it works out", body: "Every AES tech is credentialed, briefed on the site, and held to AES documentation standards. If we can't staff to the standard, we tell you before you commit." },
+];
+
 export default function PartnersPage() {
   return (
     <>
@@ -197,6 +213,42 @@ export default function PartnersPage() {
                 </span>
               </a>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* When Partners Call AES */}
+      <section className="bg-[#F4F7FA] section-pad">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-start">
+          <div>
+            <p className="eyebrow mb-3">When Partners Call AES</p>
+            <h2 className="text-[#06284C] text-3xl font-bold mb-6">The Six Reasons Primes &amp; Integrators Reach Out</h2>
+            <p className="text-[#1F2933] leading-relaxed mb-6">
+              Our best partner conversations start one of these six ways. If any of them sound like your week, AES is built for exactly this.
+            </p>
+            <ul className="space-y-3">
+              {WHEN_PARTNERS_CALL.map((w) => (
+                <li key={w} className="flex items-start gap-3 text-[#1F2933]">
+                  <span className="text-[#FF6B00] font-bold flex-shrink-0 mt-0.5">&rsaquo;</span>
+                  <span>{w}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <p className="eyebrow mb-3">What AES Will Not Do</p>
+            <h2 className="text-[#06284C] text-3xl font-bold mb-6">Four Partner Commitments</h2>
+            <p className="text-[#1F2933] leading-relaxed mb-6">
+              The reason primes and integrators trust AES with their client engagements is that we&apos;re explicit about the lines we don&apos;t cross.
+            </p>
+            <div className="space-y-4">
+              {WHAT_AES_WONT_DO.map((c) => (
+                <div key={c.title} className="bg-white rounded-lg p-5 border-l-4 border-[#FF6B00]">
+                  <h3 className="text-[#06284C] font-bold mb-1">{c.title}</h3>
+                  <p className="text-[#1F2933] text-sm leading-relaxed">{c.body}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

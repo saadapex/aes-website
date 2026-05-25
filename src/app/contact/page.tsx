@@ -6,9 +6,40 @@ import FormErrorBanner from "@/components/form-error-banner";
 import { SITE } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: "Contact Us",
-  description: "Get in touch with Apex Enterprise Solutions to scope your next infrastructure deployment \u2014 structured cabling, rack-and-stack, or AP refresh across the U.S. and Canada.",
+  title: "Send Your Scope \u2014 Contact AES",
+  description: "Send AES your scope, BOM, RFP, drawings, or site list. We respond within one business day with a straight answer on how we can execute \u2014 across the U.S. and Canada.",
   alternates: { canonical: "https://www.apexsolutions.io/contact" },
+};
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: "Apex Enterprise Solutions",
+  image: "https://www.apexsolutions.io/images/og-image.png",
+  "@id": "https://www.apexsolutions.io/#org",
+  url: "https://www.apexsolutions.io",
+  telephone: "+1-669-251-7810",
+  email: "info@apexsolutions.io",
+  priceRange: "$$",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "1069 Duane Ct",
+    addressLocality: "Sunnyvale",
+    addressRegion: "CA",
+    postalCode: "94085",
+    addressCountry: "US",
+  },
+  areaServed: [
+    { "@type": "Country", name: "United States" },
+    { "@type": "Country", name: "Canada" },
+  ],
+  serviceType: [
+    "Structured Cabling",
+    "Rack and Stack",
+    "AP Refresh",
+    "Smart Hands and Field Support",
+    "Data Center Deployment",
+  ],
 };
 
 const NEXT_STEPS = [
@@ -32,7 +63,8 @@ const NEXT_STEPS = [
 export default function ContactPage() {
   return (
     <>
-      <PageHero h1="Let&apos;s Talk Infrastructure" sub="Send us your scope. We&apos;ll respond within one business day with a straight answer on how AES can execute it." />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
+      <PageHero h1="Send Your Scope" sub="RFP, BOM, site list, drawings, or a paragraph — whatever you have. AES responds within one business day with a straight answer on how we can execute. NDA available on request." />
       <section className="bg-white section-pad">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-5 gap-12">
 
@@ -83,7 +115,7 @@ export default function ContactPage() {
               <div>
                 <label className="block text-sm font-semibold text-[#06284C] mb-3">Services Needed</label>
                 <div className="flex flex-wrap gap-3">
-                  {["Structured Cabling","Rack & Stack","AP Refresh"].map((s) => (
+                  {["Structured Cabling","Rack & Stack","AP Refresh","Smart Hands"].map((s) => (
                     <label key={s} className="flex items-center gap-2 cursor-pointer">
                       <input type="checkbox" name="services" value={s}
                         className="w-4 h-4 accent-[#FF6B00]" />
@@ -116,9 +148,13 @@ export default function ContactPage() {
               <input type="hidden" name="utm_campaign" />
 
               <button type="submit" className="btn-primary w-full justify-center text-base">
-                Submit Request &rarr;
+                Send Your Scope &rarr;
               </button>
-              <p className="text-xs text-gray-400 text-center">We respond within one business day. Your information is never sold or shared.</p>
+              <p className="text-xs text-gray-500 text-center leading-relaxed">
+                AES can work under NDA. We do not publish project names, client names, or site details without written approval.
+                <br />
+                <span className="text-gray-400">We respond within one business day. Your information is never sold or shared.</span>
+              </p>
             </form>
           </div>
 
@@ -127,7 +163,7 @@ export default function ContactPage() {
             <div>
               <h3 className="text-[#06284C] font-bold text-lg mb-4">Or book a time directly</h3>
               <a href={SITE.calendly} target="_blank" rel="noopener noreferrer" className="btn-primary w-full justify-center">
-                Book a Call &rarr;
+                Book a 15-Minute Scope Review &rarr;
               </a>
             </div>
             <div className="border-t border-gray-100 pt-6 space-y-4">

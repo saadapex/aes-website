@@ -29,10 +29,10 @@ export const SITE = {
 } as const;
 
 export const STATS = [
-  { value: "1,586+",        label: "APs Replaced Across a Documented Multi-Site Program" },
+  { value: "1,586+",        label: "APs Replaced · Multi-Site Program" },
   { value: "U.S. & Canada", label: "Field Deployment Coverage" },
-  { value: "0",             label: "Recorded Safety Incidents · Documented AES-Led Engagements" },
-  { value: "On Schedule",   label: "Delivery Across Documented Recent Deployments" },
+  { value: "0",             label: "Recorded Safety Incidents · AES-Led Engagements" },
+  { value: "On Schedule",   label: "Delivery · Documented Recent Deployments" },
 ] as const;
 
 export const SERVICES = [
@@ -60,6 +60,15 @@ export const SERVICES = [
     subtitle: "Large-Scale Wireless Rollouts",
     subhead: "High-density Wi-Fi that survives steel, concrete, and cold storage.",
     cta: "Get a Quote",
+    ctaHref: "/contact",
+    ctaType: "form" as const,
+  },
+  {
+    slug: "smart-hands",
+    title: "Smart Hands & Field Support",
+    subtitle: "Remote Hands · Site Survey · Decommissioning",
+    subhead: "Vetted hands on the ground when you need a single-site fix, audit, or rapid response.",
+    cta: "Send Your Scope",
     ctaHref: "/contact",
     ctaType: "form" as const,
   },

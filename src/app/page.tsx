@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
-import StatsBand from "@/components/stats-band";
-import LogoSlider from "@/components/logo-slider";
 import ServiceCard from "@/components/service-card";
 import CaseStudyCard from "@/components/case-study-card";
 import CtaBand from "@/components/cta-band";
@@ -11,7 +9,7 @@ import { SITE, SERVICES, INDUSTRIES, CASE_STUDIES } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "IT Infrastructure & Data-Center Deployment | Apex Enterprise Solutions",
-  description: "Apex Enterprise Solutions delivers structured cabling, rack-and-stack, and large-scale AP refresh across the U.S. & Canada. Field-first, certified, on schedule.",
+  description: "Apex Enterprise Solutions delivers structured cabling, rack-and-stack, large-scale AP refresh, and smart hands across the U.S. and Canada. Field-first, credentialed, on schedule.",
   alternates: { canonical: "https://www.apexsolutions.io" },
 };
 
@@ -102,10 +100,11 @@ export default function HomePage() {
               <span className="text-[#FF6B00]">Field Execution Partner</span>
             </h1>
             <p className="text-[#4E6575] text-lg md:text-xl leading-relaxed mb-4 max-w-xl">
-              Structured cabling, rack-and-stack, and large-scale AP refresh —
-              executed across the U.S. and Canada. AES delivers the field
-              precision, disciplined documentation, and program coordination
-              that primes and integrators stake their reputation on.
+              Structured cabling, rack-and-stack, large-scale AP refresh, and
+              smart hands — executed across the U.S. and Canada. AES delivers
+              the field precision, disciplined documentation, and program
+              coordination that primes and integrators stake their reputation
+              on.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
               <Link href="/contact" className="btn-primary text-base">
@@ -134,17 +133,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* ── STATS ────────────────────────────────────────────── */}
-      <StatsBand />
-
-      {/* ── PARTNER LOGO SLIDER ──────────────────────────────── */}
-      <LogoSlider />
-      <div className="bg-white pb-8 px-6 -mt-2">
-        <p className="max-w-4xl mx-auto text-center text-[11px] text-[#4E6575] leading-relaxed">
-          Logos represent project, partner, or team ecosystem experience and do not imply endorsement unless stated.
-        </p>
-      </div>
 
       {/* ── TESTIMONIALS ─────────────────────────────────────── */}
       <section className="bg-[#F4F7FA] section-pad">

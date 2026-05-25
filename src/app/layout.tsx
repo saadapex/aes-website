@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     template: "%s | Apex Enterprise Solutions",
   },
   description:
-    "Apex Enterprise Solutions delivers structured cabling, rack-and-stack, and large-scale AP refresh across the U.S. & Canada. Field-first, certified, on schedule.",
+    "Apex Enterprise Solutions delivers structured cabling, rack-and-stack, large-scale AP refresh, and smart hands across the U.S. and Canada. Field-first, credentialed, on schedule.",
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -30,10 +30,69 @@ export const metadata: Metadata = {
   category: "IT Infrastructure",
 };
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Apex Enterprise Solutions",
+  alternateName: "AES",
+  url: "https://www.apexsolutions.io",
+  logo: "https://www.apexsolutions.io/images/AES_Option3_Primary_Nav_Tight_96px_2x.png",
+  description:
+    "North America-based field execution partner for IT infrastructure deployment — structured cabling, rack-and-stack, AP refresh, and smart hands across the U.S. and Canada.",
+  email: "info@apexsolutions.io",
+  telephone: "+1-669-251-7810",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "1069 Duane Ct",
+    addressLocality: "Sunnyvale",
+    addressRegion: "CA",
+    postalCode: "94085",
+    addressCountry: "US",
+  },
+  areaServed: [
+    { "@type": "Country", name: "United States" },
+    { "@type": "Country", name: "Canada" },
+  ],
+  contactPoint: [
+    {
+      "@type": "ContactPoint",
+      contactType: "sales",
+      telephone: "+1-669-251-7810",
+      email: "info@apexsolutions.io",
+      areaServed: ["US", "CA"],
+      availableLanguage: ["English"],
+    },
+  ],
+  sameAs: [
+    "https://www.linkedin.com/company/apexenterprisesolutions/",
+    "https://x.com/apexensolutions",
+    "https://www.instagram.com/apexenterprisesolutions",
+    "https://www.facebook.com/apexenterprisesolutions",
+  ],
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Apex Enterprise Solutions",
+  url: "https://www.apexsolutions.io",
+  publisher: { "@type": "Organization", name: "Apex Enterprise Solutions" },
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={inter.variable}>
       <body className="antialiased">
+        {/* Site-wide JSON-LD: Organization + WebSite schemas */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
+
         <Nav />
         <main>{children}</main>
         <Footer />

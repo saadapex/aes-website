@@ -102,10 +102,27 @@ export default function Footer() {
             <ul className="space-y-2">
               {[
                 { label: "About",        href: "/about" },
-                { label: "Case Studies", href: "/case-studies" },
-                { label: "Industries",   href: "/industries" },
+                { label: "Capabilities", href: "/capabilities" },
+                { label: "Partners",     href: "/partners" },
                 { label: "Careers",      href: "/careers" },
                 { label: "Contact",      href: "/contact" },
+              ].map((item) => (
+                <li key={item.href}>
+                  <Link href={item.href}
+                    className="text-sm text-gray-300 hover:text-[#FF6B00] transition-colors">
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <h4 className="text-xs uppercase tracking-widest text-[#4E6575] mb-4 mt-8">Explore</h4>
+            <ul className="space-y-2">
+              {[
+                { label: "Case Studies", href: "/case-studies" },
+                { label: "Industries",   href: "/industries" },
+                { label: "Locations",    href: "/locations" },
+                { label: "Resources",    href: "/resources" },
+                { label: "Blog",         href: "/blog" },
               ].map((item) => (
                 <li key={item.href}>
                   <Link href={item.href}
