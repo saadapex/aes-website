@@ -64,7 +64,7 @@ export default function RfpTemplateLeadMagnetPage() {
                 <div className="inline-flex items-center gap-2 bg-[#FF6B00] text-xs uppercase tracking-wide font-bold px-3 py-1 rounded mb-3">
                   <FileText size={12} /> 22 Pages · Interactive PDF
                 </div>
-                <h3 className="text-2xl font-black leading-tight">AES Structured Cabling &amp; Fiber RFP Template</h3>
+                <h3 className="text-white text-2xl font-black leading-tight">AES Structured Cabling &amp; Fiber RFP Template</h3>
                 <p className="text-sm text-gray-200 mt-1">v2.2 · For primes, integrators &amp; enterprise IT</p>
               </div>
             </div>
