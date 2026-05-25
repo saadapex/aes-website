@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const IMAGES: Record<string, string> = {
-  "ai-cluster-pod-build":           "/images/case-ai-cluster.png",
+  "ai-cluster-pod-build":           "/images/case-ai-cluster-compute-hall.jpg",
   "fulfillment-ap-refresh-ontario": "/images/case-warehouse-ap.png",
   "amazon-ap-refresh":              "/images/case-amazon-ap.png",
   "telecom-transport-lab":          "/images/case-telecom-lab.jpg",

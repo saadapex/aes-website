@@ -6,7 +6,7 @@ import CtaBand from "@/components/cta-band";
 import { CASE_STUDIES } from "@/lib/utils";
 
 const IMAGES: Record<string, string> = {
-  "ai-cluster-pod-build":           "/images/case-ai-cluster.png",
+  "ai-cluster-pod-build":           "/images/case-ai-cluster-compute-hall.jpg",
   "telecom-transport-lab":          "/images/case-telecom-lab.jpg",
   "fulfillment-ap-refresh-ontario": "/images/case-warehouse-ap.png",
   "amazon-ap-refresh":              "/images/case-amazon-ap.png",
