@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { Menu, X, ChevronDown, Phone, MessageSquare } from "lucide-react";
 import { SITE, SERVICES, INDUSTRIES } from "@/lib/utils";
@@ -33,7 +34,10 @@ export default function Nav() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const solid = scrolled || mobileOpen;
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+  // Solid mode whenever we're scrolled past the hero, mobile menu open, OR on any page that isn't the homepage hero.
+  const solid = scrolled || mobileOpen || !isHome;
 
   const navClass = `fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
     solid ? "bg-white shadow-md" : "bg-transparent"
