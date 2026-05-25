@@ -483,14 +483,14 @@ export default function HomePage() {
           <div className="w-full max-w-3xl mx-auto rounded-xl overflow-hidden shadow-lg mb-8">
             <Image
               src="/images/about-coverage-map.png"
-              alt="AES field coverage map — active pods across the United States"
+              alt="AES field coverage map — active pods across the U.S. and Canada"
               width={900}
               height={520}
               className="w-full h-auto block brightness-150"
             />
           </div>
           <div className="flex flex-wrap justify-center gap-3">
-            {["San Francisco Bay Area, CA", "Los Angeles, CA", "Dallas, TX", "Las Vegas, NV", "Memphis, TN"].map((pod) => (
+            {["San Francisco Bay Area, CA", "Los Angeles, CA", "Dallas, TX", "Las Vegas, NV", "Memphis, TN", "Toronto, ON", "Calgary, AB", "Edmonton, AB"].map((pod) => (
               <span key={pod}
                 className="bg-[#F4F7FA] border border-[#006FB9]/20 text-[#06284C] text-sm px-4 py-2 rounded-full font-medium">
                 📍 {pod}
