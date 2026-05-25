@@ -68,11 +68,13 @@ AES operates as a subcontract execution partner with a flexible delivery model b
 - Data Centers & Colocation: https://www.apexsolutions.io/industries/data-centers
 - Logistics & Warehousing: https://www.apexsolutions.io/industries/logistics-warehousing
 - Telecom & Service Providers: https://www.apexsolutions.io/industries/telecom
+- Locations / Field Coverage: https://www.apexsolutions.io/locations
 - Case Studies: https://www.apexsolutions.io/case-studies
 - About AES: https://www.apexsolutions.io/about
 - Partner With AES: https://www.apexsolutions.io/partners
 - Contact / Send Your Scope: https://www.apexsolutions.io/contact
 - Resources: https://www.apexsolutions.io/resources
+- Structured Cabling RFP Template (lead magnet): https://www.apexsolutions.io/resources/rfp-template
 
 ## Engagement Model
 

@@ -38,7 +38,7 @@ const sections = [
   {
     heading: "Geographies & Coverage",
     body:
-      "AES delivers projects across the United States and Canada. Dedicated coverage pages exist for the San Francisco Bay Area, Los Angeles, Dallas–Fort Worth, Las Vegas, and the Greater Toronto Area (including Scarborough, Mississauga, Brampton, Bolton, and Oakville). Additional U.S. and Canadian markets — including Memphis, Calgary, and Edmonton — are supported on a project basis through AES's vetted partner and field-resource network.",
+      "AES delivers projects across the United States and Canada. Active field coverage markets include the San Francisco Bay Area, Los Angeles, Dallas–Fort Worth, Las Vegas, and Memphis in the U.S.; and the Greater Toronto Area (including Scarborough, Mississauga, Brampton, Bolton, and Oakville), Calgary, and Edmonton in Canada. Additional U.S. and Canadian markets are supported on a project basis through AES's vetted partner and field-resource network.",
   },
   {
     heading: "Buyers AES Works With",

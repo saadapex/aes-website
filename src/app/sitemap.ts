@@ -1,17 +1,9 @@
 import { MetadataRoute } from "next";
-import { LOCATIONS } from "@/lib/locations";
 
 const BASE = "https://www.apexsolutions.io";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
-
-  const locationEntries: MetadataRoute.Sitemap = LOCATIONS.map((loc) => ({
-    url: `${BASE}/locations/${loc.slug}`,
-    lastModified: now,
-    changeFrequency: "monthly" as const,
-    priority: 0.7,
-  }));
 
   return [
     { url: BASE,                                       lastModified: now, changeFrequency: "weekly",  priority: 1.0 },
@@ -26,7 +18,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/industries/logistics-warehousing`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/industries/telecom`,               lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/locations`,                        lastModified: now, changeFrequency: "monthly", priority: 0.8 },
-    ...locationEntries,
     { url: `${BASE}/case-studies`,                               lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/case-studies/ai-cluster-pod-build`,          lastModified: now, changeFrequency: "yearly", priority: 0.7 },
     { url: `${BASE}/case-studies/telecom-transport-lab`,         lastModified: now, changeFrequency: "yearly", priority: 0.7 },
