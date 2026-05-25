@@ -32,6 +32,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/case-studies/fulfillment-ap-refresh-ontario`,lastModified: now, changeFrequency: "yearly", priority: 0.7 },
     { url: `${BASE}/case-studies/amazon-ap-refresh`,             lastModified: now, changeFrequency: "yearly", priority: 0.7 },
     { url: `${BASE}/resources`,                        lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE}/resources/rfp-template`,            lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/about`,                            lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/partners`,                         lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/careers`,                          lastModified: now, changeFrequency: "monthly", priority: 0.6 },
