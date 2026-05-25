@@ -144,9 +144,10 @@ export default function HomePage() {
           <div className="grid md:grid-cols-3 gap-6">
             {[
               {
-                quote: "AES showed up on day one, executed without hand-holding, and the documentation package was cleaner than what our own crews produce. We'd use them again without hesitation.",
-                role: "Program Director",
-                company: "Global E-Commerce Fulfillment Operator",
+                quote: "Apex Enterprise Solutions has been a reliable and professional partner for our technology deployment needs. Their team brings strong technical capability, clear communication, and dependable field execution. We appreciate their responsiveness and commitment to getting the work done right.",
+                name: "Asfar Zaidi",
+                role: "CEO",
+                company: "Inventiv Technology",
               },
               {
                 quote: "We handed AES a 46-IDF, two-site AP rollout with a 24-hour change window. They held the window, zero safety incidents, and the coverage validation came back clean. Exactly what we needed.",
@@ -167,8 +168,17 @@ export default function HomePage() {
                 <span className="text-[#FF6B00] text-4xl font-black leading-none select-none">&ldquo;</span>
                 <p className="text-[#1F2933] leading-relaxed text-base flex-1">{t.quote}</p>
                 <div className="border-t border-gray-100 pt-4">
-                  <p className="text-[#06284C] font-semibold text-sm">{t.role}</p>
-                  <p className="text-[#4E6575] text-xs mt-0.5">{t.company}</p>
+                  {t.name ? (
+                    <>
+                      <p className="text-[#06284C] font-bold text-base">{t.name}</p>
+                      <p className="text-[#4E6575] text-xs mt-0.5">{t.role} · {t.company}</p>
+                    </>
+                  ) : (
+                    <>
+                      <p className="text-[#06284C] font-semibold text-sm">{t.role}</p>
+                      <p className="text-[#4E6575] text-xs mt-0.5">{t.company}</p>
+                    </>
+                  )}
                 </div>
               </div>
             ))}
