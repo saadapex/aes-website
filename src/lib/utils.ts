@@ -106,6 +106,20 @@ export const INDUSTRIES = [
       { value: "72 hr",  label: "Burn-In Support Window" },
     ],
     caseStudySlug: "telecom-transport-lab",
+    faq: [
+      {
+        q: "Does AES work in hyperscale and colocation data center environments?",
+        a: "Yes. AES delivers rack-and-stack, structured cabling, fiber installation, and burn-in support across hyperscale data halls and colo cages. We work to client access protocols, label schemas, and commissioning windows — not around them.",
+      },
+      {
+        q: "Can AES handle GPU-dense and AI cluster rack-and-stack work?",
+        a: "Yes. AES has executed GPU-dense compute pod builds requiring high-density 400G fabric cabling and disciplined cable management. We staff senior fiber and hardware technicians, and the work is performed to the standards the client's network engineering team requires.",
+      },
+      {
+        q: "What documentation does AES deliver at handover on a data center engagement?",
+        a: "Per approved scope: OTDR trace files and power meter results on fiber, copper link certification reports, ANSI/TIA-606 (or owner-approved) labeling records, as-built drawings, rack elevation diagrams, CMDB-ready asset inventory, and burn-in test reports. The full closeout pack is delivered at handover — not chased later.",
+      },
+    ],
   },
   {
     slug: "logistics-warehousing",
@@ -138,6 +152,20 @@ export const INDUSTRIES = [
       { value: "0",      label: "Recorded Safety Incidents · Documented AES-Led Engagements" },
     ],
     caseStudySlug: "fulfillment-ap-refresh-ontario",
+    faq: [
+      {
+        q: "Can AES execute multi-site warehouse AP refresh in active 24/7 operations?",
+        a: "Yes. AES regularly executes multi-site, multi-IDF AP refresh programs across active picking floors — scheduling around live shifts, coordinating with site operations teams, and running daily field updates. The documented Q1 2026 Ontario program covered 1,586+ APs across two fulfillment centres without disrupting throughput.",
+      },
+      {
+        q: "Does AES handle freezer and cooler-rated installations?",
+        a: "Yes. Cold-chain logistics work requires freezer / cooler-rated cable, mounting hardware, AP enclosures, and crew PPE. AES sources and installs to spec — no shortcuts that fail when the temperature drops.",
+      },
+      {
+        q: "How does AES coordinate field crews across multi-site rollouts?",
+        a: "AES runs program-level coordination, not single-truck dispatch: pre-staged equipment, pre-labelled hardware where feasible, daily field reports, real-time per-AP tracking, and clean shift hand-offs. Your PM gets visibility into every site every day, not just at closeout.",
+      },
+    ],
   },
   {
     slug: "telecom",
@@ -170,6 +198,20 @@ export const INDUSTRIES = [
       { value: "OTDR + PM", label: "Fiber Testing per Approved Scope" },
     ],
     caseStudySlug: "telecom-transport-lab",
+    faq: [
+      {
+        q: "Does AES support service provider transport lab builds?",
+        a: "Yes. AES delivered a 4-platform, 6-rack DWDM / MPLS / microwave transport lab for a U.S. energy provider in two weeks — site survey, installation drawings, commissioning, and as-built documentation included. Service provider lab builds are one of AES's core engagement types.",
+      },
+      {
+        q: "Is OTDR certification standard on AES fiber work?",
+        a: "Fiber is tested with OTDR and power meter per approved scope. Trace files, power meter results, and link certification reports are part of the closeout package — not an afterthought. Copper links are certified separately with a Fluke DSX or equivalent field tester.",
+      },
+      {
+        q: "Can AES work to a service provider's labeling and CMDB schema?",
+        a: "Yes. AES delivers labeling records aligned to ANSI/TIA-606 or to the owner / client's approved schema. CMDB-ready asset inventory with serial-level records is provided at handover so your back-office systems update cleanly.",
+      },
+    ],
   },
 ] as const;
 

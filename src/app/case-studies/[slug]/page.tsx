@@ -102,6 +102,15 @@ const META_DESCRIPTIONS: Record<string, string> = {
     "AES field-executed a large-scale AP refresh at a U.S. fulfillment operator — 850 APs installed and validated on schedule. Zero safety incidents.",
 };
 
+// Per-case-study publication metadata — used in Article JSON-LD schema
+// for Google rich results and AI search engine citations
+const PUBLICATION_META: Record<string, { datePublished: string; dateModified: string }> = {
+  "ai-cluster-pod-build":           { datePublished: "2025-02-15", dateModified: "2026-05-25" },
+  "telecom-transport-lab":          { datePublished: "2024-03-15", dateModified: "2026-05-25" },
+  "fulfillment-ap-refresh-ontario": { datePublished: "2026-03-15", dateModified: "2026-05-25" },
+  "amazon-ap-refresh":              { datePublished: "2024-12-15", dateModified: "2026-05-25" },
+};
+
 export async function generateStaticParams() {
   return CASE_STUDIES.map((cs) => ({ slug: cs.slug }));
 }
@@ -121,8 +130,55 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
   if (!cs) notFound();
   const content = CONTENT[cs.slug];
 
+  // ──────────────────────────────────────────────────────────
+  // JSON-LD: Article schema for Google rich results + AI search citations
+  // ──────────────────────────────────────────────────────────
+  const pageUrl = `https://www.apexsolutions.io/case-studies/${cs.slug}`;
+  const pubMeta = PUBLICATION_META[cs.slug] ?? { datePublished: "2024-01-01", dateModified: "2026-05-25" };
+  const imagePath = IMAGES[cs.slug];
+
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: cs.title,
+    description: META_DESCRIPTIONS[cs.slug] ?? cs.title,
+    image: imagePath ? [`https://www.apexsolutions.io${imagePath}`] : undefined,
+    datePublished: pubMeta.datePublished,
+    dateModified: pubMeta.dateModified,
+    author: {
+      "@type": "Organization",
+      name: "Apex Enterprise Solutions Field Execution Team",
+      url: "https://www.apexsolutions.io",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Apex Enterprise Solutions",
+      url: "https://www.apexsolutions.io",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://www.apexsolutions.io/images/AES_Option3_Primary_Nav_Tight_96px_2x.png",
+      },
+    },
+    mainEntityOfPage: { "@type": "WebPage", "@id": pageUrl },
+    articleSection: cs.tag,
+    keywords: content?.tags?.join(", "),
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.apexsolutions.io/" },
+      { "@type": "ListItem", position: 2, name: "Case Studies", item: "https://www.apexsolutions.io/case-studies" },
+      { "@type": "ListItem", position: 3, name: cs.title, item: pageUrl },
+    ],
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+
       <PageHero
         eyebrow={cs.tag}
         h1={cs.title}

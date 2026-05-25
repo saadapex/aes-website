@@ -28,8 +28,54 @@ export default function IndustryPage({ params }: { params: { slug: string } }) {
   const relatedServices = SERVICES.filter((s) => (ind.services as readonly string[]).includes(s.slug));
   const featuredStudy = CASE_STUDIES.find((cs) => cs.slug === ind.caseStudySlug);
 
+  // ──────────────────────────────────────────────────────────
+  // JSON-LD schemas
+  // ──────────────────────────────────────────────────────────
+  const pageUrl = `https://www.apexsolutions.io/industries/${ind.slug}`;
+
+  const professionalServiceSchema = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    name: `Apex Enterprise Solutions — ${ind.title}`,
+    description: ind.sub,
+    url: pageUrl,
+    image: `https://www.apexsolutions.io${ind.image.src}`,
+    parentOrganization: { "@type": "Organization", name: "Apex Enterprise Solutions", url: "https://www.apexsolutions.io" },
+    areaServed: [
+      { "@type": "Country", name: "United States" },
+      { "@type": "Country", name: "Canada" },
+    ],
+    serviceType: relatedServices.map((s) => s.title),
+    telephone: "+1-669-251-7810",
+    email: "info@apexsolutions.io",
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: ind.faq.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a },
+    })),
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.apexsolutions.io/" },
+      { "@type": "ListItem", position: 2, name: "Industries", item: "https://www.apexsolutions.io/industries" },
+      { "@type": "ListItem", position: 3, name: ind.title, item: pageUrl },
+    ],
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(professionalServiceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+
       <PageHero
         eyebrow={ind.title}
         h1={ind.headline}
@@ -111,6 +157,22 @@ export default function IndustryPage({ params }: { params: { slug: string } }) {
           </div>
         </section>
       )}
+
+      {/* ── FAQ ──────────────────────────────────────────────────── */}
+      <section className="bg-[#F4F6F9] section-pad">
+        <div className="max-w-7xl mx-auto">
+          <p className="eyebrow mb-3">Common Questions</p>
+          <h2 className="text-[#0D1F3C] text-3xl font-bold mb-10">{ind.title} — FAQ</h2>
+          <div className="max-w-3xl space-y-8">
+            {ind.faq.map((item) => (
+              <div key={item.q} className="border-b border-gray-200 pb-8 last:border-0">
+                <h3 className="text-[#0D1F3C] text-lg font-bold mb-3">{item.q}</h3>
+                <p className="text-[#1F2933] leading-relaxed">{item.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <CtaBand />
     </>
