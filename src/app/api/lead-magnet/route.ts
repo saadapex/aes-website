@@ -24,10 +24,10 @@ export async function POST(req: NextRequest) {
 
     const resourceConfig = RESOURCE_FILES[resource];
     if (!resourceConfig) {
-      return NextResponse.redirect(new URL(`/resources?error=unknown`, req.url));
+      return NextResponse.redirect(new URL(`/resources?error=unknown`, req.url), 303);
     }
     if (!email) {
-      return NextResponse.redirect(new URL(`/resources/${resource}?error=1`, req.url));
+      return NextResponse.redirect(new URL(`/resources/${resource}?error=1`, req.url), 303);
     }
 
     const [firstname, ...rest] = name.split(" ");
@@ -50,10 +50,11 @@ export async function POST(req: NextRequest) {
 
     // Redirect to the thank-you page that auto-triggers the download.
     return NextResponse.redirect(
-      new URL(`/resources/${resource}/thanks`, req.url)
+      new URL(`/resources/${resource}/thanks`, req.url),
+      303,
     );
   } catch (err) {
     console.error("[Lead Magnet Error]", err);
-    return NextResponse.redirect(new URL(`/resources?error=1`, req.url));
+    return NextResponse.redirect(new URL(`/resources?error=1`, req.url), 303);
   }
 }

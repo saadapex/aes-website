@@ -16,7 +16,7 @@ export async function POST(req: NextRequest) {
     const services  = data.getAll("services").join(", ");
     const scope     = (data.get("scope")     as string) || "";
 
-    if (!email) return NextResponse.redirect(new URL("/contact?error=1", req.url));
+    if (!email) return NextResponse.redirect(new URL("/contact?error=1", req.url), 303);
 
     const [firstname, ...rest] = name.split(" ");
     const lastname = rest.join(" ");
@@ -36,9 +36,9 @@ export async function POST(req: NextRequest) {
       });
     }
 
-    return NextResponse.redirect(new URL("/thank-you", req.url));
+    return NextResponse.redirect(new URL("/thank-you", req.url), 303);
   } catch (err) {
     console.error("[Contact Form Error]", err);
-    return NextResponse.redirect(new URL("/contact?error=1", req.url));
+    return NextResponse.redirect(new URL("/contact?error=1", req.url), 303);
   }
 }
