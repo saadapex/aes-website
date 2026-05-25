@@ -96,50 +96,62 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Founding Story */}
-      <section className="bg-[#F4F6F9] section-pad">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
-          {/* Timeline / story visual */}
-          <div className="relative">
-            <div className="absolute left-4 top-0 bottom-0 w-px bg-[#1E5FA8]/20" />
-            <div className="space-y-10 pl-12">
-              {[
-                {
-                  year: "The Problem",
-                  heading: "A gap that kept showing up",
-                  body: "Coming from a telecom and systems engineering background, I kept running into the same situation on large programs — primes and integrators with strong design and PM capability, but no reliable field execution partner they could actually trust. Work was getting handed off to whoever was available, not whoever was qualified. Documentation was an afterthought. And the client always felt it.",
-                },
-                {
-                  year: "The Decision",
-                  heading: "Built for execution — nothing else",
-                  body: "I started AES to fill that gap. Not as a staffing company, not as a generalist IT firm — but as a dedicated field execution partner with its own processes, its own standards, and its own accountability. A company that shows up prepared, executes clean, and hands over documentation that holds up. One where the quality of the work protects our partners, every time.",
-                },
-                {
-                  year: "Today",
-                  heading: "A team and a standard",
-                  body: "AES now operates across the U.S. and Canada with a network of trusted field resources and a delivery model built around program-grade execution. Every technician on an AES engagement works to the same standard — because our partners' reputations depend on it.",
-                },
-              ].map((item) => (
-                <div key={item.year} className="relative">
-                  {/* Timeline dot */}
-                  <div className="absolute -left-12 top-1 w-4 h-4 rounded-full bg-[#F26522] border-4 border-[#F4F6F9]" />
-                  <p className="text-[#F26522] text-xs font-black uppercase tracking-widest mb-1">
-                    {item.year}
-                  </p>
-                  <h3 className="text-[#0D1F3C] font-bold text-lg mb-2">{item.heading}</h3>
-                  <p className="text-[#1F2933] text-sm leading-relaxed">{item.body}</p>
-                </div>
-              ))}
+      {/* Founder Letter */}
+      <section id="founder-letter" className="bg-[#F4F6F9] section-pad scroll-mt-24">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-start">
+
+          {/* Letter — left column */}
+          <div>
+            <p className="eyebrow mb-3">A Letter from the Founder</p>
+            <h2 className="text-[#06284C] text-3xl font-bold mb-8">Why I Started AES</h2>
+
+            <div className="relative">
+              <div className="absolute left-4 top-0 bottom-0 w-px bg-[#1E5FA8]/20" />
+              <div className="space-y-10 pl-12">
+                {[
+                  {
+                    year: "The Problem",
+                    heading: "A gap that kept showing up",
+                    body: "Coming from more than two decades in telecom, systems engineering, and technical program management, I kept running into the same situation on large programs — primes and integrators with strong design and PM capability, but no reliable field execution partner they could actually trust. Work was getting handed off to whoever was available, not whoever was qualified. Documentation was an afterthought. And the client always felt it.",
+                  },
+                  {
+                    year: "The Decision",
+                    heading: "Built for execution — nothing else",
+                    body: "I started AES to fill that gap. Not as a staffing company, not as a generalist IT firm — but as a dedicated field execution partner with its own processes, its own standards, and its own accountability. A company that shows up prepared, executes clean, and hands over documentation that holds up. One where the quality of the work protects our partners, every time.",
+                  },
+                  {
+                    year: "Today",
+                    heading: "A team and a standard",
+                    body: "AES now operates across the U.S. and Canada with a network of trusted field resources and a delivery model built around program-grade execution. Every technician on an AES engagement works to the same standard — because our partners' reputations depend on it. If you're sizing us up as a subcontract partner, that's the standard we hold ourselves to. Hold us to it.",
+                  },
+                ].map((item) => (
+                  <div key={item.year} className="relative">
+                    <div className="absolute -left-12 top-1 w-4 h-4 rounded-full bg-[#F26522] border-4 border-[#F4F6F9]" />
+                    <p className="text-[#F26522] text-xs font-black uppercase tracking-widest mb-1">
+                      {item.year}
+                    </p>
+                    <h3 className="text-[#0D1F3C] font-bold text-lg mb-2">{item.heading}</h3>
+                    <p className="text-[#1F2933] text-sm leading-relaxed">{item.body}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Signature */}
+            <div className="mt-12 pl-12 border-t border-[#1E5FA8]/15 pt-6">
+              <p className="text-[#06284C] font-bold text-base mb-0.5" style={{ fontFamily: "Georgia, 'Times New Roman', serif", fontStyle: "italic" }}>
+                Saad Usmani
+              </p>
+              <p className="text-[#4E6575] text-xs uppercase tracking-wide">Founder &amp; CEO, Apex Enterprise Solutions</p>
             </div>
           </div>
 
-          {/* Pull quote */}
-          <div className="flex flex-col gap-8">
-            <div className="bg-[#0D1F3C] rounded-2xl p-10">
+          {/* Pull quote + stats — right column */}
+          <div className="flex flex-col gap-8 lg:sticky lg:top-28">
+            <div className="bg-[#0D1F3C] rounded-2xl p-10 shadow-xl">
               <span className="text-[#F26522] text-5xl font-black leading-none select-none block mb-4">&ldquo;</span>
               <p className="text-white text-xl md:text-2xl font-bold leading-snug mb-6">
-                I built AES because the market had a real shortage of execution partners who actually cared
-                about the standard of work — not just getting the job done fast.
+                In two decades of telecom and field deployment, I watched the same pattern over and over &mdash; well-designed programs unraveled by subcontractors who couldn&apos;t be relied on. I started AES to break that pattern.
               </p>
               <div className="border-t border-white/10 pt-5">
                 <p className="text-[#F26522] font-semibold text-sm">Saad Usmani</p>

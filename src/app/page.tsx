@@ -134,6 +134,52 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── FROM THE FOUNDER ─────────────────────────────────── */}
+      <section className="bg-[#06284C] section-pad relative overflow-hidden">
+        {/* Subtle orange glow accent */}
+        <div className="absolute -top-32 -right-32 w-96 h-96 bg-[#FF6B00] opacity-10 blur-3xl rounded-full pointer-events-none" />
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-5 gap-12 items-center relative">
+
+          {/* Photo */}
+          <div className="lg:col-span-2 flex justify-center lg:justify-start">
+            <div className="relative w-56 h-56 lg:w-72 lg:h-72">
+              <div className="absolute -inset-3 bg-[#FF6B00] opacity-20 blur-2xl rounded-full" />
+              <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl border-4 border-[#FF6B00]/40">
+                <Image
+                  src="/images/Saad Headshot.png"
+                  alt="Saad Usmani, Founder &amp; CEO of Apex Enterprise Solutions"
+                  fill
+                  className="object-cover object-top"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Quote */}
+          <div className="lg:col-span-3">
+            <p className="text-[#FF6B00] uppercase tracking-widest text-xs font-bold mb-4">
+              From the Founder
+            </p>
+            <span className="text-[#FF6B00] text-5xl font-black leading-none select-none block mb-3">&ldquo;</span>
+            <p className="text-white text-xl md:text-2xl font-medium leading-relaxed mb-8">
+              In two decades of telecom and infrastructure deployment, I watched the same pattern over and over &mdash; well-designed programs unraveled in the field by subcontractors who couldn&apos;t be relied on. I started AES to be the partner that breaks that pattern.
+            </p>
+            <div className="border-t border-white/15 pt-6 flex items-center justify-between flex-wrap gap-4">
+              <div>
+                <p className="text-[#FF6B00] font-bold text-base">Saad Usmani</p>
+                <p className="text-[#7A9FC0] text-sm">Founder &amp; CEO, Apex Enterprise Solutions</p>
+              </div>
+              <Link
+                href="/about#founder-letter"
+                className="text-white hover:text-[#FF6B00] text-sm font-semibold transition-colors"
+              >
+                Read the founder letter &rarr;
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── TESTIMONIALS ─────────────────────────────────────── */}
       <section className="bg-[#F4F7FA] section-pad">
         <div className="max-w-7xl mx-auto">
