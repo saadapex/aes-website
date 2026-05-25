@@ -182,14 +182,14 @@ export default function HomePage() {
           <p className="eyebrow mb-3">What We Deploy</p>
           <div className="flex items-end justify-between mb-12">
             <h2 className="text-[#06284C] text-3xl md:text-4xl font-bold max-w-xl">
-              Three Services. One Execution Partner.
+              Four Services. One Execution Partner.
             </h2>
             <Link href="/services"
               className="text-[#006FB9] font-semibold text-sm hover:text-[#FF6B00] transition-colors hidden md:block">
               View All Services →
             </Link>
           </div>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {SERVICES.map((s) => (
               <ServiceCard key={s.slug} {...s} />
             ))}
@@ -360,7 +360,7 @@ export default function HomePage() {
           <h2 className="text-white text-3xl md:text-4xl font-bold mb-12 text-center">
             Industries We Deploy In
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-5xl mx-auto">
             {INDUSTRIES.map((ind) => (
               <Link key={ind.slug} href={`/industries/${ind.slug}`}
                 className="group bg-white/5 hover:bg-[#FF6B00]/10 border border-white/10 hover:border-[#FF6B00]/40

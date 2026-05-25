@@ -15,7 +15,7 @@ export default function IndustriesPage() {
     <>
       <PageHero h1="Industries We Serve" sub="From hyperscale data halls to frozen warehouse floors — AES delivers field-first infrastructure across every environment." />
       <section className="bg-white section-pad">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-6">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-6">
           {INDUSTRIES.map((ind) => (
             <Link key={ind.slug} href={`/industries/${ind.slug}`}
               className="group bg-[#F4F7FA] hover:bg-white border border-transparent hover:border-[#FF6B00]/30 rounded-xl p-8 transition-all duration-200 hover:shadow-md">
