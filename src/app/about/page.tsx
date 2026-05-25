@@ -192,11 +192,11 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto">
           <p className="eyebrow mb-3">Leadership</p>
           <h2 className="text-[#06284C] text-3xl font-bold mb-12">The Team Behind AES</h2>
-          <div className="max-w-sm">
+          <div className="max-w-3xl">
             {LEADERSHIP.map((person) => (
-              <div key={person.name} className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 flex gap-6 items-start">
+              <div key={person.name} className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 flex flex-col sm:flex-row gap-6 sm:gap-8 items-start">
                 {person.photo ? (
-                  <div className="relative w-24 h-24 rounded-full overflow-hidden flex-shrink-0">
+                  <div className="relative w-32 h-32 rounded-full overflow-hidden flex-shrink-0">
                     <Image
                       src={person.photo}
                       alt={person.name}
@@ -205,11 +205,11 @@ export default function AboutPage() {
                     />
                   </div>
                 ) : (
-                  <div className="w-24 h-24 bg-[#06284C] rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-white font-bold text-2xl">{person.initials}</span>
+                  <div className="w-32 h-32 bg-[#06284C] rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-white font-bold text-3xl">{person.initials}</span>
                   </div>
                 )}
-                <div>
+                <div className="flex-1 min-w-0">
                   <h3 className="text-[#06284C] font-bold text-xl mb-0.5">{person.name}</h3>
                   <p className="text-[#FF6B00] text-sm font-semibold mb-3">{person.title}</p>
                   <p className="text-[#1F2933] text-sm leading-relaxed">{person.bio}</p>
