@@ -6,8 +6,8 @@ import CtaBand from "@/components/cta-band";
 import { SERVICES, SITE } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: "Infrastructure Services",
-  description: "AES delivers structured cabling, rack-and-stack, and large-scale AP refresh. Field-first execution with certified technicians across North America.",
+  title: "Structured Cabling, Rack & Stack, AP Refresh & Smart Hands Services",
+  description: "AES delivers structured cabling, rack-and-stack, large-scale AP refresh, and smart hands / field support across the U.S. and Canada. Field-first execution with credentialed crews.",
   alternates: { canonical: "https://www.apexsolutions.io/services" },
 };
 
@@ -45,6 +45,17 @@ const serviceDetails: Record<string, { scope: string[]; deliverables: string[]; 
     ],
     deliverables: ["Mounting Maps", "Validated Heatmaps", "Punch-List Closeout"],
   },
+  "smart-hands": {
+    image: "/images/service-rack-stack.png",
+    scope: [
+      "Hardware swap, break-fix, and rapid field response",
+      "Site surveys, pre-deployment walks, and validation visits",
+      "Asset audits, tagging reconciliation, and CMDB sync",
+      "Decommissioning, packing, and chain-of-custody",
+      "Remote hands coordinated with your network or systems engineer",
+    ],
+    deliverables: ["Site Photos & Notes", "Updated Asset Records", "Daily Field Report"],
+  },
 };
 
 export default function ServicesPage() {
@@ -58,6 +69,7 @@ export default function ServicesPage() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12 py-20 space-y-28">
         {SERVICES.map((service, i) => {
           const details = serviceDetails[service.slug];
+          if (!details) return null; // skip if service detail entry not defined
           const isEven = i % 2 === 0;
           return (
             <div

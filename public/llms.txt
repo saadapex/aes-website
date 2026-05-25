@@ -1,0 +1,87 @@
+# Apex Enterprise Solutions (AES)
+
+Apex Enterprise Solutions is a North America-based field execution partner for IT infrastructure deployment. AES delivers structured cabling, rack-and-stack, large-scale AP refresh, and smart hands / field support across the United States and Canada — primarily as a subcontract execution partner to prime contractors, systems integrators, MSPs, telecom and network providers, IT staffing companies, and data center operators.
+
+Website: https://www.apexsolutions.io
+Email: info@apexsolutions.io
+Phone / Text: (669) 251-7810
+Headquarters: 1069 Duane Ct, Sunnyvale, CA 94085
+
+## Core Services
+
+- **Structured Cabling & Fiber** — CAT6 / CAT6A copper, OS2 / OM3 / OM4 fiber, terminations, fusion splicing, OTDR and power meter testing per approved scope, copper certification with Fluke DSX or equivalent, ANSI/TIA-606 (or owner-approved) labeling, as-builts, full closeout documentation.
+- **Rack & Stack / Data Center Refresh** — Rack assembly, server / switch / appliance mounting, PDU install and circuit labeling, BIOS/firmware validation, burn-in support, asset tagging, CMDB-ready inventory, hardware refresh, decommissioning, smart hands.
+- **AP Refresh / Wireless Rollouts** — Multi-site wireless AP replacement and validation, controller and cloud-managed AP onboarding (coordinated with the client's network engineer for RF design and policy), post-install RF validation, freezer / cooler / harsh-environment installs.
+- **Smart Hands & Field Support** — Hardware swap, site survey, asset validation, decommissioning, remote hands, rack audit, IDF cleanup, AP troubleshooting, single-site or rapid-response field engagements.
+
+## Primary Buyers
+
+- Prime contractors and general contractors
+- Systems integrators
+- Managed service providers (MSPs)
+- Telecom and network service providers
+- IT staffing and field services companies
+- Data center operators and developers
+- Enterprise IT teams (direct engagement)
+
+## Industries Served
+
+- Data Centers & Colocation
+- Logistics & Warehousing
+- Telecom & Service Providers
+
+## Coverage
+
+United States and Canada. Active field coverage includes:
+- **U.S.**: San Francisco Bay Area (CA), Los Angeles (CA), Dallas–Fort Worth (TX), Las Vegas (NV), Memphis (TN)
+- **Canada**: Greater Toronto Area (ON) including Scarborough, Mississauga, Brampton, Bolton, Oakville; Calgary (AB), Edmonton (AB)
+- Additional U.S. and Canadian markets supported on a project basis
+
+## Delivery Model
+
+AES operates as a subcontract execution partner with a flexible delivery model built around trusted field resources and partner-led opportunities. AES does not bypass partner project managers, does not poach partner clients, and does not publish project details without written authorization. Insurance includes general liability and E&O coverage; licensing and bonding are verified per project jurisdiction.
+
+## Documentation Deliverables
+
+- OTDR trace files (fiber)
+- Power meter test results (fiber)
+- Copper link certification reports (Fluke DSX or equivalent)
+- Labeling records aligned with ANSI/TIA-606 or owner-approved schema
+- As-built drawings
+- Rack elevation diagrams
+- CMDB-ready asset inventory
+- Burn-in test reports
+- RF survey reports and coverage validation heatmaps (AP refresh)
+- Daily progress reports during execution
+- Complete closeout pack at handover
+
+## Important Pages
+
+- Homepage: https://www.apexsolutions.io/
+- Services index: https://www.apexsolutions.io/services
+- Structured Cabling: https://www.apexsolutions.io/services/structured-cabling
+- Rack & Stack: https://www.apexsolutions.io/services/rack-and-stack
+- AP Refresh: https://www.apexsolutions.io/services/ap-refresh
+- Smart Hands & Field Support: https://www.apexsolutions.io/services/smart-hands
+- Capabilities Summary: https://www.apexsolutions.io/capabilities
+- Industries: https://www.apexsolutions.io/industries
+- Data Centers & Colocation: https://www.apexsolutions.io/industries/data-centers
+- Logistics & Warehousing: https://www.apexsolutions.io/industries/logistics-warehousing
+- Telecom & Service Providers: https://www.apexsolutions.io/industries/telecom
+- Case Studies: https://www.apexsolutions.io/case-studies
+- About AES: https://www.apexsolutions.io/about
+- Partner With AES: https://www.apexsolutions.io/partners
+- Contact / Send Your Scope: https://www.apexsolutions.io/contact
+- Resources: https://www.apexsolutions.io/resources
+
+## Engagement Model
+
+1. Inquiry or scope submission (RFP, BOM, drawings, site list, or partner introduction)
+2. Intro call and scope review within one business day of submission
+3. NDA and partner / subcontract agreement as needed
+4. First deployment
+
+## Leadership
+
+- **Saad Usmani** — Founder & CEO. More than two decades in telecom, infrastructure deployment, systems engineering, and technical program management. Leads business development, partner relationships, pricing, and delivery oversight.
+- **Vinod Bharwani** — COO. Supports operational coordination and execution planning.
