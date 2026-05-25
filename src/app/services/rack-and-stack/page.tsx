@@ -18,7 +18,7 @@ const scope = [
   "Physical rack installation, anchoring, and leveling",
   "Server, switch, and appliance mounting per vendor and client standards",
   "Power distribution unit (PDU) install and circuit labeling",
-  "Cable management: structured patch, power, fiber — labeled to TIA/EIA-606",
+  "Cable management: structured patch, power, fiber — labeled to ANSI/TIA-606 or owner-approved schema",
   "BIOS/firmware validation and burn-in support",
   "Asset tagging, CMDB (IT asset database) updates, and closeout documentation",
   "Smart hands for hardware refresh, swap, and decommission",

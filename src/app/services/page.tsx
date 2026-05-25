@@ -18,7 +18,7 @@ const serviceDetails: Record<string, { scope: string[]; deliverables: string[]; 
       "Site survey and pathway design; permitting support",
       "CAT6/6A copper runs and terminations",
       "SM/MM fiber pulls and LC/MPO terminations; fusion splicing",
-      "OTDR and power meter certification; labeling to TIA/EIA-606",
+      "Fiber OTDR and power meter testing per approved scope; copper certified with field tester; labeling to ANSI/TIA-606 or owner-approved schema",
       "Rack dressing; freezer/cooler and high-bay experience",
     ],
     deliverables: ["Certification Reports", "Label Schema", "As-Builts", "Closeout Pack"],
@@ -26,7 +26,7 @@ const serviceDetails: Record<string, { scope: string[]; deliverables: string[]; 
   "rack-and-stack": {
     image: "/images/service-rack-stack.png",
     scope: [
-      "Rack assembly; power whips and PDU installation",
+      "Rack assembly; PDU installation, power labeling, and coordination with licensed electrical resources where required",
       "Server, storage, and GPU rack-and-stack",
       "100G/400G fabric cabling and cable management",
       "Burn-in and airflow/thermal checks",

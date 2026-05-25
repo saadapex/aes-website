@@ -16,13 +16,13 @@ const scope = [
   "Site survey and pathway design; permitting support",
   "CAT6/6A copper runs and terminations",
   "Single-mode and multi-mode fiber pulls, field-terminated and fusion-spliced where required",
-  "Full signal certification testing (OTDR and power meter); labeling to TIA/EIA-606 standard",
+  "Fiber tested with OTDR and power meter per approved scope; copper certified with Fluke DSX or equivalent; labeling to owner-approved ANSI/TIA-606 schema",
   "Rack dressing and documentation; freezer/cooler and high-bay experience",
   "Test reports, label schema, as-builts, and closeout pack",
 ];
 const kpis = [
-  "Every run OTDR-tested and power meter verified",
-  "TIA/EIA-606 labeling on every cable, panel, and outlet",
+  "Fiber runs tested with OTDR and power meter per approved scope; copper links certified with approved field tester",
+  "ANSI/TIA-606 (or owner-approved) labeling on cables, panels, and outlets",
   "Installs dressed, documented, and site-cleaned before we leave",
   "Closeout pack delivered at handover — not chased after",
 ];
@@ -45,7 +45,7 @@ const faq = [
   },
   {
     q: "What certifications and documentation do you deliver at project closeout?",
-    a: "Every project includes OTDR trace files, power meter test results, link certification reports (Fluke DSX or equivalent), TIA/EIA-606 compliant labeling records, and full as-built documentation. The complete closeout pack is delivered at handover — not chased after.",
+    a: "Per approved scope, AES delivers OTDR trace files and power meter results on fiber runs, link certification reports from a Fluke DSX or equivalent field tester on copper, labeling records aligned with the ANSI/TIA-606 (or owner-approved) schema, and full as-built documentation. The complete closeout pack is delivered at handover — not chased after.",
   },
   {
     q: "What cable categories and fiber types does AES install?",

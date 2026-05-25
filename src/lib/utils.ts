@@ -29,10 +29,10 @@ export const SITE = {
 } as const;
 
 export const STATS = [
-  { value: "1,586+",        label: "Access Points Replaced in a Single Program" },
-  { value: "U.S. & Canada", label: "Cross-Border Deployment Coverage" },
-  { value: "0",             label: "Safety Incidents on Record" },
-  { value: "100%",          label: "On-Time Project Delivery" },
+  { value: "1,586+",        label: "APs Replaced Across a Documented Multi-Site Program" },
+  { value: "U.S. & Canada", label: "Field Deployment Coverage" },
+  { value: "0",             label: "Recorded Safety Incidents · Documented AES-Led Engagements" },
+  { value: "On Schedule",   label: "Delivery Across Documented Recent Deployments" },
 ] as const;
 
 export const SERVICES = [
@@ -92,8 +92,8 @@ export const INDUSTRIES = [
       },
     ],
     kpis: [
-      { value: "1,000+", label: "Racks Built & Validated" },
-      { value: "0",      label: "Punch Items at Handover" },
+      { value: "1,000+", label: "Racks Across AES Team & Partner Ecosystem Experience" },
+      { value: "Clean",  label: "Pre-Handover Punch-List Discipline" },
       { value: "72 hr",  label: "Burn-In Support Window" },
     ],
     caseStudySlug: "telecom-transport-lab",
@@ -102,7 +102,7 @@ export const INDUSTRIES = [
     slug: "logistics-warehousing",
     title: "Logistics & Warehousing",
     headline: "Wireless & Low-Voltage for High-Throughput Warehouses",
-    sub: "AP rollouts, structured cabling, and freezer/cooler-rated installs — executed around active operations, zero disruption to throughput.",
+    sub: "AP rollouts, structured cabling, and freezer/cooler-rated installs — scheduled around active operations to minimize disruption to throughput.",
     image: { src: "/images/industry-logistics.jpg", alt: "Field technician on a scissor lift installing a wireless AP in a large distribution warehouse" },
     services: ["ap-refresh", "structured-cabling"],
     painPoints: [
@@ -124,9 +124,9 @@ export const INDUSTRIES = [
       },
     ],
     kpis: [
-      { value: "1,586+", label: "APs Replaced in a Single Program" },
+      { value: "1,586+", label: "APs Replaced Across a Documented Multi-Site Program" },
       { value: "46",     label: "IDFs Across 2 Sites" },
-      { value: "0",      label: "Safety Incidents on Record" },
+      { value: "0",      label: "Recorded Safety Incidents · Documented AES-Led Engagements" },
     ],
     caseStudySlug: "fulfillment-ap-refresh-ontario",
   },
@@ -157,8 +157,8 @@ export const INDUSTRIES = [
     ],
     kpis: [
       { value: "2 Weeks", label: "Telecom Lab Delivered Start-to-Finish" },
-      { value: "6",       label: "Racks Commissioned, 0 Punch Items" },
-      { value: "100%",    label: "OTDR-Certified Fiber Runs" },
+      { value: "6 Racks", label: "Commissioned with Clean Punch-List Clearance" },
+      { value: "OTDR + PM", label: "Fiber Testing per Approved Scope" },
     ],
     caseStudySlug: "telecom-transport-lab",
   },
@@ -178,7 +178,7 @@ export const CASE_STUDIES = [
     title: "Large-Scale AP Refresh — Ontario Fulfillment Centres",
     tag: "AP REFRESH",
     location: "Scarborough & Bolton, ON — Q1 2026",
-    metrics: ["1,586+ Access Points Replaced", "2 Sites · 46 IDFs", "24hr Shutdown Window · 0 Safety Incidents"],
+    metrics: ["1,586+ Access Points Replaced", "2 Sites · 46 IDFs", "24hr Shutdown Window · 0 Recorded Safety Incidents"],
     service: "ap-refresh",
   },
   {

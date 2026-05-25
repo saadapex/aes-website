@@ -79,7 +79,7 @@ const STEPS = [
 const VALUE_PILLARS = [
   { heading: "Speed",          body: "AES mobilizes fast — across the U.S. and Canada, for single sites and multi-city programs alike." },
   { heading: "Coordination",   body: "Daily field updates, proactive issue calls, and a team that doesn't wait to be chased." },
-  { heading: "Workmanship",    body: "Installations that pass first inspection — cabling dressed clean, labeled right, documented before we leave site." },
+  { heading: "Workmanship",    body: "Installations built for first-pass acceptance — cabling dressed clean, labeled right, documented before we leave site." },
   { heading: "Documentation",  body: "Test reports, as-builts, and label schemas in the format your client requires. Delivered at closeout, not three weeks later." },
 ];
 
@@ -140,6 +140,11 @@ export default function HomePage() {
 
       {/* ── PARTNER LOGO SLIDER ──────────────────────────────── */}
       <LogoSlider />
+      <div className="bg-white pb-8 px-6 -mt-2">
+        <p className="max-w-4xl mx-auto text-center text-[11px] text-[#4E6575] leading-relaxed">
+          Logos represent project, partner, or team ecosystem experience and do not imply endorsement unless stated.
+        </p>
+      </div>
 
       {/* ── TESTIMONIALS ─────────────────────────────────────── */}
       <section className="bg-[#F4F7FA] section-pad">

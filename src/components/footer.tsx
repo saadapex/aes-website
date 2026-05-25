@@ -159,7 +159,7 @@ export default function Footer() {
         {/* Trust line */}
         <div className="border-t border-white/10 pt-6 mb-6">
           <p className="text-[#4E6575] text-xs text-center">
-            Fully insured · General liability &amp; E&amp;O coverage · Licensed &amp; bonded · U.S. &amp; Canada operations
+            Fully insured · General liability &amp; E&amp;O coverage · Licensing and bonding verified per project jurisdiction · U.S. &amp; Canada operations
           </p>
         </div>
 

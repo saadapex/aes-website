@@ -37,7 +37,7 @@ const LEADERSHIP = [
     initials: "SU",
     name: "Saad Usmani",
     title: "Founder & CEO",
-    bio: "Saad founded Apex Enterprise Solutions after a decade in telecom and systems engineering, where he repeatedly saw large deployment programs fail at the field execution layer. He leads business development, partner relationships, pricing, and delivery oversight at AES — with a focus on building a company that protects its partners' reputations on every job.",
+    bio: "Saad founded Apex Enterprise Solutions after more than two decades in telecom, infrastructure deployment, systems engineering, and technical program management — where he repeatedly saw large deployment programs fail at the field execution layer. He leads business development, partner relationships, pricing, and delivery oversight at AES, with a focus on building a company that protects its partners' reputations on every job.",
   },
 ];
 
@@ -153,7 +153,7 @@ export default function AboutPage() {
               </div>
               <div className="bg-white rounded-xl p-6 border border-[#1E5FA8]/10 text-center shadow-sm">
                 <p className="text-[#F26522] text-3xl font-black mb-1">0</p>
-                <p className="text-[#0D1F3C] text-xs uppercase tracking-wide font-medium">Safety Incidents</p>
+                <p className="text-[#0D1F3C] text-xs uppercase tracking-wide font-medium">Recorded Safety Incidents<br/><span className="text-[10px] normal-case tracking-normal text-[#4E6575]">Documented AES-Led Engagements</span></p>
               </div>
             </div>
           </div>

@@ -26,7 +26,7 @@ const scope = [
 const kpis = [
   "Wireless coverage (RF) validated at every site — not assumed",
   "Per-AP progress tracked and reported in real time",
-  "Scheduling coordinated around live operations — zero disruption",
+  "Scheduling coordinated around live operations to minimize disruption",
   "Validated test pack and as-builts delivered at handover",
 ];
 const deliverables = ["RF Survey Report", "Coverage Validation", "As-Builts", "Label Schema", "Closeout Pack"];
