@@ -1,0 +1,128 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" role="img">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#041935"/>
+      <stop offset="55%" stop-color="#0D3E6F"/>
+      <stop offset="100%" stop-color="#06284C"/>
+    </linearGradient>
+    <radialGradient id="sunGlow" cx="50%" cy="100%" r="55%">
+      <stop offset="0%"  stop-color="#FF6B00"   stop-opacity="0.65"/>
+      <stop offset="40%" stop-color="#FFA15A" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#FF6B00"  stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#0D3E6F"/>
+      <stop offset="100%" stop-color="#041935"/>
+    </linearGradient>
+
+  </defs>
+      <rect width="800" height="600" fill="url(#sky)"/>
+  <circle cx="77" cy="66" r="0.6" fill="#FFFFFF" opacity="0.6"/>
+<circle cx="193" cy="177" r="1.0" fill="#FFFFFF" opacity="0.5"/>
+<circle cx="641" cy="38" r="0.8" fill="#FFFFFF" opacity="0.8"/>
+<circle cx="673" cy="221" r="1.0" fill="#FFFFFF" opacity="0.8"/>
+<circle cx="534" cy="157" r="0.6" fill="#FFFFFF" opacity="0.4"/>
+<circle cx="392" cy="258" r="1.0" fill="#FFFFFF" opacity="0.8"/>
+<circle cx="453" cy="104" r="0.8" fill="#FFFFFF" opacity="0.5"/>
+<circle cx="256" cy="32" r="0.8" fill="#FFFFFF" opacity="0.6"/>
+<circle cx="197" cy="89" r="1.0" fill="#FFFFFF" opacity="0.5"/>
+<circle cx="476" cy="232" r="1.0" fill="#FFFFFF" opacity="0.6"/>
+<circle cx="390" cy="248" r="0.8" fill="#FFFFFF" opacity="0.8"/>
+<circle cx="752" cy="256" r="0.8" fill="#FFFFFF" opacity="0.8"/>
+<circle cx="305" cy="275" r="1.0" fill="#FFFFFF" opacity="0.8"/>
+<circle cx="492" cy="199" r="1.2" fill="#FFFFFF" opacity="0.8"/>
+<circle cx="694" cy="133" r="1.0" fill="#FFFFFF" opacity="0.5"/>
+<circle cx="651" cy="157" r="1.2" fill="#FFFFFF" opacity="0.6"/>
+<circle cx="330" cy="278" r="1.2" fill="#FFFFFF" opacity="0.6"/>
+<circle cx="768" cy="126" r="1.2" fill="#FFFFFF" opacity="0.6"/>
+<circle cx="720" cy="58" r="1.0" fill="#FFFFFF" opacity="0.4"/>
+<circle cx="215" cy="74" r="0.6" fill="#FFFFFF" opacity="0.4"/>
+<circle cx="299" cy="136" r="0.6" fill="#FFFFFF" opacity="0.5"/>
+<circle cx="292" cy="145" r="0.8" fill="#FFFFFF" opacity="0.4"/>
+  <ellipse cx="400" cy="480" rx="320" ry="100" fill="url(#sunGlow)"/>
+  <circle cx="400" cy="460" r="24" fill="#FF6B00" opacity="0.85"/>
+
+
+    <!-- Distant Marin headlands -->
+    <path d="M0 480 Q120 430 240 460 T480 450 T720 470 L800 460 L800 540 L0 540 Z"
+          fill="#4E6575" opacity="0.55"/>
+
+    <!-- Closer hills -->
+    <path d="M0 510 Q180 480 360 500 Q520 510 720 495 L800 505 L800 540 L0 540 Z"
+          fill="#0D3E6F"/>
+
+    <!-- Water -->
+    <rect y="540" width="800" height="60" fill="url(#water)"/>
+    <!-- Subtle water ripples -->
+    <line x1="80"  y1="555" x2="200" y2="555" stroke="#FFFFFF" stroke-width="0.6" opacity="0.18"/>
+    <line x1="320" y1="575" x2="460" y2="575" stroke="#FFFFFF" stroke-width="0.6" opacity="0.15"/>
+    <line x1="540" y1="560" x2="700" y2="560" stroke="#FFFFFF" stroke-width="0.6" opacity="0.18"/>
+
+    <!-- Main suspension cable (parabolic curve) -->
+    <path d="M180 335 Q400 520 620 335" stroke="#FF6B00" stroke-width="4" fill="none"/>
+    <!-- Cable ends running off the bridge -->
+    <line x1="0"   y1="490" x2="180" y2="335" stroke="#FF6B00" stroke-width="3"/>
+    <line x1="620" y1="335" x2="800" y2="490" stroke="#FF6B00" stroke-width="3"/>
+
+    <!-- Suspender cables -->
+    <line x1="190" y1="489.89669421487605" x2="190" y2="513" stroke="#FF6B00" stroke-width="1.2" opacity="0.75"/>
+  <line x1="204" y1="469.93223140495866" x2="204" y2="513" stroke="#FF6B00" stroke-width="1.2" opacity="0.75"/>
+  <line x1="218" y1="451.3446280991735" x2="218" y2="513" stroke="#FF6B00" stroke-width="1.2" opacity="0.75"/>
+  <line x1="232" y1="434.1338842975207" x2="232" y2="513" stroke="#FF6B00" stroke-width="1.2" opacity="0.75"/>
+  <line x1="246" y1="418.3" x2="246" y2="513" stroke="#FF6B00" stroke-width="1.2" opacity="0.75"/>
+  <line x1="260" y1="403.8429752066116" x2="260" y2="513" stroke="#FF6B00" stroke-width="1.2" opacity="0.75"/>
+  <line x1="274" y1="390.76280991735536" x2="274" y2="513" stroke="#FF6B00" stroke-width="1.2" opacity="0.75"/>
+  <line x1="288" y1="379.0595041322314" x2="288" y2="513" stroke="#FF6B00" stroke-width="1.2" opacity="0.75"/>
+  <line x1="302" y1="368.73305785123966" x2="302" y2="513" stroke="#FF6B00" stroke-width="1.2" opacity="0.75"/>
+  <line x1="316" y1="359.78347107438015" x2="316" y2="513" stroke="#FF6B00" stroke-width="1.2" opacity="0.75"/>
+  <line x1="330" y1="352.21074380165294" x2="330" y2="513" stroke="#FF6B00" stroke-width="1.2" opacity="0.75"/>
+  <line x1="344" y1="346.0148760330578" x2="344" y2="513" stroke="#FF6B00" stroke-width="1.2" opacity="0.75"/>
+  <line x1="358" y1="341.195867768595" x2="358" y2="513" stroke="#FF6B00" stroke-width="1.2" opacity="0.75"/>
+  <line x1="372" y1="337.7537190082645" x2="372" y2="513" stroke="#FF6B00" stroke-width="1.2" opacity="0.75"/>
+  <line x1="386" y1="335.6884297520661" x2="386" y2="513" stroke="#FF6B00" stroke-width="1.2" opacity="0.75"/>
+  <line x1="400" y1="335.0" x2="400" y2="513" stroke="#FF6B00" stroke-width="1.2" opacity="0.75"/>
+  <line x1="414" y1="335.6884297520661" x2="414" y2="513" stroke="#FF6B00" stroke-width="1.2" opacity="0.75"/>
+  <line x1="428" y1="337.7537190082645" x2="428" y2="513" stroke="#FF6B00" stroke-width="1.2" opacity="0.75"/>
+  <line x1="442" y1="341.195867768595" x2="442" y2="513" stroke="#FF6B00" stroke-width="1.2" opacity="0.75"/>
+  <line x1="456" y1="346.0148760330578" x2="456" y2="513" stroke="#FF6B00" stroke-width="1.2" opacity="0.75"/>
+  <line x1="470" y1="352.21074380165294" x2="470" y2="513" stroke="#FF6B00" stroke-width="1.2" opacity="0.75"/>
+  <line x1="484" y1="359.78347107438015" x2="484" y2="513" stroke="#FF6B00" stroke-width="1.2" opacity="0.75"/>
+  <line x1="498" y1="368.73305785123966" x2="498" y2="513" stroke="#FF6B00" stroke-width="1.2" opacity="0.75"/>
+  <line x1="512" y1="379.0595041322314" x2="512" y2="513" stroke="#FF6B00" stroke-width="1.2" opacity="0.75"/>
+  <line x1="526" y1="390.76280991735536" x2="526" y2="513" stroke="#FF6B00" stroke-width="1.2" opacity="0.75"/>
+  <line x1="540" y1="403.8429752066116" x2="540" y2="513" stroke="#FF6B00" stroke-width="1.2" opacity="0.75"/>
+  <line x1="554" y1="418.3" x2="554" y2="513" stroke="#FF6B00" stroke-width="1.2" opacity="0.75"/>
+  <line x1="568" y1="434.1338842975207" x2="568" y2="513" stroke="#FF6B00" stroke-width="1.2" opacity="0.75"/>
+  <line x1="582" y1="451.3446280991735" x2="582" y2="513" stroke="#FF6B00" stroke-width="1.2" opacity="0.75"/>
+  <line x1="596" y1="469.93223140495866" x2="596" y2="513" stroke="#FF6B00" stroke-width="1.2" opacity="0.75"/>
+  <line x1="610" y1="489.89669421487605" x2="610" y2="513" stroke="#FF6B00" stroke-width="1.2" opacity="0.75"/>
+  <line x1="624" y1="511.2380165289256" x2="624" y2="513" stroke="#FF6B00" stroke-width="1.2" opacity="0.75"/>
+
+    <!-- Bridge deck -->
+    <rect x="0" y="513" width="800" height="6" fill="#FF6B00"/>
+    <rect x="0" y="519" width="800" height="2" fill="#041935" opacity="0.4"/>
+
+    <!-- Two towers -->
+    <g fill="#FF6B00">
+  <rect x="173" y="335" width="9" height="178"/>
+  <rect x="208" y="335" width="9" height="178"/>
+  <rect x="170" y="370" width="50" height="6"/>
+  <rect x="170" y="420" width="50" height="6"/>
+  <rect x="170" y="470" width="50" height="6"/>
+  <rect x="167" y="328" width="56" height="7"/>
+  <rect x="189"  y="318" width="12" height="10"/>
+</g>
+    <g fill="#FF6B00">
+  <rect x="583" y="335" width="9" height="178"/>
+  <rect x="618" y="335" width="9" height="178"/>
+  <rect x="580" y="370" width="50" height="6"/>
+  <rect x="580" y="420" width="50" height="6"/>
+  <rect x="580" y="470" width="50" height="6"/>
+  <rect x="577" y="328" width="56" height="7"/>
+  <rect x="599"  y="318" width="12" height="10"/>
+</g>
+
+    <!-- Fog wisps at deck level -->
+    <ellipse cx="120" cy="525" rx="140" ry="5" fill="#FFFFFF" opacity="0.22"/>
+    <ellipse cx="680" cy="528" rx="160" ry="4" fill="#FFFFFF" opacity="0.18"/>
+</svg>

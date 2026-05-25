@@ -1,0 +1,123 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" role="img">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#041935"/>
+      <stop offset="55%" stop-color="#0D3E6F"/>
+      <stop offset="100%" stop-color="#06284C"/>
+    </linearGradient>
+    <radialGradient id="sunGlow" cx="50%" cy="100%" r="55%">
+      <stop offset="0%"  stop-color="#FF6B00"   stop-opacity="0.65"/>
+      <stop offset="40%" stop-color="#FFA15A" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#FF6B00"  stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#0D3E6F"/>
+      <stop offset="100%" stop-color="#041935"/>
+    </linearGradient>
+
+  </defs>
+      <rect width="800" height="600" fill="url(#sky)"/>
+  <circle cx="77" cy="66" r="0.6" fill="#FFFFFF" opacity="0.6"/>
+<circle cx="193" cy="177" r="1.0" fill="#FFFFFF" opacity="0.5"/>
+<circle cx="641" cy="38" r="0.8" fill="#FFFFFF" opacity="0.8"/>
+<circle cx="673" cy="221" r="1.0" fill="#FFFFFF" opacity="0.8"/>
+<circle cx="534" cy="157" r="0.6" fill="#FFFFFF" opacity="0.4"/>
+<circle cx="392" cy="258" r="1.0" fill="#FFFFFF" opacity="0.8"/>
+<circle cx="453" cy="104" r="0.8" fill="#FFFFFF" opacity="0.5"/>
+<circle cx="256" cy="32" r="0.8" fill="#FFFFFF" opacity="0.6"/>
+<circle cx="197" cy="89" r="1.0" fill="#FFFFFF" opacity="0.5"/>
+<circle cx="476" cy="232" r="1.0" fill="#FFFFFF" opacity="0.6"/>
+<circle cx="390" cy="248" r="0.8" fill="#FFFFFF" opacity="0.8"/>
+<circle cx="752" cy="256" r="0.8" fill="#FFFFFF" opacity="0.8"/>
+<circle cx="305" cy="275" r="1.0" fill="#FFFFFF" opacity="0.8"/>
+<circle cx="492" cy="199" r="1.2" fill="#FFFFFF" opacity="0.8"/>
+<circle cx="694" cy="133" r="1.0" fill="#FFFFFF" opacity="0.5"/>
+<circle cx="651" cy="157" r="1.2" fill="#FFFFFF" opacity="0.6"/>
+<circle cx="330" cy="278" r="1.2" fill="#FFFFFF" opacity="0.6"/>
+<circle cx="768" cy="126" r="1.2" fill="#FFFFFF" opacity="0.6"/>
+<circle cx="720" cy="58" r="1.0" fill="#FFFFFF" opacity="0.4"/>
+<circle cx="215" cy="74" r="0.6" fill="#FFFFFF" opacity="0.4"/>
+<circle cx="299" cy="136" r="0.6" fill="#FFFFFF" opacity="0.5"/>
+<circle cx="292" cy="145" r="0.8" fill="#FFFFFF" opacity="0.4"/>
+  <ellipse cx="580" cy="420" rx="320" ry="100" fill="url(#sunGlow)"/>
+  <circle cx="580" cy="400" r="42" fill="#FF6B00" opacity="0.85"/>
+
+
+    <!-- Distant mountains (San Gabriel range) -->
+    <path d="M0 380 L120 320 L260 360 L380 300 L520 340 L660 280 L800 320 L800 600 L0 600 Z"
+          fill="#4E6575" opacity="0.6"/>
+
+    <!-- Hollywood Hills (mid) -->
+    <path d="M0 430 Q200 350 400 400 Q550 430 700 380 L800 400 L800 600 L0 600 Z"
+          fill="#0D3E6F"/>
+
+    <rect x="350" y="290" width="22" height="38" fill="#FFFFFF" opacity="0.88"/>
+  <rect x="350" y="290" width="22" height="38" fill="none" stroke="#041935" stroke-width="0.8"/>
+  <rect x="380" y="290" width="22" height="38" fill="#FFFFFF" opacity="0.88"/>
+  <rect x="380" y="290" width="22" height="38" fill="none" stroke="#041935" stroke-width="0.8"/>
+  <rect x="410" y="290" width="22" height="38" fill="#FFFFFF" opacity="0.88"/>
+  <rect x="410" y="290" width="22" height="38" fill="none" stroke="#041935" stroke-width="0.8"/>
+  <rect x="440" y="290" width="22" height="38" fill="#FFFFFF" opacity="0.88"/>
+  <rect x="440" y="290" width="22" height="38" fill="none" stroke="#041935" stroke-width="0.8"/>
+  <rect x="470" y="290" width="22" height="38" fill="#FFFFFF" opacity="0.88"/>
+  <rect x="470" y="290" width="22" height="38" fill="none" stroke="#041935" stroke-width="0.8"/>
+  <rect x="500" y="290" width="22" height="38" fill="#FFFFFF" opacity="0.88"/>
+  <rect x="500" y="290" width="22" height="38" fill="none" stroke="#041935" stroke-width="0.8"/>
+  <rect x="530" y="290" width="22" height="38" fill="#FFFFFF" opacity="0.88"/>
+  <rect x="530" y="290" width="22" height="38" fill="none" stroke="#041935" stroke-width="0.8"/>
+  <rect x="560" y="290" width="22" height="38" fill="#FFFFFF" opacity="0.88"/>
+  <rect x="560" y="290" width="22" height="38" fill="none" stroke="#041935" stroke-width="0.8"/>
+  <rect x="590" y="290" width="22" height="38" fill="#FFFFFF" opacity="0.88"/>
+  <rect x="590" y="290" width="22" height="38" fill="none" stroke="#041935" stroke-width="0.8"/>
+
+    <!-- Downtown LA silhouette in background -->
+    <g fill="#1E5FA8" opacity="0.55">
+  <rect x="60"  y="430" width="40" height="80"/>
+  <rect x="105" y="410" width="50" height="100"/>
+  <rect x="160" y="395" width="35" height="115"/>
+  <!-- US Bank tower (tall round-top) -->
+  <rect x="200" y="370" width="40" height="140"/>
+  <ellipse cx="220" cy="370" rx="20" ry="8"/>
+  <rect x="245" y="400" width="38" height="110"/>
+  <rect x="288" y="420" width="30" height="90"/>
+</g>
+
+    <!-- Foreground hill / road shoulder -->
+    <path d="M0 540 Q150 510 350 525 Q550 540 800 520 L800 600 L0 600 Z"
+          fill="#06284C"/>
+
+    <!-- Palm trees -->
+    <g fill="#06284C">
+  <rect x="77" y="400" width="6" height="140"/>
+  <ellipse cx="80" cy="400" rx="3" ry="6"/>
+  <!-- fronds -->
+  <path d="M80 400 Q40 380 25 395"  stroke="#06284C" stroke-width="3" fill="none"/>
+  <path d="M80 400 Q52 370 50 355" stroke="#06284C" stroke-width="3" fill="none"/>
+  <path d="M80 400 Q105 370 110 355" stroke="#06284C" stroke-width="3" fill="none"/>
+  <path d="M80 400 Q120 380 135 395"  stroke="#06284C" stroke-width="3" fill="none"/>
+  <path d="M80 400 Q65 365 75 350"  stroke="#06284C" stroke-width="3" fill="none"/>
+  <path d="M80 400 Q95 365 85 350"  stroke="#06284C" stroke-width="3" fill="none"/>
+</g>
+    <g fill="#06284C">
+  <rect x="717" y="380" width="6" height="160"/>
+  <ellipse cx="720" cy="380" rx="3" ry="6"/>
+  <!-- fronds -->
+  <path d="M720 380 Q680 360 665 375"  stroke="#06284C" stroke-width="3" fill="none"/>
+  <path d="M720 380 Q692 350 690 335" stroke="#06284C" stroke-width="3" fill="none"/>
+  <path d="M720 380 Q745 350 750 335" stroke="#06284C" stroke-width="3" fill="none"/>
+  <path d="M720 380 Q760 360 775 375"  stroke="#06284C" stroke-width="3" fill="none"/>
+  <path d="M720 380 Q705 345 715 330"  stroke="#06284C" stroke-width="3" fill="none"/>
+  <path d="M720 380 Q735 345 725 330"  stroke="#06284C" stroke-width="3" fill="none"/>
+</g>
+    <g fill="#06284C">
+  <rect x="147" y="440" width="6" height="100"/>
+  <ellipse cx="150" cy="440" rx="3" ry="6"/>
+  <!-- fronds -->
+  <path d="M150 440 Q110 420 95 435"  stroke="#06284C" stroke-width="3" fill="none"/>
+  <path d="M150 440 Q122 410 120 395" stroke="#06284C" stroke-width="3" fill="none"/>
+  <path d="M150 440 Q175 410 180 395" stroke="#06284C" stroke-width="3" fill="none"/>
+  <path d="M150 440 Q190 420 205 435"  stroke="#06284C" stroke-width="3" fill="none"/>
+  <path d="M150 440 Q135 405 145 390"  stroke="#06284C" stroke-width="3" fill="none"/>
+  <path d="M150 440 Q165 405 155 390"  stroke="#06284C" stroke-width="3" fill="none"/>
+</g>
+</svg>
