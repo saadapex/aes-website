@@ -4,7 +4,6 @@ import Nav from "@/components/nav";
 import Footer from "@/components/footer";
 import CookieBanner from "@/components/cookie-banner";
 import Analytics from "@/components/analytics";
-import NewsletterPopup from "@/components/newsletter-popup";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -103,8 +102,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* GDPR cookie consent banner */}
         <CookieBanner />
 
-        {/* Newsletter lead capture popup — fires after 30s */}
-        <NewsletterPopup />
       </body>
     </html>
   );
