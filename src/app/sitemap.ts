@@ -28,6 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/locations`,                        lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     ...locationEntries,
     { url: `${BASE}/case-studies`,                               lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE}/case-studies/ai-cluster-pod-build`,          lastModified: now, changeFrequency: "yearly", priority: 0.7 },
     { url: `${BASE}/case-studies/telecom-transport-lab`,         lastModified: now, changeFrequency: "yearly", priority: 0.7 },
     { url: `${BASE}/case-studies/fulfillment-ap-refresh-ontario`,lastModified: now, changeFrequency: "yearly", priority: 0.7 },
     { url: `${BASE}/case-studies/amazon-ap-refresh`,             lastModified: now, changeFrequency: "yearly", priority: 0.7 },

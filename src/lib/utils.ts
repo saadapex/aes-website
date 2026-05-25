@@ -175,6 +175,14 @@ export const INDUSTRIES = [
 
 export const CASE_STUDIES = [
   {
+    slug: "ai-cluster-pod-build",
+    title: "AI Cluster Pod Build — GPU-Dense Data Center",
+    tag: "RACK & STACK",
+    location: "Memphis, TN — Q4 2024 / Q1 2025",
+    metrics: ["GPU-Dense Compute Build", "Structured Fiber + Rack & Stack", "6–7 Tech Crew Mobilization"],
+    service: "rack-and-stack",
+  },
+  {
     slug: "telecom-transport-lab",
     title: "Telecom Transport Lab Build-Out",
     tag: "RACK & STACK",

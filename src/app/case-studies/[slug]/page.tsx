@@ -6,6 +6,7 @@ import CtaBand from "@/components/cta-band";
 import { CASE_STUDIES } from "@/lib/utils";
 
 const IMAGES: Record<string, string> = {
+  "ai-cluster-pod-build":           "/images/case-ai-cluster.png",
   "telecom-transport-lab":          "/images/case-telecom-lab.jpg",
   "fulfillment-ap-refresh-ontario": "/images/case-warehouse-ap.png",
   "amazon-ap-refresh":              "/images/case-amazon-ap.png",
@@ -19,6 +20,24 @@ const CONTENT: Record<string, {
   tags: string[];
   lessonsLearned?: { title: string; body: string }[];
 }> = {
+  "ai-cluster-pod-build": {
+    overview: "A major generative AI research company engaged AES to deliver structured cabling and rack & stack work for a new GPU-dense data center in Memphis, Tennessee. The facility was built to house high-performance compute for training large AI models — requiring precision fiber management from the meet-me room to the compute racks, scalable rack infrastructure, and an aggressive deployment schedule. AES's prior hyperscale environment experience made it a strong fit for the scope.",
+    challenge: "The project carried three concurrent constraints. GPU-dense compute requires low-latency, high-bandwidth fiber connectivity with disciplined cable management — sloppy fiber kills performance and adds risk at every future change. The schedule had to move fast to accelerate the client's research roadmap. And Memphis is not a major data-center labor market, so AES had to mobilize skilled fiber technicians from outside the region with travel, lodging, and per-diem coordination handled in parallel with the deployment itself.",
+    approach: [
+      "Phase 1 — Crew mobilization: AES staged 6–7 fiber and hardware technicians for the Memphis site, mixing senior and junior crew to balance speed and quality. Travel, lodging, and per-diem logistics were coordinated before crew arrival so day one was productive, not administrative.",
+      "Phase 2 — Structured fiber installation: High-density fiber runs were installed from the meet-me room to the compute racks. Precision fiber management was implemented from the start — clean routing, labeled bundles, organized slack, and room for future scaling without re-pulling.",
+      "Phase 3 — Rack & stack: AES assembled and installed the compute racks, mounted equipment, connected servers to power and network, and dressed fiber jumpers within each rack. The initial two-rack build was completed in a focused two-day push, with additional racks added across subsequent phases.",
+      "Phase 4 — Sustained execution: The deployment ran across late 2024 and early 2025, with crew shifts including overtime to hold the schedule. Detailed labor and equipment tracking was maintained throughout for client visibility and post-project documentation.",
+    ],
+    outcome: "AES completed the structured cabling and rack & stack work on schedule, delivering a ready-for-integration data-center environment with GPU-dense compute capacity and precision fiber management. The infrastructure supported the client's AI training operations without bottlenecks at the cable plant or rack level. The facility now serves as a marquee reference for AES's ability to execute high-performance AI data-center builds under aggressive timelines in non-traditional data-center markets.",
+    tags: ["Rack & Stack", "Structured Cabling", "Fiber", "AI / ML", "Data Center", "Memphis", "GPU-Dense Compute"],
+    lessonsLearned: [
+      { title: "Mobilization plan matters as much as scope", body: "In a market without deep local data-center labor, travel, lodging, and per-diem logistics are part of the schedule — not an afterthought. Plan them before mobilization, not as crews are arriving." },
+      { title: "Focused scope improves quality", body: "Limiting AES's scope to structured fiber and rack & stack let the crew hold high standards on cleanliness, cable management, and rack consistency rather than spreading thin across adjacent disciplines." },
+      { title: "Flexible crew sizing scales the program", body: "Mixing senior and junior fiber technicians lets AES scale labor up and down across phases without losing project knowledge between visits." },
+      { title: "Precision fiber management pays compounding dividends", body: "Clean, labeled fiber routing from day one makes every subsequent rack add, hardware refresh, and troubleshooting visit faster and lower-risk." },
+    ],
+  },
   "telecom-transport-lab": {
     overview: "One of the largest U.S. energy providers serving approximately 9 million customers engaged AES to upgrade its internal telecom transport lab. The facility validates new telecom equipment before production deployment — a critical quality gate for the client's network. The refresh integrated DWDM optical, MPLS routing, and microwave transmission platforms across six racks and had to be completed in two weeks to keep network rollouts on schedule.",
     challenge: "The scope covered a full site audit, engineering drawings, complete installation and commissioning across six racks, and final as-built documentation. Speed was non-negotiable: future network rollouts depended on lab availability, and any delay would cascade downstream.",
@@ -73,6 +92,8 @@ const CONTENT: Record<string, {
 
 // Hand-crafted meta descriptions — complete sentences, under 155 chars, outcome-first
 const META_DESCRIPTIONS: Record<string, string> = {
+  "ai-cluster-pod-build":
+    "AES delivered structured cabling and rack & stack for a GPU-dense AI data center in Memphis, TN — precision fiber management and scalable rack infrastructure for high-performance compute.",
   "telecom-transport-lab":
     "AES built a DWDM, MPLS, and microwave telecom transport lab for a U.S. energy provider — 6 racks, 4 platforms, commissioned in 2 weeks.",
   "fulfillment-ap-refresh-ontario":
