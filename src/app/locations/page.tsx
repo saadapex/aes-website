@@ -61,6 +61,11 @@ export default function LocationsIndexPage() {
             </p>
             <Link href="/contact" className="btn-primary">Send Your Scope →</Link>
           </div>
+
+          {/* Freshness stamp for AI engine citation */}
+          <p className="text-xs text-[#4E6575] text-right">
+            Updated <time dateTime="2026-05-25">May 2026</time>
+          </p>
         </div>
       </section>
 
@@ -76,7 +81,10 @@ interface CardProps {
 
 function LocationCard({ loc }: CardProps) {
   return (
-    <div className="bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow group">
+    <div
+      id={loc.slug}
+      className="bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow group scroll-mt-28"
+    >
       {/* Landmark image */}
       <div className="aspect-[4/3] bg-[#06284C] relative overflow-hidden">
         <Image

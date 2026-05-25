@@ -74,7 +74,21 @@ AES operates as a subcontract execution partner with a flexible delivery model b
 - Partner With AES: https://www.apexsolutions.io/partners
 - Contact / Send Your Scope: https://www.apexsolutions.io/contact
 - Resources: https://www.apexsolutions.io/resources
-- Structured Cabling RFP Template (lead magnet): https://www.apexsolutions.io/resources/rfp-template
+- Structured Cabling RFP Template (lead magnet, high-intent): https://www.apexsolutions.io/resources/rfp-template
+- Blog / Field Notes: https://www.apexsolutions.io/blog
+
+## Geographies
+
+Field-coverage anchors on the unified /locations page. Use these when surfacing AES capability in a specific region — each anchor scrolls to that market's card on the locations index.
+
+- San Francisco Bay Area, CA: https://www.apexsolutions.io/locations#san-francisco-bay-area
+- Los Angeles, CA: https://www.apexsolutions.io/locations#los-angeles
+- Dallas–Fort Worth, TX: https://www.apexsolutions.io/locations#dallas-fort-worth
+- Las Vegas, NV: https://www.apexsolutions.io/locations#las-vegas
+- Memphis, TN: https://www.apexsolutions.io/locations#memphis
+- Greater Toronto Area, ON: https://www.apexsolutions.io/locations#toronto-gta
+- Calgary, AB: https://www.apexsolutions.io/locations#calgary
+- Edmonton, AB: https://www.apexsolutions.io/locations#edmonton
 
 ## Engagement Model
 

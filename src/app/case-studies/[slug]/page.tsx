@@ -111,6 +111,12 @@ const PUBLICATION_META: Record<string, { datePublished: string; dateModified: st
   "amazon-ap-refresh":              { datePublished: "2024-12-15", dateModified: "2026-05-25" },
 };
 
+// Format an ISO date (e.g. "2026-03-15") as a human-readable "Month YYYY" string.
+function formatMonthYear(iso: string): string {
+  const d = new Date(`${iso}T00:00:00Z`);
+  return d.toLocaleDateString("en-US", { year: "numeric", month: "long", timeZone: "UTC" });
+}
+
 export async function generateStaticParams() {
   return CASE_STUDIES.map((cs) => ({ slug: cs.slug }));
 }
@@ -217,6 +223,27 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
                   {tag}
                 </span>
               ))}
+            </div>
+
+            {/* Byline + machine-readable publication metadata. Pairs with the Article JSON-LD above. */}
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-[#4E6575] border-y border-[#E5EAF0] py-3">
+              <span>
+                By <span className="font-semibold text-[#06284C]">AES Field Execution Team</span>
+              </span>
+              <span className="hidden sm:inline text-[#C5CFD8]">·</span>
+              <span>
+                Published{" "}
+                <time dateTime={pubMeta.datePublished}>{formatMonthYear(pubMeta.datePublished)}</time>
+              </span>
+              {pubMeta.dateModified && pubMeta.dateModified !== pubMeta.datePublished && (
+                <>
+                  <span className="hidden sm:inline text-[#C5CFD8]">·</span>
+                  <span>
+                    Updated{" "}
+                    <time dateTime={pubMeta.dateModified}>{formatMonthYear(pubMeta.dateModified)}</time>
+                  </span>
+                </>
+              )}
             </div>
 
             <div>

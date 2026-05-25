@@ -150,6 +150,11 @@ export default function CapabilitiesPage() {
               <a href={SITE.capabilityPdf} target="_blank" rel="noopener noreferrer" className="btn-secondary">Download Capability Statement (PDF) ↓</a>
             </div>
           </div>
+
+          {/* Freshness stamp for AI engine citation */}
+          <p className="text-xs text-[#4E6575] text-right">
+            Updated <time dateTime="2026-05-25">May 2026</time>
+          </p>
         </div>
       </section>
 
