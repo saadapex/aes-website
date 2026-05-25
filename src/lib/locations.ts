@@ -23,7 +23,7 @@ export const LOCATIONS: LocationCard[] = [
     country: "US",
     cardSummary:
       "Headquartered in Sunnyvale. Santa Clara hyperscale, AI cluster builds, enterprise campuses, and East Bay logistics.",
-    landmarkImage: "/images/locations/san-francisco-bay-area.svg",
+    landmarkImage: "/images/locations/san-francisco-bay-area.jpg",
     landmarkAlt: "Golden Gate Bridge, San Francisco — AES Bay Area coverage market",
   },
   {
@@ -33,7 +33,7 @@ export const LOCATIONS: LocationCard[] = [
     country: "US",
     cardSummary:
       "Inland Empire fulfillment, Port of LA logistics, West LA enterprise, and broadcast-adjacent infrastructure.",
-    landmarkImage: "/images/locations/los-angeles.svg",
+    landmarkImage: "/images/locations/los-angeles.jpg",
     landmarkAlt: "Downtown Los Angeles skyline — AES Southern California coverage market",
   },
   {
@@ -43,7 +43,7 @@ export const LOCATIONS: LocationCard[] = [
     country: "US",
     cardSummary:
       "DFW data center alley, North Dallas corporate stand-up, and high-bay logistics across the metro.",
-    landmarkImage: "/images/locations/dallas-fort-worth.svg",
+    landmarkImage: "/images/locations/dallas-fort-worth.jpg",
     landmarkAlt: "Dallas downtown skyline with Reunion Tower — AES DFW coverage market",
   },
   {
@@ -53,7 +53,7 @@ export const LOCATIONS: LocationCard[] = [
     country: "US",
     cardSummary:
       "Hospitality MDF/IDF, Switch and adjacent DC work, and convention-driven infrastructure in the Vegas Valley.",
-    landmarkImage: "/images/locations/las-vegas.svg",
+    landmarkImage: "/images/locations/las-vegas.jpg",
     landmarkAlt: "Las Vegas Strip skyline — AES Nevada coverage market",
   },
   {
@@ -63,7 +63,7 @@ export const LOCATIONS: LocationCard[] = [
     country: "US",
     cardSummary:
       "AI / hyperscale data center deployment, structured fiber and rack & stack in a non-traditional DC market.",
-    landmarkImage: "/images/locations/memphis.svg",
+    landmarkImage: "/images/locations/memphis.jpg",
     landmarkAlt: "Memphis Tennessee skyline along the Mississippi River — AES Memphis coverage market",
   },
   {
@@ -73,7 +73,7 @@ export const LOCATIONS: LocationCard[] = [
     country: "CA",
     cardSummary:
       "Multi-site warehouse AP refresh across Scarborough, Bolton, Mississauga, Brampton, and Oakville.",
-    landmarkImage: "/images/locations/toronto-gta.svg",
+    landmarkImage: "/images/locations/toronto-gta.jpg",
     landmarkAlt: "CN Tower and Toronto skyline — AES Greater Toronto Area coverage market",
   },
   {
@@ -83,7 +83,7 @@ export const LOCATIONS: LocationCard[] = [
     country: "CA",
     cardSummary:
       "Data centre and enterprise field execution across the Calgary and Southern Alberta corridor.",
-    landmarkImage: "/images/locations/calgary.svg",
+    landmarkImage: "/images/locations/calgary.jpg",
     landmarkAlt: "Calgary downtown skyline with the Calgary Tower — AES Alberta coverage market",
   },
   {
@@ -93,7 +93,7 @@ export const LOCATIONS: LocationCard[] = [
     country: "CA",
     cardSummary:
       "Field deployment support for enterprise and logistics infrastructure across Edmonton and Northern Alberta.",
-    landmarkImage: "/images/locations/edmonton.svg",
+    landmarkImage: "/images/locations/edmonton.jpg",
     landmarkAlt: "Edmonton skyline with the High Level Bridge — AES Northern Alberta coverage market",
   },
 ];
