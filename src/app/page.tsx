@@ -180,6 +180,46 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── TRUST BAND: PARTNER ECOSYSTEM LOGOS ──────────────── */}
+      <section className="bg-white border-b border-gray-100 py-12 lg:py-14">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          <p className="text-[#4E6575] uppercase tracking-widest text-xs font-bold text-center mb-8">
+            Trusted Across the IT Infrastructure Ecosystem
+          </p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-x-8 gap-y-10 items-center">
+            {[
+              { name: "HPE",                 logo: "/images/Partners%20Logo/HPE-Logo.png" },
+              { name: "Black Box",           logo: "/images/Partners%20Logo/Blackbox-Logo.jpg" },
+              { name: "DataKnox",            logo: "/images/Partners%20Logo/636bbbf913f59171dda12e5b_dataknox-blue.svg" },
+              { name: "Eaton / Exertherm",   logo: "/images/Partners%20Logo/Exertherm%20logo.svg" },
+              { name: "Karavan Technology",  logo: "/images/Partners%20Logo/Karavan.svg" },
+              { name: "Inventiv Technology", logo: "/images/Partners%20Logo/INVENTIV-TECHNOLOGY-TRANSPARENT-PNG.png.webp" },
+            ].map((p) => (
+              <Link
+                key={p.name}
+                href="/partners"
+                title={p.name}
+                className="flex items-center justify-center h-14 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={p.logo}
+                  alt={p.name}
+                  className="max-h-12 max-w-[140px] w-auto h-auto object-contain"
+                />
+              </Link>
+            ))}
+          </div>
+          <p className="text-center text-[10px] text-gray-400 mt-8 max-w-2xl mx-auto leading-relaxed">
+            Logos represent project, partner, or team ecosystem experience. Relationships are project-based;
+            logos are displayed for reference only and do not imply endorsement unless stated.
+            <Link href="/partners" className="text-[#006FB9] hover:text-[#FF6B00] font-semibold ml-1">
+              View all partners &rarr;
+            </Link>
+          </p>
+        </div>
+      </section>
+
       {/* ── TESTIMONIALS ─────────────────────────────────────── */}
       <section className="bg-[#F4F7FA] section-pad">
         <div className="max-w-7xl mx-auto">
