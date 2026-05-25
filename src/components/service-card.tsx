@@ -1,11 +1,12 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
-import { Cable, Server, Wifi } from "lucide-react";
+import { Cable, Server, Wifi, Wrench } from "lucide-react";
 
 const icons: Record<string, ReactNode> = {
   "structured-cabling": <Cable  size={32} className="text-[#006FB9]" />,
   "rack-and-stack":     <Server size={32} className="text-[#006FB9]" />,
   "ap-refresh":         <Wifi   size={32} className="text-[#006FB9]" />,
+  "smart-hands":        <Wrench size={32} className="text-[#006FB9]" />,
 };
 
 interface ServiceCardProps {
