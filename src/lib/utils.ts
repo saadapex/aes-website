@@ -179,7 +179,7 @@ export const CASE_STUDIES = [
     title: "Telecom Transport Lab Build-Out",
     tag: "RACK & STACK",
     location: "United States — Q1 2024",
-    metrics: ["Delivered in 2 Weeks", "$24,400 Total Project Cost", "4 Platforms · 6 Racks Commissioned"],
+    metrics: ["Delivered in 2 Weeks", "DWDM · MPLS · Microwave Transport", "4 Platforms · 6 Racks Commissioned"],
     service: "rack-and-stack",
   },
   {

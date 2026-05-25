@@ -74,7 +74,7 @@ const CONTENT: Record<string, {
 // Hand-crafted meta descriptions — complete sentences, under 155 chars, outcome-first
 const META_DESCRIPTIONS: Record<string, string> = {
   "telecom-transport-lab":
-    "AES built a DWDM, MPLS, and microwave telecom transport lab for a U.S. energy provider — 6 racks, 4 platforms, commissioned in 2 weeks. $24,400 total.",
+    "AES built a DWDM, MPLS, and microwave telecom transport lab for a U.S. energy provider — 6 racks, 4 platforms, commissioned in 2 weeks.",
   "fulfillment-ap-refresh-ontario":
     "AES replaced 1,586+ wireless APs across two Ontario fulfillment centres (YYZ9 Scarborough, YYZ7 Bolton) in Q1 2026. 24hr window, zero safety incidents.",
   "amazon-ap-refresh":
