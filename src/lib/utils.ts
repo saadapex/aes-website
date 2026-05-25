@@ -28,13 +28,6 @@ export const SITE = {
   capabilityPdf: "/assets/Apex Enterprise Solutions – Capability Statement.pdf",
 } as const;
 
-export const STATS = [
-  { value: "1,586+",        label: "APs Replaced · Multi-Site Program" },
-  { value: "U.S. & Canada", label: "Field Deployment Coverage" },
-  { value: "0",             label: "Recorded Safety Incidents · AES-Led Engagements" },
-  { value: "On Schedule",   label: "Delivery · Documented Recent Deployments" },
-] as const;
-
 export const SERVICES = [
   {
     slug: "structured-cabling",

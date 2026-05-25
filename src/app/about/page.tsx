@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import PageHero from "@/components/page-hero";
 import CtaBand from "@/components/cta-band";
-import { STATS } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "About Apex Enterprise Solutions",
@@ -168,21 +167,6 @@ export default function AboutPage() {
                 <p className="text-[#0D1F3C] text-xs uppercase tracking-wide font-medium">Recorded Safety Incidents<br/><span className="text-[10px] normal-case tracking-normal text-[#4E6575]">Documented AES-Led Engagements</span></p>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* AES at a Glance — KPI band */}
-      <section className="bg-[#06284C] py-14 px-6">
-        <div className="max-w-7xl mx-auto">
-          <p className="text-[#4E6575] uppercase tracking-widest text-xs text-center mb-10">AES at a Glance</p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            {STATS.map((stat) => (
-              <div key={stat.label}>
-                <div className="text-[#FF6B00] text-3xl md:text-4xl font-black mb-2">{stat.value}</div>
-                <div className="text-[#4E6575] text-xs uppercase tracking-wide leading-tight">{stat.label}</div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
