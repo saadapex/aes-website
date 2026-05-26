@@ -22,7 +22,7 @@ export default function Footer() {
               {SITE.tagline}
             </p>
             <p className="text-[#4E6575] text-sm leading-relaxed mb-6">
-              North America&apos;s field-first infrastructure deployment partner.
+              A North America-based field-first infrastructure deployment partner.
             </p>
             {/* Social icons */}
             <div className="flex items-center gap-3">

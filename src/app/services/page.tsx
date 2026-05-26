@@ -67,7 +67,7 @@ export default function ServicesPage() {
         sub="One execution partner from first survey to final handover. Three core services, disciplined delivery."
       />
       <div className="max-w-7xl mx-auto px-6 lg:px-12 py-20 space-y-28">
-        {SERVICES.map((service, i) => {
+        {SERVICES.filter((s) => s.slug !== "smart-hands").map((service, i) => {
           const details = serviceDetails[service.slug];
           if (!details) return null; // skip if service detail entry not defined
           const isEven = i % 2 === 0;

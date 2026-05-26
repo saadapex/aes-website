@@ -70,12 +70,12 @@ const CURRENT_PARTNERS = [
 ];
 
 const BENEFITS = [
-  { title: "Reliable Field Execution", body: "We show up, stay on schedule, and deliver clean work. Your reputation is protected on every engagement we support." },
-  { title: "Transparent Communication", body: "Daily updates, early issue escalation, and responsive coordination — no surprises from kickoff to handover." },
-  { title: "Scalable Capacity", body: "Need two techs or twenty? We flex to your program size across the U.S. and Canada without compromising quality." },
+  { title: "Reliable Field Execution", body: "We show up prepared, communicate schedule risk early, and deliver clean work that helps protect your client relationship." },
+  { title: "Transparent Communication", body: "Daily updates, early issue escalation, and responsive coordination — fewer surprises from kickoff to handover." },
+  { title: "Scalable Capacity", body: "Need a small crew or a larger field team? AES scales based on location, schedule, scope, and vetted-resource availability." },
   { title: "Clean Closeout Documentation", body: "Every project ends with as-builts, test reports, and label schemas that hold up to client scrutiny." },
   { title: "Competitive Subcontract Pricing", body: "Lean overhead means competitive rates. We price to win work together, not to pad margin at your expense." },
-  { title: "North America Coverage", body: "Active field pods in California, Texas, Nevada, Tennessee, and Canada. We mobilize where the work is." },
+  { title: "North America Coverage", body: "Active field-resource coverage in California, Texas, Nevada, Tennessee, Ontario, and Alberta, with project-based support elsewhere." },
 ];
 
 const WHO = [
@@ -116,7 +116,7 @@ export default function PartnersPage() {
       <PageHero
         eyebrow="Partner Program"
         h1="Become an AES Execution Partner"
-        sub="Primes, integrators, and MSPs across North America bring AES in when field execution has to be right. Reliable crews, clean work, handover-ready documentation — every engagement."
+        sub="Primes, integrators, and MSPs bring AES in when field execution has to be right across active U.S. and Canadian markets. Reliable crews, clean work, handover-ready documentation."
         cta={{ label: "Submit Partner Inquiry →", href: "#partner-form" }}
         breadcrumb={[{ label: "Home", href: "/" }, { label: "Partners", href: "/partners" }]}
       />
@@ -129,8 +129,8 @@ export default function PartnersPage() {
             <h2 className="text-[#06284C] text-3xl font-bold mb-6">Built for Primes, Integrators &amp; MSPs</h2>
             <p className="text-[#1F2933] text-lg leading-relaxed mb-6">
               AES is a field execution partner — not a staffing agency, not a general contractor.
-              We bring our own processes, our own techs, and our own quality standards to every
-              engagement. When you hand off scope to AES, it gets done.
+              AES brings structured processes, AES-managed field resources, and quality standards
+              to each engagement. When scope is clear, AES executes against the agreed plan.
             </p>
             <ul className="space-y-3">
               {WHO.map((w) => (

@@ -45,8 +45,8 @@ export default function AboutPage() {
     <>
       <PageHero
         eyebrow="About AES"
-        h1="North America&#x27;s Infrastructure Execution Partner"
-        sub="Apex Enterprise Solutions executes structured cabling, rack-and-stack, and large-scale wireless rollouts across the U.S. and Canada \u2014 built clean, documented right, every time."
+        h1="A North America-Based Infrastructure Execution Partner"
+        sub="Apex Enterprise Solutions executes structured cabling, rack-and-stack, and large-scale wireless rollouts across the U.S. and Canada \u2014 built clean and documented to approved scope."
         breadcrumb={[{ label: "Home", href: "/" }, { label: "About", href: "/about" }]}
       />
 
@@ -65,8 +65,8 @@ export default function AboutPage() {
             </p>
             <p className="text-[#1F2933] leading-relaxed mb-6">
               We are a North America-based field execution partner. We bring structured deployment
-              processes, credentialed technicians, and a standard of work that protects our
-              partners&apos; reputations on every engagement.
+              processes, credentialed technicians, and a standard of work designed to protect our
+              partners&apos; reputations.
             </p>
             <Link href="/contact" className="btn-primary">
               Work With AES &rarr;
@@ -210,21 +210,21 @@ export default function AboutPage() {
           <p className="eyebrow mb-3">Coverage</p>
           <h2 className="text-[#06284C] text-3xl font-bold mb-4">North America Field Presence</h2>
           <p className="text-[#1F2933] text-lg mb-8 max-w-2xl">
-            We mobilize where the work is. Active field pods across the U.S. and Canada, with
-            rapid-response capability for multi-site and urgent deployment programs.
+            Active field-resource coverage in selected U.S. and Canadian markets, with rapid
+            mobilization available on a project basis for multi-site and urgent programs.
           </p>
           {/* Coverage map */}
           <div className="w-full rounded-xl overflow-hidden shadow-lg mb-8">
             <Image
               src="/images/about-coverage-map.png"
-              alt="AES field coverage map \u2014 active pods across the United States"
+              alt="AES field coverage map \u2014 active markets across the U.S. and Canada"
               width={1200}
               height={650}
               className="w-full h-auto block brightness-150"
             />
           </div>
           <div className="flex flex-wrap gap-3">
-            {["San Francisco Bay Area, CA", "Los Angeles, CA", "Dallas, TX", "Las Vegas, NV", "Memphis, TN"].map((pod) => (
+            {["San Francisco Bay Area, CA", "Los Angeles, CA", "Dallas, TX", "Las Vegas, NV", "Memphis, TN", "Toronto, ON", "Calgary, AB", "Edmonton, AB"].map((pod) => (
               <span key={pod}
                 className="bg-[#F4F7FA] border border-[#006FB9]/20 text-[#06284C] px-4 py-2 rounded-full text-sm font-medium">
                 &#128205; {pod}

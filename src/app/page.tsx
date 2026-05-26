@@ -96,7 +96,7 @@ export default function HomePage() {
               Field Execution · U.S. &amp; Canada
             </p>
             <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-black leading-tight mb-6">
-              North America&apos;s{" "}
+              A North America-Based{" "}
               <span className="text-[#FF6B00]">Field Execution Partner</span>
             </h1>
             <p className="text-[#4E6575] text-lg md:text-xl leading-relaxed mb-4 max-w-xl">
@@ -184,7 +184,7 @@ export default function HomePage() {
       <section className="bg-white border-b border-gray-100 py-12 lg:py-14">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <p className="text-[#4E6575] uppercase tracking-widest text-xs font-bold text-center mb-8">
-            Trusted Across the IT Infrastructure Ecosystem
+            Experience Across the IT Infrastructure Ecosystem
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-x-8 gap-y-10 items-center">
             {[
@@ -278,15 +278,15 @@ export default function HomePage() {
           <p className="eyebrow mb-3">What We Deploy</p>
           <div className="flex items-end justify-between mb-12">
             <h2 className="text-[#06284C] text-3xl md:text-4xl font-bold max-w-xl">
-              Four Services. One Execution Partner.
+              Three Core Services. One Execution Partner.
             </h2>
             <Link href="/services"
               className="text-[#006FB9] font-semibold text-sm hover:text-[#FF6B00] transition-colors hidden md:block">
               View All Services →
             </Link>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {SERVICES.map((s) => (
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {SERVICES.filter((s) => s.slug !== "smart-hands").map((s) => (
               <ServiceCard key={s.slug} {...s} />
             ))}
           </div>
@@ -478,12 +478,12 @@ export default function HomePage() {
             North America Coverage
           </h2>
           <p className="text-[#1F2933] text-lg mb-10 max-w-2xl mx-auto">
-            Rapid-response field pods across the U.S. and Canada. We mobilize where the work is.
+            Active field-resource coverage in key U.S. and Canadian markets, with additional mobilization on a project basis.
           </p>
           <div className="w-full max-w-3xl mx-auto rounded-xl overflow-hidden shadow-lg mb-8">
             <Image
               src="/images/about-coverage-map.png"
-              alt="AES field coverage map — active pods across the U.S. and Canada"
+              alt="AES field coverage map — active markets across the U.S. and Canada"
               width={900}
               height={520}
               className="w-full h-auto block brightness-150"
@@ -516,8 +516,8 @@ export default function HomePage() {
               { icon: "02", heading: "Clear Communication", body: "Daily site reports, proactive escalation, and a single point of contact from kickoff to closeout. No surprises." },
               { icon: "03", heading: "Clean Installations", body: "Every install is done to a standard: properly routed, tested, labeled, and cleaned up before the crew leaves site." },
               { icon: "04", heading: "Handover-Ready Documentation", body: "As-builts, OTDR reports, RF validation, label schemas — delivered in the format your PM needs. Closeout that holds up." },
-              { icon: "05", heading: "Program Execution at Scale", body: "Single site or 50-location rollout, the AES delivery standard doesn't change. We scale to the program." },
-              { icon: "06", heading: "Safety by Default", body: "Full PPE compliance, site orientation, and documented safety practices on every engagement. Zero incidents isn't a target — it's the floor." },
+              { icon: "05", heading: "Program Execution at Scale", body: "Single-site or multi-location rollout, AES applies the same field execution standard. We scale to the program." },
+              { icon: "06", heading: "Safety by Default", body: "Safe execution planned into every engagement — PPE compliance, site orientation, lift discipline, and documented safety practices." },
             ].map((item) => (
               <div key={item.icon} className="bg-white/5 border border-white/10 rounded-xl p-7 flex flex-col gap-3">
                 <span className="text-[#FF6B00] text-xs font-black tracking-widest">{item.icon}</span>
