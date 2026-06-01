@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import PageHero from "@/components/page-hero";
 import CtaBand from "@/components/cta-band";
@@ -110,6 +111,11 @@ export default function SmartHandsPage() {
           { label: "Smart Hands & Field Support", href: "/services/smart-hands" },
         ]}
       />
+
+      <div className="relative w-full h-64 md:h-80 lg:h-96 overflow-hidden">
+        <Image src="/images/service-smart-hands.png" alt="AES field technician performing smart hands work in a data center" fill className="object-cover" priority />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#06284C]/50 to-transparent" />
+      </div>
 
       <section className="bg-white section-pad">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-3 gap-12">
