@@ -133,10 +133,16 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
       {post.coverImage && (
         <div className="relative w-full aspect-[7/3] overflow-hidden">
           <Image
-            src={urlFor(post.coverImage).width(1400).height(600).url()}
+            src={urlFor(post.coverImage)
+              .width(1400)
+              .height(600)
+              .fit("crop")
+              .crop("focalpoint")
+              .auto("format")
+              .url()}
             alt={post.title}
             fill
-            className="object-cover object-center"
+            className="object-cover object-top"
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#06284C]/30 to-transparent" />

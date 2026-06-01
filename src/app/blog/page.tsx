@@ -52,10 +52,16 @@ export default async function BlogPage() {
                   <div className="relative w-full aspect-video bg-[#F4F7FA] overflow-hidden">
                     {post.coverImage ? (
                       <Image
-                        src={urlFor(post.coverImage).width(600).height(338).url()}
+                        src={urlFor(post.coverImage)
+                          .width(600)
+                          .height(338)
+                          .fit("crop")
+                          .crop("focalpoint")
+                          .auto("format")
+                          .url()}
                         alt={post.title}
                         fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                        className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
                       />
                     ) : (
                       <div className="absolute inset-0 bg-gradient-to-br from-[#06284C] to-[#006FB9] flex items-center justify-center">
