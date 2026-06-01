@@ -86,7 +86,7 @@ export default function StructuredCablingPage() {
       />
 
       <div className="relative w-full h-64 md:h-80 lg:h-96 overflow-hidden">
-        <Image src="/images/service-structured-cabling.png" alt="Structured cabling installation in a data center" fill className="object-cover" priority />
+        <Image src="/images/service-structured-cabling.jpg" alt="Structured cabling installation in a data center" fill className="object-cover" priority />
         <div className="absolute inset-0 bg-gradient-to-t from-[#06284C]/50 to-transparent" />
       </div>
 

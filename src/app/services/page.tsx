@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 const serviceDetails: Record<string, { scope: string[]; deliverables: string[]; image: string }> = {
   "structured-cabling": {
-    image: "/images/service-structured-cabling.png",
+    image: "/images/service-structured-cabling.jpg",
     scope: [
       "Site survey and pathway design; permitting support",
       "CAT6/6A copper runs and terminations",
