@@ -152,7 +152,6 @@ export default function SmartHandsPage() {
       {/* When to call AES */}
       <section className="bg-[#F4F7FA] section-pad">
         <div className="max-w-7xl mx-auto">
-          <p className="eyebrow mb-3">When to Call AES</p>
           <h2 className="text-[#06284C] text-3xl font-bold mb-10">Four Common Field-Support Scenarios</h2>
           <div className="grid md:grid-cols-2 gap-6">
             {useCases.map((u) => (
@@ -168,7 +167,6 @@ export default function SmartHandsPage() {
       {/* FAQ */}
       <section className="bg-white section-pad">
         <div className="max-w-7xl mx-auto">
-          <p className="eyebrow mb-3">Common Questions</p>
           <h2 className="text-[#0D1F3C] text-3xl font-bold mb-10">Smart Hands &amp; Field Support — FAQ</h2>
           <div className="max-w-3xl space-y-8">
             {faq.map((item) => (

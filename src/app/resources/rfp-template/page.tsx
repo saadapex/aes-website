@@ -70,7 +70,6 @@ export default function RfpTemplateLeadMagnetPage() {
             </div>
 
             <div>
-              <p className="eyebrow mb-3">What&apos;s Inside</p>
               <h2 className="text-[#06284C] text-2xl font-bold mb-6">Eight Sections, One Editable PDF</h2>
               <ul className="space-y-3">
                 {WHATS_INSIDE.map((item) => (
@@ -83,7 +82,6 @@ export default function RfpTemplateLeadMagnetPage() {
             </div>
 
             <div>
-              <p className="eyebrow mb-3">Who Uses This Template</p>
               <h2 className="text-[#06284C] text-2xl font-bold mb-6">Built for the People Writing the RFP</h2>
               <ul className="space-y-3">
                 {WHO_USES_IT.map((item) => (
@@ -180,7 +178,6 @@ export default function RfpTemplateLeadMagnetPage() {
       {/* Trust band */}
       <section className="bg-[#F4F7FA] section-pad">
         <div className="max-w-7xl mx-auto text-center">
-          <p className="eyebrow mb-3">Already Have a Scope?</p>
           <h2 className="text-[#06284C] text-2xl font-bold mb-4">Skip the Template — Send Us Your RFP</h2>
           <p className="text-[#1F2933] max-w-2xl mx-auto leading-relaxed mb-6">
             If your scope is already written, we&apos;ll review it directly. One business day, real person, straight answer on how AES can execute.

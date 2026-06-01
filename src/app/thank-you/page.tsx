@@ -39,7 +39,6 @@ export default function ThankYouPage() {
 
         {/* Calendly nudge */}
         <div className="bg-[#06284C] rounded-xl p-8 mb-12 text-left">
-          <p className="text-[#4E6575] text-sm uppercase tracking-widest mb-2">Optional</p>
           <h2 className="text-white font-bold text-xl mb-2">Want to move faster?</h2>
           <p className="text-[#4E6575] mb-4 text-sm">
             Book a call directly and we&apos;ll get on the same page sooner.

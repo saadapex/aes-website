@@ -61,7 +61,6 @@ export default function ResourcesPage() {
 
       <section className="bg-white section-pad">
         <div className="max-w-7xl mx-auto">
-          <p className="eyebrow mb-3">Available Now</p>
           <h2 className="text-[#06284C] text-3xl font-bold mb-10">Download &amp; Use</h2>
           <div className="grid md:grid-cols-2 gap-6">
             {RESOURCES.map((r) => (

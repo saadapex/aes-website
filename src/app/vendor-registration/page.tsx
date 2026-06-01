@@ -24,7 +24,6 @@ export default function VendorRegistrationPage() {
         <div className="max-w-7xl mx-auto grid lg:grid-cols-5 gap-12">
 
           <div className="lg:col-span-3">
-            <p className="eyebrow mb-3">Tell Us About Your Capabilities</p>
             <h2 className="text-[#06284C] text-2xl font-bold mb-6">Register Your Business</h2>
             <Suspense fallback={null}>
               <FormErrorBanner message="Something went wrong — please try again or email info@apexsolutions.io." />

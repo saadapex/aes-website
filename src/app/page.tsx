@@ -92,9 +92,6 @@ export default function HomePage() {
       <section className="bg-[#06284C] min-h-screen flex items-center pt-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 py-24 grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <p className="text-[#4E6575] uppercase tracking-widest text-sm font-medium mb-6">
-              Field Execution · U.S. &amp; Canada
-            </p>
             <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-black leading-tight mb-6">
               A North America-Based{" "}
               <span className="text-[#FF6B00]">Field Execution Partner</span>
@@ -157,9 +154,6 @@ export default function HomePage() {
 
           {/* Quote */}
           <div className="lg:col-span-3">
-            <p className="text-[#FF6B00] uppercase tracking-widest text-xs font-bold mb-4">
-              From the Founder
-            </p>
             <span className="text-[#FF6B00] text-5xl font-black leading-none select-none block mb-3">&ldquo;</span>
             <p className="text-white text-xl md:text-2xl font-medium leading-relaxed mb-8">
               In two decades of telecom and infrastructure deployment, I watched the same pattern over and over &mdash; well-designed programs unraveled in the field by subcontractors who couldn&apos;t be relied on. I started AES to be the partner that breaks that pattern.
@@ -183,9 +177,6 @@ export default function HomePage() {
       {/* ── TRUST BAND: PARTNER ECOSYSTEM LOGOS ──────────────── */}
       <section className="bg-white border-b border-gray-100 py-12 lg:py-14">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <p className="text-[#4E6575] uppercase tracking-widest text-xs font-bold text-center mb-8">
-            Experience Across the IT Infrastructure Ecosystem
-          </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-x-8 gap-y-10 items-center">
             {[
               { name: "HPE",                 logo: "/images/Partners%20Logo/HPE-Logo.png" },
@@ -223,7 +214,6 @@ export default function HomePage() {
       {/* ── TESTIMONIALS ─────────────────────────────────────── */}
       <section className="bg-[#F4F7FA] section-pad">
         <div className="max-w-7xl mx-auto">
-          <p className="eyebrow text-center mb-3">What Partners Say</p>
           <h2 className="text-[#06284C] text-3xl md:text-4xl font-bold text-center mb-12">
             Trusted by Primes &amp; Integrators
           </h2>
@@ -275,7 +265,6 @@ export default function HomePage() {
       {/* ── SERVICES GRID ────────────────────────────────────── */}
       <section className="bg-white section-pad">
         <div className="max-w-7xl mx-auto">
-          <p className="eyebrow mb-3">What We Deploy</p>
           <div className="flex items-end justify-between mb-12">
             <h2 className="text-[#06284C] text-3xl md:text-4xl font-bold max-w-xl">
               Three Core Services. One Execution Partner.
@@ -296,9 +285,6 @@ export default function HomePage() {
       {/* ── WHO WE HELP ──────────────────────────────────────── */}
       <section className="bg-[#0D1F3C] section-pad">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[#7A9FC0] uppercase tracking-widest text-sm font-light text-center mb-3">
-            Who We Help
-          </p>
           <h2 className="text-white text-3xl md:text-4xl font-bold text-center mb-4">
             Built for the Teams Running the Program
           </h2>
@@ -382,7 +368,6 @@ export default function HomePage() {
       {/* ── HOW WE DELIVER ───────────────────────────────────── */}
       <section className="bg-[#F4F7FA] section-pad">
         <div className="max-w-7xl mx-auto">
-          <p className="eyebrow text-center mb-3">Our Process</p>
           <h2 className="text-[#06284C] text-3xl md:text-4xl font-bold mb-16 text-center">
             Structured Deployment, Every Time
           </h2>
@@ -405,7 +390,6 @@ export default function HomePage() {
       {/* ── VALUE PILLARS ─────────────────────────────────────── */}
       <section className="bg-white section-pad">
         <div className="max-w-7xl mx-auto">
-          <p className="eyebrow mb-3">Why AES</p>
           <h2 className="text-[#06284C] text-3xl md:text-4xl font-bold mb-12">
             What Partners Count On
           </h2>
@@ -427,7 +411,6 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center justify-between mb-12">
             <div>
-              <p className="eyebrow mb-2">Proof of Work</p>
               <h2 className="text-[#06284C] text-3xl md:text-4xl font-bold">Recent Deployments</h2>
             </div>
             <Link href="/case-studies"
@@ -450,9 +433,6 @@ export default function HomePage() {
       {/* ── INDUSTRIES BAND ──────────────────────────────────── */}
       <section className="bg-[#06284C] section-pad">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[#4E6575] uppercase tracking-widest text-sm font-medium text-center mb-3">
-            Sectors We Serve
-          </p>
           <h2 className="text-white text-3xl md:text-4xl font-bold mb-12 text-center">
             Industries We Deploy In
           </h2>
@@ -473,7 +453,6 @@ export default function HomePage() {
       {/* ── COVERAGE ─────────────────────────────────────────── */}
       <section className="bg-white section-pad">
         <div className="max-w-7xl mx-auto text-center">
-          <p className="eyebrow mb-3">Field Coverage</p>
           <h2 className="text-[#06284C] text-3xl md:text-4xl font-bold mb-4">
             North America Coverage
           </h2>
@@ -503,21 +482,18 @@ export default function HomePage() {
       {/* ── PARTNER VALUE ────────────────────────────────────── */}
       <section className="bg-[#06284C] section-pad">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[#4E6575] uppercase tracking-widest text-sm font-medium text-center mb-3">The AES Standard</p>
           <h2 className="text-white text-3xl md:text-4xl font-bold mb-4 text-center">
             What Primes and Integrators Get
           </h2>
           <p className="text-[#4E6575] text-center max-w-2xl mx-auto mb-12 text-base leading-relaxed">
             When a program goes to the field, execution quality is what the client remembers. AES delivers consistent, documented, professional field work — the kind that makes primes look good.
           </p>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid sm:grid-cols-2 gap-5">
             {[
-              { icon: "01", heading: "Fast Mobilization", body: "AES deploys quickly — credentialed technicians, right coverage area, right scope. No warm-up time on urgent programs." },
-              { icon: "02", heading: "Clear Communication", body: "Daily site reports, proactive escalation, and a single point of contact from kickoff to closeout. No surprises." },
-              { icon: "03", heading: "Clean Installations", body: "Every install is done to a standard: properly routed, tested, labeled, and cleaned up before the crew leaves site." },
-              { icon: "04", heading: "Handover-Ready Documentation", body: "As-builts, OTDR reports, RF validation, label schemas — delivered in the format your PM needs. Closeout that holds up." },
-              { icon: "05", heading: "Program Execution at Scale", body: "Single-site or multi-location rollout, AES applies the same field execution standard. We scale to the program." },
-              { icon: "06", heading: "Safety by Default", body: "Safe execution planned into every engagement — PPE compliance, site orientation, lift discipline, and documented safety practices." },
+              { icon: "01", heading: "Fast Mobilization & Clear Communication", body: "AES deploys quickly with credentialed technicians, daily site reports, proactive escalation, and a single point of contact from kickoff to closeout." },
+              { icon: "02", heading: "Clean Installs & Handover-Ready Documentation", body: "Properly routed, tested, labeled work — paired with as-builts, OTDR reports, RF validation, and label schemas delivered in the format your PM needs." },
+              { icon: "03", heading: "Program Execution at Scale", body: "Single-site or multi-location rollout, AES applies the same field execution standard. We scale to the program." },
+              { icon: "04", heading: "Safety by Default", body: "Safe execution planned into every engagement — PPE compliance, site orientation, lift discipline, and documented safety practices." },
             ].map((item) => (
               <div key={item.icon} className="bg-white/5 border border-white/10 rounded-xl p-7 flex flex-col gap-3">
                 <span className="text-[#FF6B00] text-xs font-black tracking-widest">{item.icon}</span>

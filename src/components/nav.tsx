@@ -8,20 +8,15 @@ import { Menu, X, ChevronDown, Phone, MessageSquare } from "lucide-react";
 import { SITE, SERVICES, INDUSTRIES } from "@/lib/utils";
 
 const ABOUT = [
-  { title: "Saad's Background", subtitle: "Founder & CEO — telecom and field execution leader", href: "/about#leadership" },
-  { title: "Company",           subtitle: "Who we are & how we work",                          href: "/about" },
-  { title: "Capabilities",      subtitle: "Full plain-language overview of AES",               href: "/capabilities" },
-  { title: "Partners",          subtitle: "Become an execution partner",                       href: "/partners" },
-  { title: "Careers",           subtitle: "Join the AES field team",                           href: "/careers" },
+  { title: "Company",       subtitle: "Who we are & how we work",                          href: "/about" },
+  { title: "Capabilities",  subtitle: "Full plain-language overview of AES",               href: "/capabilities" },
+  { title: "Partners",      subtitle: "Become an execution partner",                       href: "/partners" },
+  { title: "Careers",       subtitle: "Join the AES field team",                           href: "/careers" },
+  { title: "Resources",     subtitle: "RFP templates, checklists, buyer guides",           href: "/resources" },
+  { title: "Locations",     subtitle: "U.S. & Canada field coverage markets",              href: "/locations" },
 ];
 
-const RESOURCES_LINKS = [
-  { title: "Resources",  subtitle: "RFP templates, checklists, buyer guides", href: "/resources" },
-  { title: "Locations",  subtitle: "U.S. & Canada field coverage markets",    href: "/locations" },
-  { title: "Blog",       subtitle: "Field notes from AES deployments",        href: "/blog" },
-];
-
-type DropdownKey = "services" | "industries" | "about" | "resources" | null;
+type DropdownKey = "services" | "industries" | "about" | null;
 
 export default function Nav() {
   const [scrolled, setScrolled]   = useState(false);
@@ -156,26 +151,10 @@ export default function Nav() {
             </Dropdown>
           </div>
 
-          {/* Resources */}
-          <div className="relative" onMouseEnter={() => setOpen("resources")} onMouseLeave={() => setOpen(null)}>
-            <button
-              className={`flex items-center gap-1 text-sm font-medium transition-colors ${linkClass}`}
-              aria-haspopup="true"
-              aria-expanded={open === "resources"}
-            >
-              Resources
-              <ChevronDown size={14} className={`transition-transform duration-200 ${open === "resources" ? "rotate-180" : ""}`} />
-            </button>
-            <Dropdown id="resources" width="w-72">
-              {RESOURCES_LINKS.map((c) => (
-                <Link key={c.href} href={c.href} onClick={closeAll}
-                  className="block px-4 py-2.5 text-sm text-[#06284C] hover:bg-[#F4F7FA] hover:text-[#FF6B00] transition-colors">
-                  {c.title}
-                  <span className="block text-xs text-[#4E6575] font-normal">{c.subtitle}</span>
-                </Link>
-              ))}
-            </Dropdown>
-          </div>
+          {/* Blog */}
+          <Link href="/blog" className={`text-sm font-medium transition-colors ${linkClass}`}>
+            Blog
+          </Link>
 
           <Link href="/contact" className={`text-sm font-medium transition-colors ${linkClass}`}>
             Contact
@@ -258,15 +237,10 @@ export default function Nav() {
             ))}
           </div>
 
-          <div>
-            <p className="text-xs uppercase tracking-widest text-[#4E6575] font-medium mb-3">Resources</p>
-            {RESOURCES_LINKS.map((c) => (
-              <Link key={c.href} href={c.href} onClick={closeAll}
-                className="flex items-center gap-2 py-2 text-[#06284C] hover:text-[#FF6B00] text-sm border-b border-gray-50 transition-colors">
-                <span className="text-[#FF6B00]">›</span>{c.title}
-              </Link>
-            ))}
-          </div>
+          <Link href="/blog" onClick={closeAll}
+            className="text-[#06284C] font-semibold hover:text-[#FF6B00] transition-colors">
+            Blog
+          </Link>
 
           <Link href="/contact" className="text-[#06284C] font-semibold" onClick={closeAll}>Contact</Link>
 

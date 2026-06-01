@@ -33,7 +33,6 @@ export default function LocationsIndexPage() {
 
           {/* U.S. coverage */}
           <div>
-            <p className="eyebrow mb-3">United States</p>
             <h2 className="text-[#06284C] text-3xl font-bold mb-10">U.S. Coverage</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {usLocations.map((loc) => (
@@ -44,7 +43,6 @@ export default function LocationsIndexPage() {
 
           {/* Canada coverage */}
           <div>
-            <p className="eyebrow mb-3">Canada</p>
             <h2 className="text-[#06284C] text-3xl font-bold mb-10">Canadian Coverage</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {caLocations.map((loc) => (

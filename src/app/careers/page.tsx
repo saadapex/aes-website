@@ -123,7 +123,6 @@ export default async function CareersPage() {
           <div className="max-w-7xl mx-auto">
             <div className="flex items-end justify-between mb-10">
               <div>
-                <p className="eyebrow mb-2">Open Positions</p>
                 <h2 className="text-[#06284C] text-3xl font-bold">
                   {jobs.length} Role{jobs.length !== 1 ? "s" : ""} Available
                 </h2>
@@ -143,7 +142,6 @@ export default async function CareersPage() {
         <section className="bg-[#F4F7FA] section-pad">
           <div className="max-w-7xl mx-auto">
             <div className="max-w-3xl mx-auto text-center">
-              <p className="eyebrow mb-3">Join the Bench</p>
               <h2 className="text-[#06284C] text-3xl font-bold mb-4">
                 Always Recruiting Experienced Field Techs
               </h2>

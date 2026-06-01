@@ -115,7 +115,7 @@ export default function ContactPage() {
               <div>
                 <label className="block text-sm font-semibold text-[#06284C] mb-3">Services Needed</label>
                 <div className="flex flex-wrap gap-3">
-                  {["Structured Cabling","Rack & Stack","AP Refresh","Smart Hands"].map((s) => (
+                  {["Structured Cabling","Rack & Stack","AP Refresh","Smart Hands","Other"].map((s) => (
                     <label key={s} className="flex items-center gap-2 cursor-pointer">
                       <input type="checkbox" name="services" value={s}
                         className="w-4 h-4 accent-[#FF6B00]" />
@@ -197,7 +197,6 @@ export default function ContactPage() {
       {/* What Happens Next */}
       <section className="bg-[#F4F7FA] section-pad">
         <div className="max-w-7xl mx-auto">
-          <p className="eyebrow mb-3">After You Submit</p>
           <h2 className="text-[#06284C] text-3xl font-bold mb-12">What Happens Next</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {NEXT_STEPS.map(({ step, heading, body }) => (

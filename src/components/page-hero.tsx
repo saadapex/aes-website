@@ -47,11 +47,6 @@ export default function PageHero({ eyebrow, h1, sub, cta, breadcrumb, image }: P
               ))}
             </nav>
           )}
-          {eyebrow && (
-            <p className="text-[#7A9FC0] uppercase tracking-widest text-xs sm:text-sm font-light mb-3">
-              {eyebrow}
-            </p>
-          )}
           <h1 className="text-white text-3xl sm:text-4xl md:text-5xl font-bold max-w-3xl leading-tight mb-4">
             {h1}
           </h1>

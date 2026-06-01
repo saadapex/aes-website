@@ -46,7 +46,7 @@ const serviceDetails: Record<string, { scope: string[]; deliverables: string[]; 
     deliverables: ["Mounting Maps", "Validated Heatmaps", "Punch-List Closeout"],
   },
   "smart-hands": {
-    image: "/images/service-rack-stack.png",
+    image: "/images/service-smart-hands.png",
     scope: [
       "Hardware swap, break-fix, and rapid field response",
       "Site surveys, pre-deployment walks, and validation visits",
@@ -89,7 +89,6 @@ export default function ServicesPage() {
 
               {/* Content */}
               <div className={!isEven ? "lg:col-start-1 lg:row-start-1" : ""}>
-                <p className="eyebrow mb-2">Service</p>
                 <h2 className="text-[#06284C] text-3xl font-bold mb-1">{service.title}</h2>
                 <p className="text-[#4E6575] text-sm uppercase tracking-wide mb-4">{service.subtitle}</p>
                 <p className="text-[#1F2933] mb-6">{service.subhead}</p>

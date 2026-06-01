@@ -131,7 +131,6 @@ export default function StructuredCablingPage() {
       {featuredStudy && (
         <section className="bg-[#F4F7FA] section-pad">
           <div className="max-w-7xl mx-auto">
-            <p className="eyebrow mb-3">Proof of Work</p>
             <h2 className="text-[#06284C] text-3xl font-bold mb-10">See It in the Field</h2>
             <div className="max-w-xl">
               <CaseStudyCard {...featuredStudy} />
@@ -148,7 +147,6 @@ export default function StructuredCablingPage() {
       {/* FAQ Section */}
       <section className="bg-[#F4F6F9] section-pad">
         <div className="max-w-7xl mx-auto">
-          <p className="eyebrow mb-3">Common Questions</p>
           <h2 className="text-[#0D1F3C] text-3xl font-bold mb-10">Structured Cabling — FAQ</h2>
           <div className="max-w-3xl space-y-8">
             {faq.map((item) => (

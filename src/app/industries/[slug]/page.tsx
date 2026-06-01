@@ -88,7 +88,6 @@ export default function IndustryPage({ params }: { params: { slug: string } }) {
       {/* ── PAIN POINTS ─────────────────────────────────────────── */}
       <section className="bg-white section-pad">
         <div className="max-w-7xl mx-auto">
-          <p className="eyebrow mb-3">What Buyers in This Space Deal With</p>
           <h2 className="text-[#06284C] text-3xl font-bold mb-12">
             The Problems AES Is Built to Solve
           </h2>
@@ -125,7 +124,6 @@ export default function IndustryPage({ params }: { params: { slug: string } }) {
       {/* ── RELEVANT SERVICES ────────────────────────────────────── */}
       <section className="bg-[#F4F7FA] section-pad">
         <div className="max-w-7xl mx-auto">
-          <p className="eyebrow mb-3">What We Deploy</p>
           <h2 className="text-[#06284C] text-3xl font-bold mb-10">
             Services for {ind.title}
           </h2>
@@ -139,7 +137,6 @@ export default function IndustryPage({ params }: { params: { slug: string } }) {
       {featuredStudy && (
         <section className="bg-white section-pad">
           <div className="max-w-7xl mx-auto">
-            <p className="eyebrow mb-3">Proof of Work</p>
             <h2 className="text-[#06284C] text-3xl font-bold mb-10">
               A Recent Deployment in This Space
             </h2>
@@ -161,7 +158,6 @@ export default function IndustryPage({ params }: { params: { slug: string } }) {
       {/* ── FAQ ──────────────────────────────────────────────────── */}
       <section className="bg-[#F4F6F9] section-pad">
         <div className="max-w-7xl mx-auto">
-          <p className="eyebrow mb-3">Common Questions</p>
           <h2 className="text-[#0D1F3C] text-3xl font-bold mb-10">{ind.title} — FAQ</h2>
           <div className="max-w-3xl space-y-8">
             {ind.faq.map((item) => (

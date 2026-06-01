@@ -30,16 +30,6 @@ const PRINCIPLES = [
   },
 ];
 
-const LEADERSHIP = [
-  {
-    photo: "/images/Saad Headshot.png",
-    initials: "SU",
-    name: "Saad Usmani",
-    title: "Founder & CEO",
-    bio: "Saad founded Apex Enterprise Solutions after more than two decades in telecom, infrastructure deployment, systems engineering, and technical program management — where he repeatedly saw large deployment programs fail at the field execution layer. He leads business development, partner relationships, pricing, and delivery oversight at AES, with a focus on building a company that protects its partners' reputations on every job.",
-  },
-];
-
 export default function AboutPage() {
   return (
     <>
@@ -54,7 +44,6 @@ export default function AboutPage() {
       <section className="bg-white section-pad">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-start">
           <div>
-            <p className="eyebrow mb-3">Who We Are</p>
             <h2 className="text-[#06284C] text-3xl font-bold mb-6">
               The Execution Partner Primes and Integrators Count On
             </h2>
@@ -101,7 +90,6 @@ export default function AboutPage() {
 
           {/* Letter — left column */}
           <div>
-            <p className="eyebrow mb-3">A Letter from the Founder</p>
             <h2 className="text-[#06284C] text-3xl font-bold mb-8">Why I Started AES</h2>
 
             <div className="relative">
@@ -126,9 +114,6 @@ export default function AboutPage() {
                 ].map((item) => (
                   <div key={item.year} className="relative">
                     <div className="absolute -left-12 top-1 w-4 h-4 rounded-full bg-[#F26522] border-4 border-[#F4F6F9]" />
-                    <p className="text-[#F26522] text-xs font-black uppercase tracking-widest mb-1">
-                      {item.year}
-                    </p>
                     <h3 className="text-[#0D1F3C] font-bold text-lg mb-2">{item.heading}</h3>
                     <p className="text-[#1F2933] text-sm leading-relaxed">{item.body}</p>
                   </div>
@@ -170,44 +155,9 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
-      {/* Leadership */}
-      <section id="leadership" className="bg-[#F4F7FA] section-pad scroll-mt-24">
-        <div className="max-w-7xl mx-auto">
-          <p className="eyebrow mb-3">Leadership</p>
-          <h2 className="text-[#06284C] text-3xl font-bold mb-12">The Team Behind AES</h2>
-          <div className="max-w-3xl">
-            {LEADERSHIP.map((person) => (
-              <div key={person.name} className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 flex flex-col sm:flex-row gap-6 sm:gap-8 items-start">
-                {person.photo ? (
-                  <div className="relative w-32 h-32 rounded-full overflow-hidden flex-shrink-0">
-                    <Image
-                      src={person.photo}
-                      alt={person.name}
-                      fill
-                      className="object-cover object-top"
-                    />
-                  </div>
-                ) : (
-                  <div className="w-32 h-32 bg-[#06284C] rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-white font-bold text-3xl">{person.initials}</span>
-                  </div>
-                )}
-                <div className="flex-1 min-w-0">
-                  <h3 className="text-[#06284C] font-bold text-xl mb-0.5">{person.name}</h3>
-                  <p className="text-[#FF6B00] text-sm font-semibold mb-3">{person.title}</p>
-                  <p className="text-[#1F2933] text-sm leading-relaxed">{person.bio}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Coverage */}
       <section className="bg-white section-pad">
         <div className="max-w-7xl mx-auto">
-          <p className="eyebrow mb-3">Coverage</p>
           <h2 className="text-[#06284C] text-3xl font-bold mb-4">North America Field Presence</h2>
           <p className="text-[#1F2933] text-lg mb-8 max-w-2xl">
             Active field-resource coverage in selected U.S. and Canadian markets, with rapid

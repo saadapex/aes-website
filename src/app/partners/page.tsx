@@ -125,7 +125,6 @@ export default function PartnersPage() {
       <section className="bg-white section-pad">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-start">
           <div>
-            <p className="eyebrow mb-3">Who We Work With</p>
             <h2 className="text-[#06284C] text-3xl font-bold mb-6">Built for Primes, Integrators &amp; MSPs</h2>
             <p className="text-[#1F2933] text-lg leading-relaxed mb-6">
               AES is a field execution partner — not a staffing agency, not a general contractor.
@@ -155,7 +154,6 @@ export default function PartnersPage() {
       {/* How it works */}
       <section className="bg-[#06284C] section-pad">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[#4E6575] uppercase tracking-widest text-sm font-medium text-center mb-3">How It Works</p>
           <h2 className="text-white text-3xl font-bold mb-12 text-center">Simple Engagement Model</h2>
           <div className="grid md:grid-cols-4 gap-6">
             {STEPS.map((step) => (
@@ -174,7 +172,6 @@ export default function PartnersPage() {
       {/* Current partners */}
       <section className="bg-white section-pad">
         <div className="max-w-7xl mx-auto">
-          <p className="eyebrow mb-3">Delivery Network</p>
           <h2 className="text-[#06284C] text-3xl font-bold mb-3">Companies &amp; Ecosystems We Support</h2>
           <p className="text-[#4E6575] text-sm mb-10 max-w-2xl">AES has worked with or alongside the following companies on infrastructure projects. Relationships are project-based; logos are displayed for reference only.</p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -221,7 +218,6 @@ export default function PartnersPage() {
       <section className="bg-[#F4F7FA] section-pad">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-start">
           <div>
-            <p className="eyebrow mb-3">When Partners Call AES</p>
             <h2 className="text-[#06284C] text-3xl font-bold mb-6">The Six Reasons Primes &amp; Integrators Reach Out</h2>
             <p className="text-[#1F2933] leading-relaxed mb-6">
               Our best partner conversations start one of these six ways. If any of them sound like your week, AES is built for exactly this.
@@ -236,7 +232,6 @@ export default function PartnersPage() {
             </ul>
           </div>
           <div>
-            <p className="eyebrow mb-3">What AES Will Not Do</p>
             <h2 className="text-[#06284C] text-3xl font-bold mb-6">Four Partner Commitments</h2>
             <p className="text-[#1F2933] leading-relaxed mb-6">
               The reason primes and integrators trust AES with their client engagements is that we&apos;re explicit about the lines we don&apos;t cross.
@@ -257,7 +252,6 @@ export default function PartnersPage() {
       <section id="partner-form" className="bg-white section-pad">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-5 gap-12">
           <div className="lg:col-span-3">
-            <p className="eyebrow mb-3">Partner Inquiry</p>
             <h2 className="text-[#06284C] text-3xl font-bold mb-6">Let&apos;s Start the Conversation</h2>
             <Suspense fallback={null}>
               <FormErrorBanner message="Something went wrong — please try again or contact us directly." />
