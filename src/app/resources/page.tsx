@@ -41,7 +41,7 @@ const RESOURCES: Resource[] = [
     title: "AES Capability Statement",
     type: "Statement",
     description:
-      "One-page summary of AES services, coverage, delivery model, and engagement model. Built to share with procurement, finance, or anyone sizing up AES as a deployment partner.",
+      "4-page summary of AES services, coverage, delivery model, and engagement model. Built to share with procurement, finance, or anyone sizing up AES as a deployment partner.",
     audience: "Procurement · Primes · Integrators",
     href: SITE.capabilityPdf,
     cta: "Download PDF",

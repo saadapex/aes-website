@@ -76,7 +76,7 @@ export default function ExitIntent() {
           Capability Statement
         </div>
         <h2 className="text-[#06284C] text-2xl font-bold leading-tight mb-3">
-          One-page summary of how AES works.
+          Quick summary of how AES works.
         </h2>
         <p className="text-[#1F2933] text-sm leading-relaxed mb-6">
           Services, coverage, delivery model, documentation deliverables — built to share with procurement, finance, or anyone sizing up AES. Free download, no form.
