@@ -129,7 +129,7 @@ export default function VendorRegistrationPage() {
                 Book a quick call with Saad to discuss your capabilities and where you&apos;d be the best fit.
               </p>
               <a href={SITE.calendly} target="_blank" rel="noopener noreferrer" className="btn-primary w-full justify-center text-sm">
-                Book a Call →
+                Book a Vendor Screening Call →
               </a>
             </div>
           </div>

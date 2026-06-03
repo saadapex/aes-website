@@ -202,7 +202,12 @@ export default async function CareersPage() {
         </div>
       </section>
 
-      <CtaBand heading="Experienced in the field? Let’s put you to work." />
+      <CtaBand
+        heading="Experienced in the field? Let’s put you to work."
+        sub="Send your resume or register as a field partner — we’ll be in touch when scope matches your skills."
+        primary={{ label: "Send Your Resume →", href: `mailto:${SITE.email}?subject=Field Technician Application`, external: true }}
+        secondary={{ label: "Register as a Field Partner →", href: "/vendor-registration" }}
+      />
     </>
   );
 }

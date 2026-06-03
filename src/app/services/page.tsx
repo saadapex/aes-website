@@ -64,7 +64,7 @@ export default function ServicesPage() {
       <PageHero
         eyebrow="Services"
         h1="Infrastructure Services"
-        sub="One execution partner from first survey to final handover. Three core services, disciplined delivery."
+        sub="One execution partner from first survey to final handover. Four core services, disciplined delivery."
       />
       <div className="max-w-7xl mx-auto px-6 lg:px-12 py-20 space-y-28">
         {SERVICES.filter((s) => s.slug !== "smart-hands").map((service, i) => {

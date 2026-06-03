@@ -294,7 +294,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto">
           <div className="flex items-end justify-between mb-12">
             <h2 className="text-[#06284C] text-3xl md:text-4xl font-bold max-w-xl">
-              Three Core Services. One Execution Partner.
+              Core Services. One Execution Partner.
             </h2>
             <Link href="/services"
               className="text-[#006FB9] font-semibold text-sm hover:text-[#FF6B00] transition-colors hidden md:block">

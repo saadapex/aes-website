@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function CaseStudiesPage() {
   return (
     <>
-      <PageHero h1="Deployments & Case Studies" sub="Real projects, real numbers. No estimates, no placeholders." />
+      <PageHero h1="Deployments & Case Studies" sub="Real projects with documented outcomes." />
       <section className="bg-white section-pad">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
