@@ -235,7 +235,7 @@ export default function HomePage() {
           <h2 className="text-[#06284C] text-3xl md:text-4xl font-bold text-center mb-12">
             Trusted by Primes &amp; Integrators
           </h2>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
                 quote: "Apex Enterprise Solutions has been a reliable and professional partner for our technology deployment needs. Their team brings strong technical capability, clear communication, and dependable field execution. We appreciate their responsiveness and commitment to getting the work done right.",
@@ -253,6 +253,17 @@ export default function HomePage() {
                 role: "Operations Lead",
                 company: "Telecom Infrastructure Prime",
               },
+              {
+                quote: "I've worked with Saad and have seen the professionalism, technical knowledge, and execution discipline he brings to infrastructure delivery. Through Apex Enterprise Solutions, he has built a company focused on reliable field execution, clear communication, and getting mission-critical IT infrastructure work done the right way. I would be happy to recommend AES for IT infrastructure deployment, data center support, structured cabling, and field services work.",
+                name: "Vijay Kumar",
+                role: "Service Delivery Executive",
+                company: "",
+              },
+              {
+                quote: "AES has been a dependable partner for our infrastructure deployment work. Saad and his team are responsive, organized, and focused on delivering quality execution in the field. I appreciate their professionalism and would recommend AES for IT infrastructure and data center deployment support.",
+                role: "CEO",
+                company: "Karavan Technology",
+              },
             ].map((t, i) => (
               <div
                 key={i}
@@ -265,7 +276,7 @@ export default function HomePage() {
                   {t.name ? (
                     <>
                       <p className="text-[#06284C] font-bold text-base">{t.name}</p>
-                      <p className="text-[#4E6575] text-xs mt-0.5">{t.role} · {t.company}</p>
+                      <p className="text-[#4E6575] text-xs mt-0.5">{t.company ? `${t.role} · ${t.company}` : t.role}</p>
                     </>
                   ) : (
                     <>
