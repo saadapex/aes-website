@@ -244,16 +244,6 @@ export default function HomePage() {
                 company: "Inventiv Technology",
               },
               {
-                quote: "We handed AES a 46-IDF, two-site AP rollout with a 24-hour change window. They held the window, zero safety incidents, and the coverage validation came back clean. Exactly what we needed.",
-                role: "Senior Project Manager",
-                company: "National Systems Integrator",
-              },
-              {
-                quote: "The closeout pack was ready at handover — OTDR certs, as-builts, label schema, the whole thing. That's rare in field services. It made our client acceptance a non-event.",
-                role: "Operations Lead",
-                company: "Telecom Infrastructure Prime",
-              },
-              {
                 quote: "I've worked with Saad and have seen the professionalism, technical knowledge, and execution discipline he brings to infrastructure delivery. Through Apex Enterprise Solutions, he has built a company focused on reliable field execution, clear communication, and getting mission-critical IT infrastructure work done the right way. I would be happy to recommend AES for IT infrastructure deployment, data center support, structured cabling, and field services work.",
                 name: "Vijay Kumar",
                 role: "Service Delivery Executive",
