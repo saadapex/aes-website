@@ -244,7 +244,7 @@ export default function HomePage() {
                 company: "Inventiv Technology",
               },
               {
-                quote: "I've worked with Saad and have seen the professionalism, technical knowledge, and execution discipline he brings to infrastructure delivery. Through Apex Enterprise Solutions, he has built a company focused on reliable field execution, clear communication, and getting mission-critical IT infrastructure work done the right way. I would be happy to recommend AES for IT infrastructure deployment, data center support, structured cabling, and field services work.",
+                quote: "I've seen Saad's professionalism, technical knowledge, and execution discipline first-hand. Through Apex Enterprise Solutions, he's built a company focused on reliable field execution and clear communication. I would recommend AES for IT infrastructure and data center deployment work.",
                 name: "Vijay Kumar",
                 role: "Service Delivery Executive",
                 company: "",
