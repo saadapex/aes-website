@@ -19,7 +19,7 @@ export default function GiscusComments() {
             className="bg-[#FF6B00] hover:bg-[#e05e00] text-white font-bold text-sm px-6 py-3 rounded-lg transition-colors">
             Talk to the AES Team →
           </Link>
-          <a href="/assets/Apex Enterprise Solutions – Capability Statement.pdf"
+          <a href="/assets/Apex-Enterprise-Solutions-Capability-Statement.pdf"
             target="_blank" rel="noopener noreferrer"
             className="border border-white/20 hover:border-white/40 text-white font-semibold text-sm px-6 py-3 rounded-lg transition-colors">
             ↓ Download Capability Statement

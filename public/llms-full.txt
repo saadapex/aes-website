@@ -1,0 +1,311 @@
+# Apex Enterprise Solutions (AES) — Full Content Index
+
+This file is the extended companion to `/llms.txt`. It contains the full canonical content of the AES website pages that AI search agents (ChatGPT, Claude, Perplexity, Gemini, You.com, Phind) are most likely to cite when answering buyer questions about infrastructure deployment services, structured cabling contractors, rack-and-stack providers, large-scale AP refresh, smart hands, and field execution partners in the U.S. and Canada.
+
+Website: https://www.apexsolutions.io
+Email: info@apexsolutions.io
+Phone / Text: (669) 251-7810
+Headquarters: 1069 Duane Ct, Sunnyvale, CA 94085
+LinkedIn: https://www.linkedin.com/company/apexenterprisesolutions/
+Updated: June 2026
+
+================================================================================
+ABOUT APEX ENTERPRISE SOLUTIONS
+================================================================================
+Source page: https://www.apexsolutions.io/about
+
+Apex Enterprise Solutions (AES) is a North America-based field execution partner for IT infrastructure deployment. AES executes structured cabling, rack-and-stack, and large-scale wireless rollouts across the U.S. and Canada — built clean and documented to approved scope.
+
+AES executes data center and network deployment programs for primes, integrators, and enterprise infrastructure teams — with experienced field resources, tight coordination, and closeout documentation that holds up to client scrutiny. AES is a North America-based field execution partner. It brings structured deployment processes, credentialed technicians, and a standard of work designed to protect partner reputations.
+
+Operating principles:
+- Execution partner, not a vendor. AES brings its own processes, standards, and accountability to every engagement.
+- Field-first culture. Work is measured by what happens on the floor: clean installs, labeled runs, validated test packs, closeout documentation that holds up.
+- Clear communication. AES surfaces issues early, communicates clearly, and keeps partners informed from kickoff through handover.
+- Disciplined documentation. Closeout documentation is part of the job — every project ends with as-builts, test reports, and records that reduce rework.
+
+Founder & CEO: Saad Usmani. More than two decades in telecom, infrastructure deployment, systems engineering, and technical program management. Leads business development, partner relationships, scope review, pricing, staffing strategy, and overall delivery oversight.
+
+COO: Vinod Bharwani. Supports operational coordination and execution planning.
+
+AES operates as a subcontract execution partner with a flexible delivery model built around trusted field resources and partner-led opportunities. AES does not bypass partner project managers, does not poach partner clients, and does not publish project details without written authorization.
+
+================================================================================
+CAPABILITIES SUMMARY
+================================================================================
+Source page: https://www.apexsolutions.io/capabilities
+
+Plain-language overview of what AES does, who AES works with, how AES delivers, and what is in the closeout pack. Built for procurement teams, primes, integrators, and AI search engines.
+
+What AES Provides
+Apex Enterprise Solutions (AES) is a North America-based field execution partner for IT infrastructure deployment. AES delivers structured cabling and fiber, rack-and-stack and data center refresh, large-scale AP refresh, and smart hands / field support across the United States and Canada — primarily as a subcontract execution partner to prime contractors, systems integrators, MSPs, telecom providers, and data center operators.
+
+Core Services
+- Structured Cabling & Fiber — CAT6 / CAT6A copper, OS2 / OM3 / OM4 fiber, terminations, fusion splicing, OTDR and power meter testing per approved scope, copper certification with Fluke DSX or equivalent, ANSI/TIA-606 (or owner-approved) labeling, as-builts, and full closeout documentation.
+- Rack & Stack / Data Center Refresh — Rack assembly, server / switch / appliance mounting, PDU installation and circuit labeling, BIOS/firmware validation, burn-in support, asset tagging, CMDB-ready inventory, hardware refresh, decommissioning, and smart hands.
+- AP Refresh / Wireless Rollouts — Multi-site wireless AP replacement and validation, controller and cloud-managed AP onboarding (coordinated with the client's network engineer for RF design and policy), post-install RF validation, and freezer / cooler / harsh-environment installs.
+- Smart Hands & Field Support — Hardware swap, site survey, asset validation, decommissioning, remote hands, rack audit, IDF cleanup, AP troubleshooting, and rapid-response single-site engagements.
+
+Industries Served
+- Data Centers & Colocation — hyperscale and colo build-outs, refresh, and burn-in support.
+- Logistics & Warehousing — multi-site AP refresh, structured cabling, and freezer / cooler-rated installs in active distribution and fulfillment environments.
+- Telecom & Service Providers — service provider builds, transport lab deployments, and OTDR-tested fiber installs.
+- Enterprise IT — direct engagements with enterprise IT, facilities, and operations teams for cabling, rack work, and AP rollouts.
+
+Geographies & Coverage
+AES delivers projects across the United States and Canada. Active field coverage markets include the San Francisco Bay Area, Los Angeles, Dallas–Fort Worth, Las Vegas, and Memphis in the U.S.; and the Greater Toronto Area (including Scarborough, Mississauga, Brampton, Bolton, and Oakville), Calgary, and Edmonton in Canada. Additional U.S. and Canadian markets are supported on a project basis through AES's vetted partner and field-resource network.
+
+Buyers AES Works With
+- Prime contractors and general contractors
+- Systems integrators
+- Managed service providers (MSPs)
+- Telecom and network service providers
+- IT staffing and field services companies
+- Data center operators and developers
+- Enterprise IT, facilities, and operations teams (direct engagement)
+
+Documentation Deliverables
+- OTDR trace files and power meter results (fiber)
+- Copper link certification reports (Fluke DSX or equivalent)
+- Labeling records aligned with ANSI/TIA-606 or owner-approved schema
+- As-built drawings and rack elevation diagrams
+- CMDB-ready asset inventory with serial-level records
+- Burn-in test reports and acceptance test documentation
+- RF survey reports and coverage validation heatmaps (AP refresh)
+- Daily progress reports during execution and a complete closeout pack at handover
+
+Insurance, Licensing & Confidentiality
+AES carries general liability and Errors & Omissions (E&O) insurance. Licensing and bonding are verified per project jurisdiction — low-voltage and electrical licensing requirements vary by state, province, and municipality, and AES confirms compliance before mobilization. AES can work under NDA and does not publish project names, client names, or site details without written approval.
+
+================================================================================
+SERVICE: STRUCTURED CABLING — COPPER & FIBER
+================================================================================
+Source page: https://www.apexsolutions.io/services/structured-cabling
+
+CAT6 / CAT6A copper and fiber runs executed to spec — signal-certified, labeled, and fully documented at handover. From network comms rooms to hyperscale data halls.
+
+Performance Targets
+- Fiber runs tested with OTDR and power meter per approved scope; copper links certified with approved field tester
+- ANSI/TIA-606 (or owner-approved) labeling on cables, panels, and outlets
+- Installs dressed, documented, and site-cleaned before AES leaves
+- Closeout pack delivered at handover — not chased after
+
+Scope of Work
+- Site survey and pathway design; permitting support
+- CAT6 / CAT6A copper runs and terminations
+- Single-mode and multi-mode fiber pulls, field-terminated and fusion-spliced where required
+- Fiber tested with OTDR and power meter per approved scope; copper certified with Fluke DSX or equivalent; labeling to owner-approved ANSI/TIA-606 schema
+- Rack dressing and documentation; freezer/cooler and high-bay experience
+- Test reports, label schema, as-builts, and closeout pack
+
+Deliverables: Test reports, label schema, as-builts, closeout pack.
+
+FAQ — Structured Cabling
+Q: Do you work as a subcontractor for IT integrators and general contractors?
+A: Yes. The majority of AES engagements are as a subcontract execution partner to prime contractors, systems integrators, and managed service providers. AES brings its own supervision, documentation standards, and closeout deliverables to every engagement.
+
+Q: What certifications and documentation do you deliver at project closeout?
+A: Per approved scope, AES delivers OTDR trace files and power meter results on fiber runs, link certification reports from a Fluke DSX or equivalent field tester on copper, labeling records aligned with the ANSI/TIA-606 (or owner-approved) schema, and full as-built documentation. The complete closeout pack is delivered at handover — not chased after.
+
+Q: What cable categories and fiber types does AES install?
+A: AES installs CAT6, CAT6A (U/UTP and F/UTP shielded), and OS2, OM3, and OM4 fiber. Fiber runs are field-terminated or fusion-spliced depending on design requirement. AES also works in freezer, cooler, and high-bay environments.
+
+Q: How long does a structured cabling project typically take?
+A: A typical network comms room with 100–200 runs can be completed in 2–5 days. Larger multi-floor or multi-site deployments are scoped individually with milestone timelines. Daily progress updates throughout.
+
+================================================================================
+SERVICE: RACK & STACK — DATA CENTER BUILD & REFRESH
+================================================================================
+Source page: https://www.apexsolutions.io/services/rack-and-stack
+
+Bare room to live racks, executed clean. AES handles the full build — planning through validated handover — so the PM does not have to chase it.
+
+Performance Targets
+- Every rack validated and punch-listed before handover
+- CMDB-ready asset inventory delivered at closeout
+- Burn-in support executed on-site where required
+- Daily progress reports — no chasing required
+
+Scope of Work
+- Pre-build planning: rack layout, power mapping, cable management design
+- Physical rack installation, anchoring, and leveling
+- Server, switch, and appliance mounting per vendor and client standards
+- Power distribution unit (PDU) install and circuit labeling
+- Cable management: structured patch, power, fiber — labeled to ANSI/TIA-606 or owner-approved schema
+- BIOS/firmware validation and burn-in support
+- Asset tagging, CMDB (IT asset database) updates, and closeout documentation
+- Smart hands for hardware refresh, swap, and decommission
+
+Deliverables: Rack diagrams, cable labels, burn-in reports, asset inventory, closeout pack.
+
+FAQ — Rack & Stack
+Q: What does rack and stack include in a data center deployment?
+A: AES rack and stack services cover physical rack installation and anchoring, server and appliance mounting per vendor specs, PDU installation and circuit labeling, structured cabling and power dressing within the rack, asset tagging, and full closeout documentation. AES works from BOMs and rack elevation drawings.
+
+Q: Do you provide burn-in and validation after rack and stack?
+A: Yes. AES can perform burn-in monitoring, BIOS/firmware validation, IPMI/BMC verification, and pre-handover punch-list clearance where required. Burn-in scope and duration are confirmed during project planning.
+
+Q: Can AES handle multi-site rack and stack rollouts simultaneously?
+A: Yes. AES staffs and coordinates multi-site deployments across U.S. and Canadian markets simultaneously using a network of vetted field resources. Multi-site rollouts include unified documentation, standardized labeling, and a single closeout pack per site.
+
+Q: What documentation is delivered at rack and stack handover?
+A: Handover documentation includes rack elevation as-builts, cable labeling logs, equipment serial number records, PDU load documentation, burn-in test reports, and a signed punch-list clearance. CMDB-ready asset inventory is also provided.
+
+================================================================================
+SERVICE: AP REFRESH — LARGE-SCALE WIRELESS ROLLOUTS
+================================================================================
+Source page: https://www.apexsolutions.io/services/ap-refresh
+
+High-density Wi-Fi that holds up in steel, concrete, and cold storage. AES runs multi-site AP rollouts end-to-end — survey through RF validation — with a deployment playbook built for scale.
+
+Performance Targets
+- Wireless coverage (RF) validated at every site — not assumed
+- Per-AP progress tracked and reported in real time
+- Scheduling coordinated around live operations to minimize disruption
+- Validated test pack and as-builts delivered at handover
+
+Scope of Work
+- Pre-deployment site surveys and RF planning
+- Access point physical installation — ceiling, wall, and high-bay mounting
+- Low-voltage cabling and conduit runs to AP locations
+- Controller and cloud-managed AP configuration and onboarding
+- Post-install RF validation and coverage testing
+- Labeling, documentation, and as-built drawings
+- Freezer, cooler, and harsh-environment rated installations
+- Multi-site program rollouts with standardized deployment playbooks
+
+Deliverables: RF survey report, coverage validation, as-builts, label schema, closeout pack.
+
+FAQ — AP Refresh
+Q: How many access points can your team install per shift?
+A: In open-plan warehouse and logistics environments, experienced AES crews typically install and validate 80–150 APs per shift. High-bay environments requiring lift equipment or complex conduit runs are scoped to site conditions. Per-AP progress tracking throughout the deployment.
+
+Q: What wireless platforms does AES support?
+A: AES deploys access points for Cisco (Catalyst and Meraki), Juniper Mist, Aruba/HPE, Extreme Networks, and Ubiquiti. AES crews handle physical mounting, low-voltage cabling, and basic configuration staging — RF planning and controller configuration are coordinated with the responsible network engineer.
+
+Q: Do you provide post-installation testing and coverage validation?
+A: Yes. AES performs per-AP connectivity validation on every deployment and, where specified, a post-installation RF walk-test using Ekahau or equivalent tooling. Test results and RF coverage data are included in the project closeout pack.
+
+Q: Can AES handle decommissioning of legacy APs as part of a refresh?
+A: Yes. AES can decommission and remove legacy equipment as part of a refresh scope. Disposal options include certified e-waste recycling or return to client inventory, per project requirements.
+
+================================================================================
+SERVICE: SMART HANDS & FIELD SUPPORT
+================================================================================
+Source page: https://www.apexsolutions.io/services/smart-hands
+
+Vetted hands on the ground when there is a single-site fix, audit, or rapid response — across the U.S. and Canada. AES extends a partner's bench without spinning up a full subcontract.
+
+Scope of Work
+- Hardware swap and break-fix (switches, APs, servers, PDUs, fiber modules)
+- Site survey and pre-deployment walk-throughs
+- Asset validation, audit, and tagging reconciliation against CMDB or inventory schema
+- Decommissioning, packing, and chain-of-custody for retired equipment
+- Remote hands — eyes, hands, and a phone on-site coordinating with the partner's engineer
+- Rack audit and IDF cleanup — labeling, cable remediation, photo documentation
+- AP troubleshooting, controller verification, and coverage spot-checks
+- Cross-connect work, patch and label cleanup, and small structured-cabling adds/moves/changes
+
+Deliverables: Site photos and notes, updated asset records, daily field report, decommissioning chain-of-custody.
+
+================================================================================
+INDUSTRIES
+================================================================================
+
+Data Centers & Colocation (https://www.apexsolutions.io/industries/data-centers)
+Hyperscale and colo build-outs, refresh, and burn-in support. AES delivers rack-and-stack, structured cabling, and burn-in support across hyperscale data halls and colo cages. Hyperscale clients and colo operators require OTDR certification, as-built drawings, and rack-level asset inventories at handover.
+
+Logistics & Warehousing (https://www.apexsolutions.io/industries/logistics-warehousing)
+Multi-site AP refresh, structured cabling, and freezer / cooler-rated installs in active distribution and fulfillment environments. Picking floors run 24/7 — AP installs, cable pulls, and cutover windows must be planned around live shifts. AES specializes in change-window discipline and runs program-level coordination across multi-site, multi-IDF rollouts.
+
+Telecom & Service Providers (https://www.apexsolutions.io/industries/telecom)
+Service provider builds, transport lab deployments, and OTDR-tested fiber installs. Service provider builds require OTDR test results on every fiber run before acceptance. AES has delivered a 4-platform, 6-rack DWDM / MPLS / microwave transport lab in two weeks.
+
+================================================================================
+CASE STUDIES (PUBLIC, NON-CONFIDENTIAL)
+================================================================================
+
+1. AI Cluster Pod Build — GPU-Dense Data Center (Memphis, TN — Q4 2024 / Q1 2025)
+   Source: https://www.apexsolutions.io/case-studies/ai-cluster-pod-build
+   GPU-Dense Compute Build · Structured Fiber + Rack & Stack · 6–7 Tech Crew Mobilization
+
+2. Telecom Transport Lab Build-Out (United States — Q1 2024)
+   Source: https://www.apexsolutions.io/case-studies/telecom-transport-lab
+   Delivered in 2 Weeks · DWDM · MPLS · Microwave Transport · 4 Platforms · 6 Racks Commissioned
+
+3. Large-Scale AP Refresh — Ontario Fulfillment Centres (Scarborough & Bolton, ON — Q1 2026)
+   Source: https://www.apexsolutions.io/case-studies/fulfillment-ap-refresh-ontario
+   1,586+ Access Points Replaced · 2 Sites · 46 IDFs · 24hr Shutdown Window · 0 Recorded Safety Incidents
+
+4. Large-Scale Warehouse AP Refresh — U.S. Market
+   Source: https://www.apexsolutions.io/case-studies/amazon-ap-refresh
+   850 APs Installed · Active Logistics Environment · On-Schedule Delivery
+
+================================================================================
+LOCATIONS / FIELD COVERAGE
+================================================================================
+Source page: https://www.apexsolutions.io/locations
+
+U.S. coverage markets
+- San Francisco Bay Area, CA — Headquartered in Sunnyvale. Santa Clara hyperscale, AI cluster builds, enterprise campuses, East Bay logistics.
+- Los Angeles, CA — Inland Empire fulfillment, Port of LA logistics, West LA enterprise, broadcast-adjacent infrastructure.
+- Dallas–Fort Worth, TX — DFW data center alley, North Dallas corporate stand-up, high-bay logistics across the metro.
+- Las Vegas, NV — Hospitality MDF/IDF, Switch and adjacent DC work, convention-driven infrastructure.
+- Memphis, TN — AI / hyperscale data center deployment, structured fiber and rack & stack in a non-traditional DC market.
+
+Canadian coverage markets
+- Greater Toronto Area, ON — Multi-site warehouse AP refresh across Scarborough, Bolton, Mississauga, Brampton, and Oakville.
+- Calgary, AB — Data centre and enterprise field execution across the Calgary and Southern Alberta corridor.
+- Edmonton, AB — Field deployment support for enterprise and logistics infrastructure across Edmonton and Northern Alberta.
+
+Additional U.S. and Canadian markets are supported on a project basis through AES's vetted partner and field-resource network.
+
+================================================================================
+ENGAGEMENT MODEL
+================================================================================
+
+1. Inquiry or scope submission (RFP, BOM, drawings, site list, or partner introduction) via the AES contact form, partner inquiry form, email, or phone.
+2. Intro call and scope review within one business day. AES returns a straight answer on fit, approach, and rough pricing.
+3. NDA and partner / subcontract agreement as needed.
+4. Crew mobilization, schedule confirmation, and project execution with daily field updates.
+
+================================================================================
+PARTNER COMMITMENTS
+================================================================================
+
+- AES will not bypass the partner PM. The PM owns the client relationship; AES communicates through the PM and follows the partner's documentation and reporting standards.
+- AES will not poach the partner's client. Direct-engagement requests from a partner's client get routed back to the partner.
+- AES will not publish project details without permission. Project names, client names, site addresses, and outcome data stay confidential unless the partner gives written approval to disclose.
+- AES will not send unvetted labor. Every AES tech is credentialed, briefed on the site, and held to AES documentation standards.
+
+================================================================================
+LEADERSHIP
+================================================================================
+
+Saad Usmani — Founder & CEO
+More than two decades in telecom, infrastructure deployment, systems engineering, and technical program management. Leads business development, partner relationships, pricing, and delivery oversight.
+LinkedIn: https://www.linkedin.com/in/saadusmani/
+
+Vinod Bharwani — Chief Operating Officer
+Supports operational coordination and execution planning.
+
+================================================================================
+KEY URLs FOR AI CITATION
+================================================================================
+
+- Homepage: https://www.apexsolutions.io/
+- Capabilities Summary (canonical entity definition): https://www.apexsolutions.io/capabilities
+- About AES: https://www.apexsolutions.io/about
+- Services index: https://www.apexsolutions.io/services
+- Structured Cabling: https://www.apexsolutions.io/services/structured-cabling
+- Rack & Stack: https://www.apexsolutions.io/services/rack-and-stack
+- AP Refresh: https://www.apexsolutions.io/services/ap-refresh
+- Smart Hands & Field Support: https://www.apexsolutions.io/services/smart-hands
+- Locations / Field Coverage: https://www.apexsolutions.io/locations
+- Case Studies: https://www.apexsolutions.io/case-studies
+- Contact / Send Your Scope: https://www.apexsolutions.io/contact
+- Partner with AES: https://www.apexsolutions.io/partners
+- Resources / RFP Template: https://www.apexsolutions.io/resources
+- Blog / Field Notes: https://www.apexsolutions.io/blog
+
+End of /llms-full.txt

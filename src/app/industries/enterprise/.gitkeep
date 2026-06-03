@@ -1,0 +1,8 @@
+# Empty intentionally — this directory does not produce a route in Next.js App Router
+# because there is no page.tsx. The /industries/enterprise URL returns the global
+# not-found page. Leave directory in place as a placeholder for a future Phase 2
+# Enterprise IT industry page if the team decides to add one.
+#
+# To activate: drop a page.tsx in this directory and add the URL to:
+#   - src/components/nav.tsx Industries dropdown
+#   - src/app/sitemap.ts

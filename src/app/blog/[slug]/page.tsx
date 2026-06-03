@@ -5,7 +5,9 @@ import { notFound } from "next/navigation";
 import { PortableText } from "@portabletext/react";
 import PageHero from "@/components/page-hero";
 import GiscusComments from "@/components/giscus-comments";
-import { getPostBySlug, getAllPostSlugs, type Post } from "@/sanity/queries";
+import AuthorBio from "@/components/author-bio";
+import RelatedPosts from "@/components/related-posts";
+import { getPostBySlug, getAllPostSlugs, getRelatedPosts } from "@/sanity/queries";
 import { urlFor } from "@/sanity/client";
 
 export const revalidate = 60;
@@ -85,18 +87,21 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
   const post = await getPostBySlug(params.slug);
   if (!post) notFound();
 
+  const related = await getRelatedPosts(params.slug, post.category, 3);
+
   const articleSchema = {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "BlogPosting",
     headline: post.title,
     description: post.excerpt,
     author: {
       "@type": "Person",
       name: post.author,
+      url: "https://www.apexsolutions.io/about#leadership",
     },
     publisher: {
       "@type": "Organization",
-      "@id": "https://www.apexsolutions.io/#business",
+      "@id": "https://www.apexsolutions.io/#organization",
       name: "Apex Enterprise Solutions",
       url: "https://www.apexsolutions.io",
       logo: {
@@ -105,8 +110,12 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
       },
     },
     datePublished: post.publishedAt,
+    // Sanity auto-stamps _updatedAt on every save; fall back to publishedAt if missing.
+    dateModified: post._updatedAt || post.publishedAt,
     url: `https://www.apexsolutions.io/blog/${params.slug}`,
     mainEntityOfPage: `https://www.apexsolutions.io/blog/${params.slug}`,
+    inLanguage: "en",
+    ...(post.category ? { articleSection: post.category } : {}),
     ...(post.coverImage
       ? { image: urlFor(post.coverImage).width(1200).height(630).url() }
       : {}),
@@ -176,6 +185,12 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
               {post.body && <PortableText value={post.body} components={ptComponents} />}
             </div>
 
+            {/* Author bio */}
+            <AuthorBio author={post.author} />
+
+            {/* Related posts */}
+            <RelatedPosts posts={related} />
+
             {/* Comments */}
             <GiscusComments />
           </article>
@@ -211,7 +226,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
               </div>
               <div className="bg-[#F4F7FA] rounded-xl p-6 border border-[#006FB9]/10">
                 <h3 className="text-[#06284C] font-bold mb-3">Download</h3>
-                <a href="/assets/Apex Enterprise Solutions – Capability Statement.pdf"
+                <a href="/assets/Apex-Enterprise-Solutions-Capability-Statement.pdf"
                   target="_blank" rel="noopener noreferrer"
                   className="text-sm text-[#006FB9] hover:text-[#FF6B00] font-medium transition-colors">
                   ↓ Capability Statement PDF

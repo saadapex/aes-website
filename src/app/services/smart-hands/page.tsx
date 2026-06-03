@@ -104,7 +104,7 @@ export default function SmartHandsPage() {
         eyebrow="Service"
         h1="Smart Hands &amp; Field Support"
         sub="Vetted hands on the ground when you need a single-site fix, an audit, or rapid response — across the U.S. and Canada. AES extends your bench without spinning up a full subcontract."
-        cta={{ label: "Send Your Scope →", href: "/contact" }}
+        cta={{ label: "Request a Site Walk →", href: "/contact" }}
         breadcrumb={[
           { label: "Home", href: "/" },
           { label: "Services", href: "/services" },
@@ -129,7 +129,7 @@ export default function SmartHandsPage() {
                 </div>
               ))}
               <Link href="/contact" className="btn-primary w-full justify-center mt-6 text-sm">
-                Send Your Scope &rarr;
+                Request a Site Walk &rarr;
               </Link>
             </div>
           </div>

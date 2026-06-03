@@ -25,7 +25,7 @@ export const SITE = {
   twitter: "https://x.com/apexensolutions",
   instagram: "https://www.instagram.com/apexenterprisesolutions",
   facebook: "https://www.facebook.com/apexenterprisesolutions",
-  capabilityPdf: "/assets/Apex Enterprise Solutions – Capability Statement.pdf",
+  capabilityPdf: "/assets/Apex-Enterprise-Solutions-Capability-Statement.pdf",
 } as const;
 
 export const SERVICES = [

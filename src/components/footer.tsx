@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Linkedin, Mail, Phone, MapPin, Twitter, Instagram, Facebook, MessageSquare } from "lucide-react";
 import { SITE, SERVICES, INDUSTRIES } from "@/lib/utils";
+import PdfDownloadLink from "@/components/pdf-download-link";
 
 export default function Footer() {
   return (
@@ -198,10 +199,14 @@ export default function Footer() {
             ))}
           </div>
           <div className="flex items-center gap-4">
-            <a href={SITE.capabilityPdf} target="_blank" rel="noopener noreferrer"
-              className="text-xs text-[#FF6B00] hover:underline font-semibold">
+            <PdfDownloadLink
+              href={SITE.capabilityPdf}
+              fileLabel="capability_pdf"
+              source="footer"
+              className="text-xs text-[#FF6B00] hover:underline font-semibold"
+            >
               ↓ Capability Statement PDF
-            </a>
+            </PdfDownloadLink>
             <span className="text-xs text-gray-600">
               © {new Date().getFullYear()} Apex Enterprise Solutions. All rights reserved.
             </span>

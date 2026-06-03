@@ -9,9 +9,9 @@ const HS_ID = process.env.NEXT_PUBLIC_HUBSPOT_PORTAL_ID || "";
 
 declare global {
   interface Window {
-    gtag: (...args: unknown[]) => void;
-    dataLayer: unknown[];
-    _hsq: unknown[][];
+    gtag?: (...args: unknown[]) => void;
+    dataLayer?: unknown[];
+    _hsq?: unknown[][];
   }
 }
 
@@ -26,7 +26,7 @@ function loadGA() {
   document.head.appendChild(s);
 
   window.dataLayer = window.dataLayer || [];
-  window.gtag = function (...args: unknown[]) { window.dataLayer.push(args); };
+  window.gtag = function (...args: unknown[]) { (window.dataLayer as unknown[]).push(args); };
   window.gtag("js", new Date());
   window.gtag("config", GA_ID, { anonymize_ip: true });
 }

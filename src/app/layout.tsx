@@ -4,6 +4,8 @@ import Nav from "@/components/nav";
 import Footer from "@/components/footer";
 import CookieBanner from "@/components/cookie-banner";
 import Analytics from "@/components/analytics";
+import MobileContactBar from "@/components/mobile-contact-bar";
+import ExitIntent from "@/components/exit-intent";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -19,19 +21,37 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://www.apexsolutions.io",
+    // Per-page openGraph metadata in each page.tsx overrides these defaults.
+    // We intentionally do NOT set `url` here so Next.js derives og:url per-page
+    // from metadataBase + canonical instead of hard-coding the homepage on every page.
     siteName: "Apex Enterprise Solutions",
-    images: [{ url: "/images/og-image.png", width: 1200, height: 630, alt: "Apex Enterprise Solutions — Infrastructure Deployment Partner" }],
+    images: [
+      {
+        url: "/images/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Apex Enterprise Solutions — Infrastructure Deployment Partner",
+      },
+    ],
   },
   twitter: { card: "summary_large_image" },
   robots: { index: true, follow: true },
   authors: [{ name: "Apex Enterprise Solutions", url: "https://www.apexsolutions.io" }],
   category: "IT Infrastructure",
+  alternates: {
+    canonical: "https://www.apexsolutions.io",
+    languages: {
+      "en-US": "https://www.apexsolutions.io",
+      "en-CA": "https://www.apexsolutions.io",
+      "x-default": "https://www.apexsolutions.io",
+    },
+  },
 };
 
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
+  "@id": "https://www.apexsolutions.io/#organization",
   name: "Apex Enterprise Solutions",
   alternateName: "AES",
   url: "https://www.apexsolutions.io",
@@ -68,21 +88,41 @@ const organizationSchema = {
     "https://www.instagram.com/apexenterprisesolutions",
     "https://www.facebook.com/apexenterprisesolutions",
   ],
+  employee: [
+    {
+      "@type": "Person",
+      "@id": "https://www.apexsolutions.io/about#saad-usmani",
+      name: "Saad Usmani",
+      jobTitle: "Founder & CEO",
+      worksFor: { "@id": "https://www.apexsolutions.io/#organization" },
+      url: "https://www.apexsolutions.io/about#leadership",
+      sameAs: ["https://www.linkedin.com/in/saadusmani/"],
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.apexsolutions.io/about#vinod-bharwani",
+      name: "Vinod Bharwani",
+      jobTitle: "Chief Operating Officer",
+      worksFor: { "@id": "https://www.apexsolutions.io/#organization" },
+      url: "https://www.apexsolutions.io/about#leadership",
+    },
+  ],
 };
 
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
+  "@id": "https://www.apexsolutions.io/#website",
   name: "Apex Enterprise Solutions",
   url: "https://www.apexsolutions.io",
-  publisher: { "@type": "Organization", name: "Apex Enterprise Solutions" },
+  publisher: { "@id": "https://www.apexsolutions.io/#organization" },
+  inLanguage: "en",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={inter.variable}>
       <body className="antialiased">
-        {/* Site-wide JSON-LD: Organization + WebSite schemas */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
@@ -96,12 +136,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main>{children}</main>
         <Footer />
 
-        {/* Cookie-consent-gated analytics (GA4 + HubSpot) */}
+        <MobileContactBar />
+        <ExitIntent />
+
         <Analytics />
-
-        {/* GDPR cookie consent banner */}
         <CookieBanner />
-
       </body>
     </html>
   );

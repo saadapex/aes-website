@@ -5,6 +5,8 @@ import { ArrowRight } from "lucide-react";
 import ServiceCard from "@/components/service-card";
 import CaseStudyCard from "@/components/case-study-card";
 import CtaBand from "@/components/cta-band";
+import StatsBand from "@/components/stats-band";
+import PdfDownloadLink from "@/components/pdf-download-link";
 import { SITE, SERVICES, INDUSTRIES, CASE_STUDIES } from "@/lib/utils";
 
 export const metadata: Metadata = {
@@ -34,8 +36,30 @@ const jsonLd = {
         postalCode: "94085",
         addressCountry: "US",
       },
+      // Sunnyvale HQ coordinates — helps LLMs and Local Pack tie the entity to a city.
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: 37.3852,
+        longitude: -122.0089,
+      },
+      // Field execution is appointment-based across U.S. + Canada; office hours
+      // here represent the AES coordination/sales window, not field availability.
+      openingHoursSpecification: [
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          opens: "08:00",
+          closes: "18:00",
+        },
+      ],
+      priceRange: "$$",
       areaServed: ["United States", "Canada"],
-      sameAs: ["https://www.linkedin.com/company/apexenterprisesolutions/"],
+      sameAs: [
+        "https://www.linkedin.com/company/apexenterprisesolutions/",
+        "https://x.com/apexensolutions",
+        "https://www.instagram.com/apexenterprisesolutions",
+        "https://www.facebook.com/apexenterprisesolutions",
+      ],
       hasOfferCatalog: {
         "@type": "OfferCatalog",
         name: "Infrastructure Deployment Services",
@@ -107,10 +131,14 @@ export default function HomePage() {
               <Link href="/contact" className="btn-primary text-base">
                 Request a Site Walk <ArrowRight size={16} />
               </Link>
-              <a href={SITE.capabilityPdf} target="_blank" rel="noopener noreferrer"
-                className="btn-outline-white text-base">
+              <PdfDownloadLink
+                href={SITE.capabilityPdf}
+                fileLabel="capability_pdf"
+                source="home_hero"
+                className="btn-outline-white text-base"
+              >
                 Download Capability PDF
-              </a>
+              </PdfDownloadLink>
             </div>
           </div>
 
@@ -130,6 +158,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ── PROOF STAT BAND ──────────────────────────────────── */}
+      <StatsBand />
 
       {/* ── FROM THE FOUNDER ─────────────────────────────────── */}
       <section className="bg-[#06284C] section-pad relative overflow-hidden">
@@ -156,7 +187,7 @@ export default function HomePage() {
           <div className="lg:col-span-3">
             <span className="text-[#FF6B00] text-5xl font-black leading-none select-none block mb-3">&ldquo;</span>
             <p className="text-white text-xl md:text-2xl font-medium leading-relaxed mb-8">
-              In two decades of telecom and infrastructure deployment, I watched the same pattern over and over &mdash; well-designed programs unraveled in the field by subcontractors who couldn&apos;t be relied on. I started AES to be the partner that breaks that pattern.
+              In two decades of telecom and field deployment, I watched the same pattern over and over &mdash; well-designed programs unraveled by subcontractors who couldn&apos;t be relied on. I started AES to break that pattern.
             </p>
             <div className="border-t border-white/15 pt-6 flex items-center justify-between flex-wrap gap-4">
               <div>

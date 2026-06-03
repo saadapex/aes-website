@@ -80,7 +80,7 @@ export default function ApRefreshPage() {
         eyebrow="Service"
         h1="AP Refresh — Large-Scale Wireless Rollouts"
         sub="High-density Wi-Fi that holds up in steel, concrete, and cold storage. AES runs multi-site AP rollouts end-to-end — survey through RF validation — with a deployment playbook built for scale."
-        cta={{ label: "Get a Quote →", href: "/contact" }}
+        cta={{ label: "Request a Site Walk →", href: "/contact" }}
         breadcrumb={[
           { label: "Home", href: "/" },
           { label: "Services", href: "/services" },
@@ -105,7 +105,7 @@ export default function ApRefreshPage() {
                 </div>
               ))}
               <Link href="/contact" className="btn-primary w-full justify-center mt-6 text-sm">
-                Get a Quote &rarr;
+                Request a Site Walk &rarr;
               </Link>
             </div>
           </div>
