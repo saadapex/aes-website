@@ -142,24 +142,7 @@ export default function AboutPage() {
                 <p className="text-[#7A9FC0] text-xs mt-0.5">Founder &amp; CEO, Apex Enterprise Solutions</p>
               </div>
             </div>
-            {/* Stat row — three clean, distinct cards. */}
-            <div className="grid grid-cols-3 gap-3">
-              <div className="bg-white rounded-xl p-5 border border-[#1E5FA8]/10 text-center shadow-sm">
-                <p className="text-[#F26522] text-2xl lg:text-3xl font-black mb-1 leading-none">U.S. &amp; CA</p>
-                <p className="text-[#0D1F3C] text-[10px] lg:text-xs uppercase tracking-wide font-medium leading-snug">Active Coverage</p>
-              </div>
-              <div className="bg-white rounded-xl p-5 border border-[#1E5FA8]/10 text-center shadow-sm">
-                <p className="text-[#F26522] text-2xl lg:text-3xl font-black mb-1 leading-none">1,000+</p>
-                <p className="text-[#0D1F3C] text-[10px] lg:text-xs uppercase tracking-wide font-medium leading-snug">Racks Built &amp; Validated</p>
-              </div>
-              <div className="bg-white rounded-xl p-5 border border-[#1E5FA8]/10 text-center shadow-sm">
-                <p className="text-[#F26522] text-2xl lg:text-3xl font-black mb-1 leading-none">0</p>
-                <p className="text-[#0D1F3C] text-[10px] lg:text-xs uppercase tracking-wide font-medium leading-snug">Recorded Safety Incidents</p>
-              </div>
-            </div>
-            <p className="text-[10px] text-[#4E6575] text-center mt-3 leading-relaxed">
-              Across documented AES-led engagements and aggregate AES team &amp; partner-ecosystem field experience.
-            </p>
+
           </div>
         </div>
       </section>
