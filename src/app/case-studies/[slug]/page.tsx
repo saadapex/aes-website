@@ -27,7 +27,7 @@ const CONTENT: Record<string, {
       "Phase 1 — Crew mobilization: AES staged 6–7 fiber and hardware technicians for the Memphis site, mixing senior and junior crew to balance speed and quality. Travel, lodging, and per-diem logistics were coordinated before crew arrival so day one was productive, not administrative.",
       "Phase 2 — Structured fiber installation: High-density fiber runs were installed from the meet-me room to the compute racks. Precision fiber management was implemented from the start — clean routing, labeled bundles, organized slack, and room for future scaling without re-pulling.",
       "Phase 3 — Rack & stack: AES assembled and installed the compute racks, mounted equipment, connected servers to power and network, and dressed fiber jumpers within each rack. The initial two-rack build was completed in a focused two-day push, with additional racks added across subsequent phases.",
-      "Phase 4 — Sustained execution: The deployment ran across late 2024 and early 2025, with crew shifts including overtime to hold the schedule. Detailed labor and equipment tracking was maintained throughout for client visibility and post-project documentation.",
+      "Phase 4 — Sustained execution: The deployment ran across the program duration, with crew shifts including overtime to hold the schedule. Detailed labor and equipment tracking was maintained throughout for client visibility and post-project documentation.",
     ],
     outcome: "AES completed the structured cabling and rack & stack work within the approved schedule, delivering a ready-for-integration data-center environment with GPU-dense compute capacity and precision fiber management. No cable-plant or rack-level issues were reported to AES during handover. The engagement is a strong internal reference for AES's ability to execute high-performance AI data-center builds under compressed timelines in non-traditional data-center markets.",
     tags: ["Rack & Stack", "Structured Cabling", "Fiber", "AI / ML", "Data Center", "Memphis", "GPU-Dense Compute"],
@@ -57,7 +57,7 @@ const CONTENT: Record<string, {
     ],
   },
   "fulfillment-ap-refresh-ontario": {
-    overview: "A global e-commerce and fulfillment leader initiated a network refresh program in early 2026, replacing aging wireless access points across approximately 24 North American sites including five Canadian facilities. AES executed the physical refresh at two Ontario locations: YYZ9 in Scarborough (476 APs across 23 network closets) and YYZ7 in Bolton (1,110 APs across 23 network closets), replacing over 1,586 access points in total.",
+    overview: "A global e-commerce and fulfillment leader initiated a network refresh program, replacing aging wireless access points across approximately 24 North American sites including five Canadian facilities. AES executed the physical refresh at two Ontario locations: YYZ9 in Scarborough (476 APs across 23 network closets) and YYZ7 in Bolton (1,110 APs across 23 network closets), replacing over 1,586 access points in total.",
     challenge: "Warehouse ceilings reached 40 feet across four mezzanine levels, requiring scissor lifts maintained at full charge throughout each shift. Labelling was exacting: every AP required port identifier, logical name, serial number, and MAC address for the client's asset database. YYZ9 had a non-negotiable 24-hour shutdown window. YYZ7, with more than twice the AP count, demanded extended windows and a larger workforce.",
     approach: [
       "Pre-staging day before each shutdown: technicians visited each site the day prior to inventory APs, confirm scissor-lift availability, and pre-stage all equipment including fall-protection gear. This became standard practice across the program.",
@@ -66,7 +66,7 @@ const CONTENT: Record<string, {
       "Real-time iPad-based tracking: each AP was logged in a shared spreadsheet as completed, ensuring no device was missed and enabling clean shift hand-offs with direct client engineering team communication.",
       "Safety enforcement: full PPE including safety shoes, high-visibility vests, hard hats, and gloves; harnesses and lanyards above 6 feet; mandatory spotters for all scissor-lift operations; VCO contractor orientation completed by every technician.",
     ],
-    outcome: "All 1,586+ access points were replaced across both Ontario sites within Q1 2026. YYZ9 was completed within the 24-hour window. Warehouse staff reported improved wireless coverage, fewer drop-offs, and faster scanning speeds. Zero safety incidents were recorded at either site. The pre-labelling strategy, real-time documentation, and flexible staffing model were carried forward to the remaining facilities in the broader North American program.",
+    outcome: "All 1,586+ access points were replaced across both Ontario sites. YYZ9 was completed within the 24-hour window. Warehouse staff reported improved wireless coverage, fewer drop-offs, and faster scanning speeds. Zero safety incidents were recorded at either site. The pre-labelling strategy, real-time documentation, and flexible staffing model were carried forward to the remaining facilities in the broader North American program.",
     tags: ["AP Refresh", "Wireless", "Ontario", "Fulfillment Centre", "Multi-Site", "Canada"],
     lessonsLearned: [
       { title: "Pre-planning is critical", body: "A dedicated inventory and staging day before each shutdown allows the team to confirm lift availability and identify hazards in advance." },
@@ -97,7 +97,7 @@ const META_DESCRIPTIONS: Record<string, string> = {
   "telecom-transport-lab":
     "AES built a DWDM, MPLS, and microwave telecom transport lab for a U.S. energy provider — 6 racks, 4 platforms, commissioned in 2 weeks.",
   "fulfillment-ap-refresh-ontario":
-    "AES replaced 1,586+ wireless APs across two Ontario fulfillment centres (YYZ9 Scarborough, YYZ7 Bolton) in Q1 2026. 24hr window, zero safety incidents.",
+    "AES replaced 1,586+ wireless APs across two Ontario fulfillment centres (YYZ9 Scarborough, YYZ7 Bolton). 24hr window, zero safety incidents.",
   "amazon-ap-refresh":
     "AES field-executed a large-scale AP refresh at a U.S. fulfillment operator — 850 APs installed and validated on schedule. Zero safety incidents.",
 };
