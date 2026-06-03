@@ -5,7 +5,6 @@ import { ArrowRight } from "lucide-react";
 import ServiceCard from "@/components/service-card";
 import CaseStudyCard from "@/components/case-study-card";
 import CtaBand from "@/components/cta-band";
-import StatsBand from "@/components/stats-band";
 import PdfDownloadLink from "@/components/pdf-download-link";
 import { SITE, SERVICES, INDUSTRIES, CASE_STUDIES } from "@/lib/utils";
 
@@ -158,9 +157,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* ── PROOF STAT BAND ──────────────────────────────────── */}
-      <StatsBand />
 
       {/* ── FROM THE FOUNDER ─────────────────────────────────── */}
       <section className="bg-[#06284C] section-pad relative overflow-hidden">
