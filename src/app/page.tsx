@@ -5,7 +5,6 @@ import { ArrowRight } from "lucide-react";
 import ServiceCard from "@/components/service-card";
 import CaseStudyCard from "@/components/case-study-card";
 import CtaBand from "@/components/cta-band";
-import PdfDownloadLink from "@/components/pdf-download-link";
 import { SITE, SERVICES, INDUSTRIES, CASE_STUDIES } from "@/lib/utils";
 
 export const metadata: Metadata = {
@@ -130,14 +129,6 @@ export default function HomePage() {
               <Link href="/contact" className="btn-primary text-base">
                 Request a Site Walk <ArrowRight size={16} />
               </Link>
-              <PdfDownloadLink
-                href={SITE.capabilityPdf}
-                fileLabel="capability_pdf"
-                source="home_hero"
-                className="btn-outline-white text-base"
-              >
-                Download Capability PDF
-              </PdfDownloadLink>
             </div>
           </div>
 
