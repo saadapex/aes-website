@@ -248,6 +248,7 @@ export default function HomePage() {
               },
               {
                 quote: "AES has been a dependable partner for our infrastructure deployment work. Saad and his team are responsive, organized, and focused on delivering quality execution in the field. I appreciate their professionalism and would recommend AES for IT infrastructure and data center deployment support.",
+                name: "Omar Matar",
                 role: "CEO",
                 company: "Karavan Technology",
               },
