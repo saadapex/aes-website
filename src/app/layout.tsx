@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     template: "%s | Apex Enterprise Solutions",
   },
   description:
-    "Apex Enterprise Solutions delivers structured cabling, rack-and-stack, large-scale AP refresh, and smart hands across the U.S. and Canada. Field-first, credentialed, on schedule.",
+    "Apex Enterprise Solutions supports fiber, structured cabling, rack-and-stack, and AI/data center deployments across North America. Field-first, credentialed, on schedule.",
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -57,7 +57,7 @@ const organizationSchema = {
   url: "https://www.apexsolutions.io",
   logo: "https://www.apexsolutions.io/images/AES_Option3_Primary_Nav_Tight_96px_2x.png",
   description:
-    "North America-based field execution partner for IT infrastructure deployment — structured cabling, rack-and-stack, AP refresh, and smart hands across the U.S. and Canada.",
+    "North America-based field execution partner for IT infrastructure deployment — fiber, structured cabling, rack-and-stack, and AI/data center deployments across North America.",
   email: "info@apexsolutions.io",
   telephone: "+1-669-251-7810",
   address: {

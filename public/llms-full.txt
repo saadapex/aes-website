@@ -14,7 +14,7 @@ ABOUT APEX ENTERPRISE SOLUTIONS
 ================================================================================
 Source page: https://www.apexsolutions.io/about
 
-Apex Enterprise Solutions (AES) is a North America-based field execution partner for IT infrastructure deployment. AES executes structured cabling, rack-and-stack, and large-scale wireless rollouts across the U.S. and Canada — built clean and documented to approved scope.
+Apex Enterprise Solutions (AES) is a North America-based field execution partner for IT infrastructure deployment. AES supports fiber, structured cabling, rack-and-stack, and AI/data center deployments across North America — built clean and documented to approved scope.
 
 AES executes data center and network deployment programs for primes, integrators, and enterprise infrastructure teams — with experienced field resources, tight coordination, and closeout documentation that holds up to client scrutiny. AES is a North America-based field execution partner. It brings structured deployment processes, credentialed technicians, and a standard of work designed to protect partner reputations.
 

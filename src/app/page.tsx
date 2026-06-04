@@ -9,7 +9,7 @@ import { SITE, SERVICES, INDUSTRIES, CASE_STUDIES } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "IT Infrastructure & Data-Center Deployment | Apex Enterprise Solutions",
-  description: "Apex Enterprise Solutions delivers structured cabling, rack-and-stack, large-scale AP refresh, and smart hands across the U.S. and Canada. Field-first, credentialed, on schedule.",
+  description: "Apex Enterprise Solutions supports fiber, structured cabling, rack-and-stack, and AI/data center deployments across North America. Field-first, credentialed, on schedule.",
   alternates: { canonical: "https://www.apexsolutions.io" },
 };
 
@@ -23,7 +23,7 @@ const jsonLd = {
       url: "https://www.apexsolutions.io",
       logo: "https://www.apexsolutions.io/images/AES_Option3_Primary_Full_Logo_No_Background.png",
       image: "https://www.apexsolutions.io/images/hero-datacenter.png",
-      description: "IT infrastructure deployment company specializing in structured cabling, rack-and-stack, and large-scale AP refresh across the U.S. and Canada.",
+      description: "IT infrastructure deployment company supporting fiber, structured cabling, rack-and-stack, and AI/data center deployments across North America.",
       telephone: "+16692517810",
       email: "info@apexsolutions.io",
       address: {
@@ -114,17 +114,14 @@ export default function HomePage() {
       <section className="bg-[#06284C] min-h-screen flex items-center pt-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 py-24 grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-black leading-tight mb-6">
-              A North America-Based{" "}
-              <span className="text-[#FF6B00]">Field Execution Partner</span>
+            <h1 className="text-white text-4xl md:text-5xl font-black leading-tight mb-6">
+              We support{" "}
+              <span className="text-[#FF6B00]">
+                Fiber, Structured Cabling, Rack-and-Stack &amp; AI/Data Center
+                Deployments
+              </span>{" "}
+              across North America.
             </h1>
-            <p className="text-[#4E6575] text-lg md:text-xl leading-relaxed mb-4 max-w-xl">
-              Structured cabling, rack-and-stack, large-scale AP refresh, and
-              smart hands — executed across the U.S. and Canada. AES delivers
-              the field precision, disciplined documentation, and program
-              coordination that primes and integrators stake their reputation
-              on.
-            </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
               <Link href="/contact" className="btn-primary text-base">
                 Request a Site Walk <ArrowRight size={16} />
