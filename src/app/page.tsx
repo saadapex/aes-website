@@ -235,6 +235,12 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
+                quote: "AES has been a dependable partner for our infrastructure deployment work. Saad and his team are responsive, organized, and focused on delivering quality execution in the field. I appreciate their professionalism and would recommend AES for IT infrastructure and data center deployment support.",
+                name: "Omar Matar",
+                role: "CEO",
+                company: "Karavan Technology",
+              },
+              {
                 quote: "Apex Enterprise Solutions has been a reliable and professional partner for our technology deployment needs. Their team brings strong technical capability, clear communication, and dependable field execution. We appreciate their responsiveness and commitment to getting the work done right.",
                 name: "Asfar Zaidi",
                 role: "CEO",
@@ -245,12 +251,6 @@ export default function HomePage() {
                 name: "Vijay Kumar",
                 role: "Service Delivery Executive",
                 company: "",
-              },
-              {
-                quote: "AES has been a dependable partner for our infrastructure deployment work. Saad and his team are responsive, organized, and focused on delivering quality execution in the field. I appreciate their professionalism and would recommend AES for IT infrastructure and data center deployment support.",
-                name: "Omar Matar",
-                role: "CEO",
-                company: "Karavan Technology",
               },
             ].map((t, i) => (
               <div
