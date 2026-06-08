@@ -85,6 +85,12 @@ const legacyWixRedirects = [
 
   { source: "/blog-1", destination: "/blog" },
 
+  // --- Wix policy / legal page slugs ---
+  { source: "/privacy-policy",        destination: "/privacy" },
+  { source: "/terms-of-service",      destination: "/terms" },
+  { source: "/terms-and-conditions",  destination: "/terms" },
+  { source: "/cookie-policy",         destination: "/privacy" },
+
   { source: "/assets/Apex Enterprise Solutions - Capability Statement.pdf",
     destination: "/assets/Apex-Enterprise-Solutions-Capability-Statement.pdf" },
 ];
