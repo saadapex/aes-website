@@ -1,8 +1,11 @@
 /**
- * Thin GA4 / dataLayer helper for the few client-side events we care about.
- * Safe to call in SSR contexts — checks for `window.gtag` and `window.dataLayer`
- * before pushing anything. If consent has not been granted, the GA4 script
- * isn't loaded (see components/analytics.tsx) and these calls are no-ops.
+ * Thin GA4 / dataLayer helper for the client-side events we measure.
+ *
+ * Every helper:
+ *   - Safe in SSR (early returns when window is undefined).
+ *   - No-op when GA4 hasn't loaded - analytics.tsx only loads gtag after the
+ *     user accepts the analytics consent.
+ *   - Pushes to both `gtag` (GA4) and `dataLayer` (any future GTM container).
  *
  * Notes:
  *   - `window.gtag` and `window.dataLayer` are declared globally in
@@ -12,31 +15,85 @@
  *     as required, but at runtime they only exist after analytics has loaded.
  */
 
-/**
- * Track a file download. Used by Capability PDF + RFP Template links.
- *
- * @param fileLabel - e.g. "capability_pdf", "rfp_template"
- * @param source    - where the user clicked from, e.g. "footer", "hero", "exit_intent"
- */
-export function trackDownload(fileLabel: string, source: string = "unknown"): void {
-  if (typeof window === "undefined") return;
+/* eslint-disable @typescript-eslint/no-explicit-any */
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+/**
+ * Core event-pusher. Sends the event to gtag AND mirrors it onto dataLayer.
+ * Most callers should use the named helpers below.
+ */
+function pushEvent(name: string, params: Record<string, unknown>): void {
+  if (typeof window === "undefined") return;
   const w = window as any;
 
   if (typeof w.gtag === "function") {
-    w.gtag("event", "file_download", {
-      file_name: fileLabel,
-      file_extension: "pdf",
-      source,
-    });
+    w.gtag("event", name, params);
   }
-
   if (Array.isArray(w.dataLayer)) {
-    w.dataLayer.push({
-      event: "file_download",
-      file_name: fileLabel,
-      source,
-    });
+    w.dataLayer.push({ event: name, ...params });
   }
+}
+
+/**
+ * Track a file download. Used by Capability PDF + RFP Template links.
+ */
+export function trackDownload(fileLabel: string, source: string = "unknown"): void {
+  pushEvent("file_download", {
+    file_name: fileLabel,
+    file_extension: "pdf",
+    source,
+  });
+}
+
+export type ContactChannel = "phone" | "sms" | "email" | "calendly" | "linkedin";
+
+/**
+ * Track a high-intent contact-CTA click (call, text, email, book a meeting).
+ */
+export function trackContactClick(channel: ContactChannel, source: string = "unknown"): void {
+  pushEvent("contact_click", {
+    channel,
+    source,
+    method: channel,
+  });
+}
+
+/**
+ * Track a successful form submission. Fired on /thank-you after the contact
+ * form POST + redirect succeeds, so it only counts completed submissions.
+ */
+export function trackFormSubmit(formName: string, source: string = "unknown"): void {
+  pushEvent("form_submit", {
+    form_name: formName,
+    source,
+  });
+  pushEvent("generate_lead", {
+    form_name: formName,
+    source,
+    currency: "USD",
+    value: 0,
+  });
+}
+
+/**
+ * Track a service-page view as a dedicated event so /services/* funnels
+ * are easy to compare in GA4 without filtering by page_path manually.
+ */
+export function trackServiceView(serviceSlug: string): void {
+  pushEvent("service_page_view", {
+    service: serviceSlug,
+  });
+}
+
+/**
+ * Track a completed Calendly booking. Distinct from `contact_click` - this
+ * fires only when react-calendly's `eventScheduled` callback fires.
+ */
+export function trackCalendlyBooked(source: string = "unknown"): void {
+  pushEvent("calendly_meeting_booked", { source });
+  pushEvent("generate_lead", {
+    form_name: "calendly_booking",
+    source,
+    currency: "USD",
+    value: 0,
+  });
 }

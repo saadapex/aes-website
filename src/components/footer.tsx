@@ -1,10 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Linkedin, Mail, Phone, MapPin, Twitter, Instagram, Facebook, MessageSquare } from "lucide-react";
-import { SITE, SERVICES, INDUSTRIES } from "@/lib/utils";
+import { SITE, SERVICES } from "@/lib/utils";
 import PdfDownloadLink from "@/components/pdf-download-link";
+import TrackedContactLink from "@/components/tracked-contact-link";
 
 export default function Footer() {
+  const tel = "+1" + SITE.phone.replace(/\D/g, "");
+
   return (
     <footer className="bg-[#06284C] text-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 py-16">
@@ -25,19 +28,16 @@ export default function Footer() {
             <p className="text-[#4E6575] text-sm leading-relaxed mb-6">
               A North America-based field-first infrastructure deployment partner.
             </p>
-            {/* Social icons */}
             <div className="flex items-center gap-3">
-              {/* LinkedIn — always visible */}
-              <a
+              <TrackedContactLink
                 href={SITE.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
+                channel="linkedin"
+                source="footer"
                 aria-label="Apex Enterprise Solutions on LinkedIn"
                 className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-[#4E6575] hover:bg-[#F26522] hover:border-[#F26522] hover:text-white transition-all duration-200"
               >
                 <Linkedin size={16} />
-              </a>
-              {/* Twitter/X — renders only when URL is set */}
+              </TrackedContactLink>
               {SITE.twitter && (
                 <a
                   href={SITE.twitter}
@@ -49,7 +49,6 @@ export default function Footer() {
                   <Twitter size={16} />
                 </a>
               )}
-              {/* Instagram — renders only when URL is set */}
               {SITE.instagram && (
                 <a
                   href={SITE.instagram}
@@ -61,7 +60,6 @@ export default function Footer() {
                   <Instagram size={16} />
                 </a>
               )}
-              {/* Facebook — renders only when URL is set */}
               {SITE.facebook && (
                 <a
                   href={SITE.facebook}
@@ -82,7 +80,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {SERVICES.map((s) => (
                 <li key={s.slug}>
-                  <Link href={`/services/${s.slug}`}
+                  <Link href={"/services/" + s.slug}
                     className="text-sm text-gray-300 hover:text-[#FF6B00] transition-colors">
                     {s.title}
                   </Link>
@@ -140,27 +138,39 @@ export default function Footer() {
             <h4 className="text-xs uppercase tracking-widest text-[#4E6575] mb-4">Contact</h4>
             <ul className="space-y-3">
               <li>
-                <a href={`mailto:${SITE.email}`}
-                  className="flex items-start gap-2 text-sm text-gray-300 hover:text-[#FF6B00] transition-colors">
+                <TrackedContactLink
+                  href={"mailto:" + SITE.email}
+                  channel="email"
+                  source="footer"
+                  className="flex items-start gap-2 text-sm text-gray-300 hover:text-[#FF6B00] transition-colors"
+                >
                   <Mail size={14} className="mt-0.5 flex-shrink-0 text-[#006FB9]" />
                   {SITE.email}
-                </a>
+                </TrackedContactLink>
               </li>
               <li>
                 <div className="flex items-start gap-2 text-sm text-gray-300">
                   <Phone size={14} className="mt-0.5 flex-shrink-0 text-[#006FB9]" />
                   <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
-                    <a href={`tel:+1${SITE.phone.replace(/\D/g, "")}`}
-                      aria-label={`Call ${SITE.phone}`}
-                      className="hover:text-[#FF6B00] transition-colors">
+                    <TrackedContactLink
+                      href={"tel:" + tel}
+                      channel="phone"
+                      source="footer"
+                      aria-label={"Call " + SITE.phone}
+                      className="hover:text-[#FF6B00] transition-colors"
+                    >
                       {SITE.phone}
-                    </a>
-                    <span className="text-gray-500">·</span>
-                    <a href={`sms:+1${SITE.phone.replace(/\D/g, "")}`}
-                      aria-label={`Text ${SITE.phone}`}
-                      className="inline-flex items-center gap-1 text-xs text-[#7A9FC0] hover:text-[#FF6B00] transition-colors">
+                    </TrackedContactLink>
+                    <span className="text-gray-500">.</span>
+                    <TrackedContactLink
+                      href={"sms:" + tel}
+                      channel="sms"
+                      source="footer"
+                      aria-label={"Text " + SITE.phone}
+                      className="inline-flex items-center gap-1 text-xs text-[#7A9FC0] hover:text-[#FF6B00] transition-colors"
+                    >
                       <MessageSquare size={11} /> Text
-                    </a>
+                    </TrackedContactLink>
                   </div>
                 </div>
               </li>
@@ -177,7 +187,7 @@ export default function Footer() {
         {/* Trust line */}
         <div className="border-t border-white/10 pt-6 mb-6">
           <p className="text-[#4E6575] text-xs text-center">
-            Fully insured · General liability &amp; E&amp;O coverage · Licensing and bonding verified per project jurisdiction · U.S. &amp; Canada operations
+            Fully insured. General liability &amp; E&amp;O coverage. Licensing and bonding verified per project jurisdiction. U.S. &amp; Canada operations.
           </p>
         </div>
 
@@ -205,10 +215,10 @@ export default function Footer() {
               source="footer"
               className="text-xs text-[#FF6B00] hover:underline font-semibold"
             >
-              ↓ Capability Statement PDF
+              &darr; Capability Statement PDF
             </PdfDownloadLink>
             <span className="text-xs text-gray-600">
-              © {new Date().getFullYear()} Apex Enterprise Solutions. All rights reserved.
+              &copy; {new Date().getFullYear()} Apex Enterprise Solutions. All rights reserved.
             </span>
           </div>
         </div>

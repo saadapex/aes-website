@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { Menu, X, ChevronDown, Phone, MessageSquare } from "lucide-react";
 import { SITE, SERVICES, INDUSTRIES } from "@/lib/utils";
+import { trackContactClick } from "@/lib/track";
 
 const ABOUT = [
   { title: "Company",       subtitle: "Who we are & how we work",                          href: "/about" },
@@ -166,12 +167,14 @@ export default function Nav() {
           <div className="flex items-center gap-2">
             <a href={`tel:+1${SITE.phone.replace(/\D/g, "")}`}
               aria-label={`Call ${SITE.phone}`}
+              onClick={() => trackContactClick("phone", "nav")}
               className={`flex items-center gap-1.5 text-sm font-medium transition-colors ${linkClass}`}>
               <Phone size={14} /> {SITE.phone}
             </a>
             <a href={`sms:+1${SITE.phone.replace(/\D/g, "")}`}
               aria-label={`Text ${SITE.phone}`}
               title="Text us"
+              onClick={() => trackContactClick("sms", "nav")}
               className={`flex items-center gap-1 text-xs font-medium px-2 py-1 rounded border transition-colors ${
                 solid
                   ? "border-[#006FB9]/30 text-[#006FB9] hover:border-[#FF6B00] hover:text-[#FF6B00]"
@@ -181,6 +184,7 @@ export default function Nav() {
             </a>
           </div>
           <a href={SITE.calendly} target="_blank" rel="noopener noreferrer"
+            onClick={() => trackContactClick("calendly", "nav")}
             className="btn-primary text-sm py-2.5 px-5">
             Book a Call
           </a>
@@ -245,6 +249,7 @@ export default function Nav() {
           <Link href="/contact" className="text-[#06284C] font-semibold" onClick={closeAll}>Contact</Link>
 
           <a href={SITE.calendly} target="_blank" rel="noopener noreferrer"
+            onClick={() => { trackContactClick("calendly", "nav_mobile"); closeAll(); }}
             className="btn-primary justify-center text-center mt-2">
             Book a Call
           </a>

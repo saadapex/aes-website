@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Analytics as VercelAnalytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import Nav from "@/components/nav";
 import Footer from "@/components/footer";
 import CookieBanner from "@/components/cookie-banner";
@@ -9,6 +11,13 @@ import ExitIntent from "@/components/exit-intent";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+
+// Search Console / Bing Webmaster verification tokens are env-driven so we
+// can rotate them without code changes. Either may be empty (Next will skip
+// emitting the meta tag) - set them in Vercel project env vars once you've
+// claimed the property.
+const GSC_TOKEN  = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "";
+const BING_TOKEN = process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION   || "";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.apexsolutions.io"),
@@ -21,16 +30,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    // Per-page openGraph metadata in each page.tsx overrides these defaults.
-    // We intentionally do NOT set `url` here so Next.js derives og:url per-page
-    // from metadataBase + canonical instead of hard-coding the homepage on every page.
     siteName: "Apex Enterprise Solutions",
     images: [
       {
         url: "/images/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Apex Enterprise Solutions — Infrastructure Deployment Partner",
+        alt: "Apex Enterprise Solutions - Infrastructure Deployment Partner",
       },
     ],
   },
@@ -46,6 +52,10 @@ export const metadata: Metadata = {
       "x-default": "https://www.apexsolutions.io",
     },
   },
+  verification: {
+    ...(GSC_TOKEN  ? { google: GSC_TOKEN }  : {}),
+    ...(BING_TOKEN ? { other: { "msvalidate.01": BING_TOKEN } } : {}),
+  },
 };
 
 const organizationSchema = {
@@ -57,7 +67,7 @@ const organizationSchema = {
   url: "https://www.apexsolutions.io",
   logo: "https://www.apexsolutions.io/images/AES_Option3_Primary_Nav_Tight_96px_2x.png",
   description:
-    "North America-based field execution partner for IT infrastructure deployment — fiber, structured cabling, rack-and-stack, and AI/data center deployments across North America.",
+    "North America-based field execution partner for IT infrastructure deployment - fiber, structured cabling, rack-and-stack, and AI/data center deployments across North America.",
   email: "info@apexsolutions.io",
   telephone: "+1-669-251-7810",
   address: {
@@ -141,6 +151,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         <Analytics />
         <CookieBanner />
+
+        {/* Vercel Analytics + Speed Insights (privacy-friendly, cookieless). */}
+        <VercelAnalytics />
+        <SpeedInsights />
       </body>
     </html>
   );

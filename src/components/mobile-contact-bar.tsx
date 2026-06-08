@@ -4,29 +4,24 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Phone, MessageSquare, ArrowRight } from "lucide-react";
 import { SITE } from "@/lib/utils";
+import { trackContactClick } from "@/lib/track";
 
 /**
- * Sticky mobile-only contact bar that appears after the user scrolls past the hero.
- * Three high-intent actions: Request Site Walk · Call · Text.
+ * Sticky mobile-only contact bar that appears after scroll past the hero.
+ * Three high-intent actions: Request Site Walk / Call / Text.
  *
  * Hidden on:
  *   - desktop (md+ breakpoint)
- *   - while the cookie banner is open (would overlap)
- *   - on /contact and Calendly already-engaged surfaces
+ *   - on /contact (the form is already in view)
  */
 export default function MobileContactBar() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    // Don't render on the contact page — the form is already in view.
     if (typeof window !== "undefined" && window.location.pathname.startsWith("/contact")) {
       return;
     }
-
-    const onScroll = () => {
-      // Show after 600px of scroll (well past the hero on every page).
-      setVisible(window.scrollY > 600);
-    };
+    const onScroll = () => setVisible(window.scrollY > 600);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -34,7 +29,7 @@ export default function MobileContactBar() {
 
   if (!visible) return null;
 
-  const tel = `+1${SITE.phone.replace(/\D/g, "")}`;
+  const tel = "+1" + SITE.phone.replace(/\D/g, "");
 
   return (
     <div
@@ -50,15 +45,17 @@ export default function MobileContactBar() {
           Site Walk <ArrowRight size={12} />
         </Link>
         <a
-          href={`tel:${tel}`}
-          aria-label={`Call ${SITE.phone}`}
+          href={"tel:" + tel}
+          aria-label={"Call " + SITE.phone}
+          onClick={() => trackContactClick("phone", "mobile_bar")}
           className="flex items-center justify-center gap-1.5 py-3 text-white font-semibold text-xs uppercase tracking-wide hover:bg-white/5"
         >
           <Phone size={13} /> Call
         </a>
         <a
-          href={`sms:${tel}`}
-          aria-label={`Text ${SITE.phone}`}
+          href={"sms:" + tel}
+          aria-label={"Text " + SITE.phone}
+          onClick={() => trackContactClick("sms", "mobile_bar")}
           className="flex items-center justify-center gap-1.5 py-3 text-white font-semibold text-xs uppercase tracking-wide hover:bg-white/5"
         >
           <MessageSquare size={13} /> Text

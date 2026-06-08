@@ -20,7 +20,7 @@ export default function GiscusComments() {
             Talk to the AES Team →
           </Link>
           <a href="/assets/Apex-Enterprise-Solutions-Capability-Statement.pdf"
-            target="_blank" rel="noopener noreferrer"
+            download
             className="border border-white/20 hover:border-white/40 text-white font-semibold text-sm px-6 py-3 rounded-lg transition-colors">
             ↓ Download Capability Statement
           </a>

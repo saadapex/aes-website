@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 const PRINCIPLES = [
   {
     title: "Execution Partner, Not a Vendor",
-    body: "AES brings its own processes, its own standards, and its own accountability to every engagement \u2014 not just bodies to fill a headcount.",
+    body: "AES brings its own processes, its own standards, and its own accountability to every engagement — not just bodies to fill a headcount.",
   },
   {
     title: "Field-First Culture",
@@ -36,7 +36,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About AES"
         h1="A North America-Based Infrastructure Execution Partner"
-        sub="Apex Enterprise Solutions executes structured cabling, rack-and-stack, and large-scale wireless rollouts across the U.S. and Canada \u2014 built clean and documented to approved scope."
+        sub="Apex Enterprise Solutions executes structured cabling, rack-and-stack, and large-scale wireless rollouts across the U.S. and Canada — built clean and documented to approved scope."
         breadcrumb={[{ label: "Home", href: "/" }, { label: "About", href: "/about" }]}
       />
 
@@ -49,7 +49,7 @@ export default function AboutPage() {
             </h2>
             <p className="text-[#1F2933] text-lg leading-relaxed mb-4">
               AES executes data center and network deployment programs for primes, integrators,
-              and enterprise infrastructure teams \u2014 with experienced field resources, tight
+              and enterprise infrastructure teams — with experienced field resources, tight
               coordination, and closeout documentation that holds up to client scrutiny.
             </p>
             <p className="text-[#1F2933] leading-relaxed mb-6">
@@ -158,7 +158,7 @@ export default function AboutPage() {
           <div className="w-full rounded-xl overflow-hidden shadow-lg mb-8">
             <Image
               src="/images/about-coverage-map.png"
-              alt="AES field coverage map \u2014 active markets across the U.S. and Canada"
+              alt="AES field coverage map — active markets across the U.S. and Canada"
               width={1200}
               height={650}
               className="w-full h-auto block brightness-150"

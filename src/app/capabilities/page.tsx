@@ -147,7 +147,7 @@ export default function CapabilitiesPage() {
             <div className="flex flex-wrap gap-3">
               <Link href="/contact" className="btn-primary">Send Your Scope →</Link>
               <a href={SITE.calendly} target="_blank" rel="noopener noreferrer" className="btn-secondary">Book a 15-Minute Scope Review →</a>
-              <a href={SITE.capabilityPdf} target="_blank" rel="noopener noreferrer" className="btn-secondary">Download Capability Statement (PDF) ↓</a>
+              <a href={SITE.capabilityPdf} download className="btn-secondary">Download Capability Statement (PDF) ↓</a>
             </div>
           </div>
 

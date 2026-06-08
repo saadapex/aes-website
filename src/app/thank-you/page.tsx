@@ -2,9 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { CheckCircle } from "lucide-react";
 import { SITE } from "@/lib/utils";
+import ThankYouTracker from "@/components/thank-you-tracker";
+import TrackedContactLink from "@/components/tracked-contact-link";
 
 export const metadata: Metadata = {
-  title: "Request Received — Apex Enterprise Solutions",
+  title: "Request Received - Apex Enterprise Solutions",
   alternates: { canonical: "https://www.apexsolutions.io/thank-you" },
   robots: { index: false, follow: false },
 };
@@ -30,6 +32,10 @@ const NEXT_STEPS = [
 export default function ThankYouPage() {
   return (
     <div className="bg-[#F4F7FA] min-h-screen pt-32 pb-24 px-6">
+      {/* Fires form_submit + generate_lead GA4 events on mount.
+          The redirect to /thank-you is the contact form's success signal. */}
+      <ThankYouTracker formName="contact_form" source="contact_page" />
+
       <div className="max-w-3xl mx-auto text-center">
         <CheckCircle size={56} className="text-[#FF6B00] mx-auto mb-6" />
         <h1 className="text-[#06284C] text-4xl font-black mb-3">We&apos;ve Got It.</h1>
@@ -37,18 +43,21 @@ export default function ThankYouPage() {
           Your request is in. We&apos;ll follow up within one business day.
         </p>
 
-        {/* Calendly nudge */}
         <div className="bg-[#06284C] rounded-xl p-8 mb-12 text-left">
           <h2 className="text-white font-bold text-xl mb-2">Want to move faster?</h2>
           <p className="text-[#4E6575] mb-4 text-sm">
             Book a call directly and we&apos;ll get on the same page sooner.
           </p>
-          <a href={SITE.calendly} target="_blank" rel="noopener noreferrer" className="btn-primary">
-            Book a Call →
-          </a>
+          <TrackedContactLink
+            href={SITE.calendly}
+            channel="calendly"
+            source="thank_you"
+            className="btn-primary"
+          >
+            Book a Call &rarr;
+          </TrackedContactLink>
         </div>
 
-        {/* Next steps */}
         <div className="grid md:grid-cols-3 gap-6 mb-12">
           {NEXT_STEPS.map((step) => (
             <div key={step.num} className="bg-white rounded-lg p-6 text-left shadow-sm border border-gray-100">
@@ -60,7 +69,7 @@ export default function ThankYouPage() {
         </div>
 
         <Link href="/" className="btn-secondary">
-          ← Back to Home
+          &larr; Back to Home
         </Link>
       </div>
     </div>

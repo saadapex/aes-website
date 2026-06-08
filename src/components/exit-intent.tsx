@@ -84,9 +84,11 @@ export default function ExitIntent() {
 
         <a
           href={SITE.capabilityPdf}
-          target="_blank"
-          rel="noopener noreferrer"
-          onClick={() => trackDownload("capability_pdf", "exit_intent")}
+          download
+          onClick={() => {
+            trackDownload("capability_pdf", "exit_intent");
+            setOpen(false);
+          }}
           className="inline-flex items-center justify-center gap-2 bg-[#FF6B00] hover:bg-[#FF8533] text-white font-bold py-3 px-6 rounded-lg transition-colors w-full"
         >
           <FileDown size={16} /> Download Capability PDF

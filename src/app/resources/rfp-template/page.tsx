@@ -7,9 +7,9 @@ import PageHero from "@/components/page-hero";
 import FormErrorBanner from "@/components/form-error-banner";
 
 export const metadata: Metadata = {
-  title: "Structured Cabling RFP Template — Free Download",
+  title: "Structured Cabling RFP Template — Free, Sent to Your Inbox",
   description:
-    "Download the AES Structured Cabling & Fiber RFP Template — 22 pages with interactive form fields. Scope of work, technical specs, deliverables, schedule, pricing, qualifications, and evaluation criteria. Free to download for primes, integrators, and enterprise IT teams.",
+    "Get the AES Structured Cabling & Fiber RFP Template — 22 pages with interactive form fields, sent straight to your inbox. Scope of work, technical specs, deliverables, schedule, pricing, qualifications, and evaluation criteria. Free for primes, integrators, and enterprise IT teams.",
   alternates: { canonical: "https://www.apexsolutions.io/resources/rfp-template" },
 };
 
@@ -35,7 +35,7 @@ export default function RfpTemplateLeadMagnetPage() {
   return (
     <>
       <PageHero
-        eyebrow="Free Download · Lead Magnet"
+        eyebrow="Free Template · Sent by Email"
         h1="Structured Cabling RFP Template"
         sub="A 22-page editable RFP template covering scope, specs, deliverables, schedule, pricing, qualifications, and evaluation criteria. Built to procurement standards — drop in your project details and send it out."
         breadcrumb={[
@@ -106,7 +106,7 @@ export default function RfpTemplateLeadMagnetPage() {
             <div className="lg:sticky lg:top-28 bg-[#06284C] rounded-xl p-8 shadow-xl">
               <h2 className="text-white text-2xl font-bold mb-2">Get the Template</h2>
               <p className="text-[#7A9FC0] text-sm mb-6">
-                Enter your details and we&apos;ll send you straight to the download. No spam, no follow-up sales calls unless you ask for one.
+                Enter your details and we&apos;ll email the template straight to your inbox. No spam, no follow-up sales calls unless you ask for one.
               </p>
 
               <Suspense fallback={null}>
@@ -166,7 +166,7 @@ export default function RfpTemplateLeadMagnetPage() {
                 </button>
 
                 <p className="text-xs text-[#4E6575] text-center leading-relaxed pt-2">
-                  By submitting, you agree to receive the template via download and may occasionally hear from AES.
+                  By submitting, you agree to receive the template by email and may occasionally hear from AES.
                   We never sell or share your information. Unsubscribe anytime.
                 </p>
               </form>

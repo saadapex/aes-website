@@ -20,8 +20,7 @@ export default function PdfDownloadLink({ href, fileLabel, source, className, ch
   return (
     <a
       href={href}
-      target="_blank"
-      rel="noopener noreferrer"
+      download
       onClick={() => trackDownload(fileLabel, source)}
       className={className}
     >

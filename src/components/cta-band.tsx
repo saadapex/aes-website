@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { SITE } from "@/lib/utils";
+import TrackedContactLink from "@/components/tracked-contact-link";
+import type { ContactChannel } from "@/lib/track";
 
 export interface CtaButtonConfig {
   label: string;
@@ -10,17 +12,14 @@ export interface CtaButtonConfig {
 interface CtaBandProps {
   heading?: string;
   sub?: string;
-  /** Override the default primary button (orange). */
   primary?: CtaButtonConfig;
-  /** Override the default secondary button (outline). */
   secondary?: CtaButtonConfig;
 }
 
 /**
- * Site-wide closing CTA band. Defaults to sales-funnel CTAs
- * (Get a Quote / Book a Call). Pages that need candidate or
- * partner CTAs (Careers, Vendor Registration, etc.) pass
- * `primary` and `secondary` overrides to keep the journey on-topic.
+ * Site-wide closing CTA band. Defaults to sales-funnel CTAs (Get a Quote /
+ * Book a Call). Pages that need candidate or partner CTAs (Careers,
+ * Vendor Registration) pass `primary` and `secondary` overrides.
  */
 export default function CtaBand({
   heading = "Have scope? AES will execute it.",
@@ -31,18 +30,46 @@ export default function CtaBand({
   const p = primary  ?? { label: "Get a Quote →", href: "/contact" };
   const s = secondary ?? { label: "Book a Call →", href: SITE.calendly, external: true };
 
-  const renderBtn = (cfg: CtaButtonConfig, cls: string) =>
-    cfg.external || cfg.href.startsWith("http") || cfg.href.startsWith("mailto:") ? (
-      <a href={cfg.href} target={cfg.external ? "_blank" : undefined}
-        rel={cfg.external ? "noopener noreferrer" : undefined}
-        className={cls}>
-        {cfg.label}
-      </a>
-    ) : (
+  // Detect which "contact channel" a CTA points at so high-intent clicks
+  // (Calendly, mailto, tel) show up as `contact_click` events in GA4.
+  const detectChannel = (href: string): ContactChannel | null => {
+    if (href === SITE.calendly || href.includes("calendly.com")) return "calendly";
+    if (href.startsWith("mailto:")) return "email";
+    if (href.startsWith("tel:"))    return "phone";
+    if (href.startsWith("sms:"))    return "sms";
+    return null;
+  };
+
+  const renderBtn = (cfg: CtaButtonConfig, cls: string) => {
+    const channel = detectChannel(cfg.href);
+    if (channel) {
+      return (
+        <TrackedContactLink
+          href={cfg.href}
+          channel={channel}
+          source="cta_band"
+          external={cfg.external}
+          className={cls}
+        >
+          {cfg.label}
+        </TrackedContactLink>
+      );
+    }
+    if (cfg.external || cfg.href.startsWith("http")) {
+      return (
+        <a href={cfg.href} target={cfg.external ? "_blank" : undefined}
+          rel={cfg.external ? "noopener noreferrer" : undefined}
+          className={cls}>
+          {cfg.label}
+        </a>
+      );
+    }
+    return (
       <Link href={cfg.href} className={cls}>
         {cfg.label}
       </Link>
     );
+  };
 
   return (
     <section className="bg-[#006FB9] py-16 px-6">

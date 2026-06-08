@@ -1,12 +1,15 @@
 import { NextRequest, NextResponse } from "next/server";
 import { upsertHubSpotContact } from "@/lib/hubspot";
+import { sendPdfEmail } from "@/lib/email";
 
 const HS_TOKEN = process.env.HUBSPOT_ACCESS_TOKEN || "";
+const SITE_URL = "https://www.apexsolutions.io";
 
 // Map a resource slug to the actual PDF path on /public/assets/
-const RESOURCE_FILES: Record<string, { file: string; label: string }> = {
+const RESOURCE_FILES: Record<string, { file: string; filename: string; label: string }> = {
   "rfp-template": {
     file: "/assets/AES_Structured_Cabling_RFP_Template_v2.2.pdf",
+    filename: "AES_Structured_Cabling_RFP_Template_v2.2.pdf",
     label: "Structured Cabling RFP Template v2.2",
   },
 };
@@ -42,13 +45,27 @@ export async function POST(req: NextRequest) {
         phone,
         hs_lead_status:   "NEW",
         lifecyclestage:   "lead",
-        lead_type:        "Lead Magnet — Resource Download",
+        lead_type:        "Lead Magnet — Resource Request",
         service_interest: resourceConfig.label,
         message: `Requested resource: ${resourceConfig.label}\nRole: ${role}`,
       });
     }
 
-    // Redirect to the thank-you page that auto-triggers the download.
+    // Email the PDF to the lead instead of triggering a browser download.
+    const sent = await sendPdfEmail({
+      to: email,
+      firstName: firstname || "",
+      subject: `Your ${resourceConfig.label} from AES`,
+      resourceLabel: resourceConfig.label,
+      attachmentUrl: `${SITE_URL}${resourceConfig.file}`,
+      attachmentFilename: resourceConfig.filename,
+    });
+
+    if (!sent) {
+      return NextResponse.redirect(new URL(`/resources/${resource}?error=1`, req.url), 303);
+    }
+
+    // Redirect to the thank-you page that confirms email delivery.
     return NextResponse.redirect(
       new URL(`/resources/${resource}/thanks`, req.url),
       303,

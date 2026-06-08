@@ -227,7 +227,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
               <div className="bg-[#F4F7FA] rounded-xl p-6 border border-[#006FB9]/10">
                 <h3 className="text-[#06284C] font-bold mb-3">Download</h3>
                 <a href="/assets/Apex-Enterprise-Solutions-Capability-Statement.pdf"
-                  target="_blank" rel="noopener noreferrer"
+                  download
                   className="text-sm text-[#006FB9] hover:text-[#FF6B00] font-medium transition-colors">
                   ↓ Capability Statement PDF
                 </a>

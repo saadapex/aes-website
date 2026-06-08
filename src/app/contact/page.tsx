@@ -3,6 +3,7 @@ import { Suspense } from "react";
 import { Mail, Phone, MapPin, Linkedin, MessageSquare } from "lucide-react";
 import PageHero from "@/components/page-hero";
 import FormErrorBanner from "@/components/form-error-banner";
+import TrackedContactLink from "@/components/tracked-contact-link";
 import { SITE } from "@/lib/utils";
 
 export const metadata: Metadata = {
@@ -71,7 +72,7 @@ export default function ContactPage() {
           {/* Form \u2014 3 cols */}
           <div className="lg:col-span-3">
             <Suspense fallback={null}>
-              <FormErrorBanner message="Something went wrong submitting your request \u2014 please try again or email us directly at info@apexsolutions.io." />
+              <FormErrorBanner message="Something went wrong submitting your request — please try again or email us directly at info@apexsolutions.io." />
             </Suspense>
             <form action="/api/contact" method="POST" className="space-y-5">
               <div className="grid sm:grid-cols-2 gap-4">
@@ -162,33 +163,55 @@ export default function ContactPage() {
           <div className="lg:col-span-2 space-y-8">
             <div>
               <h3 className="text-[#06284C] font-bold text-lg mb-4">Or book a time directly</h3>
-              <a href={SITE.calendly} target="_blank" rel="noopener noreferrer" className="btn-primary w-full justify-center">
+              <TrackedContactLink
+                href={SITE.calendly}
+                channel="calendly"
+                source="contact_page"
+                className="btn-primary w-full justify-center"
+              >
                 Book a 15-Minute Scope Review &rarr;
-              </a>
+              </TrackedContactLink>
             </div>
             <div className="border-t border-gray-100 pt-6 space-y-4">
-              <a href={`mailto:${SITE.email}`} className="flex items-center gap-3 text-gray-700 hover:text-[#FF6B00] transition-colors">
+              <TrackedContactLink
+                href={`mailto:${SITE.email}`}
+                channel="email"
+                source="contact_page"
+                className="flex items-center gap-3 text-gray-700 hover:text-[#FF6B00] transition-colors"
+              >
                 <Mail size={16} className="text-[#006FB9]" /> {SITE.email}
-              </a>
+              </TrackedContactLink>
               <div className="flex items-center gap-3 text-gray-700">
                 <Phone size={16} className="text-[#006FB9] flex-shrink-0" />
-                <a href={`tel:+1${SITE.phone.replace(/\D/g, "")}`}
-                  className="hover:text-[#FF6B00] transition-colors">
+                <TrackedContactLink
+                  href={`tel:+1${SITE.phone.replace(/\D/g, "")}`}
+                  channel="phone"
+                  source="contact_page"
+                  className="hover:text-[#FF6B00] transition-colors"
+                >
                   {SITE.phone}
-                </a>
+                </TrackedContactLink>
                 <span className="text-gray-300">·</span>
-                <a href={`sms:+1${SITE.phone.replace(/\D/g, "")}`}
-                  className="inline-flex items-center gap-1 text-sm text-[#006FB9] hover:text-[#FF6B00] transition-colors">
+                <TrackedContactLink
+                  href={`sms:+1${SITE.phone.replace(/\D/g, "")}`}
+                  channel="sms"
+                  source="contact_page"
+                  className="inline-flex items-center gap-1 text-sm text-[#006FB9] hover:text-[#FF6B00] transition-colors"
+                >
                   <MessageSquare size={13} /> Text
-                </a>
+                </TrackedContactLink>
               </div>
               <div className="flex items-start gap-3 text-gray-700">
                 <MapPin size={16} className="text-[#006FB9] mt-0.5 flex-shrink-0" /> {SITE.address}
               </div>
-              <a href={SITE.linkedin} target="_blank" rel="noopener noreferrer"
-                className="flex items-center gap-3 text-gray-700 hover:text-[#FF6B00] transition-colors">
+              <TrackedContactLink
+                href={SITE.linkedin}
+                channel="linkedin"
+                source="contact_page"
+                className="flex items-center gap-3 text-gray-700 hover:text-[#FF6B00] transition-colors"
+              >
                 <Linkedin size={16} className="text-[#006FB9]" /> LinkedIn
-              </a>
+              </TrackedContactLink>
             </div>
           </div>
         </div>
