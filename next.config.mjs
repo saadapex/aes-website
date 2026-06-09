@@ -85,6 +85,11 @@ const legacyWixRedirects = [
 
   { source: "/blog-1", destination: "/blog" },
 
+  // --- Legacy Wix blog posts (/post/*) — retired AI-generated content.
+  // Catch-all 301 to the new blog index. Fires once the domain is fully
+  // cut over to Vercel (Wix currently still serves these paths). ---
+  { source: "/post/:slug*", destination: "/blog" },
+
   // --- Wix policy / legal page slugs ---
   { source: "/privacy-policy",        destination: "/privacy" },
   { source: "/terms-of-service",      destination: "/terms" },
