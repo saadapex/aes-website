@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { Suspense } from "react";
 import { MapPin, Briefcase, Clock, ChevronRight } from "lucide-react";
 import PageHero from "@/components/page-hero";
 import CtaBand from "@/components/cta-band";
-import { SITE } from "@/lib/utils";
+import FormErrorBanner from "@/components/form-error-banner";
 import { getActiveJobs, type Job } from "@/sanity/queries";
 
 export const metadata: Metadata = {
@@ -80,10 +80,7 @@ function JobCard({ job }: { job: Job }) {
         </div>
       )}
 
-      <a
-        href={`mailto:${SITE.email}?subject=Application: ${encodeURIComponent(job.title)}&body=Hi AES team,%0A%0AI'm applying for the ${encodeURIComponent(job.title)} role in ${encodeURIComponent(job.location)}.%0A%0A`}
-        className="btn-primary text-sm w-full justify-center"
-      >
+      <a href="#apply" className="btn-primary text-sm w-full justify-center">
         Apply for This Role <ChevronRight size={14} />
       </a>
     </div>
@@ -151,10 +148,7 @@ export default async function CareersPage() {
                 experienced, and dependable — send your resume and we&apos;ll reach out when scope
                 that fits your profile opens up.
               </p>
-              <a
-                href={`mailto:${SITE.email}?subject=Field Technician — General Application`}
-                className="btn-primary inline-flex justify-center text-base px-8"
-              >
+              <a href="#apply" className="btn-primary inline-flex justify-center text-base px-8">
                 Send Your Resume →
               </a>
               <p className="text-[#4E6575] text-sm mt-4">
@@ -192,20 +186,103 @@ export default async function CareersPage() {
               We work with a flexible network of trusted technicians. If you&apos;re certified,
               experienced, and dependable — we want to hear from you.
             </p>
-            <a
-              href={`mailto:${SITE.email}?subject=Field Technician Application`}
-              className="btn-primary w-full justify-center"
-            >
+            <a href="#apply" className="btn-primary w-full justify-center">
               Send Your Resume →
             </a>
           </div>
         </div>
       </section>
 
+      {/* Application form — uploads the resume and emails it straight to AES */}
+      <section id="apply" className="bg-[#F4F7FA] section-pad scroll-mt-28">
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-10">
+            <h2 className="text-[#06284C] text-3xl font-bold mb-3">Send Us Your Resume</h2>
+            <p className="text-[#1F2933] leading-relaxed max-w-xl mx-auto">
+              Attach your resume and tell us a little about yourself — it comes straight to our team.
+              We respond to every qualified submission and reach out when scope matches your profile.
+            </p>
+          </div>
+
+          <Suspense fallback={null}>
+            <FormErrorBanner message="We couldn't submit that — your resume may be over 8 MB or an unsupported file type (PDF, DOC, DOCX work best). Please try again, or email it to info@apexsolutions.io." />
+          </Suspense>
+
+          <form action="/api/careers" method="POST" encType="multipart/form-data" className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 space-y-5">
+            <div className="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label className="block text-sm font-semibold text-[#06284C] mb-1.5">Full Name *</label>
+                <input name="name" required type="text" placeholder="Jane Smith"
+                  className="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-[#006FB9] focus:ring-1 focus:ring-[#006FB9]" />
+              </div>
+              <div>
+                <label className="block text-sm font-semibold text-[#06284C] mb-1.5">Email *</label>
+                <input name="email" required type="email" placeholder="jane@email.com"
+                  className="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-[#006FB9] focus:ring-1 focus:ring-[#006FB9]" />
+              </div>
+            </div>
+
+            <div className="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label className="block text-sm font-semibold text-[#06284C] mb-1.5">Phone</label>
+                <input name="phone" type="tel" placeholder="(555) 000-0000"
+                  className="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-[#006FB9] focus:ring-1 focus:ring-[#006FB9]" />
+              </div>
+              <div>
+                <label className="block text-sm font-semibold text-[#06284C] mb-1.5">Role / Trade</label>
+                <select name="role"
+                  className="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-[#006FB9] focus:ring-1 focus:ring-[#006FB9] bg-white">
+                  <option value="">Select a role</option>
+                  <option>Structured Cabling Technician (Cat6 / Fiber)</option>
+                  <option>Data Center Rack &amp; Stack Technician</option>
+                  <option>Wireless AP Installation Technician</option>
+                  <option>Field Lead / Site Supervisor</option>
+                  <option>Project Manager (Infrastructure)</option>
+                  <option>Low-Voltage Subcontractor / Field Partner</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label className="block text-sm font-semibold text-[#06284C] mb-1.5">Location / Coverage Area</label>
+              <input name="location" type="text" placeholder="e.g. Dallas TX, Bay Area CA, all of Ontario"
+                className="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-[#006FB9] focus:ring-1 focus:ring-[#006FB9]" />
+            </div>
+
+            <div>
+              <label className="block text-sm font-semibold text-[#06284C] mb-1.5">Resume *</label>
+              <input
+                name="resume"
+                required
+                type="file"
+                accept=".pdf,.doc,.docx,.rtf,.txt,.odt"
+                className="w-full text-sm text-[#1F2933] border border-gray-200 rounded-lg px-4 py-2.5 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-[#06284C] file:text-white hover:file:bg-[#006FB9] cursor-pointer"
+              />
+              <p className="text-xs text-[#4E6575] mt-1.5">PDF, DOC, or DOCX · 8 MB max.</p>
+            </div>
+
+            <div>
+              <label className="block text-sm font-semibold text-[#06284C] mb-1.5">Anything else?</label>
+              <textarea name="message" rows={3} placeholder="Certifications (BICSI, OSHA, etc.), years of experience, availability..."
+                className="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-[#006FB9] focus:ring-1 focus:ring-[#006FB9] resize-none" />
+            </div>
+
+            <button type="submit" className="btn-primary w-full justify-center text-base">
+              Submit Application →
+            </button>
+            <p className="text-xs text-gray-400 text-center">
+              We respond to every qualified submission. Trouble uploading? Email{" "}
+              <a href="mailto:info@apexsolutions.io" className="text-[#006FB9] underline">info@apexsolutions.io</a>.
+            </p>
+          </form>
+        </div>
+      </section>
+
       <CtaBand
         heading="Experienced in the field? Let’s put you to work."
         sub="Send your resume or register as a field partner — we’ll be in touch when scope matches your skills."
-        primary={{ label: "Send Your Resume →", href: `mailto:${SITE.email}?subject=Field Technician Application`, external: true }}
+        primary={{ label: "Send Your Resume →", href: "#apply" }}
         secondary={{ label: "Register as a Field Partner →", href: "/vendor-registration" }}
       />
     </>

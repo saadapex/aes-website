@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { MailCheck } from "lucide-react";
+import { MailCheck, Download } from "lucide-react";
 import PageHero from "@/components/page-hero";
+import AutoDownload from "./auto-download";
+
+const PDF_PATH = "/assets/AES_Structured_Cabling_RFP_Template_v2.2.pdf";
+const PDF_FILENAME = "AES_Structured_Cabling_RFP_Template_v2.2.pdf";
 
 export const metadata: Metadata = {
-  title: "Your RFP Template Is On Its Way",
-  description: "The AES Structured Cabling RFP Template has been sent to your inbox.",
+  title: "Your RFP Template Is Ready",
+  description: "Download the AES Structured Cabling RFP Template — it's also on its way to your inbox.",
   robots: { index: false, follow: false },
   alternates: { canonical: "https://www.apexsolutions.io/resources/rfp-template/thanks" },
 };
@@ -13,10 +17,13 @@ export const metadata: Metadata = {
 export default function RfpThanksPage() {
   return (
     <>
+      {/* Kicks off the download automatically the moment this page loads. */}
+      <AutoDownload href={PDF_PATH} filename={PDF_FILENAME} />
+
       <PageHero
-        eyebrow="Check Your Inbox"
-        h1="Your RFP Template Is On Its Way"
-        sub="Thanks for the details. We've emailed the template to the address you provided — it should arrive within a few minutes."
+        eyebrow="Download Ready"
+        h1="Your RFP Template Is Ready"
+        sub="Thanks for the details. Your download should start automatically — and we've also emailed you a copy."
         breadcrumb={[
           { label: "Home", href: "/" },
           { label: "Resources", href: "/resources" },
@@ -28,18 +35,23 @@ export default function RfpThanksPage() {
         <div className="max-w-3xl mx-auto text-center">
 
           <div className="bg-[#F4F7FA] rounded-xl p-10 border border-gray-100 shadow-sm mb-10">
-            <MailCheck size={56} className="text-[#FF6B00] mx-auto mb-5" />
-            <h2 className="text-[#06284C] text-2xl font-bold mb-3">Sent to your inbox</h2>
-            <p className="text-[#1F2933] leading-relaxed">
-              The AES Structured Cabling &amp; Fiber RFP Template (v2.2) is on its way to the
-              email address you shared. Look for{" "}
-              <code className="text-xs bg-white px-2 py-1 rounded border border-gray-200">AES_Structured_Cabling_RFP_Template_v2.2.pdf</code>{" "}
-              attached to an email from <strong>info@apexsolutions.io</strong>.
+            <Download size={56} className="text-[#FF6B00] mx-auto mb-5" />
+            <h2 className="text-[#06284C] text-2xl font-bold mb-3">Your download is starting</h2>
+            <p className="text-[#1F2933] leading-relaxed mb-6">
+              The AES Structured Cabling &amp; Fiber RFP Template (v2.2) should download automatically.
+              If it didn&apos;t, use the button below.
             </p>
-            <p className="text-[#4E6575] text-sm leading-relaxed mt-4">
-              Don&apos;t see it? Check your spam or promotions folder — or email{" "}
-              <a href="mailto:info@apexsolutions.io" className="text-[#006FB9] hover:text-[#FF6B00] underline">info@apexsolutions.io</a>{" "}
-              and we&apos;ll send it directly.
+            <a
+              href={PDF_PATH}
+              download={PDF_FILENAME}
+              className="btn-primary inline-flex justify-center text-base px-8"
+            >
+              <Download size={16} /> Download the Template (PDF)
+            </a>
+            <p className="text-[#4E6575] text-sm leading-relaxed mt-6 flex items-center justify-center gap-2">
+              <MailCheck size={15} className="text-[#006FB9]" />
+              We also emailed a copy to the address you shared — check spam/promotions if you don&apos;t see it, or email{" "}
+              <a href="mailto:info@apexsolutions.io" className="text-[#006FB9] hover:text-[#FF6B00] underline">info@apexsolutions.io</a>.
             </p>
           </div>
 
@@ -49,7 +61,7 @@ export default function RfpThanksPage() {
               <li className="flex gap-4">
                 <span className="text-[#FF6B00] font-black text-xl flex-shrink-0">1</span>
                 <div>
-                  <strong className="text-[#06284C]">Open the attached PDF in Adobe Acrobat or any modern PDF reader.</strong>
+                  <strong className="text-[#06284C]">Open the PDF in Adobe Acrobat or any modern PDF reader.</strong>
                   <p className="text-sm text-[#4E6575] mt-1">The form fields are interactive — you can fill them in digitally and save.</p>
                 </div>
               </li>
