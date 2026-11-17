@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { guardBodySize, cleanText, emailText, FormValidationError } from "@/lib/form-security";
 
 const HS_TOKEN      = process.env.HUBSPOT_ACCESS_TOKEN || "";
 const BEEHIIV_KEY   = process.env.BEEHIIV_API_KEY || "";
@@ -6,8 +7,15 @@ const BEEHIIV_PUB   = process.env.BEEHIIV_PUBLICATION_ID || "";
 
 export async function POST(req: NextRequest) {
   try {
-    const { email, name } = await req.json();
-    if (!email) return NextResponse.json({ error: "Email required" }, { status: 400 });
+    guardBodySize(req, 4 * 1024);
+    const payload: unknown = await req.json();
+    if (!payload || typeof payload !== "object" || Array.isArray(payload)) {
+      throw new FormValidationError("Invalid newsletter payload");
+    }
+    const fields = payload as Record<string, unknown>;
+    if (fields.website) return NextResponse.json({ ok: true }); // bot trap
+    const email = emailText(fields.email);
+    const name = cleanText(fields.name ?? "", 120);
 
     const [firstname, ...rest] = (name || "").split(" ");
     const lastname = rest.join(" ");
@@ -26,7 +34,7 @@ export async function POST(req: NextRequest) {
               email,
               first_name:          firstname || "",
               last_name:           lastname  || "",
-              reactivate_existing: true,
+              reactivate_existing: false,
               send_welcome_email:  true,
               utm_source:          "website",
               utm_medium:          "popup",
@@ -66,6 +74,7 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json({ ok: true });
   } catch (e) {
+    if (e instanceof FormValidationError) return NextResponse.json({ error: "Invalid input" }, { status: 400 });
     console.error("Newsletter API error:", e);
     return NextResponse.json({ error: "Server error" }, { status: 500 });
   }
