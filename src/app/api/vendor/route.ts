@@ -1,21 +1,25 @@
 import { NextRequest, NextResponse } from "next/server";
 import { upsertHubSpotContact } from "@/lib/hubspot";
+import { guardBodySize, isHoneypotFilled, textField, emailField, listField } from "@/lib/form-security";
 
 const HS_TOKEN = process.env.HUBSPOT_ACCESS_TOKEN || "";
 
 export async function POST(req: NextRequest) {
   try {
+    guardBodySize(req, 32 * 1024);
     const data = await req.formData();
+    // Hidden bot-trap; avoid creating leads for obvious automated spam.
+    if (isHoneypotFilled(data)) return NextResponse.redirect(new URL("/thank-you", req.url), 303);
 
-    const name         = (data.get("name")         as string) || "";
-    const email        = (data.get("email")         as string) || "";
-    const company      = (data.get("company")       as string) || "";
-    const phone        = (data.get("phone")         as string) || "";
-    const businessType = (data.get("businessType")  as string) || "";
-    const coverage     = (data.get("coverage")      as string) || "";
-    const certs        = (data.get("certs")         as string) || "";
-    const notes        = (data.get("notes")         as string) || "";
-    const trades       = data.getAll("trades").join(", ");
+    const name = textField(data, "name", 120);
+    const email = emailField(data, "email");
+    const company = textField(data, "company", 160);
+    const phone = textField(data, "phone", 40);
+    const businessType = textField(data, "businessType", 120);
+    const coverage = textField(data, "coverage", 240);
+    const certs = textField(data, "certs", 400);
+    const notes = textField(data, "notes", 2200);
+    const trades       = listField(data, "trades");
 
     if (!email) return NextResponse.redirect(new URL("/vendor-registration?error=1", req.url), 303);
 
