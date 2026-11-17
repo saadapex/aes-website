@@ -21,6 +21,7 @@
  */
 
 import nodemailer from "nodemailer";
+import { escapeHtml, safeEmailSubject } from "@/lib/form-security";
 
 const FROM_NAME = "Apex Enterprise Solutions";
 
@@ -41,20 +42,20 @@ export async function sendPdfEmail(args: SendPdfEmailArgs): Promise<boolean> {
     return false;
   }
 
-  const greeting = args.firstName ? `Hi ${args.firstName},` : "Hi,";
+  const greeting = args.firstName ? `Hi ${escapeHtml(args.firstName)},` : "Hi,";
 
   const html = `
     <div style="font-family: Arial, Helvetica, sans-serif; color: #1F2933; max-width: 560px; margin: 0 auto;">
       <p>${greeting}</p>
-      <p>Thanks for your interest — your <strong>${args.resourceLabel}</strong> is ready to download:</p>
+      <p>Thanks for your interest — your <strong>${escapeHtml(args.resourceLabel)}</strong> is ready to download:</p>
       <p style="margin: 24px 0;">
-        <a href="${args.downloadUrl}"
+        <a href="${escapeHtml(args.downloadUrl)}"
            style="background:#FF6B00; color:#ffffff; text-decoration:none; font-weight:bold; padding:14px 26px; border-radius:8px; display:inline-block; font-size:15px;">
           Download the RFP Template (PDF) &rarr;
         </a>
       </p>
       <p style="font-size:13px; color:#4E6575;">If the button doesn't work, copy and paste this link into your browser:<br/>
-        <a href="${args.downloadUrl}" style="color:#006FB9; word-break:break-all;">${args.downloadUrl}</a>
+        <a href="${escapeHtml(args.downloadUrl)}" style="color:#006FB9; word-break:break-all;">${escapeHtml(args.downloadUrl)}</a>
       </p>
       <p>The form fields are interactive: open it in Adobe Acrobat or any modern PDF reader, drop in your project details, and send it out.</p>
       <p>If you'd like AES to review your scope or bid the work, just reply to this email or reach us at <a href="mailto:info@apexsolutions.io" style="color:#006FB9;">info@apexsolutions.io</a>.</p>
@@ -76,7 +77,7 @@ export async function sendPdfEmail(args: SendPdfEmailArgs): Promise<boolean> {
       from: `"${FROM_NAME}" <${user}>`,
       to: args.to,
       replyTo: `"${FROM_NAME}" <info@apexsolutions.io>`,
-      subject: args.subject,
+      subject: safeEmailSubject(args.subject),
       html,
     });
     return true;
@@ -116,15 +117,15 @@ export async function sendNotificationEmail(args: SendNotificationArgs): Promise
     .map(
       ([label, value]) => `
         <tr>
-          <td style="padding:8px 12px; border-bottom:1px solid #E5EAF0; font-weight:bold; color:#06284C; vertical-align:top; white-space:nowrap;">${label}</td>
-          <td style="padding:8px 12px; border-bottom:1px solid #E5EAF0; color:#1F2933;">${value.replace(/\n/g, "<br/>")}</td>
+          <td style="padding:8px 12px; border-bottom:1px solid #E5EAF0; font-weight:bold; color:#06284C; vertical-align:top; white-space:nowrap;">${escapeHtml(label)}</td>
+          <td style="padding:8px 12px; border-bottom:1px solid #E5EAF0; color:#1F2933;">${escapeHtml(value).replace(/\n/g, "<br/>")}</td>
         </tr>`,
     )
     .join("");
 
   const html = `
     <div style="font-family: Arial, Helvetica, sans-serif; color:#1F2933; max-width:600px; margin:0 auto;">
-      <h2 style="color:#06284C; font-size:18px;">${args.subject}</h2>
+      <h2 style="color:#06284C; font-size:18px;">${escapeHtml(args.subject)}</h2>
       <table style="border-collapse:collapse; width:100%; font-size:14px;">${rows}</table>
       <p style="color:#4E6575; font-size:12px; margin-top:20px;">Sent from the apexsolutions.io website.</p>
     </div>
@@ -142,7 +143,7 @@ export async function sendNotificationEmail(args: SendNotificationArgs): Promise
       from: `"${FROM_NAME} Website" <${user}>`,
       to: args.to || "info@apexsolutions.io",
       replyTo: args.replyTo,
-      subject: args.subject,
+      subject: safeEmailSubject(args.subject),
       html,
       attachments: args.attachments,
     });
