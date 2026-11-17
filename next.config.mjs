@@ -25,7 +25,7 @@ const securityHeaders = [
       // script-src adds LinkedIn Insight (snap.licdn.com), Microsoft Clarity
       // (*.clarity.ms), and Vercel Analytics/Speed Insights (va.vercel-scripts.com)
       // alongside the existing GA4 / HubSpot / Calendly / Giscus sources.
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.googletagmanager.com https://*.google-analytics.com https://js.hs-scripts.com https://js.hs-analytics.net https://js.hsadspixel.net https://js.hsleadflows.net https://js.hubspot.com https://js.usemessages.com https://assets.calendly.com https://giscus.app https://snap.licdn.com https://*.clarity.ms https://www.clarity.ms https://va.vercel-scripts.com",
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.googletagmanager.com https://*.google-analytics.com https://js.hs-scripts.com https://js.hs-analytics.net https://js.hsadspixel.net https://js.hsleadflows.net https://js.hubspot.com https://js.usemessages.com https://assets.calendly.com https://giscus.app https://snap.licdn.com https://*.clarity.ms https://www.clarity.ms https://va.vercel-scripts.com".replace("'unsafe-eval' ", process.env.NODE_ENV === "production" ? "" : "'unsafe-eval' "),
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://assets.calendly.com https://giscus.app",
       // img-src adds LinkedIn pixel (px.ads.linkedin.com / dc.ads.linkedin.com)
       // and Clarity asset hosts.
