@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { upsertHubSpotContact } from "@/lib/hubspot";
 import { sendPdfEmail } from "@/lib/email";
+import { guardBodySize, isHoneypotFilled, textField, emailField } from "@/lib/form-security";
 
 // nodemailer needs the Node.js runtime (not Edge). The email is now
 // lightweight (a link, not a 14.5MB attachment) so it returns quickly well
@@ -21,14 +22,16 @@ const RESOURCE_FILES: Record<string, { file: string; filename: string; label: st
 
 export async function POST(req: NextRequest) {
   try {
+    guardBodySize(req, 16 * 1024);
     const data = await req.formData();
+    if (isHoneypotFilled(data)) return NextResponse.redirect(new URL("/resources", req.url), 303);
 
-    const resource = (data.get("resource") as string) || "rfp-template";
-    const name     = (data.get("name")     as string) || "";
-    const email    = (data.get("email")    as string) || "";
-    const company  = (data.get("company")  as string) || "";
-    const role     = (data.get("role")     as string) || "";
-    const phone    = (data.get("phone")    as string) || "";
+    const resource = textField(data, "resource", 80) || "rfp-template";
+    const name = textField(data, "name", 120);
+    const email = emailField(data, "email");
+    const company = textField(data, "company", 160);
+    const role = textField(data, "role", 120);
+    const phone = textField(data, "phone", 40);
 
     const resourceConfig = RESOURCE_FILES[resource];
     if (!resourceConfig) {
