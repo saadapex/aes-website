@@ -75,6 +75,8 @@ export default function ContactPage() {
               <FormErrorBanner message="Something went wrong submitting your request — please try again or email us directly at info@apexsolutions.io." />
             </Suspense>
             <form action="/api/contact" method="POST" className="space-y-5">
+              {/* Accessible users never see this bot-trap field. */}
+              <input type="text" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" className="absolute -left-[10000px] w-px h-px opacity-0" />
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-semibold text-[#06284C] mb-1.5">Full Name *</label>
@@ -132,11 +134,7 @@ export default function ContactPage() {
                   className="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-[#006FB9] focus:ring-1 focus:ring-[#006FB9] resize-none" />
               </div>
 
-              <div>
-                <label className="block text-sm font-semibold text-[#06284C] mb-1.5">Upload RFP or BOM <span className="text-gray-400 font-normal">(optional)</span></label>
-                <input name="file" type="file" accept=".pdf,.doc,.docx,.xls,.xlsx"
-                  className="w-full text-sm text-gray-600 file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:bg-[#F4F7FA] file:text-[#06284C] file:font-semibold hover:file:bg-[#006FB9]/10" />
-              </div>
+              <p className="text-xs text-gray-500">Have an RFP or BOM? Mention it in your message and AES will provide a secure document-submission method. This form does not accept file uploads.</p>
 
               <label className="flex items-center gap-2 cursor-pointer">
                 <input type="checkbox" name="nda" className="w-4 h-4 accent-[#FF6B00]" />
