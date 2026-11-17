@@ -257,6 +257,8 @@ export default function PartnersPage() {
               <FormErrorBanner message="Something went wrong — please try again or contact us directly." />
             </Suspense>
             <form action="/api/partner" method="POST" className="space-y-5">
+              {/* Accessible users never see this bot-trap field. */}
+              <input type="text" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" className="absolute -left-[10000px] w-px h-px opacity-0" />
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-semibold text-[#06284C] mb-1.5">Full Name *</label>

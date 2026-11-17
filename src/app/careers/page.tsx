@@ -209,6 +209,8 @@ export default async function CareersPage() {
           </Suspense>
 
           <form action="/api/careers" method="POST" encType="multipart/form-data" className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 space-y-5">
+              {/* Accessible users never see this bot-trap field. */}
+              <input type="text" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" className="absolute -left-[10000px] w-px h-px opacity-0" />
             <div className="grid sm:grid-cols-2 gap-4">
               <div>
                 <label className="block text-sm font-semibold text-[#06284C] mb-1.5">Full Name *</label>

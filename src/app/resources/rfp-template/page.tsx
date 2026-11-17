@@ -114,6 +114,8 @@ export default function RfpTemplateLeadMagnetPage() {
               </Suspense>
 
               <form action="/api/lead-magnet" method="POST" className="space-y-4">
+              {/* Accessible users never see this bot-trap field. */}
+              <input type="text" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" className="absolute -left-[10000px] w-px h-px opacity-0" />
                 <input type="hidden" name="resource" value="rfp-template" />
 
                 <div>

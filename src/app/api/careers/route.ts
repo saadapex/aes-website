@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { upsertHubSpotContact } from "@/lib/hubspot";
 import { sendNotificationEmail } from "@/lib/email";
+import { guardBodySize, isHoneypotFilled, textField, emailField, verifiedResumeMime, FormValidationError } from "@/lib/form-security";
 
 // nodemailer needs the Node.js runtime (not Edge).
 export const runtime = "nodejs";
@@ -9,18 +10,19 @@ const HS_TOKEN = process.env.HUBSPOT_ACCESS_TOKEN || "";
 
 // Keep resume uploads sane — resumes are small. Reject anything over 8 MB.
 const MAX_RESUME_BYTES = 8 * 1024 * 1024;
-const ALLOWED_EXT = [".pdf", ".doc", ".docx", ".rtf", ".txt", ".odt"];
 
 export async function POST(req: NextRequest) {
   try {
+    guardBodySize(req, 9 * 1024 * 1024);
     const data = await req.formData();
+    if (isHoneypotFilled(data)) return NextResponse.redirect(new URL("/thank-you", req.url), 303);
 
-    const name     = (data.get("name")     as string) || "";
-    const email    = (data.get("email")    as string) || "";
-    const phone    = (data.get("phone")    as string) || "";
-    const role     = (data.get("role")     as string) || "";
-    const location = (data.get("location") as string) || "";
-    const message  = (data.get("message")  as string) || "";
+    const name = textField(data, "name", 120);
+    const email = emailField(data, "email");
+    const phone = textField(data, "phone", 40);
+    const role = textField(data, "role", 160);
+    const location = textField(data, "location", 240);
+    const message = textField(data, "message", 2200);
 
     if (!email) {
       return NextResponse.redirect(new URL("/careers?error=1#apply", req.url), 303);
@@ -33,20 +35,26 @@ export async function POST(req: NextRequest) {
     if (resume && typeof resume === "object" && "arrayBuffer" in resume) {
       const file = resume as File;
       if (file.size > 0) {
-        const lower = file.name.toLowerCase();
-        const okExt = ALLOWED_EXT.some((ext) => lower.endsWith(ext));
-        if (!okExt) {
-          return NextResponse.redirect(new URL("/careers?error=filetype#apply", req.url), 303);
-        }
         if (file.size > MAX_RESUME_BYTES) {
           return NextResponse.redirect(new URL("/careers?error=filesize#apply", req.url), 303);
         }
         const buf = Buffer.from(await file.arrayBuffer());
+        let verifiedMime: string;
+        try {
+          verifiedMime = verifiedResumeMime(file.name, buf);
+        } catch (error) {
+          if (error instanceof FormValidationError) {
+            return NextResponse.redirect(new URL("/careers?error=filetype#apply", req.url), 303);
+          }
+          throw error;
+        }
+        // WARNING: signature verification is NOT malware scanning. A quarantined
+        // scan-before-delivery workflow is required before production acceptance.
         attachments = [
           {
             filename: file.name,
             content: buf,
-            contentType: file.type || "application/octet-stream",
+            contentType: verifiedMime,
           },
         ];
         resumeNote = `Attached: ${file.name}`;

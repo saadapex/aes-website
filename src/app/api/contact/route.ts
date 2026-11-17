@@ -1,20 +1,24 @@
 import { NextRequest, NextResponse } from "next/server";
 import { upsertHubSpotContact } from "@/lib/hubspot";
+import { guardBodySize, isHoneypotFilled, textField, emailField, listField } from "@/lib/form-security";
 
 const HS_TOKEN = process.env.HUBSPOT_ACCESS_TOKEN || "";
 
 export async function POST(req: NextRequest) {
   try {
+    guardBodySize(req, 32 * 1024);
     const data = await req.formData();
+    // Hidden bot-trap; avoid creating leads for obvious automated spam.
+    if (isHoneypotFilled(data)) return NextResponse.redirect(new URL("/thank-you", req.url), 303);
 
-    const name      = (data.get("name")      as string) || "";
-    const email     = (data.get("email")     as string) || "";
-    const phone     = (data.get("phone")     as string) || "";
-    const company   = (data.get("company")   as string) || "";
-    const locations = (data.get("locations") as string) || "";
-    const startDate = (data.get("startDate") as string) || "";
-    const services  = data.getAll("services").join(", ");
-    const scope     = (data.get("scope")     as string) || "";
+    const name = textField(data, "name", 120);
+    const email = emailField(data, "email");
+    const phone = textField(data, "phone", 40);
+    const company = textField(data, "company", 160);
+    const locations = textField(data, "locations", 240);
+    const startDate = textField(data, "startDate", 120);
+    const services  = listField(data, "services");
+    const scope = textField(data, "scope", 2200);
 
     if (!email) return NextResponse.redirect(new URL("/contact?error=1", req.url), 303);
 
