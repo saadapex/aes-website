@@ -29,6 +29,8 @@ export default function VendorRegistrationPage() {
               <FormErrorBanner message="Something went wrong — please try again or email info@apexsolutions.io." />
             </Suspense>
             <form action="/api/vendor" method="POST" className="space-y-5">
+              {/* Accessible users never see this bot-trap field. */}
+              <input type="text" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" className="absolute -left-[10000px] w-px h-px opacity-0" />
 
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
