@@ -30,6 +30,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE}/case-studies/amazon-ap-refresh`,              changeFrequency: "yearly",  priority: 0.7 },
     { url: `${BASE}/resources`,                        changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/resources/rfp-template`,           changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE}/resources/field-execution-evidence`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/about`,                            changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/partners`,                         changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/careers`,                          changeFrequency: "monthly", priority: 0.6 },
