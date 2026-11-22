@@ -15,13 +15,15 @@ Scope: technical discovery, search-engine ownership, and company-listing consist
 ## Code changes in this review branch
 1. `src/app/sitemap.ts`: remove inaccurate render-time `lastModified = now` across unchanged pages; add live Sanity blog article URLs with their actual publish/update dates, when available, and revalidate the sitemap hourly.
 2. `src/app/contact/page.tsx`: unify ProfessionalService `@id` with existing Organization `#organization` identity. The homepage already emits Organization and WebSite JSON-LD.
-3. `src/app/layout.tsx`: correct leadership URLs in Organization structured data; the former `/about#leadership` anchor did not exist.
+3. `src/app/layout.tsx`: correct leadership URLs in Organization structured data; the former `/about#leadership` anchor did not exist. Also stage Search Console meta tag for URL-prefix property.
 
 ## Authenticated Google audit (2026-11-22)
 ### Google Search Console
 - The connected AES Google Workspace account did not display any existing verified apexsolutions.io or www.apexsolutions.io properties.
 - A Domain property setup for apexsolutions.io offered DNS TXT verification. A URL-prefix property for https://www.apexsolutions.io offered HTML file, meta tag, GA and GTM verification methods.
 - No Search Console index coverage, search performance, or prior sitemap submissions could be confirmed without successful verification.
+- Existing unverified Domain and URL-prefix setup flows are accessible in Search Console. GA verification failed because the homepage tracking code was not found; GTM verification failed because the container ID was not detected.
+- The website URL-prefix ownership meta verification tag has now been staged in `src/app/layout.tsx` on this review branch. It must be deployed before clicking Verify. Domain-level verification via DNS remains the recommended eventual option.
 - Do not claim a Search Console property has been verified or a sitemap submitted until confirmed.
 
 ### Google Business Profile
