@@ -6,7 +6,8 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/studio/", "/api/", "/thank-you"],
+        // /thank-you has its own noindex meta tag; allow crawling so bots can see it.
+        disallow: ["/studio/", "/api/"],
       },
     ],
     sitemap: "https://www.apexsolutions.io/sitemap.xml",
