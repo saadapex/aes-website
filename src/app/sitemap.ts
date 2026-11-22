@@ -3,6 +3,9 @@ import { getAllPosts } from "@/sanity/queries";
 
 const BASE = "https://www.apexsolutions.io";
 
+// Refresh CMS-driven sitemap entries periodically without a full deployment.
+export const revalidate = 3600;
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Use Sanity publication/update dates for articles, not the sitemap render date.
   const posts = await getAllPosts();
