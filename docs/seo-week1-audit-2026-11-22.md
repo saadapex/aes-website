@@ -120,3 +120,13 @@ Scope: technical discovery, search-engine ownership, and company-listing consist
 - Do not promise inclusion or ranking. Re-check the two submitted article URLs and sitemap ingestion after Google processes the changes.
 - Bing Webmaster access remains blocked at owner sign-in / GSC OAuth import; no Bing import confirmed. A secure connection flow has been given to the user, but it is not yet saved.
 - Google Business Profile remains unverified intentionally at owner's request. Do not request SMS or postcard, and do not start further verification.
+
+
+## Bing Webmaster Tools — verified and refreshed (November 22, 2026)
+- Existing site `https://www.apexsolutions.io/` confirmed in the connected Bing Webmaster account. No duplicate site added.
+- Bing HTML meta verification token (public website token) was staged and merged via [PR #4](https://github.com/saadapex/aes-website/pull/4); production Vercel deployment was successful. The live homepage metadata was independently checked to contain the exact `msvalidate.01` token.
+- Bing Webmaster's **Verify** action succeeded; ownership status is **Verified**.
+- Existing sitemap `https://www.apexsolutions.io/sitemap.xml` was already registered and previously reported Success with 29 discovered URLs, last crawled June 4, 2026.
+- Clicked **Re-submit** on the same existing sitemap entry once; Bing confirmed it was submitted for processing on **November 22, 2026**. Post-submit status **Processing**, previous last-crawl date still June 4, and previous discovered URL count still 29. No duplicate was created, and no errors/warnings appeared.
+- Actual live sitemap contains **39 URLs**. Wait for Bing to process it before claiming it has discovered the 10 additional blog articles or indexed them.
+- Google Business Profile physical verification remains explicitly on hold at user request; Bing changes did not affect it.
