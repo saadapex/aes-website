@@ -107,3 +107,16 @@ Scope: technical discovery, search-engine ownership, and company-listing consist
 - **Schema link fixed on this branch**: The article BlogPosting author URL referenced a nonexistent `/about#leadership` anchor; link Saad-authored content to the existing `/about#founder-letter` anchor, and avoid attaching that founder URL to unrelated authors.
 - **Robots/noindex conflict fixed on this branch**: The `/thank-you` page has `noindex`, but robots.txt disallowed crawling that path, preventing a bot from reading the directive. Allow crawling while retaining the page-specific `noindex`; keep /studio/ and /api/ disallowed.
 - Follow-on acceptance checks: Vercel build, merged production version, no private street address or unverified hours in homepage JSON-LD, article author link working, /thank-you crawlable but meta-noindex, 39 sitemap URLs still present. Do not claim resolved until inspected live.
+
+
+## Final follow-on implementation and evidence — Nov 22, 2026
+- PR #3 merged to main (squash commit `f4cb0135f57e7c1f4458d83abe3d01ae034df49a`) and Vercel status **success**. It removed the public private street address, approximate location coordinates, unconfirmed opening hours and price tier from homepage LocalBusiness JSON-LD, aligned the Organization reference, corrected Saad's BlogPosting author anchor, and removed robots disallow on the generic thank-you page while preserving its meta-noindex.
+- Production recheck: live `/robots.txt` allows `/thank-you` to be crawled and still disallows `/studio/` and `/api/`. Live `/thank-you` advertises `noindex, nofollow`. `/sitemap.xml` still emits 39 URLs. Vercel deployment success confirms build; the fetched semantic HTML did not include JSON-LD scripts, so verify schema in full rendered HTML if further confidence is needed.
+- Confirmed **per-URL Search Console URL Inspection** independent of unreliable aggregate classifications:
+  - `/` — **URL is on Google**.
+  - `/services/structured-cabling` — **URL is on Google**.
+  - `/blog/otdr-certification-fiber-acceptance` — **URL is not on Google**; crawled currently not indexed; last crawl Jul 13, 2026. Google displayed **Indexing requested** after a single explicit request on Nov 22.
+  - `/blog/rack-and-stack-best-practices` — **URL is not on Google**; crawled currently not indexed; last crawl Jul 13, 2026. Google displayed **Indexing requested** after a single explicit request on Nov 22.
+- Do not promise inclusion or ranking. Re-check the two submitted article URLs and sitemap ingestion after Google processes the changes.
+- Bing Webmaster access remains blocked at owner sign-in / GSC OAuth import; no Bing import confirmed. A secure connection flow has been given to the user, but it is not yet saved.
+- Google Business Profile remains unverified intentionally at owner's request. Do not request SMS or postcard, and do not start further verification.
