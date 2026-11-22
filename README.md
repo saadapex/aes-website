@@ -1,34 +1,44 @@
-# AES Website — Next.js 14
+# Apex Enterprise Solutions (AES) — IT Infrastructure Field Execution
 
-## Setup
+**[Apex Enterprise Solutions](https://www.apexsolutions.io/)** is a Sunnyvale, California–based service-area business supporting inside-plant IT infrastructure deployments for prime contractors, systems integrators, and enterprise infrastructure teams.
+
+AES focuses on physical field execution, not data-center hosting or managed colocation. Projects are scoped around customer-approved drawings, access conditions, qualified resources, inspection and closeout requirements.
+
+## Core Services
+
+| Service | Buyer information |
+| --- | --- |
+| [Structured cabling and fiber](https://www.apexsolutions.io/services/structured-cabling) | Copper and fiber deployment, labeling, test plans and project-specific acceptance records |
+| [Data-center rack-and-stack](https://www.apexsolutions.io/services/rack-and-stack) | Rack assembly, hardware deployment, cabling, asset records and turnover |
+| [Multi-site warehouse AP refresh](https://www.apexsolutions.io/services/ap-refresh) | High-bay installations, device-by-device tracking, shift planning and agreed validation |
+| [Smart hands and field support](https://www.apexsolutions.io/services/smart-hands) | On-site support, hardware refresh and decommissioning within approved scope |
+
+AES supports multiple U.S. markets and coordinates Canadian engagements through delivery partners. Work requiring regulated contractor licenses is subject to jurisdiction-specific qualification and contracting arrangements.
+
+## Project Experience and Buyer Evidence
+
+- [Published AES project case studies](https://www.apexsolutions.io/case-studies)
+- [Field execution evidence and quality controls](https://www.apexsolutions.io/resources/field-execution-evidence)
+- [Company capabilities](https://www.apexsolutions.io/capabilities)
+- [Contact AES / send a scope](https://www.apexsolutions.io/contact)
+
+Case studies and project summaries on the AES website are company-published accounts, not independent customer endorsements or acceptance certificates. Project-specific testing and documentation depend on the contract and customer requirements.
+
+## About this repository
+
+This public repository contains the code for the AES website at **https://www.apexsolutions.io/**. It is maintained as a web application, not an independent third-party company directory or a certificate of qualifications.
+
+### Development
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open http://localhost:3000
+Website framework: Next.js (App Router), TypeScript and Tailwind CSS.
 
-## ⚠️ Windows Folder Rename Required
+### Contact
 
-Next.js dynamic routes use `[slug]` folder names. Windows blocked creating brackets via shell.
-You need to manually rename these two folders before `npm run dev`:
-
-1. `src/app/case-studies/SLUG_PLACEHOLDER/` → rename to `[slug]`
-   (the `__slug__` copy is a backup — delete after rename)
-2. The industries `[slug]` folder was created successfully — no action needed there.
-
-## Stack
-- Next.js 14 App Router
-- Tailwind CSS (AES tokens configured in tailwind.config.ts)
-- shadcn/ui · Framer Motion · React Hook Form · Lucide React
-
-## Before Launch
-- [ ] Replace GTM-XXXXXXX in layout.tsx with real GTM ID
-- [ ] Replace LinkedIn Insight Tag ID in layout.tsx
-- [ ] Add CRM webhook URL to .env.local → NEXT_PUBLIC_CRM_WEBHOOK_URL
-- [ ] Confirm ISO cert status (9001, 22301, 45001) before publishing badges
-- [ ] Add real logo SVGs to /public/images/
-- [ ] Add capability-statement.pdf to /public/assets/
-- [ ] Rename case-studies/SLUG_PLACEHOLDER → [slug]
-- [ ] Add real hero photo and case study images
+Website: https://www.apexsolutions.io/  
+Company email: info@apexsolutions.io  
+Headquarters/service-area base: Sunnyvale, California (no public walk-in office).
