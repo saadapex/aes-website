@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 interface Resource {
   title: string;
-  type: "Template" | "Statement";
+  type: "Template" | "Statement" | "Evidence";
   description: string;
   pages?: string;
   audience: string;
@@ -26,6 +26,15 @@ interface Resource {
 }
 
 const RESOURCES: Resource[] = [
+  {
+    title: "Field Execution Evidence & Quality Controls",
+    type: "Evidence",
+    description: "AES-published project examples, a scope-driven QC framework, and the records primes can request before awarding cabling, rack-and-stack, or wireless work.",
+    audience: "Primes · Systems Integrators · Procurement",
+    href: "/resources/field-execution-evidence",
+    cta: "Review Evidence",
+    gated: false,
+  },
   {
     title: "Structured Cabling RFP Template",
     type: "Template",
@@ -77,9 +86,9 @@ export default function ResourcesPage() {
                 </div>
                 <p className="text-[#1F2933] text-sm leading-relaxed mb-4 flex-grow">{r.description}</p>
                 <p className="text-[#4E6575] text-xs uppercase tracking-wide mb-5">For: {r.audience}</p>
-                {r.gated ? (
+                {r.gated || !r.href.endsWith(".pdf") ? (
                   <Link href={r.href} className="btn-primary inline-flex items-center gap-2 text-sm self-start">
-                    <Download size={14} /> {r.cta} &rarr;
+                    {r.type === "Evidence" ? <FileText size={14} /> : <Download size={14} />} {r.cta} &rarr;
                   </Link>
                 ) : (
                   <a
