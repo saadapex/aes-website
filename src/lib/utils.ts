@@ -19,7 +19,7 @@ export const SITE = {
   tagline: "INFRASTRUCTURE. DEPLOYMENT. PERFORMANCE.",
   email: "info@apexsolutions.io",
   phone: "(669) 251-7810",
-  address: "1069 Duane Ct, Sunnyvale, CA 94085",
+  address: "Sunnyvale, CA — service-area business (no walk-in office)",
   calendly: "https://calendly.com/apexenterprisesolutions/meeting",
   linkedin: "https://www.linkedin.com/company/apexenterprisesolutions/",
   twitter: "https://x.com/apexensolutions",
