@@ -73,10 +73,9 @@ const organizationSchema = {
   telephone: "+1-669-251-7810",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "1069 Duane Ct",
+    // Only publish the city and region: AES travels to customer sites and does not accept visitors.
     addressLocality: "Sunnyvale",
     addressRegion: "CA",
-    postalCode: "94085",
     addressCountry: "US",
   },
   areaServed: [
