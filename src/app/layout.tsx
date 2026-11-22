@@ -105,7 +105,7 @@ const organizationSchema = {
       name: "Saad Usmani",
       jobTitle: "Founder & CEO",
       worksFor: { "@id": "https://www.apexsolutions.io/#organization" },
-      url: "https://www.apexsolutions.io/about#leadership",
+      url: "https://www.apexsolutions.io/about#founder-letter",
       sameAs: ["https://www.linkedin.com/in/saadusmani/"],
     },
     {
@@ -114,7 +114,7 @@ const organizationSchema = {
       name: "Vinod Bharwani",
       jobTitle: "Chief Operating Officer",
       worksFor: { "@id": "https://www.apexsolutions.io/#organization" },
-      url: "https://www.apexsolutions.io/about#leadership",
+      url: "https://www.apexsolutions.io/capabilities",
     },
   ],
 };
