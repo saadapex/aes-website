@@ -30,7 +30,9 @@ Scope: technical discovery, search-engine ownership, and company-listing consist
 - The connected AES Workspace account has manager access to an existing Apex Enterprise Solutions business listing; the listing displays **Get verified** and is not fully verified.
 - The profile visibly lacks a selected business category.
 - Website is listed as http://www.apexsolutions.io/ instead of HTTPS; listed hours are 24 hours.
-- 1069 Duane Ct, Sunnyvale, CA 94085 is publicly visible; determine whether AES actually receives customers on-site before continuing with verification or changes to address visibility.
+- AES confirmed it does not receive any customers at 1069 Duane Ct. Google guidance is to use a service-area listing and not publicly show the street address.
+- 2026-11-22: On the existing managed Google Business Profile, disabled **Show business address to customers** and saved the edit. Google accepted the change but displays **Your edits will be visible once verified**; public removal is therefore pending verification. The backend address was preserved for verification.
+- Existing profile service areas Sunnyvale, Santa Clara, San Jose, and Palo Alto were retained unchanged.
 - Phone (669) 251-7810 matches website; no same-address duplicate was found in this check.
 - Profile description currently references power distribution and data center builds; amend later to emphasize appropriately licensed / in-scope inside-plant cabling, racks, AP rollouts and field support.
 - No listing changes made. Verify exact business category, true operating hours and storefront/service-area classification with AES before editing.
