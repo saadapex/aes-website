@@ -17,6 +17,22 @@ Scope: technical discovery, search-engine ownership, and company-listing consist
 2. `src/app/contact/page.tsx`: unify ProfessionalService `@id` with existing Organization `#organization` identity. The homepage already emits Organization and WebSite JSON-LD.
 3. `src/app/layout.tsx`: correct leadership URLs in Organization structured data; the former `/about#leadership` anchor did not exist.
 
+## Authenticated Google audit (2026-11-22)
+### Google Search Console
+- The connected AES Google Workspace account did not display any existing verified apexsolutions.io or www.apexsolutions.io properties.
+- A Domain property setup for apexsolutions.io offered DNS TXT verification. A URL-prefix property for https://www.apexsolutions.io offered HTML file, meta tag, GA and GTM verification methods.
+- No Search Console index coverage, search performance, or prior sitemap submissions could be confirmed without successful verification.
+- Do not claim a Search Console property has been verified or a sitemap submitted until confirmed.
+
+### Google Business Profile
+- The connected AES Workspace account has manager access to an existing Apex Enterprise Solutions business listing; the listing displays **Get verified** and is not fully verified.
+- The profile visibly lacks a selected business category.
+- Website is listed as http://www.apexsolutions.io/ instead of HTTPS; listed hours are 24 hours.
+- 1069 Duane Ct, Sunnyvale, CA 94085 is publicly visible; determine whether AES actually receives customers on-site before continuing with verification or changes to address visibility.
+- Phone (669) 251-7810 matches website; no same-address duplicate was found in this check.
+- Profile description currently references power distribution and data center builds; amend later to emphasize appropriately licensed / in-scope inside-plant cabling, racks, AP rollouts and field support.
+- No listing changes made. Verify exact business category, true operating hours and storefront/service-area classification with AES before editing.
+
 ## Still requires authenticated access
 ### Google Search Console
 1. Sign in to https://search.google.com/search-console
