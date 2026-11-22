@@ -18,7 +18,8 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 // Public Search Console URL-prefix verification token generated for AES on 2026-11-22.
 // Vercel may override it with a refreshed verified token via environment variable.
 const GSC_TOKEN  = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "iSHKYGBWudPHA6VnLdRfDDJtrvduqpeeDClsH7yKaUY";
-const BING_TOKEN = process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION   || "";
+// Bing Webmaster Tools token for the existing www AES property; Vercel env can override.
+const BING_TOKEN = process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION || "DC81F7C1AFB8707410048A9AF9DD8D74";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.apexsolutions.io"),
