@@ -118,3 +118,24 @@ Example public pages:
 **Google Search Console URL Inspection:** Newly published \`/resources/field-execution-evidence\` was reported **URL unknown to Google / not indexed**, as expected for a just-published URL. A user-initiated Request Indexing attempt triggered a live test but Google displayed: **"Oops! Something went wrong - We had a problem submitting your indexing request. Please try again later."** This is **not a successful submission**. The two older service URLs were not inspected in that same browser run due to its step budget. Source: https://agent.tinyfish.ai/runs/bc52c7ba-36aa-4d7a-8725-1e6ca5302836.
 
 **Next valid comparison point:** After Search Console records a new crawl/recognition of the resource and service pages, rerun the same buyer prompts and log presence + cited sources. Indexing is not guaranteed, and short-term position changes are not attributable to this release.
+
+
+## External-visibility actions and source hygiene — November 22, 2026
+
+This section records **external listing and partner-visibility work**, distinct from AI model recommendations and internal website edits. A submitted listing is not a live backlink.
+
+| Surface | Status verified this date | Next action / limits |
+|---|---|---|
+| [AES LinkedIn](https://www.linkedin.com/company/apexenterprisesolutions/) | Existing company-owner-administered profile updated: service-area/no-walk-in-office wording, IT Services and IT Consulting category, HTTPS website, and 10 service-related specialties | Recheck public indexing after LinkedIn search cache refresh; no street address was present in owner edit fields |
+| [AES GitHub website repository](https://github.com/saadapex/aes-website) | Public README updated and merged with accurate buyer-facing services, case study and contact links | Owner-controlled public reference, **not independent corroboration** |
+| [Data Center Contractors Hub](https://datacentercontractorshub.com/) | Free AES structured-cabling listing submitted, email confirmed, receipt #000008; **editorial review pending**; public search returns no AES entry | Check whether eventually publicly published. Do not duplicate submission or buy upsells |
+| [DataCenterUPS](https://datacenterups.com/) | Free basic contractor listing request submitted via site's contact form; explicit success confirmation and promise to review; **not publicly live** | Check business inbox response and verify published URL/category/HTTPS link if approved |
+| [NORAMARK AES page](https://www.noramark.com/apex-enterprise-solutions/) | An existing third-party profile is visible, correctly says "Service Provider" in body, but browser title says "Manufacturer" and official Website field says "N/A" | Claim/edit requires verified account. No correction submitted and no login/account created. Lower priority because platform primarily serves manufacturing firms |
+| [PrivCo AES profile](https://www.privco.com/company/apex-enterprise-solutions) | Existing public summary describes AES's infrastructure field-execution services and Sunnyvale base | No owner edit undertaken; public listing not independently validated as an endorsement |
+| [Karavan Technology partner page](https://gokaravan.com/partner) and [Inventiv Technology](https://inventivtechnology.com/) | Credible potential *partner-controlled* domains; AES homepage already publishes named testimonials from Karavan and Inventiv | A reciprocal, voluntary AES service-subcontractor profile/link would require partner cooperation and prior messaging approval; **no emails or requests sent** |
+
+**Submission controls:** Public business email \`info@apexsolutions.io\`, business telephone, site domain and **Sunnyvale, CA only** were used where needed. No customer-facing street, questionable third-party certifications/contractor licenses, paid upgrades or private customer records were submitted. Both directory sites make their own publication decisions; SEO/referral impact cannot be inferred without published profiles and traffic/referral evidence.
+
+**Discovery and brand hygiene:** Public corporate registry mirrors may still reproduce corporate filing street address independently of the company's service-area marketing profile. Do not confuse a legal registered address with a client walk-in site, and do not re-publish it on marketing listings. No claim is made that a third-party public legal filing can be changed solely by editing the website.
+
+**Scheduling note:** Attempted to create a limited daily condition monitor for publication/approval of these two pending listings. The automation system refused creation because all five active task slots were in use. **No new scheduled watcher exists**, and no existing AES automation was modified. Manual public checks and email-reply review can continue in future requested turns.
