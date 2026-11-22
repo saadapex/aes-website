@@ -12,11 +12,12 @@ import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
-// Search Console / Bing Webmaster verification tokens are env-driven so we
-// can rotate them without code changes. Either may be empty (Next will skip
-// emitting the meta tag) - set them in Vercel project env vars once you've
-// claimed the property.
-const GSC_TOKEN  = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "";
+// The Google URL-prefix property can be verified after deployment using a
+// public verification meta tag, with env override available for token rotation.
+// Bing verification remains env-driven and optional until the account is connected.
+// Public Search Console URL-prefix verification token generated for AES on 2026-11-22.
+// Vercel may override it with a refreshed verified token via environment variable.
+const GSC_TOKEN  = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "iSHKYGBWudPHA6VnLdRfDDJtrvduqpeeDClsH7yKaUY";
 const BING_TOKEN = process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION   || "";
 
 export const metadata: Metadata = {
@@ -72,10 +73,9 @@ const organizationSchema = {
   telephone: "+1-669-251-7810",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "1069 Duane Ct",
+    // Only publish the city and region: AES travels to customer sites and does not accept visitors.
     addressLocality: "Sunnyvale",
     addressRegion: "CA",
-    postalCode: "94085",
     addressCountry: "US",
   },
   areaServed: [
@@ -105,7 +105,7 @@ const organizationSchema = {
       name: "Saad Usmani",
       jobTitle: "Founder & CEO",
       worksFor: { "@id": "https://www.apexsolutions.io/#organization" },
-      url: "https://www.apexsolutions.io/about#leadership",
+      url: "https://www.apexsolutions.io/about#founder-letter",
       sameAs: ["https://www.linkedin.com/in/saadusmani/"],
     },
     {
@@ -114,7 +114,7 @@ const organizationSchema = {
       name: "Vinod Bharwani",
       jobTitle: "Chief Operating Officer",
       worksFor: { "@id": "https://www.apexsolutions.io/#organization" },
-      url: "https://www.apexsolutions.io/about#leadership",
+      url: "https://www.apexsolutions.io/capabilities",
     },
   ],
 };

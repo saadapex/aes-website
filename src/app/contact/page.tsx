@@ -17,17 +17,15 @@ const localBusinessSchema = {
   "@type": "ProfessionalService",
   name: "Apex Enterprise Solutions",
   image: "https://www.apexsolutions.io/images/og-image.png",
-  "@id": "https://www.apexsolutions.io/#org",
+  "@id": "https://www.apexsolutions.io/#organization",
   url: "https://www.apexsolutions.io",
   telephone: "+1-669-251-7810",
   email: "info@apexsolutions.io",
   priceRange: "$$",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "1069 Duane Ct",
     addressLocality: "Sunnyvale",
     addressRegion: "CA",
-    postalCode: "94085",
     addressCountry: "US",
   },
   areaServed: [
