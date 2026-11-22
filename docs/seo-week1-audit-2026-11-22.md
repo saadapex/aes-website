@@ -13,8 +13,9 @@ Scope: technical discovery, search-engine ownership, and company-listing consist
 - A business search result identifies AES in Sunnyvale with the published phone and address; ownership and verification of Google/Bing business listings are NOT known.
 
 ## Code changes in this review branch
-1. `src/app/sitemap.ts`: remove inaccurate render-time `lastModified = now` across unchanged pages; add live Sanity blog article URLs with their actual publish/update dates, when available.
+1. `src/app/sitemap.ts`: remove inaccurate render-time `lastModified = now` across unchanged pages; add live Sanity blog article URLs with their actual publish/update dates, when available, and revalidate the sitemap hourly.
 2. `src/app/contact/page.tsx`: unify ProfessionalService `@id` with existing Organization `#organization` identity. The homepage already emits Organization and WebSite JSON-LD.
+3. `src/app/layout.tsx`: correct leadership URLs in Organization structured data; the former `/about#leadership` anchor did not exist.
 
 ## Still requires authenticated access
 ### Google Search Console
