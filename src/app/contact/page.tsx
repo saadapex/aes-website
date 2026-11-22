@@ -24,10 +24,8 @@ const localBusinessSchema = {
   priceRange: "$$",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "1069 Duane Ct",
     addressLocality: "Sunnyvale",
     addressRegion: "CA",
-    postalCode: "94085",
     addressCountry: "US",
   },
   areaServed: [
