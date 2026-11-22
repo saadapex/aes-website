@@ -97,7 +97,9 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
     author: {
       "@type": "Person",
       name: post.author,
-      url: "https://www.apexsolutions.io/about#leadership",
+      ...(post.author === "Saad Usmani"
+        ? { url: "https://www.apexsolutions.io/about#founder-letter" }
+        : {}),
     },
     publisher: {
       "@type": "Organization",
