@@ -94,3 +94,27 @@ Example public pages:
 6. **Separate workflow**: Google Business Profile physical verification is on hold at the owner's request. Do not initiate SMS/postcard/video verification or publish the private address.
 
 **Audit notes:** Search and AI recommendation responses can contain inaccuracies; reported competitor qualifications are observations, not independently verified facts. Keep exact prompts and model/session differences in future comparisons.
+
+
+## Post-publication deployment and immediate smoke retest — November 22, 2026
+
+**Code release:** [PR #5](https://github.com/saadapex/aes-website/pull/5), merged to main, squash commit \`5e9402f46748286d18a2d2afc0335787e4eb9d20\`. Vercel deployment status **success**.
+
+**Live acceptance checks:**
+- https://www.apexsolutions.io/resources/field-execution-evidence is now live, self-canonical and \`index, follow\`. It links four existing AES-published case studies and qualifies their evidence status.
+- https://www.apexsolutions.io/services/structured-cabling and https://www.apexsolutions.io/services/ap-refresh contain new scope-specific acceptance/playbook content and link to the evidence page. Both are live, self-canonical and \`index, follow\`.
+- https://www.apexsolutions.io/resources links to the new resource.
+- Live https://www.apexsolutions.io/sitemap.xml now returns **40 URLs** (39 prior + one evidence resource).
+
+**Retest methodology:** Re-ran the exact same *unbranded* Google AI Mode Q1 and Q2 via \`udm=50\` immediately after production deployment. These are only smoke tests: **search engines have not yet confirmed recrawling the new content**, and model responses are stochastic / potentially personalized.
+
+| Exact prompt | Initial AI Mode top five (first test) | Immediate post-deploy top five | Spontaneous AES mention? |
+|---|---|---|---|
+| Q1: Bay Area physical cabling + rack-and-stack + wireless execution | Access Cabling; Signal Solutions; MDC Low Voltage; Infinite Networks; Data Infrastructure Solutions | Access Cabling; Infinite Networks; Signal Solutions; Zencom Cabling Solutions; Claw Communications | No → No |
+| Q2: nationwide multi-site warehouse AP refresh + cabling | TechLink Services; IES Communications; SRS Networks; TailWind; Globalcom Technologies | Matrix Technology Group; SRS Networks; QuadPoint; National Data Contractor; Globalcom Technologies | No → No |
+
+**Direct response references:** [Q1](https://agent.tinyfish.ai/runs/1c57479f-bd3e-44bf-8d9f-1e3bc2ccf997) and [Q2](https://agent.tinyfish.ai/runs/1da8b99a-b7b1-47f5-bfb3-05c40667b08c). Distinguish generated answers from organic listings. Do not claim improvement, regression, stable competitor rank or causal impact from these immediate snapshots.
+
+**Google Search Console URL Inspection:** Newly published \`/resources/field-execution-evidence\` was reported **URL unknown to Google / not indexed**, as expected for a just-published URL. A user-initiated Request Indexing attempt triggered a live test but Google displayed: **"Oops! Something went wrong - We had a problem submitting your indexing request. Please try again later."** This is **not a successful submission**. The two older service URLs were not inspected in that same browser run due to its step budget. Source: https://agent.tinyfish.ai/runs/bc52c7ba-36aa-4d7a-8725-1e6ca5302836.
+
+**Next valid comparison point:** After Search Console records a new crawl/recognition of the resource and service pages, rerun the same buyer prompts and log presence + cited sources. Indexing is not guaranteed, and short-term position changes are not attributable to this release.
