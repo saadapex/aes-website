@@ -18,7 +18,7 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "LocalBusiness",
-      "@id": "https://www.apexsolutions.io/#business",
+      "@id": "https://www.apexsolutions.io/#organization",
       name: "Apex Enterprise Solutions",
       url: "https://www.apexsolutions.io",
       logo: "https://www.apexsolutions.io/images/AES_Option3_Primary_Full_Logo_No_Background.png",
@@ -26,31 +26,14 @@ const jsonLd = {
       description: "IT infrastructure deployment company supporting fiber, structured cabling, rack-and-stack, and AI/data center deployments across North America.",
       telephone: "+16692517810",
       email: "info@apexsolutions.io",
+      // AES is a service-area business, not a customer-facing storefront.
+      // Do not expose its private mailing address, precise coordinates, or unconfirmed hours.
       address: {
         "@type": "PostalAddress",
-        streetAddress: "1069 Duane Ct",
         addressLocality: "Sunnyvale",
         addressRegion: "CA",
-        postalCode: "94085",
         addressCountry: "US",
       },
-      // Sunnyvale HQ coordinates — helps LLMs and Local Pack tie the entity to a city.
-      geo: {
-        "@type": "GeoCoordinates",
-        latitude: 37.3852,
-        longitude: -122.0089,
-      },
-      // Field execution is appointment-based across U.S. + Canada; office hours
-      // here represent the AES coordination/sales window, not field availability.
-      openingHoursSpecification: [
-        {
-          "@type": "OpeningHoursSpecification",
-          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-          opens: "08:00",
-          closes: "18:00",
-        },
-      ],
-      priceRange: "$$",
       areaServed: ["United States", "Canada"],
       sameAs: [
         "https://www.linkedin.com/company/apexenterprisesolutions/",
@@ -73,7 +56,7 @@ const jsonLd = {
       "@id": "https://www.apexsolutions.io/#website",
       url: "https://www.apexsolutions.io",
       name: "Apex Enterprise Solutions",
-      publisher: { "@id": "https://www.apexsolutions.io/#business" },
+      publisher: { "@id": "https://www.apexsolutions.io/#organization" },
     },
   ],
 };
