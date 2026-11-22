@@ -7,8 +7,8 @@ import CaseStudyCard from "@/components/case-study-card";
 import { CASE_STUDIES } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: "Structured Cabling — Copper & Fiber Installation",
-  description: "Copper and fiber structured cabling installation across the U.S. and Canada. OTDR testing, as-builts, and closeout documentation included on every project.",
+  title: "Data Center Structured Cabling & Fiber Acceptance",
+  description: "Copper and fiber data center cabling, OTDR/OLTS acceptance planning, labeling, installation and project-specific closeout for primes and integrators.",
   alternates: { canonical: "https://www.apexsolutions.io/services/structured-cabling" },
 };
 
@@ -16,15 +16,15 @@ const scope = [
   "Site survey and pathway design; permitting support",
   "CAT6/6A copper runs and terminations",
   "Single-mode and multi-mode fiber pulls, field-terminated and fusion-spliced where required",
-  "Fiber tested with OTDR and power meter per approved scope; copper certified with Fluke DSX or equivalent; labeling to owner-approved ANSI/TIA-606 schema",
+  "Contract-specified testing: OTDR, OLTS/power meter, polarity, continuity or copper certification as required by the approved acceptance plan",
   "Rack dressing and documentation; freezer/cooler and high-bay experience",
-  "Test reports, label schema, as-builts, and closeout pack",
+  "Link IDs, test results, as-builts, punch closure and turnover records aligned to the contracted scope",
 ];
 const kpis = [
-  "Fiber runs tested with OTDR and power meter per approved scope; copper links certified with approved field tester",
+  "Acceptance criteria and required test methods confirmed before field testing",
   "ANSI/TIA-606 (or owner-approved) labeling on cables, panels, and outlets",
   "Installs dressed, documented, and site-cleaned before we leave",
-  "Closeout pack delivered at handover — not chased after",
+  "Contract-required closeout records and punch items reconciled at handover",
 ];
 const deliverables = ["Test Reports", "Label Schema", "As-Builts", "Closeout Pack"];
 
@@ -32,8 +32,8 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
   "name": "Structured Cabling",
-  "description": "Copper and fiber structured cabling installation across the U.S. and Canada. OTDR testing, as-builts, and closeout documentation on every project.",
-  "provider": { "@type": "LocalBusiness", "name": "Apex Enterprise Solutions", "url": "https://www.apexsolutions.io" },
+  "description": "Data center and telecom structured cabling, copper and fiber installation, testing and closeout per approved scope for primes and systems integrators.",
+  "provider": { "@id": "https://www.apexsolutions.io/#organization" },
   "areaServed": ["United States", "Canada"],
   "url": "https://www.apexsolutions.io/services/structured-cabling",
 };
@@ -44,8 +44,8 @@ const faq = [
     a: "Yes — the majority of AES engagements are as a subcontract execution partner to prime contractors, systems integrators, and managed service providers. We bring our own supervision, documentation standards, and closeout deliverables to every engagement.",
   },
   {
-    q: "What certifications and documentation do you deliver at project closeout?",
-    a: "Per approved scope, AES delivers OTDR trace files and power meter results on fiber runs, link certification reports from a Fluke DSX or equivalent field tester on copper, labeling records aligned with the ANSI/TIA-606 (or owner-approved) schema, and full as-built documentation. The complete closeout pack is delivered at handover — not chased after.",
+    q: "What testing records and closeout evidence can be specified?",
+    a: "The acceptance plan identifies required instruments, limits, test methods, and deliverables before work starts. Depending on approved scope, records may include OTDR trace files, OLTS or power meter results, polarity verification, copper certification from a suitable field tester, ANSI/TIA-606 or owner-approved labeling logs, as-builts and punch-list closure. Actual results and customer sign-off are project-specific.",
   },
   {
     q: "What cable categories and fiber types does AES install?",
@@ -53,7 +53,7 @@ const faq = [
   },
   {
     q: "How long does a structured cabling project typically take?",
-    a: "A typical network comms room with 100–200 runs can be completed in 2–5 days. Larger multi-floor or multi-site deployments are scoped individually with milestone timelines. We provide daily progress updates throughout.",
+    a: "Timelines depend on pathway readiness, cable counts and lengths, active-facility access, approved testing methods, and coordination with other trades. AES develops a milestone and crew plan from the site survey and confirmed project scope rather than promising a generic installation duration.",
   },
 ];
 
@@ -76,7 +76,7 @@ export default function StructuredCablingPage() {
       <PageHero
         eyebrow="Service"
         h1="Structured Cabling — Copper &amp; Fiber"
-        sub="CAT6/6A copper and fiber runs executed to spec — signal-certified, labeled, and fully documented at handover. From network comms rooms to hyperscale data halls."
+        sub="Copper and fiber installation for data centers, telecom rooms and enterprise sites — with defined acceptance criteria, test evidence and documented turnover to the approved scope."
         cta={{ label: "Request a Site Walk →", href: "/contact" }}
         breadcrumb={[
           { label: "Home", href: "/" },
@@ -124,6 +124,65 @@ export default function StructuredCablingPage() {
                 </span>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section className="bg-[#F4F7FA] section-pad">
+        <div className="max-w-7xl mx-auto">
+          <div className="max-w-4xl mb-9">
+            <p className="text-[#006FB9] text-xs font-semibold uppercase tracking-widest mb-2">
+              Data center fiber acceptance
+            </p>
+            <h2 className="text-[#06284C] text-3xl font-bold mb-4">
+              What an acceptance-ready cabling package should prove
+            </h2>
+            <p className="text-[#1F2933] leading-relaxed">
+              An OTDR screenshot alone is not a handover. The prime and owner need a traceable
+              connection between the approved cable schedule, the installed link, its acceptance
+              criteria, the recorded measurement and any dispositioned punch item.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+            {[
+              {
+                name: "Scope and test plan",
+                detail: "Approved cable schedule, fiber type, end points, test wavelengths, loss budget and witness points.",
+              },
+              {
+                name: "Installation traceability",
+                detail: "Cable and port IDs, route drawings, polarity, label scheme and photos where permitted.",
+              },
+              {
+                name: "Instrument evidence",
+                detail: "Specified copper results, OLTS and/or OTDR trace files with pass/fail criteria and retest records.",
+              },
+              {
+                name: "Handover control",
+                detail: "As-built changes, exceptions, signed punch disposition and customer acceptance as required.",
+              },
+            ].map((item) => (
+              <div key={item.name} className="rounded-xl bg-white border border-gray-100 p-6">
+                <h3 className="text-[#06284C] font-bold text-lg mb-3">{item.name}</h3>
+                <p className="text-[#1F2933] text-sm leading-relaxed">{item.detail}</p>
+              </div>
+            ))}
+          </div>
+          <p className="text-[#4E6575] text-sm mt-6 max-w-4xl">
+            Acceptance testing and record formats are defined by the executed scope and client
+            requirements. AES&apos;s Quality Control Program establishes a process; no public
+            sample report is represented as an independently audited project result.
+          </p>
+          <div className="flex flex-wrap gap-6 mt-7">
+            <Link href="/resources/field-execution-evidence"
+              className="text-[#006FB9] text-sm font-semibold hover:text-[#FF6B00]">
+              Review AES project evidence and QC approach &rarr;
+            </Link>
+            <Link href="/blog/otdr-certification-fiber-acceptance"
+              className="text-[#006FB9] text-sm font-semibold hover:text-[#FF6B00]">
+              Read the fiber acceptance field note &rarr;
+            </Link>
           </div>
         </div>
       </section>
