@@ -73,6 +73,12 @@ Scope: technical discovery, search-engine ownership, and company-listing consist
 - Headquarters as presently published: 1069 Duane Ct, Sunnyvale, CA 94085, United States
 - Positioning: North American field execution partner for structured cabling, fiber, rack-and-stack, enterprise AP refresh and smart hands; Canada service via partners where applicable.
 
+## Service-area address consistency work (2026-11-22)
+- Owner confirmed no customers visit the Sunnyvale headquarters.
+- Staged code edits remove the exact street/postal address from public Organization and ProfessionalService JSON-LD, the contact and footer display, and both llms.txt documents.
+- Public business location becomes "Sunnyvale, CA — service-area business (no walk-in office)" while the private Google Business Profile address remains retained for Google verification.
+- Google Business Profile address hide edit was accepted/saved but is awaiting verification before publication.
+
 ## Acceptance test after deploy
 - The production sitemap includes real blog article URLs.
 - No static URL's `lastmod` changes without a significant corresponding page change.
