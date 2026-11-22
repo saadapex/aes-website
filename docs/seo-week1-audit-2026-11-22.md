@@ -85,3 +85,15 @@ Scope: technical discovery, search-engine ownership, and company-listing consist
 - Contact and homepage JSON-LD identify the same Organization `@id`.
 - Sitemap can be submitted and processed by Google and Bing.
 - Source crawling and indexing reports have been captured; outstanding account verification remains explicitly tracked.
+
+
+## Updated confirmed status after implementation — November 22, 2026
+- The search/AI discovery changes were merged into `main` via PR #2, commit `8da1ed43e015df08477ffc0318cb8fc14f4f0da1`; Vercel reported production deployment successful.
+- Production recheck confirmed the homepage and contact page include Google's URL-prefix ownership verification meta tag, `/sitemap.xml` includes live blog slugs, and the previous full street address is absent from sampled pages and `/llms.txt`.
+- A later, more complete authenticated Google Search Console inspection found the existing `https://www.apexsolutions.io/` URL-prefix property **verified** (superseding the earlier incomplete no-property report). Do not attempt to create another property. It was recorded as added September 3, 2025.
+- `https://www.apexsolutions.io/sitemap.xml` was **already submitted** June 4, 2026; its last read on November 20, 2026 predates our deploy. No duplicate submission was made.
+- Search Console reported 28 indexed URLs and 36 excluded URLs (last report update November 15, 2026). Exclusions included 10 crawled not indexed, 14 discovered not indexed, 3 redirects, 3 duplicate canonicals, and 6 robots blocks; inspect URL samples to decide which require remediation. Performance totals in the automated read appeared internally inconsistent and should be rechecked in the UI before quoting.
+- Managed Google Business Profile correction: saved category **Computer networking service**, HTTPS website URL, and replacement description limited to AES's actual services. Street address visibility set to hidden; verified-location address retained privately.
+- Google Business Profile is still **unverified**. The exact available owner-verification methods are **Phone or text** and **Mail**; email was not offered. No code was sent or entered. Edits are waiting for business verification before public publication.
+- Google Business Profile still displays 24-hour hours; do not change until AES confirms real staffed/answering hours.
+- Bing Webmaster Tools import from GSC reached a Google authentication prompt requiring the account owner's login; import/verification and Bing sitemap submission therefore remain **unconfirmed**. Do not assert that a Bing property exists.
