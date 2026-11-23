@@ -72,7 +72,7 @@ export default function TermsPage() {
 
             <div>
               <h2 className="text-[#06284C] text-xl font-bold mb-3">11. Contact</h2>
-              <p>Questions about these Terms? Reach us at <a href="mailto:info@apexsolutions.io" className="text-[#006FB9] hover:text-[#FF6B00] underline">info@apexsolutions.io</a> or by mail: Apex Enterprise Solutions, 1069 Duane Ct, Sunnyvale, CA 94085.</p>
+              <p>Questions about these Terms? Reach us at <a href="mailto:info@apexsolutions.io" className="text-[#006FB9] hover:text-[#FF6B00] underline">info@apexsolutions.io</a> ; Apex Enterprise Solutions is based in Sunnyvale, California.</p>
             </div>
 
           </div>
