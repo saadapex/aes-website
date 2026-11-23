@@ -73,7 +73,7 @@ const sections = [
   {
     heading: "Insurance, Licensing & Confidentiality",
     body:
-      "AES carries general liability and Errors & Omissions (E&O) insurance. Licensing and bonding are verified per project jurisdiction — low-voltage and electrical licensing requirements vary by state, province, and municipality, and AES confirms compliance before mobilization. AES can work under NDA and does not publish project names, client names, or site details without written approval.",
+      "Insurance, licensing and bonding needs are reviewed against each project's location and scope before commitment. Work requiring a regulated contractor license is undertaken through appropriately qualified partners. AES can work under NDA and does not publish project names, client names, or site details without written approval.",
   },
   {
     heading: "Engagement Model",
