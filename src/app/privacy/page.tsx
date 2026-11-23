@@ -62,7 +62,7 @@ export default function PrivacyPage() {
 
           <h2>9. Contact</h2>
           <p>For privacy-related questions: <a href="mailto:info@apexsolutions.io">info@apexsolutions.io</a><br />
-          Apex Enterprise Solutions, 1069 Duane Ct, Sunnyvale, CA 94085</p>
+          Apex Enterprise Solutions, Sunnyvale, California</p>
         </div>
       </section>
     </>
