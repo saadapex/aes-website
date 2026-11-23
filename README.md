@@ -1,6 +1,6 @@
 # Apex Enterprise Solutions (AES) — IT Infrastructure Field Execution
 
-**[Apex Enterprise Solutions](https://www.apexsolutions.io/)** is a Sunnyvale, California–based service-area business supporting inside-plant IT infrastructure deployments for prime contractors, systems integrators, and enterprise infrastructure teams.
+**[Apex Enterprise Solutions](https://www.apexsolutions.io/)** is a Sunnyvale, California–based infrastructure deployment company supporting inside-plant IT deployments for prime contractors, systems integrators, and enterprise infrastructure teams.
 
 AES focuses on physical field execution, not data-center hosting or managed colocation. Projects are scoped around customer-approved drawings, access conditions, qualified resources, inspection and closeout requirements.
 
@@ -41,4 +41,4 @@ Website framework: Next.js (App Router), TypeScript and Tailwind CSS.
 
 Website: https://www.apexsolutions.io/  
 Company email: info@apexsolutions.io  
-Headquarters/service-area base: Sunnyvale, California (no public walk-in office).
+Headquarters: Sunnyvale, California.
